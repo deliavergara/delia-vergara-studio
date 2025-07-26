@@ -48,7 +48,7 @@ const ProductPage = () => {
       <div className="pt-24 pb-12">
         {/* Título del producto */}
         <div className="text-center mb-12">
-          <h1 className="font-elegant font-medium text-4xl text-muted-foreground tracking-title">
+          <h1 className="font-elegant font-medium text-4xl text-slate-500 tracking-title">
             {product.name}
           </h1>
         </div>

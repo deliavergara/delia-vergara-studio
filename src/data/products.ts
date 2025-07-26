@@ -214,11 +214,133 @@ export const jewelryItems: JewelryItem[] = [
       silverCLP: 56000,
       goldCLP: 70000,
     }
+  },
+
+  // Anillos - Alcázar
+  {
+    id: "anillo-alcazar",
+    name: "Anillo Alcázar",
+    description: "Diseñado en oro blanco 18K y una espectacular aguamarina. Este anillo puede reproducirse en el material y la piedra que se ajusten a tu presupuesto. Hecho por encargo. Disponible en plata, plata con baño de oro, oro 18k.",
+    category: "anillos",
+    images: [
+      "/lovable-uploads/Anillos/Alcázar/Anillo oro blanco 18 k aguamarina.jpg",
+      "/lovable-uploads/Anillos/Alcázar/Anillo oro blanco 18 k aguamarina 2.0.jpg",
+      "/lovable-uploads/Anillos/Alcázar/Anillo oro blanco 18 k aguamarina 3.0.jpg"
+    ],
+    mainImage: "/lovable-uploads/Anillos/Alcázar/Anillo oro blanco 18 k aguamarina.jpg",
+    prices: {
+      silverEUR: 0,
+      goldEUR: 0,
+      silverCLP: 0,
+      goldCLP: 0,
+    }
+  },
+
+  // Anillos - Ana
+  {
+    id: "anillo-ana",
+    name: "Anillo Ana",
+    description: "Pieza única en oro blanco con una Tanzanita. Tallado a mano, por lo que ninguno será igual al anterior. Se puede encargar con la piedra y el material que se ajuste a tú presupuesto. Hecho por encargo. Disponible en plata, plata con baño de oro, oro 18k.",
+    category: "anillos",
+    images: [
+      "/lovable-uploads/Anillos/Ana/1.Anillo oro blanco 18k con tanzanita.jpg",
+      "/lovable-uploads/Anillos/Ana/2.Anillo oro blanco 18k con tanzanita 2.0.jpg"
+    ],
+    mainImage: "/lovable-uploads/Anillos/Ana/1.Anillo oro blanco 18k con tanzanita.jpg",
+    prices: {
+      silverEUR: 0,
+      goldEUR: 0,
+      silverCLP: 0,
+      goldCLP: 0,
+    }
+  },
+
+  // Anillos - Blanca
+  {
+    id: "anillo-blanca",
+    name: "Anillo Blanca",
+    description: "Anillo con una pequeña curva interna que guía hasta la piedra central. Color a elección. Hechos a mano en plata 925. Disponibles con baño en oro.",
+    category: "anillos",
+    images: [
+      "/lovable-uploads/Anillos/Blanca/1.Anillo plata pidra azul.jpg",
+      "/lovable-uploads/Anillos/Blanca/3. Anillo oro piedra verde.jpg"
+    ],
+    mainImage: "/lovable-uploads/Anillos/Blanca/1.Anillo plata pidra azul.jpg",
+    prices: {
+      silverEUR: 65,
+      goldEUR: 70,
+      silverCLP: 65000,
+      goldCLP: 70000,
+    }
+  },
+
+  // Anillos - Magma
+  {
+    id: "anillo-magma",
+    name: "Anillo Magma",
+    description: "Con textura como la de la piedra volcánica, el anillo magma logra ser diferente, atrevido, pero también elegante y delicado. Hechos a mano en plata 925. Disponibles con baño en oro.",
+    category: "anillos",
+    images: [
+      "/lovable-uploads/Anillos/Magma/1.Anillo magma.jpg",
+      "/lovable-uploads/Anillos/Magma/2.Anillo magma .jpg"
+    ],
+    mainImage: "/lovable-uploads/Anillos/Magma/1.Anillo magma.jpg",
+    prices: {
+      silverEUR: 55,
+      goldEUR: 65,
+      silverCLP: 55000,
+      goldCLP: 65000,
+    }
+  },
+
+  // Pulseras - Fractal
+  {
+    id: "pulsera-fractal",
+    name: "Pulsera Fractal",
+    description: "Con dos módulos fractales a cada lado, esta pulsera tiene gran carácter y elegancia. Diseñada para hacerse notar, diferente a cualquier otra. Hechos a mano en plata 925. Disponibles con baño en oro.",
+    category: "pulseras",
+    images: [
+      "/lovable-uploads/Pulsera/Pulsera Fractal plata/1. Pulsera fractal plata.jpg",
+      "/lovable-uploads/Pulsera/Pulsera Fractal plata/2. pulsera fractal.jpg",
+      "/lovable-uploads/Pulsera/Pulsera Fractal plata/3.Pulsera fractal plata.jpg"
+    ],
+    mainImage: "/lovable-uploads/Pulsera/Pulsera Fractal plata/1. Pulsera fractal plata.jpg",
+    prices: {
+      silverEUR: 85,
+      goldEUR: 105,
+      silverCLP: 85000,
+      goldCLP: 105000,
+    }
+  },
+
+  // Pulseras - Mitsuro
+  {
+    id: "pulsera-mitsuro",
+    name: "Pulsera Mitsuro",
+    description: "Modelada a mano con la técnica Mitsuro, esta pulsera de casi 200g de plata se forma a partir de sus propias curvas. Es una pieza única. Si quieres la tuya será una nueva: pero igual de especial. Hechos a mano en plata 925. Disponibles con baño en oro.",
+    category: "pulseras",
+    images: [
+      "/lovable-uploads/Pulsera/Pulsera Mitsuro/1.Pulsera Mitsuro plata.jpg",
+      "/lovable-uploads/Pulsera/Pulsera Mitsuro/2.Pulsera mitsuro plata 2.0.jpg",
+      "/lovable-uploads/Pulsera/Pulsera Mitsuro/3.Pulsera mitsuro plata 3.0.jpg"
+    ],
+    mainImage: "/lovable-uploads/Pulsera/Pulsera Mitsuro/1.Pulsera Mitsuro plata.jpg",
+    prices: {
+      silverEUR: 90,
+      goldEUR: 120,
+      silverCLP: 90000,
+      goldCLP: 120000,
+    }
   }
 ];
 
 // Organizar por categorías según Menu.txt
 export const categories: Category[] = [
+  {
+    id: "anillos",
+    name: "Anillos",
+    items: jewelryItems.filter(item => item.category === "anillos")
+  },
   {
     id: "collares",
     name: "Collares", 
@@ -228,5 +350,10 @@ export const categories: Category[] = [
     id: "pendientes",
     name: "Pendientes",
     items: jewelryItems.filter(item => item.category === "pendientes")
+  },
+  {
+    id: "pulseras", 
+    name: "Pulseras",
+    items: jewelryItems.filter(item => item.category === "pulseras")
   }
 ];

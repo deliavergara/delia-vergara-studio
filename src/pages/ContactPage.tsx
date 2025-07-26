@@ -40,37 +40,40 @@ const ContactPage = () => {
           </h1>
 
           <div className="space-y-12">
-            {/* WhatsApp */}
-            <div className="space-y-6">
-              <p className="text-body font-light text-muted-foreground tracking-body leading-body">
-                Escríbeme por WhatsApp para ver el stock, encargar una pieza personalizada o resolver cualquier duda.
-              </p>
-              <a
-                href="https://wa.me/34625857127"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-sm transition-elegant"
-              >
-                <MessageCircle className="h-5 w-5" />
-                WhatsApp
-              </a>
-            </div>
-
-            {/* Instagram */}
-            <div className="space-y-6">
-              <p className="text-body font-light text-muted-foreground tracking-body leading-body">
-                También puedes seguirme en Instagram para ver procesos y novedades.
-              </p>
-              <div className="flex flex-col items-center gap-4">
+            {/* Contact options in two columns */}
+            <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+              {/* WhatsApp */}
+              <div className="space-y-6 text-center">
+                <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+                  Escríbeme por WhatsApp para ver el stock, encargar una pieza personalizada o resolver cualquier duda.
+                </p>
                 <a
-                  href="https://instagram.com/deliavergaras"
+                  href="https://wa.me/34625857127"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-sm transition-elegant"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-sm transition-elegant"
                 >
-                  <Instagram className="h-5 w-5" />
-                  @deliavergaras
+                  <img src="/lovable-uploads/0a13d467-6ad9-48b5-82ae-a5481a41885d.png" alt="WhatsApp" className="h-5 w-5" />
+                  WhatsApp
                 </a>
+              </div>
+
+              {/* Instagram */}
+              <div className="space-y-6 text-center">
+                <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+                  También puedes seguirme en Instagram para ver procesos y novedades.
+                </p>
+                <div className="flex flex-col items-center gap-4">
+                  <a
+                    href="https://instagram.com/deliavergaras"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-sm transition-elegant"
+                  >
+                    <img src="/lovable-uploads/d870cb07-e308-4eb3-817d-68dba260d987.png" alt="Instagram" className="h-5 w-5" />
+                    @deliavergaras
+                  </a>
+                </div>
               </div>
             </div>
 
