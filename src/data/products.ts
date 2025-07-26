@@ -334,11 +334,26 @@ export const jewelryItems: JewelryItem[] = [
   }
 ];
 
-// Solo mostrar categoría de anillos por ahora para testing
+// Categorías basadas en las carpetas reales de lovable-uploads
 export const categories: Category[] = [
   {
     id: "anillos",
     name: "Anillos",
     items: jewelryItems.filter(item => item.category === "anillos")
+  },
+  {
+    id: "collares",
+    name: "Collares",
+    items: jewelryItems.filter(item => item.category === "collares")
+  },
+  {
+    id: "pendientes", 
+    name: "Pendientes",
+    items: jewelryItems.filter(item => item.category === "pendientes")
+  },
+  {
+    id: "pulseras",
+    name: "Pulseras", 
+    items: jewelryItems.filter(item => item.category === "pulseras")
   }
 ];
