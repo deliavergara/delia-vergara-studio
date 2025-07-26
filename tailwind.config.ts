@@ -18,6 +18,20 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				elegant: ['Roboto', 'sans-serif'],
+				clean: ['Roboto', 'sans-serif'],
+			},
+			letterSpacing: {
+				'body': '0.02em', // 20 tracking
+				'title': '0.03em', // 30 tracking
+			},
+			lineHeight: {
+				'body': '25px',
+			},
+			fontSize: {
+				'body': ['13px', '25px'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

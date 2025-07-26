@@ -13,9 +13,12 @@ export const HamburgerMenu = ({ onNavigate }: HamburgerMenuProps) => {
   const navigate = useNavigate();
 
   const menuItems = [
-    { label: "Collares", path: "/categoria/collares" },
-    { label: "Pendientes", path: "/categoria/pendientes" },
+    { label: "Anillos", path: "/anillos" },
+    { label: "Collares", path: "/collares" },
+    { label: "Pendientes", path: "/pendientes" },
+    { label: "Pulseras", path: "/pulseras" },
     { label: "Cómo comprar", path: "/como-comprar" },
+    { label: "Contáctame", path: "/contactame" },
   ];
 
   const handleItemClick = (path: string) => {
