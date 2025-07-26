@@ -1,16 +1,23 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { menuItems } from "@/data/menuItems";
-import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
-export const HamburgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
+interface HamburgerMenuProps {
+  onNavigate: (section: string) => void;
+}
 
-  const handleItemClick = (path: string) => {
-    navigate(path);
+export const HamburgerMenu = ({ onNavigate }: HamburgerMenuProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuItems = [
+    { label: "Anillos", section: "rings" },
+    { label: "Pendientes", section: "earrings" },
+    { label: "Cómo comprar", section: "how-to-buy" },
+  ];
+
+  const handleItemClick = (section: string) => {
+    onNavigate(section);
     setIsOpen(false);
   };
 
@@ -54,11 +61,11 @@ export const HamburgerMenu = () => {
           <nav className="mt-12 space-y-8">
             {menuItems.map((item) => (
               <button
-                key={item.id}
-                onClick={() => handleItemClick(`/${item.id}`)}
+                key={item.section}
+                onClick={() => handleItemClick(item.section)}
                 className="block text-left w-full font-elegant text-2xl text-foreground hover:text-muted-foreground transition-quick"
               >
-                {item.name}
+                {item.label}
               </button>
             ))}
           </nav>
