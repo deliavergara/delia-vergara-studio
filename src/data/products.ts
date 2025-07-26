@@ -334,7 +334,7 @@ export const jewelryItems: JewelryItem[] = [
   }
 ];
 
-// Organizar por categorías según Menu.txt
+// Organizar por categorías según estructura de carpetas
 export const categories: Category[] = [
   {
     id: "anillos",
@@ -352,8 +352,8 @@ export const categories: Category[] = [
     items: jewelryItems.filter(item => item.category === "pendientes")
   },
   {
-    id: "pulseras", 
-    name: "Pulseras",
+    id: "pulsera", 
+    name: "Pulsera",
     items: jewelryItems.filter(item => item.category === "pulseras")
   }
 ];
