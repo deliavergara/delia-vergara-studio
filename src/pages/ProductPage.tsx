@@ -50,7 +50,7 @@ const ProductPage = () => {
         {/* Logo */}
         <div className="text-center mb-8">
           <img 
-            src="lovable-uploads/Material de Apoyo/Logo/logo gris_Mesa de trabajo 1.png" 
+            src="/lovable-uploads/Material de Apoyo/Logo/logo gris_Mesa de trabajo 1.png" 
             alt="Logo"
             className="h-12 mx-auto mb-8"
           />
