@@ -35,7 +35,7 @@ const ContactPage = () => {
       {/* Contenido principal */}
       <div className="relative z-10 pt-24 pb-12">
         <div className="container mx-auto px-6 max-w-2xl text-center">
-          <h1 className="font-elegant font-medium text-4xl text-foreground mb-16 tracking-title">
+          <h1 className="font-elegant font-medium text-4xl text-slate-500 mb-16 tracking-title">
             Contáctame
           </h1>
 
@@ -53,7 +53,7 @@ const ContactPage = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
                 >
-                  <img src="/lovable-uploads/Material de Apoyo/Iconos/0a13d467-6ad9-48b5-82ae-a5481a41885d.png" alt="WhatsApp" className="h-5 w-5" />
+                  <img src="/lovable-uploads/Material de Apoyo/Iconos/0a13d467-6ad9-48b5-82ae-a5481a41885d.png" alt="WhatsApp" className="h-5 w-5 self-center" />
                   <span className="font-body text-body">WhatsApp</span>
                 </a>
               </div>
@@ -70,7 +70,7 @@ const ContactPage = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
                   >
-                    <img src="/lovable-uploads/Material de Apoyo/Iconos/d870cb07-e308-4eb3-817d-68dba260d987.png" alt="Instagram" className="h-5 w-5" />
+                    <img src="/lovable-uploads/Material de Apoyo/Iconos/d870cb07-e308-4eb3-817d-68dba260d987.png" alt="Instagram" className="h-5 w-5 self-center" />
                     <span className="font-body text-body">@deliavergaras</span>
                   </a>
                 </div>
