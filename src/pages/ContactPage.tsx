@@ -40,12 +40,22 @@ const ContactPage = () => {
           </h1>
 
           <div className="space-y-12">
+            {/* Intro text */}
+            <div className="space-y-6 text-center">
+              <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+                La mayoría de las piezas son producidas en ediciones limitadas y están sujetas
+                a cambios, ya que constantemente busco innovar con nuevos diseños.
+                Suelo tener stock disponible, pero la mayoría de las piezas se hacen por encargo. Puedes solicitar mis diseños en plata
+                y plata enchapada en oro, así como encargos personalizados.
+              </p>
+              <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+                ¿Quieres una pieza personalizada o tienes dudas?
+                Contáctame para que podamos hablar y crear juntos lo que buscas.
+              </p>
+            </div>
+            
             {/* Contact options aligned horizontally */}
             <div className="flex flex-col items-center gap-8 max-w-2xl mx-auto">
-              <p className="text-body font-light text-muted-foreground tracking-body leading-body text-center">
-                Escríbeme para ver el stock, encargar una pieza personalizada o resolver cualquier duda.
-              </p>
-              
               {/* Icons aligned side by side */}
               <div className="flex items-center gap-8">
                 <a
