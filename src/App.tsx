@@ -20,10 +20,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/anillos" element={<CategoryPage />} />
-          <Route path="/collares" element={<CategoryPage />} />
-          <Route path="/pendientes" element={<CategoryPage />} />
-          <Route path="/pulseras" element={<CategoryPage />} />
+          <Route path="/categoria/:categoryId" element={<CategoryPage />} />
           <Route path="/producto/:productId" element={<ProductPage />} />
           <Route path="/como-comprar" element={<HowToBuyPage />} />
           <Route path="/contactame" element={<ContactPage />} />

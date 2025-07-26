@@ -334,7 +334,7 @@ export const jewelryItems: JewelryItem[] = [
   }
 ];
 
-// Organizar por categorías según estructura de carpetas con orden lógico
+// Categorías basadas en las carpetas reales de lovable-uploads
 export const categories: Category[] = [
   {
     id: "anillos",
@@ -343,55 +343,17 @@ export const categories: Category[] = [
   },
   {
     id: "collares",
-    name: "Collares", 
+    name: "Collares",
     items: jewelryItems.filter(item => item.category === "collares")
   },
   {
-    id: "pendientes",
+    id: "pendientes", 
     name: "Pendientes",
-    items: (() => {
-      const pendientesItems = jewelryItems.filter(item => item.category === "pendientes");
-      // Ordenar pendientes: fractales primero (un, dos, tres), luego mitsuro, luego otros
-      return pendientesItems.sort((a, b) => {
-        const fractalOrder = ["pendientes-un-fractal", "pendientes-dos-fractales", "pendientes-tres-fractales"];
-        const mitsuroOrder = ["pendientes-rosita-mitsuro", "pendientes-rosa-mitsuro", "pendientes-argollas-mitsuro"];
-        
-        const aFractalIndex = fractalOrder.indexOf(a.id);
-        const bFractalIndex = fractalOrder.indexOf(b.id);
-        const aMitsuroIndex = mitsuroOrder.indexOf(a.id);
-        const bMitsuroIndex = mitsuroOrder.indexOf(b.id);
-        
-        // Si ambos son fractales, usar orden de fractales
-        if (aFractalIndex !== -1 && bFractalIndex !== -1) {
-          return aFractalIndex - bFractalIndex;
-        }
-        // Si uno es fractal y otro no, fractal va primero
-        if (aFractalIndex !== -1 && bFractalIndex === -1) return -1;
-        if (aFractalIndex === -1 && bFractalIndex !== -1) return 1;
-        
-        // Si ambos son mitsuro, usar orden de mitsuro
-        if (aMitsuroIndex !== -1 && bMitsuroIndex !== -1) {
-          return aMitsuroIndex - bMitsuroIndex;
-        }
-        // Si uno es mitsuro y otro no, mitsuro va después de fractales pero antes de otros
-        if (aMitsuroIndex !== -1 && bMitsuroIndex === -1) return 1;
-        if (aMitsuroIndex === -1 && bMitsuroIndex !== -1) return -1;
-        
-        // Para el resto, orden alfabético
-        return a.name.localeCompare(b.name);
-      });
-    })()
+    items: jewelryItems.filter(item => item.category === "pendientes")
   },
   {
-    id: "pulseras", 
-    name: "Pulseras",
-    items: jewelryItems.filter(item => item.category === "pulseras").sort((a, b) => {
-      // Pulsera fractal primero, luego mitsuro
-      if (a.id === "pulsera-fractal") return -1;
-      if (b.id === "pulsera-fractal") return 1;
-      if (a.id === "pulsera-mitsuro") return -1;
-      if (b.id === "pulsera-mitsuro") return 1;
-      return a.name.localeCompare(b.name);
-    })
+    id: "pulseras",
+    name: "Pulseras", 
+    items: jewelryItems.filter(item => item.category === "pulseras")
   }
 ];
