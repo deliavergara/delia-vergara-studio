@@ -48,7 +48,7 @@ const ProductPage = () => {
       <div className="pt-24 pb-12">
         {/* Título del producto */}
         <div className="text-center mb-12">
-          <h1 className="font-elegant text-4xl text-foreground">
+          <h1 className="font-elegant font-medium text-4xl text-slate-500 tracking-title">
             {product.name}
           </h1>
         </div>
@@ -95,14 +95,14 @@ const ProductPage = () => {
             <div className="space-y-8">
               {/* Descripción */}
               <div>
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <p className="text-body font-light text-muted-foreground tracking-body leading-body">
                   {product.description}
                 </p>
               </div>
 
               {/* Selector de material */}
               <div className="space-y-4">
-                <h3 className="font-clean font-medium text-foreground text-lg">Material</h3>
+                <h3 className="font-clean font-medium text-muted-foreground text-lg tracking-title">Material</h3>
                 <div className="flex gap-3">
                   <button
                     onClick={() => setSelectedMetal('silver')}
@@ -131,7 +131,7 @@ const ProductPage = () => {
 
               {/* Selector de moneda */}
               <div className="space-y-4">
-                <h3 className="font-clean font-medium text-foreground text-lg">Moneda</h3>
+                <h3 className="font-clean font-medium text-muted-foreground text-lg tracking-title">Moneda</h3>
                 <div className="flex gap-3">
                   <button
                     onClick={() => setSelectedCurrency('EUR')}
@@ -160,11 +160,11 @@ const ProductPage = () => {
 
               {/* Precio */}
               <div className="border-t pt-8">
-                <div className="text-3xl font-elegant text-foreground">
-                  {selectedCurrency === 'EUR' ? '€' : '$'}{currentPrice.toLocaleString()}
+                <div className="text-3xl font-elegant font-medium text-muted-foreground tracking-title">
+                  {currentPrice === 0 ? 'Por encargo' : `${selectedCurrency === 'EUR' ? '€' : '$'}${currentPrice.toLocaleString()}`}
                 </div>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Precio en {selectedMetal === 'silver' ? 'plata' : 'oro'} - {selectedCurrency}
+                <p className="text-body font-light text-muted-foreground mt-2 tracking-body leading-body">
+                  {currentPrice === 0 ? 'Contacta para presupuesto' : `Precio en ${selectedMetal === 'silver' ? 'plata' : 'oro'} - ${selectedCurrency}`}
                 </p>
               </div>
             </div>

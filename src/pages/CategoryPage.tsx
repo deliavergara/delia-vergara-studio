@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { categories } from "@/data/products";
+import { Link } from "react-router-dom";
 
 const CategoryPage = () => {
   const { categoryId } = useParams();
@@ -36,9 +37,14 @@ const CategoryPage = () => {
         </Button>
       </div>
 
-      {/* Título de la categoría */}
-      <div className="pt-24 pb-12 text-center">
-        <h1 className="font-elegant text-4xl text-foreground">
+      {/* Logo */}
+      <div className="pt-24 pb-8 text-center">
+        <img
+          src="/lovable-uploads/Material de Apoyo/Logo/logo gris_Mesa de trabajo 1.png"
+          alt="Delia Vergara Logo"
+          className="h-16 mx-auto mb-8"
+        />
+        <h1 className="font-elegant font-medium text-4xl text-slate-500 tracking-title">
           {category.name}
         </h1>
       </div>
@@ -59,11 +65,23 @@ const CategoryPage = () => {
                   className="w-full h-full object-cover transition-elegant group-hover:scale-110"
                 />
               </div>
-              <h3 className="font-elegant text-xl text-foreground text-center">
+              <h3 className="font-elegant font-medium text-xl text-slate-500 text-center tracking-title">
                 {item.name}
               </h3>
             </div>
           ))}
+        </div>
+
+        {/* Footer con contacto */}
+        <div className="mt-16 pt-8 border-t border-border text-center space-y-4">
+          <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+            deliavergara.joyas@gmail.com | +34 625857127
+          </p>
+          <Link to="/contactame">
+            <Button variant="ghost" className="text-muted-foreground hover:text-foreground transition-elegant">
+              Contáctame
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
