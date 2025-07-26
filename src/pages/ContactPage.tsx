@@ -35,45 +35,48 @@ const ContactPage = () => {
       {/* Contenido principal */}
       <div className="relative z-10 pt-24 pb-12">
         <div className="container mx-auto px-6 max-w-2xl text-center">
-          <h1 className="font-elegant font-medium text-4xl text-slate-500 mb-16 tracking-title">
+          <h1 className="font-elegant font-medium text-4xl text-slate-600 mb-16 tracking-title">
             Contáctame
           </h1>
 
           <div className="space-y-12">
-            {/* Contact options in two columns */}
-            <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-              {/* WhatsApp */}
-              <div className="space-y-6 text-center">
-                <p className="text-body font-light text-muted-foreground tracking-body leading-body">
-                  Escríbeme por WhatsApp para ver el stock, encargar una pieza personalizada o resolver cualquier duda.
-                </p>
+            {/* Intro text */}
+            <div className="space-y-6 text-center">
+              <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+                La mayoría de las piezas son producidas en ediciones limitadas y están sujetas
+                a cambios, ya que constantemente busco innovar con nuevos diseños.
+                Suelo tener stock disponible, pero la mayoría de las piezas se hacen por encargo. Puedes solicitar mis diseños en plata
+                y plata enchapada en oro, así como encargos personalizados.
+              </p>
+              <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+                ¿Quieres una pieza personalizada o tienes dudas?
+                Contáctame para que podamos hablar y crear juntos lo que buscas.
+              </p>
+            </div>
+            
+            {/* Contact options aligned horizontally */}
+            <div className="flex flex-col items-center gap-8 max-w-2xl mx-auto">
+              {/* Icons aligned side by side */}
+              <div className="flex items-center gap-8">
                 <a
                   href="https://wa.me/34625857127"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
                 >
-                  <img src="/lovable-uploads/Material de Apoyo/Iconos/0a13d467-6ad9-48b5-82ae-a5481a41885d.png" alt="WhatsApp" className="h-5 w-5 self-center" />
+                  <img src="/lovable-uploads/Material de Apoyo/Iconos/0a13d467-6ad9-48b5-82ae-a5481a41885d.png" alt="WhatsApp" className="h-6 w-6" />
                   <span className="font-body text-body">WhatsApp</span>
                 </a>
-              </div>
 
-              {/* Instagram */}
-              <div className="space-y-6 text-center">
-                <p className="text-body font-light text-muted-foreground tracking-body leading-body">
-                  También puedes seguirme en Instagram para ver procesos y novedades.
-                </p>
-                <div className="flex flex-col items-center gap-4">
-                  <a
-                    href="https://instagram.com/deliavergaras"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
-                  >
-                    <img src="/lovable-uploads/Material de Apoyo/Iconos/d870cb07-e308-4eb3-817d-68dba260d987.png" alt="Instagram" className="h-5 w-5 self-center" />
-                    <span className="font-body text-body">@deliavergaras</span>
-                  </a>
-                </div>
+                <a
+                  href="https://instagram.com/deliavergaras"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
+                >
+                  <img src="/lovable-uploads/Material de Apoyo/Iconos/d870cb07-e308-4eb3-817d-68dba260d987.png" alt="Instagram" className="h-6 w-6" />
+                  <span className="font-body text-body">@deliavergaras</span>
+                </a>
               </div>
             </div>
 

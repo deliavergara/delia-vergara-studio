@@ -52,8 +52,8 @@ export const jewelryItems: JewelryItem[] = [
 
   // Pendientes - Un fractal
   {
-    id: "pendientes-un-fractal",
-    name: "Pendientes Un Fractal",
+    id: "pendiente-un-fractal",
+    name: "Un Fractal",
     description: "Formado por un solo módulo fractal, este pendiente logra una pieza delicada, ligera y con un diseño diferente. Ideal para uso diario por su comodidad. Hechos a mano en plata 925. Disponibles con baño en oro.",
     category: "pendientes",
     images: [
@@ -71,8 +71,8 @@ export const jewelryItems: JewelryItem[] = [
 
   // Pendientes - Dos fractales
   {
-    id: "pendientes-dos-fractales",
-    name: "Pendientes Dos Fractales",
+    id: "pendiente-dos-fractales",
+    name: "Dos Fractales",
     description: "Compuestos por dos módulos florales: uno pequeño que se ajusta de forma delicada y otro más grande que le da carácter. Una pieza con equilibrio, elegante, ligera y con movimiento. Hechos a mano en plata 925. Disponibles con baño en oro.",
     category: "pendientes",
     images: [
@@ -91,8 +91,8 @@ export const jewelryItems: JewelryItem[] = [
 
   // Pendientes - Tres fractales
   {
-    id: "pendientes-tres-fractales", 
-    name: "Pendientes Tres Fractales",
+    id: "pendiente-tres-fractales",
+    name: "Tres Fractales",
     description: "Compuestos por tres módulos fractales. Forman una pieza de impacto, ligera y con presencia. Hechos a mano en plata 925. Disponibles con baño en oro.",
     category: "pendientes",
     images: [
@@ -110,8 +110,8 @@ export const jewelryItems: JewelryItem[] = [
 
   // Pendientes - Rosa mitsuro
   {
-    id: "pendientes-rosa-mitsuro",
-    name: "Pendientes Rosa Mitsuro",
+    id: "pendiente-rosa-mitsuro",
+    name: "Rosa Mitsuro",
     description: "Modelados con la técnica mitsuro, lo que permite que tomen curvas y una forma orgánica que recuerda a una rosa con su tallo. Hechos a mano en plata 925. Disponibles con baño en oro.",
     category: "pendientes",
     images: [
@@ -129,9 +129,9 @@ export const jewelryItems: JewelryItem[] = [
 
   // Pendientes - Rosita mitsuro
   {
-    id: "pendientes-rosita-mitsuro",
-    name: "Pendientes Rosita Mitsuro", 
-    description: "Pequeñas rosas modeladas con la técnica mistura. Sutiles, delicadas y con curvas orgánicas que nacen solo del modelado a mano. Hechos a mano en plata 925. Disponibles con baño en oro.",
+    id: "pendiente-rosita-mitsuro",
+    name: "Rositas Mitsuro",
+    description: "Pequeñas rosas modeladas con la técnica mitsuro. Sutiles, delicadas y con curvas orgánicas que nacen solo del modelado a mano. Hechos a mano en plata 925. Disponibles con baño en oro.",
     category: "pendientes",
     images: ["/lovable-uploads/Pendientes/Rosita mitsuro/Rositas mitsuro plata.jpg"],
     mainImage: "/lovable-uploads/Pendientes/Rosita mitsuro/Rositas mitsuro plata.jpg",
@@ -145,8 +145,8 @@ export const jewelryItems: JewelryItem[] = [
 
   // Pendientes - Argollas mitsuro
   {
-    id: "pendientes-argollas-mitsuro",
-    name: "Pendientes Argollas Mitsuro",
+    id: "pendiente-argollas-mitsuro",
+    name: "Argolla Mitsuro",
     description: "Argollas modeladas a mano con la técnica mitsuro. De una sola pieza que gira sobre sí misma. Hechos a mano en plata 925. Disponibles con baño en oro.",
     category: "pendientes",
     images: [
@@ -164,8 +164,8 @@ export const jewelryItems: JewelryItem[] = [
 
   // Pendientes - Nítido
   {
-    id: "pendientes-nitido",
-    name: "Pendientes Nítido",
+    id: "pendiente-nitido",
+    name: "Nítido",
     description: "Sutiles y delicados. Pensados para usarse todos los días. Hechos a mano en plata 925. Disponibles con baño en oro.",
     category: "pendientes",
     images: [
@@ -183,8 +183,8 @@ export const jewelryItems: JewelryItem[] = [
 
   // Pendientes - Caudales
   {
-    id: "pendientes-caudales",
-    name: "Pendientes Caudales",
+    id: "pendiente-caudales",
+    name: "Caudales",
     description: "Con textura orgánica y cadenas que caen como caudales. Tienen movimiento y mucho carácter. Hechos a mano en plata 925. Disponibles con baño en oro.",
     category: "pendientes",
     images: ["/lovable-uploads/Pendientes/Caudales/1.Pendinetes caudales plata.jpg"],
@@ -197,10 +197,10 @@ export const jewelryItems: JewelryItem[] = [
     }
   },
 
-  // Pendientes - Óvalo
+  // Pendientes - Ovalo
   {
-    id: "pendientes-ovalo",
-    name: "Pendientes Óvalo",
+    id: "pendiente-ovalo",
+    name: "Óvalo",
     description: "Coloridos y senadores. Puedes elegir el color de la piedra o incluso perlas. Hechos a mano en plata 925. Disponibles con baño en oro.",
     category: "pendientes",
     images: [
@@ -219,8 +219,8 @@ export const jewelryItems: JewelryItem[] = [
   // Anillos - Alcázar
   {
     id: "anillo-alcazar",
-    name: "Anillo Alcázar",
-    description: "Diseñado en oro blanco 18K y una espectacular aguamarina. Este anillo puede reproducirse en el material y la piedra que se ajusten a tu presupuesto. Hecho por encargo. Disponible en plata, plata con baño de oro, oro 18k.",
+    name: "Alcázar",
+    description: "Anillo único de oro blanco 18k con aguamarina talla esmeralda de 2 quilates. Pieza exclusiva.",
     category: "anillos",
     images: [
       "/lovable-uploads/Anillos/Alcázar/Anillo oro blanco 18 k aguamarina.jpg",
@@ -239,8 +239,8 @@ export const jewelryItems: JewelryItem[] = [
   // Anillos - Ana
   {
     id: "anillo-ana",
-    name: "Anillo Ana",
-    description: "Pieza única en oro blanco con una Tanzanita. Tallado a mano, por lo que ninguno será igual al anterior. Se puede encargar con la piedra y el material que se ajuste a tú presupuesto. Hecho por encargo. Disponible en plata, plata con baño de oro, oro 18k.",
+    name: "Ana",
+    description: "Anillo de oro blanco 18k con tanzanita. Diseño elegante y sofisticado.",
     category: "anillos",
     images: [
       "/lovable-uploads/Anillos/Ana/1.Anillo oro blanco 18k con tanzanita.jpg",
@@ -258,8 +258,8 @@ export const jewelryItems: JewelryItem[] = [
   // Anillos - Blanca
   {
     id: "anillo-blanca",
-    name: "Anillo Blanca",
-    description: "Anillo con una pequeña curva interna que guía hasta la piedra central. Color a elección. Hechos a mano en plata 925. Disponibles con baño en oro.",
+    name: "Blanca",
+    description: "Anillo disponible en plata con piedra azul y oro con piedra verde. Diseño clásico y atemporal.",
     category: "anillos",
     images: [
       "/lovable-uploads/Anillos/Blanca/1.Anillo plata pidra azul.jpg",
@@ -267,18 +267,18 @@ export const jewelryItems: JewelryItem[] = [
     ],
     mainImage: "/lovable-uploads/Anillos/Blanca/1.Anillo plata pidra azul.jpg",
     prices: {
-      silverEUR: 65,
-      goldEUR: 70,
-      silverCLP: 65000,
-      goldCLP: 70000,
+      silverEUR: 0,
+      goldEUR: 0,
+      silverCLP: 0,
+      goldCLP: 0,
     }
   },
 
   // Anillos - Magma
   {
     id: "anillo-magma",
-    name: "Anillo Magma",
-    description: "Con textura como la de la piedra volcánica, el anillo magma logra ser diferente, atrevido, pero también elegante y delicado. Hechos a mano en plata 925. Disponibles con baño en oro.",
+    name: "Magma",
+    description: "Anillo con diseño orgánico inspirado en la lava. Textura única y contemporánea.",
     category: "anillos",
     images: [
       "/lovable-uploads/Anillos/Magma/1.Anillo magma.jpg",
@@ -286,10 +286,10 @@ export const jewelryItems: JewelryItem[] = [
     ],
     mainImage: "/lovable-uploads/Anillos/Magma/1.Anillo magma.jpg",
     prices: {
-      silverEUR: 55,
-      goldEUR: 65,
-      silverCLP: 55000,
-      goldCLP: 65000,
+      silverEUR: 0,
+      goldEUR: 0,
+      silverCLP: 0,
+      goldCLP: 0,
     }
   },
 
@@ -331,16 +331,11 @@ export const jewelryItems: JewelryItem[] = [
       silverCLP: 90000,
       goldCLP: 120000,
     }
-  }
+  },
 ];
 
-// Categorías basadas en las carpetas reales de lovable-uploads
+// Categorías con sus respectivos items
 export const categories: Category[] = [
-  {
-    id: "anillos",
-    name: "Anillos",
-    items: jewelryItems.filter(item => item.category === "anillos")
-  },
   {
     id: "collares",
     name: "Collares",
@@ -352,8 +347,13 @@ export const categories: Category[] = [
     items: jewelryItems.filter(item => item.category === "pendientes")
   },
   {
+    id: "anillos",
+    name: "Anillos", 
+    items: jewelryItems.filter(item => item.category === "anillos")
+  },
+  {
     id: "pulseras",
-    name: "Pulseras", 
+    name: "Pulseras",
     items: jewelryItems.filter(item => item.category === "pulseras")
   }
 ];

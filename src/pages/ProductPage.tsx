@@ -47,8 +47,14 @@ const ProductPage = () => {
 
       <div className="pt-24 pb-12">
         {/* Título del producto */}
-        <div className="text-center mb-12">
-          <h1 className="font-elegant font-medium text-4xl text-slate-500 tracking-title">
+        {/* Logo */}
+        <div className="text-center mb-8">
+          <img 
+            src="/lovable-uploads/Material de Apoyo/Logo/logo gris_Mesa de trabajo 1.png" 
+            alt="Logo"
+            className="h-12 mx-auto mb-8"
+          />
+          <h1 className="font-elegant font-medium text-4xl text-slate-600 tracking-title">
             {product.name}
           </h1>
         </div>
@@ -100,63 +106,68 @@ const ProductPage = () => {
                 </p>
               </div>
 
-              {/* Selector de material */}
-              <div className="space-y-4">
-                <h3 className="font-clean font-medium text-muted-foreground text-lg tracking-title">Material</h3>
-                <div className="flex gap-3">
-                  <button
-                    onClick={() => setSelectedMetal('silver')}
-                    className={cn(
-                      "px-6 py-3 rounded-sm border transition-quick font-clean",
-                      selectedMetal === 'silver'
-                        ? "border-primary bg-primary text-primary-foreground"
-                        : "border-border hover:border-muted-foreground"
-                    )}
-                  >
-                    Plata
-                  </button>
-                  <button
-                    onClick={() => setSelectedMetal('gold')}
-                    className={cn(
-                      "px-6 py-3 rounded-sm border transition-quick font-clean",
-                      selectedMetal === 'gold'
-                        ? "border-primary bg-primary text-primary-foreground"
-                        : "border-border hover:border-muted-foreground"
-                    )}
-                  >
-                    Oro
-                  </button>
-                </div>
-              </div>
+              {/* Selectores solo si tiene precios */}
+              {currentPrice > 0 && (
+                <>
+                  {/* Selector de material */}
+                  <div className="space-y-4">
+                    <h3 className="font-clean font-medium text-muted-foreground text-lg tracking-title">Material</h3>
+                    <div className="flex gap-3">
+                      <button
+                        onClick={() => setSelectedMetal('silver')}
+                        className={cn(
+                          "px-6 py-3 rounded-sm border transition-quick font-clean text-muted-foreground",
+                          selectedMetal === 'silver'
+                            ? "border-muted-foreground bg-muted-foreground/10 text-foreground"
+                            : "border-border hover:border-muted-foreground/50"
+                        )}
+                      >
+                        Plata
+                      </button>
+                      <button
+                        onClick={() => setSelectedMetal('gold')}
+                        className={cn(
+                          "px-6 py-3 rounded-sm border transition-quick font-clean text-muted-foreground",
+                          selectedMetal === 'gold'
+                            ? "border-muted-foreground bg-muted-foreground/10 text-foreground"
+                            : "border-border hover:border-muted-foreground/50"
+                        )}
+                      >
+                        Oro
+                      </button>
+                    </div>
+                  </div>
 
-              {/* Selector de moneda */}
-              <div className="space-y-4">
-                <h3 className="font-clean font-medium text-muted-foreground text-lg tracking-title">Moneda</h3>
-                <div className="flex gap-3">
-                  <button
-                    onClick={() => setSelectedCurrency('EUR')}
-                    className={cn(
-                      "px-6 py-3 rounded-sm border transition-quick font-clean",
-                      selectedCurrency === 'EUR'
-                        ? "border-primary bg-primary text-primary-foreground"
-                        : "border-border hover:border-muted-foreground"
-                    )}
-                  >
-                    EUR (€)
-                  </button>
-                  <button
-                    onClick={() => setSelectedCurrency('CLP')}
-                    className={cn(
-                      "px-6 py-3 rounded-sm border transition-quick font-clean",
-                      selectedCurrency === 'CLP'
-                        ? "border-primary bg-primary text-primary-foreground"
-                        : "border-border hover:border-muted-foreground"
-                    )}
-                  >
-                    CLP ($)
-                  </button>
-                </div>
-              </div>
+                  {/* Selector de moneda */}
+                  <div className="space-y-4">
+                    <h3 className="font-clean font-medium text-muted-foreground text-lg tracking-title">Moneda</h3>
+                    <div className="flex gap-3">
+                      <button
+                        onClick={() => setSelectedCurrency('EUR')}
+                        className={cn(
+                          "px-6 py-3 rounded-sm border transition-quick font-clean text-muted-foreground",
+                          selectedCurrency === 'EUR'
+                            ? "border-muted-foreground bg-muted-foreground/10 text-foreground"
+                            : "border-border hover:border-muted-foreground/50"
+                        )}
+                      >
+                        EUR (€)
+                      </button>
+                      <button
+                        onClick={() => setSelectedCurrency('CLP')}
+                        className={cn(
+                          "px-6 py-3 rounded-sm border transition-quick font-clean text-muted-foreground",
+                          selectedCurrency === 'CLP'
+                            ? "border-muted-foreground bg-muted-foreground/10 text-foreground"
+                            : "border-border hover:border-muted-foreground/50"
+                        )}
+                      >
+                        CLP ($)
+                      </button>
+                    </div>
+                  </div>
+                </>
+              )}
 
               {/* Precio */}
               <div className="border-t pt-8">
