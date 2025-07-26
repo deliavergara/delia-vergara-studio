@@ -2,7 +2,8 @@ export interface JewelryItem {
   id: string;
   name: string;
   description: string;
-  category: 'rings' | 'earrings';
+  category: string;
+  subcategory: string;
   images: string[];
   mainImage: string;
   prices: {
