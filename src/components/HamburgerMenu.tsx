@@ -18,7 +18,7 @@ export const HamburgerMenu = ({ onNavigate }: HamburgerMenuProps) => {
     { label: "Pendientes", path: "/categoria/pendientes" },
     { label: "Pulseras", path: "/categoria/pulseras" },
     { label: "Cómo comprar", path: "/como-comprar" },
-    { label: "Contáctame", path: "/contactame" },
+    { label: "Contáctame", path: "/contacto" },
   ];
 
   const handleItemClick = (path: string) => {
