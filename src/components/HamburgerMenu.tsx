@@ -1,23 +1,25 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 interface HamburgerMenuProps {
-  onNavigate: (section: string) => void;
+  onNavigate?: (section: string) => void;
 }
 
 export const HamburgerMenu = ({ onNavigate }: HamburgerMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const menuItems = [
-    { label: "Anillos", section: "rings" },
-    { label: "Pendientes", section: "earrings" },
-    { label: "Cómo comprar", section: "how-to-buy" },
+    { label: "Collares", path: "/categoria/collares" },
+    { label: "Pendientes", path: "/categoria/pendientes" },
+    { label: "Cómo comprar", path: "/como-comprar" },
   ];
 
-  const handleItemClick = (section: string) => {
-    onNavigate(section);
+  const handleItemClick = (path: string) => {
+    navigate(path);
     setIsOpen(false);
   };
 
@@ -61,8 +63,8 @@ export const HamburgerMenu = ({ onNavigate }: HamburgerMenuProps) => {
           <nav className="mt-12 space-y-8">
             {menuItems.map((item) => (
               <button
-                key={item.section}
-                onClick={() => handleItemClick(item.section)}
+                key={item.path}
+                onClick={() => handleItemClick(item.path)}
                 className="block text-left w-full font-elegant text-2xl text-foreground hover:text-muted-foreground transition-quick"
               >
                 {item.label}

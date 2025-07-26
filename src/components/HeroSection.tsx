@@ -3,7 +3,7 @@ export const HeroSection = () => {
     <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/lovable-uploads/99240e15-8897-4a7b-b1b0-ca5b38f33f8f.png"
+          src="/lovable-uploads/Foto portada/portada_Mesa de trabajo 1.jpg"
           alt="Delia Vergara - Joyería Artesanal"
           className="w-full h-full object-cover"
         />
