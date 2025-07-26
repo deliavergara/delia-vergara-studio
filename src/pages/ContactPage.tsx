@@ -53,7 +53,7 @@ const ContactPage = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
                 >
-                  <img src="/lovable-uploads/0a13d467-6ad9-48b5-82ae-a5481a41885d.png" alt="WhatsApp" className="h-5 w-5" />
+                  <img src="/lovable-uploads/Material de Apoyo/Iconos/0a13d467-6ad9-48b5-82ae-a5481a41885d.png" alt="WhatsApp" className="h-5 w-5" />
                   <span className="font-body text-body">WhatsApp</span>
                 </a>
               </div>
@@ -70,7 +70,7 @@ const ContactPage = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
                   >
-                    <img src="/lovable-uploads/d870cb07-e308-4eb3-817d-68dba260d987.png" alt="Instagram" className="h-5 w-5" />
+                    <img src="/lovable-uploads/Material de Apoyo/Iconos/d870cb07-e308-4eb3-817d-68dba260d987.png" alt="Instagram" className="h-5 w-5" />
                     <span className="font-body text-body">@deliavergaras</span>
                   </a>
                 </div>
