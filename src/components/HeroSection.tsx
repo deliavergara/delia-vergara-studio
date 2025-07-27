@@ -5,7 +5,7 @@ export const HeroSection = () => {
         <img
           src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/DSC_0124.jpg"
           alt="Delia Vergara Studio"
-          className="w-full h-full object-cover opacity-95"
+          className="w-full h-full object-cover"
         />
       </div>
       
