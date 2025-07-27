@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,9 @@ const ProductPage = () => {
   const [selectedMetal, setSelectedMetal] = useState<'silver' | 'gold'>('silver');
   const [selectedCurrency, setSelectedCurrency] = useState<'EUR' | 'CLP'>('EUR');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const dragRef = useRef<HTMLDivElement>(null);
   
   const product = jewelryItems.find(item => item.id === productId);
   
@@ -30,6 +33,32 @@ const ProductPage = () => {
   const currentPrice = selectedMetal === 'silver' 
     ? (selectedCurrency === 'EUR' ? product.prices.silverEUR : product.prices.silverCLP)
     : (selectedCurrency === 'EUR' ? product.prices.goldEUR : product.prices.goldCLP);
+
+  const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+    setIsDragging(true);
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    setStartX(clientX);
+  };
+
+  const handleDragEnd = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging) return;
+    
+    const clientX = 'changedTouches' in e ? e.changedTouches[0].clientX : e.clientX;
+    const deltaX = startX - clientX;
+    const threshold = 50;
+
+    if (Math.abs(deltaX) > threshold) {
+      if (deltaX > 0 && currentImageIndex < product.images.length - 1) {
+        // Deslizar hacia la izquierda - siguiente imagen
+        setCurrentImageIndex(currentImageIndex + 1);
+      } else if (deltaX < 0 && currentImageIndex > 0) {
+        // Deslizar hacia la derecha - imagen anterior
+        setCurrentImageIndex(currentImageIndex - 1);
+      }
+    }
+    
+    setIsDragging(false);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -63,35 +92,37 @@ const ProductPage = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Galería de imágenes */}
             <div className="space-y-6">
-              {/* Imagen principal */}
-              <div className="aspect-[3/4] bg-accent rounded-sm overflow-hidden max-w-md mx-auto">
+              {/* Imagen principal con arrastre */}
+              <div 
+                ref={dragRef}
+                className="aspect-[3/4] bg-accent rounded-sm overflow-hidden max-w-md mx-auto cursor-grab active:cursor-grabbing"
+                onMouseDown={handleDragStart}
+                onMouseUp={handleDragEnd}
+                onTouchStart={handleDragStart}
+                onTouchEnd={handleDragEnd}
+              >
                 <img
                   src={product.images[currentImageIndex]}
                   alt={product.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover select-none"
+                  draggable={false}
                 />
               </div>
               
-              {/* Miniaturas deslizables */}
+              {/* Puntos indicadores */}
               {product.images.length > 1 && (
-                <div className="flex gap-4 overflow-x-auto pb-2">
-                  {product.images.map((image, index) => (
+                <div className="flex justify-center gap-2 mt-4">
+                  {product.images.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
                       className={cn(
-                        "flex-shrink-0 w-20 h-20 rounded-sm overflow-hidden border-2 transition-quick",
+                        "w-2 h-2 rounded-full transition-all duration-200",
                         currentImageIndex === index
-                          ? "border-primary"
-                          : "border-border hover:border-muted-foreground"
+                          ? "bg-muted-foreground scale-125"
+                          : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                       )}
-                    >
-                      <img
-                        src={image}
-                        alt={`${product.name} ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
+                    />
                   ))}
                 </div>
               )}
