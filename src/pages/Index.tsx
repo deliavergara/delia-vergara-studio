@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
+import { CategoryGrid } from "@/components/CategoryGrid";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -14,6 +16,14 @@ const Index = () => {
       
       <div>
         <AboutSection />
+      </div>
+      
+      <div>
+        <CategoryGrid />
+      </div>
+      
+      <div>
+        <Footer />
       </div>
     </div>
   );
