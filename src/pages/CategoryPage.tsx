@@ -3,48 +3,34 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { categories } from "@/data/products";
 import { Link } from "react-router-dom";
-
 const CategoryPage = () => {
-  const { categoryId } = useParams();
+  const {
+    categoryId
+  } = useParams();
   const navigate = useNavigate();
-  
   const category = categories.find(cat => cat.id === categoryId);
-  
   if (!category) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+    return <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h1 className="font-elegant text-2xl text-foreground mb-4">Categoría no encontrada</h1>
           <Button onClick={() => navigate("/")} variant="outline">
             Volver al inicio
           </Button>
         </div>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header con botón volver */}
       <div className="fixed top-6 left-6 z-50">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => navigate("/")}
-          className="bg-white/80 backdrop-blur-sm hover:bg-white/90 border border-border shadow-minimal transition-elegant"
-        >
+        <Button variant="ghost" size="icon" onClick={() => navigate("/")} className="bg-white/80 backdrop-blur-sm hover:bg-white/90 border border-border shadow-minimal transition-elegant">
           <ArrowLeft className="h-5 w-5" />
         </Button>
       </div>
 
       {/* Logo */}
       <div className="pt-24 pb-8 text-center">
-        <img
-          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris_Mesa%20de%20trabajo%201.png"
-          alt="Delia Vergara Logo"
-          className="h-16 mx-auto mb-8"
-        />
-        <h1 className="font-elegant font-medium text-4xl text-slate-600 tracking-title">
+        <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-16 mx-auto mb-8" />
+        <h1 className="font-elegant text-slate-600 tracking-title font-thin text-xl">
           {category.name}
         </h1>
       </div>
@@ -63,26 +49,19 @@ const CategoryPage = () => {
 
         {/* Grid de productos */}
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-          {category.items.map((item) => (
-            <div
-              key={item.id}
-              className="group cursor-pointer relative"
-              onClick={() => navigate(`/producto/${item.id}`)}
-            >
+          {category.items.map(item => <div key={item.id} className="group cursor-pointer relative" onClick={() => navigate(`/producto/${item.id}`)}>
               <div className="aspect-[4/5] bg-accent rounded-sm overflow-hidden relative transition-elegant">
-                <img
-                  src={item.mainImage}
-                  alt={item.name}
-                  className="w-full h-full object-cover transition-elegant group-hover:scale-105 group-hover:opacity-70"
-                />
+                <img src={item.mainImage} alt={item.name} className="w-full h-full object-cover transition-elegant group-hover:scale-105 group-hover:opacity-70" />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-elegant flex items-center justify-center">
-                  <h3 className="font-light text-xl text-white opacity-0 group-hover:opacity-100 transition-elegant text-center px-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: '300' }}>
+                  <h3 className="font-light text-xl text-white opacity-0 group-hover:opacity-100 transition-elegant text-center px-4" style={{
+                fontFamily: 'Roboto, sans-serif',
+                fontWeight: '300'
+              }}>
                     {item.name}
                   </h3>
                 </div>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Footer con contacto */}
@@ -97,8 +76,6 @@ const CategoryPage = () => {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default CategoryPage;
