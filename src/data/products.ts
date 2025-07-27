@@ -220,7 +220,7 @@ export const jewelryItems: JewelryItem[] = [
   {
     id: "anillo-alcazar",
     name: "Alcázar",
-    description: "Anillo único de oro blanco 18k con aguamarina talla esmeralda de 2 quilates. Pieza exclusiva.",
+    description: "Diseñado en oro blanco 18K y una espectacular aguamarina. Este anillo puede reproducirse en el material y la piedra que se ajusten a tu presupuesto. Hecho por encargo. Disponible en plata, plata con baño de oro, oro 18k.",
     category: "anillos",
     images: [
       "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/Alcázar/Anillo%20oro%20blanco%2018%20k%20aguamarina.jpg",
@@ -240,7 +240,7 @@ export const jewelryItems: JewelryItem[] = [
   {
     id: "anillo-ana",
     name: "Ana",
-    description: "Anillo de oro blanco 18k con tanzanita. Diseño elegante y sofisticado.",
+    description: "Pieza única en oro blanco con una Tanzanita. Tallado a mano, por lo que ninguno será igual al anterior. Se puede encargar con la piedra y el material que se ajuste a tu presupuesto. Hecho por encargo. Disponible en plata, plata con baño de oro, oro 18k.",
     category: "anillos",
     images: [
       "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/Ana/1.Anillo%20oro%20blanco%2018k%20con%20tanzanita.jpg",
@@ -259,7 +259,7 @@ export const jewelryItems: JewelryItem[] = [
   {
     id: "anillo-blanca",
     name: "Blanca",
-    description: "Anillo disponible en plata con piedra azul y oro con piedra verde. Diseño clásico y atemporal.",
+    description: "Anillo con una pequeña curva interna que guía hasta la piedra central. Color a elección. Hechos a mano en plata 925. Disponibles con baño en oro.",
     category: "anillos",
     images: [
       "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/Blanca/1.Anillo%20plata%20pidra%20azul.jpg",
@@ -267,10 +267,10 @@ export const jewelryItems: JewelryItem[] = [
     ],
     mainImage: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/Blanca/1.Anillo%20plata%20pidra%20azul.jpg",
     prices: {
-      silverEUR: 0,
-      goldEUR: 0,
-      silverCLP: 0,
-      goldCLP: 0,
+      silverEUR: 65,
+      goldEUR: 70,
+      silverCLP: 65000,
+      goldCLP: 70000,
     }
   },
 
@@ -278,7 +278,7 @@ export const jewelryItems: JewelryItem[] = [
   {
     id: "anillo-magma",
     name: "Magma",
-    description: "Anillo con diseño orgánico inspirado en la lava. Textura única y contemporánea.",
+    description: "Con textura como la de la piedra volcánica, el anillo magma logra ser diferente, atrevido, pero también elegante y delicado. Hechos a mano en plata 925. Disponibles con baño en oro.",
     category: "anillos",
     images: [
       "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/Magma/1.Anillo%20magma.jpg",
@@ -286,10 +286,10 @@ export const jewelryItems: JewelryItem[] = [
     ],
     mainImage: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/Magma/1.Anillo%20magma.jpg",
     prices: {
-      silverEUR: 0,
-      goldEUR: 0,
-      silverCLP: 0,
-      goldCLP: 0,
+      silverEUR: 55,
+      goldEUR: 65,
+      silverCLP: 55000,
+      goldCLP: 65000,
     }
   },
 
