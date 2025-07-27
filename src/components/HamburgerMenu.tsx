@@ -36,8 +36,8 @@ export const HamburgerMenu = ({
   };
   return <>
       <Button variant="ghost" size="icon" onClick={() => setIsOpen(true)} className="fixed top-6 left-6 z-50 hover:bg-transparent transition-elegant h-20 w-20 flex flex-col items-center justify-center gap-2">
-        <div className="w-8 h-1 bg-muted-foreground rounded-full"></div>
-        <div className="w-8 h-1 bg-muted-foreground rounded-full"></div>
+        <div className="w-8 h-1 bg-muted/60 rounded-full"></div>
+        <div className="w-8 h-1 bg-muted/60 rounded-full"></div>
       </Button>
 
       {/* Menu Panel */}
