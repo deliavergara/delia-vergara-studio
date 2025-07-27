@@ -128,7 +128,10 @@ const ProductPage = () => {
             {/* Detalles del producto */}
             <div className="space-y-8">
               {/* Título del producto */}
-              <h1 className="font-elegant font-medium text-lg text-gray-500 tracking-title mb-2">
+              <h1 className="text-lg text-gray-500 tracking-title mb-2" style={{
+                fontFamily: 'Roboto, sans-serif',
+                fontWeight: '500'
+              }}>
                 {product.name}
               </h1>
               
