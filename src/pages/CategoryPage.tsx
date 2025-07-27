@@ -29,7 +29,7 @@ const CategoryPage = () => {
 
       {/* Logo */}
       <div className="pt-8 pb-8 text-center">
-        <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-12 mx-auto mb-16" />
+        <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-12 mx-auto mb-20" />
         <h1 className="font-elegant text-gray-500 tracking-title font-thin text-xl">
           {category.name}
         </h1>
