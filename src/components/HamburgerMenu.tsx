@@ -35,12 +35,13 @@ export const HamburgerMenu = ({
     setIsOpen(false);
   };
   return <>
-      <Button variant="ghost" size="icon" onClick={() => setIsOpen(true)} className="fixed top-6 right-6 z-50 hover:bg-transparent transition-elegant h-20 w-20">
-        <Menu className="h-16 w-16 text-white" />
+      <Button variant="ghost" size="icon" onClick={() => setIsOpen(true)} className="fixed top-6 left-6 z-50 hover:bg-transparent transition-elegant h-20 w-20 flex flex-col items-center justify-center gap-2">
+        <div className="w-8 h-1 bg-white rounded-full"></div>
+        <div className="w-8 h-1 bg-white rounded-full"></div>
       </Button>
 
       {/* Menu Panel */}
-      <div className={cn("fixed top-0 right-0 h-full w-48 bg-white/70 backdrop-blur-sm z-50 shadow-elegant transition-elegant", isOpen ? "translate-x-0" : "translate-x-full")}>
+      <div className={cn("fixed top-0 left-0 h-full w-48 bg-white/70 backdrop-blur-sm z-50 shadow-elegant transition-elegant", isOpen ? "translate-x-0" : "-translate-x-full")}>
         <div className="p-6">
           <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="ml-auto block hover:bg-accent">
             <X className="h-5 w-5" />
