@@ -95,7 +95,7 @@ const ProductPage = () => {
               {/* Imagen principal con arrastre */}
               <div 
                 ref={dragRef}
-                className="aspect-[3/4] bg-accent rounded-sm overflow-hidden max-w-md mx-auto cursor-grab active:cursor-grabbing"
+                className="aspect-[4/5] bg-accent rounded-sm overflow-hidden max-w-md mx-auto cursor-grab active:cursor-grabbing"
                 onMouseDown={handleDragStart}
                 onMouseUp={handleDragEnd}
                 onTouchStart={handleDragStart}
