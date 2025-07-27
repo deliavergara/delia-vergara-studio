@@ -101,6 +101,7 @@ const ProductPage = () => {
                   src={product.images[currentImageIndex]}
                   alt={product.name}
                   className="w-full h-full object-cover select-none"
+                  style={{opacity: '0.93'}}
                   draggable={false}
                 />
               </div>

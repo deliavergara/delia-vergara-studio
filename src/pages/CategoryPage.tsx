@@ -57,7 +57,7 @@ const CategoryPage = () => {
         <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
           {category.items.map(item => <div key={item.id} className="group cursor-pointer relative" onClick={() => navigate(`/producto/${item.id}`)}>
               <div className="aspect-[4/5] bg-accent rounded-sm overflow-hidden relative transition-elegant mb-4">
-                <img src={item.mainImage} alt={item.name} className="w-full h-full object-cover transition-elegant group-hover:scale-105 opacity-90" />
+                <img src={item.mainImage} alt={item.name} className="w-full h-full object-cover transition-elegant group-hover:scale-105" style={{opacity: '0.87'}} />
               </div>
               <h3 className="font-light text-lg text-foreground text-center" style={{
                 fontFamily: 'Roboto, sans-serif',
