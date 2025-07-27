@@ -2,10 +2,13 @@ export const HeroSection = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0">
-        <img
-          src="/lovable-uploads/Material de Apoyo/Foto portada/portada 3_Mesa de trabajo 1.jpg"
-          alt="Delia Vergara - Joyería Artesanal"
-          className="w-full h-full object-cover"
+        <video
+          src="/lovable-uploads/Material de Apoyo/Foto portada/DSC_0035.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-70"
         />
       </div>
       
