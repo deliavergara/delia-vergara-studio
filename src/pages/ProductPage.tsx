@@ -78,9 +78,9 @@ const ProductPage = () => {
         {/* Logo */}
         <div className="text-center mb-6">
           <img 
-            src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris_Mesa%20de%20trabajo%201.png" 
+            src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20medio_Mesa%20de%20trabajo%201.png" 
             alt="Logo"
-            className="h-12 mx-auto"
+            className="h-14 mx-auto"
           />
         </div>
 
