@@ -79,9 +79,9 @@ const ProductPage = () => {
         <div className="text-center mb-6">
           <button onClick={() => navigate("/")} className="hover:opacity-70 transition-elegant cursor-pointer">
             <img 
-              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20medio_Mesa%20de%20trabajo%201.png" 
+              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20clariro_Mesa%20de%20trabajo%201.png" 
               alt="Logo"
-              className="h-14 mx-auto"
+              className="h-18 mx-auto"
             />
           </button>
         </div>
