@@ -246,7 +246,7 @@ export const jewelryItems: JewelryItem[] = [
       "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/Ana/1.Anillo%20oro%20blanco%2018k%20con%20tanzanita.jpg",
       "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/Ana/2.Anillo%20oro%20blanco%2018k%20con%20tanzanita%202.0.jpg"
     ],
-    mainImage: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/Ana/1.Anillo%20oro%20blanco%2018k%20con%20tanzanita.jpg",
+    mainImage: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/Ana/2.Anillo%20oro%20blanco%2018k%20con%20tanzanita%202.0.jpg",
     prices: {
       silverEUR: 0,
       goldEUR: 0,
