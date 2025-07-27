@@ -59,7 +59,7 @@ const CategoryPage = () => {
               <div className="aspect-[4/5] bg-accent rounded-sm overflow-hidden relative transition-elegant mb-4">
                 <img src={item.mainImage} alt={item.name} className="w-full h-full object-cover transition-elegant group-hover:scale-105" style={{opacity: '0.87'}} />
               </div>
-              <h3 className="text-lg text-foreground text-center" style={{
+              <h3 className="text-lg text-gray-500 tracking-title text-center" style={{
                 fontFamily: 'Roboto, sans-serif',
                 fontWeight: '500'
               }}>
