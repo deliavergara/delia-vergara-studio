@@ -43,7 +43,7 @@ export const HamburgerMenu = ({
       <div className={cn("fixed inset-0 bg-white/95 backdrop-blur-md z-40 transition-elegant", isOpen ? "opacity-100 visible" : "opacity-0 invisible")} onClick={() => setIsOpen(false)} />
 
       {/* Menu Panel */}
-      <div className={cn("fixed top-0 right-0 h-full w-64 bg-white/90 backdrop-blur-sm z-50 shadow-elegant transition-elegant", isOpen ? "translate-x-0" : "translate-x-full")}>
+      <div className={cn("fixed top-0 right-0 h-full w-64 bg-white z-50 shadow-elegant transition-elegant", isOpen ? "translate-x-0" : "translate-x-full")}>
         <div className="p-6">
           <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="ml-auto block hover:bg-accent">
             <X className="h-5 w-5" />
