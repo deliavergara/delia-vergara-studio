@@ -42,13 +42,11 @@ const CategoryPage = () => {
         {/* Descripción de la categoría */}
         <div className="max-w-xl mx-auto text-center mb-16">
           <p className="text-body font-light text-muted-foreground tracking-body leading-body">
-            {category.id === 'anillos' && (
-              <>
+            {category.id === 'anillos' && <>
                 Anillos únicos hechos a mano en plata 925 y oro.
                 <br />
                 Cada pieza es cuidadosamente crafteada con atención al detalle.
-              </>
-            )}
+              </>}
             {category.id === 'collares' && 'Collares delicados y elegantes que complementan cualquier look. Diseños minimalistas con máximo impacto.'}
             {category.id === 'pendientes' && 'Pendientes con diseños innovadores y técnicas artesanales. Desde sutiles hasta statement pieces.'}
             {category.id === 'pulseras' && 'Pulseras únicas que combinan artesanía tradicional con diseño contemporáneo.'}
@@ -59,12 +57,14 @@ const CategoryPage = () => {
         <div className="grid grid-cols-2 gap-10 max-w-2xl mx-auto">
           {category.items.map(item => <div key={item.id} className="group cursor-pointer relative" onClick={() => navigate(`/producto/${item.id}`)}>
               <div className="aspect-[4/5] bg-accent rounded-sm overflow-hidden relative transition-elegant mb-4">
-                <img src={item.mainImage} alt={item.name} className="w-full h-full object-cover transition-elegant group-hover:scale-105" style={{opacity: '0.87'}} />
+                <img src={item.mainImage} alt={item.name} className="w-full h-full object-cover transition-elegant group-hover:scale-105" style={{
+              opacity: '0.87'
+            }} />
               </div>
-              <h3 className="text-base text-product-title tracking-title text-center" style={{
-                fontFamily: 'Roboto, sans-serif',
-                fontWeight: '400'
-              }}>
+              <h3 style={{
+            fontFamily: 'Roboto, sans-serif',
+            fontWeight: '400'
+          }} className="text-product-title tracking-title text-base font-normal text-left text-slate-950">
                 {item.name}
               </h3>
             </div>)}
