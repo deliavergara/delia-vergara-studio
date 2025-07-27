@@ -68,7 +68,7 @@ const ProductPage = () => {
           variant="ghost"
           size="icon"
           onClick={() => navigate(-1)}
-          className="bg-white/80 backdrop-blur-sm hover:bg-white/90 border border-border shadow-minimal transition-elegant"
+          className="hover:bg-white/20 transition-elegant"
         >
           <ArrowLeft className="h-5 w-5" />
         </Button>
