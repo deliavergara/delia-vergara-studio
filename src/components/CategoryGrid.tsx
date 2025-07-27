@@ -9,7 +9,7 @@ export const CategoryGrid = () => {
   };
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-24 bg-background mt-24">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-light text-center mb-12 text-foreground">
           Nuestras Categorías
