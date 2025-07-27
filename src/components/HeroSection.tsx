@@ -3,7 +3,7 @@ export const HeroSection = () => {
     <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0">
         <video
-          src="/lovable-uploads/Material de Apoyo/Foto portada/DSC_0035.mp4"
+          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/DSC_0035.mp4"
           autoPlay
           loop
           muted
@@ -18,7 +18,7 @@ export const HeroSection = () => {
       {/* Logo overlay */}
       <div className="absolute inset-0 flex items-start justify-center pt-20">
         <img
-          src="/lovable-uploads/Material de Apoyo/Logo/logo gcasi blanco_Mesa de trabajo 1.png"
+          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gcasi%20blanco_Mesa%20de%20trabajo%201.png"
           alt="Delia Vergara Logo"
           className="w-72 h-auto opacity-80"
         />
