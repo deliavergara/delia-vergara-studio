@@ -64,7 +64,7 @@ const ProductPage = () => {
             {/* Galería de imágenes */}
             <div className="space-y-6">
               {/* Imagen principal */}
-              <div className="aspect-[4/5] bg-accent rounded-sm overflow-hidden">
+              <div className="aspect-[3/4] bg-accent rounded-sm overflow-hidden max-w-md mx-auto">
                 <img
                   src={product.images[currentImageIndex]}
                   alt={product.name}
