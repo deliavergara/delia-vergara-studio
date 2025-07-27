@@ -18,7 +18,7 @@ export const HeroSection = () => {
       {/* Logo overlay */}
       <div className="absolute inset-0 flex items-start justify-center pt-20">
         <img
-          src="/lovable-uploads/Material de Apoyo/Logo/Logo gris claro_Mesa de trabajo 1.png"
+          src="/lovable-uploads/Material de Apoyo/Logo/logo gris muy clariro_Mesa de trabajo 1.png"
           alt="Delia Vergara Logo"
           className="w-72 h-auto opacity-80"
         />
