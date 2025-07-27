@@ -14,11 +14,16 @@ export const HeroSection = () => {
       
       {/* Logo overlay */}
       <div className="absolute inset-0 flex items-start justify-center pt-20">
-        <img
-          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gcasi%20blanco_Mesa%20de%20trabajo%201.png"
-          alt="Delia Vergara Logo"
-          className="w-72 h-auto opacity-80"
-        />
+        <button 
+          onClick={() => window.location.href = '/'}
+          className="hover:opacity-70 transition-elegant cursor-pointer"
+        >
+          <img
+            src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gcasi%20blanco_Mesa%20de%20trabajo%201.png"
+            alt="Delia Vergara Logo"
+            className="w-72 h-auto opacity-80"
+          />
+        </button>
       </div>
     </section>
   );

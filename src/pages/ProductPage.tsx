@@ -77,11 +77,13 @@ const ProductPage = () => {
       <div className="pt-20 pb-12">
         {/* Logo */}
         <div className="text-center mb-6">
-          <img 
-            src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20medio_Mesa%20de%20trabajo%201.png" 
-            alt="Logo"
-            className="h-14 mx-auto"
-          />
+          <button onClick={() => navigate("/")} className="hover:opacity-70 transition-elegant cursor-pointer">
+            <img 
+              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20medio_Mesa%20de%20trabajo%201.png" 
+              alt="Logo"
+              className="h-14 mx-auto"
+            />
+          </button>
         </div>
 
         <div className="container mx-auto px-6 max-w-6xl">
