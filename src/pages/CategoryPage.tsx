@@ -28,9 +28,9 @@ const CategoryPage = () => {
       </div>
 
       {/* Logo */}
-      <div className="pt-16 pb-8 text-center">
-        <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20oscuro_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-14 mx-auto mb-20" />
-        <h1 className="font-elegant text-gray-500 tracking-title font-thin text-xl">
+      <div className="pt-24 pb-8 text-center">
+        <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-16 mx-auto mb-8" />
+        <h1 className="font-elegant text-slate-600 tracking-title font-thin text-xl">
           {category.name}
         </h1>
       </div>
@@ -40,13 +40,11 @@ const CategoryPage = () => {
         {/* Descripción de la categoría */}
         <div className="max-w-xl mx-auto text-center mb-16">
           <p className="text-body font-light text-muted-foreground tracking-body leading-body">
-            {category.id === 'anillos' && (
-              <>
+            {category.id === 'anillos' && <>
                 Anillos únicos hechos a mano en plata 925 y oro.
                 <br />
                 Cada pieza es cuidadosamente crafteada con atención al detalle.
-              </>
-            )}
+              </>}
             {category.id === 'collares' && 'Collares delicados y elegantes que complementan cualquier look. Diseños minimalistas con máximo impacto.'}
             {category.id === 'pendientes' && 'Pendientes con diseños innovadores y técnicas artesanales. Desde sutiles hasta statement pieces.'}
             {category.id === 'pulseras' && 'Pulseras únicas que combinan artesanía tradicional con diseño contemporáneo.'}
@@ -54,17 +52,19 @@ const CategoryPage = () => {
         </div>
 
         {/* Grid de productos */}
-        <div className="grid grid-cols-2 gap-10 max-w-2xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {category.items.map(item => <div key={item.id} className="group cursor-pointer relative" onClick={() => navigate(`/producto/${item.id}`)}>
-              <div className="aspect-[4/5] bg-accent rounded-sm overflow-hidden relative transition-elegant mb-4">
-                <img src={item.mainImage} alt={item.name} className="w-full h-full object-cover transition-elegant group-hover:scale-105" style={{opacity: '0.87'}} />
-              </div>
-              <h3 className="text-lg text-foreground text-center" style={{
+              <div className="aspect-[4/5] bg-accent rounded-sm overflow-hidden relative transition-elegant">
+                <img src={item.mainImage} alt={item.name} className="w-full h-full object-cover transition-elegant group-hover:scale-105 group-hover:opacity-70" />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-elegant flex items-center justify-center">
+                  <h3 style={{
                 fontFamily: 'Roboto, sans-serif',
-                fontWeight: '500'
-              }}>
-                {item.name}
-              </h3>
+                fontWeight: '300'
+              }} className="opacity-0 group-hover:opacity-100 transition-elegant px-4 text-left text-gray-600 font-medium text-sm">
+                    {item.name}
+                  </h3>
+                </div>
+              </div>
             </div>)}
         </div>
 
