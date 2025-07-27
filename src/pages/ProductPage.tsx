@@ -75,17 +75,13 @@ const ProductPage = () => {
       </div>
 
       <div className="pt-24 pb-12">
-        {/* Título del producto */}
         {/* Logo */}
         <div className="text-center mb-8">
           <img 
             src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris_Mesa%20de%20trabajo%201.png" 
             alt="Logo"
-            className="h-12 mx-auto mb-8"
+            className="h-12 mx-auto"
           />
-          <h1 className="font-elegant font-medium text-4xl text-slate-600 tracking-title">
-            {product.name}
-          </h1>
         </div>
 
         <div className="container mx-auto px-6 max-w-6xl">
@@ -130,6 +126,11 @@ const ProductPage = () => {
 
             {/* Detalles del producto */}
             <div className="space-y-8">
+              {/* Título del producto */}
+              <h1 className="font-elegant font-medium text-lg text-gray-500 tracking-title mb-2">
+                {product.name}
+              </h1>
+              
               {/* Descripción */}
               <div>
                 <p className="text-body font-light text-muted-foreground tracking-body leading-body">
