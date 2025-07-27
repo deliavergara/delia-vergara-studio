@@ -40,7 +40,7 @@ export const HamburgerMenu = ({
       </Button>
 
       {/* Menu Panel */}
-      <div className={cn("fixed top-0 right-0 h-full w-64 bg-white/70 backdrop-blur-sm z-50 shadow-elegant transition-elegant", isOpen ? "translate-x-0" : "translate-x-full")}>
+      <div className={cn("fixed top-0 right-0 h-full w-48 bg-white/70 backdrop-blur-sm z-50 shadow-elegant transition-elegant", isOpen ? "translate-x-0" : "translate-x-full")}>
         <div className="p-6">
           <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="ml-auto block hover:bg-accent">
             <X className="h-5 w-5" />
