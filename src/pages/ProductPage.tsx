@@ -74,9 +74,9 @@ const ProductPage = () => {
         </Button>
       </div>
 
-      <div className="pt-24 pb-12">
+      <div className="pt-20 pb-12">
         {/* Logo */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6">
           <img 
             src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris_Mesa%20de%20trabajo%201.png" 
             alt="Logo"
