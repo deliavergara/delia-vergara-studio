@@ -3,79 +3,58 @@ import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
 interface HamburgerMenuProps {
   onNavigate?: (section: string) => void;
 }
-
-export const HamburgerMenu = ({ onNavigate }: HamburgerMenuProps) => {
+export const HamburgerMenu = ({
+  onNavigate
+}: HamburgerMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-
-  const menuItems = [
-    { label: "Anillos", path: "/categoria/anillos" },
-    { label: "Collares", path: "/categoria/collares" },
-    { label: "Pendientes", path: "/categoria/pendientes" },
-    { label: "Pulseras", path: "/categoria/pulseras" },
-    { label: "Cómo comprar", path: "/como-comprar" },
-    { label: "Contáctame", path: "/contacto" },
-  ];
-
+  const menuItems = [{
+    label: "Anillos",
+    path: "/categoria/anillos"
+  }, {
+    label: "Collares",
+    path: "/categoria/collares"
+  }, {
+    label: "Pendientes",
+    path: "/categoria/pendientes"
+  }, {
+    label: "Pulseras",
+    path: "/categoria/pulseras"
+  }, {
+    label: "Cómo comprar",
+    path: "/como-comprar"
+  }, {
+    label: "Contáctame",
+    path: "/contacto"
+  }];
   const handleItemClick = (path: string) => {
     navigate(path);
     setIsOpen(false);
   };
-
-  return (
-    <>
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={() => setIsOpen(true)}
-        className="fixed top-6 right-6 z-50 hover:bg-transparent transition-elegant h-20 w-20"
-      >
+  return <>
+      <Button variant="ghost" size="icon" onClick={() => setIsOpen(true)} className="fixed top-6 right-6 z-50 hover:bg-transparent transition-elegant h-20 w-20">
         <Menu className="h-16 w-16 text-white" />
       </Button>
 
       {/* Overlay */}
-      <div
-        className={cn(
-          "fixed inset-0 bg-white/95 backdrop-blur-md z-40 transition-elegant",
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        )}
-        onClick={() => setIsOpen(false)}
-      />
+      <div className={cn("fixed inset-0 bg-white/95 backdrop-blur-md z-40 transition-elegant", isOpen ? "opacity-100 visible" : "opacity-0 invisible")} onClick={() => setIsOpen(false)} />
 
       {/* Menu Panel */}
-      <div
-        className={cn(
-          "fixed top-0 right-0 h-full w-80 bg-white z-50 shadow-elegant transition-elegant",
-          isOpen ? "translate-x-0" : "translate-x-full"
-        )}
-      >
+      <div className={cn("fixed top-0 right-0 h-full w-80 bg-white z-50 shadow-elegant transition-elegant", isOpen ? "translate-x-0" : "translate-x-full")}>
         <div className="p-6">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsOpen(false)}
-            className="ml-auto block hover:bg-accent"
-          >
+          <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="ml-auto block hover:bg-accent">
             <X className="h-5 w-5" />
           </Button>
 
           <nav className="mt-12 space-y-8">
-            {menuItems.map((item) => (
-              <button
-                key={item.path}
-                onClick={() => handleItemClick(item.path)}
-                className="block text-left w-full font-elegant text-2xl text-foreground hover:text-muted-foreground transition-quick"
-              >
+            {menuItems.map(item => <button key={item.path} onClick={() => handleItemClick(item.path)} className="block w-full font-elegant transition-quick text-base text-left bg-transparent text-slate-700 font-normal">
                 {item.label}
-              </button>
-            ))}
+              </button>)}
           </nav>
         </div>
       </div>
-    </>
-  );
+    </>;
 };
