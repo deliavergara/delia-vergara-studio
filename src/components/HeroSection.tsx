@@ -8,7 +8,7 @@ export const HeroSection = () => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-70"
+          className="w-full h-full object-cover opacity-90"
         />
       </div>
       
