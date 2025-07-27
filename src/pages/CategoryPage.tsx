@@ -28,9 +28,9 @@ const CategoryPage = () => {
       </div>
 
       {/* Logo */}
-      <div className="pt-24 pb-8 text-center">
+      <div className="pt-16 pb-8 text-center">
         <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-16 mx-auto mb-8" />
-        <h1 className="font-elegant text-slate-600 tracking-title font-thin text-xl">
+        <h1 className="font-elegant text-gray-500 tracking-title font-thin text-xl">
           {category.name}
         </h1>
       </div>
