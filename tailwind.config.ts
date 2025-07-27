@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				elegant: ['Roboto', 'sans-serif'],
 				clean: ['Roboto', 'sans-serif'],
+				'roboto-medium': ['Roboto', 'sans-serif'],
 			},
 			letterSpacing: {
 				'body': '0.02em', // 20 tracking
@@ -75,7 +76,8 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'product-title': 'hsl(var(--product-title))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
