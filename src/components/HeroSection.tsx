@@ -16,11 +16,11 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10" />
       
       {/* Logo overlay */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex items-start justify-center pt-20">
         <img
           src="/lovable-uploads/Material de Apoyo/Logo/Logo gris claro_Mesa de trabajo 1.png"
           alt="Delia Vergara Logo"
-          className="w-48 h-auto opacity-80"
+          className="w-72 h-auto opacity-80"
         />
       </div>
     </section>
