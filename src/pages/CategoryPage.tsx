@@ -38,7 +38,7 @@ const CategoryPage = () => {
       {/* Grid de productos */}
       <div className="container mx-auto px-6 pb-24">
         {/* Descripción de la categoría */}
-        <div className="max-w-2xl mx-auto text-center mb-16">
+        <div className="max-w-xl mx-auto text-center mb-16">
           <p className="text-body font-light text-muted-foreground tracking-body leading-body">
             {category.id === 'anillos' && 'Anillos únicos hechos a mano en plata 925 y oro. Cada pieza es cuidadosamente crafteada con atención al detalle.'}
             {category.id === 'collares' && 'Collares delicados y elegantes que complementan cualquier look. Diseños minimalistas con máximo impacto.'}
