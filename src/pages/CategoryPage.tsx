@@ -40,7 +40,7 @@ const CategoryPage = () => {
       {/* Logo */}
       <div className="pt-24 pb-8 text-center">
         <img
-          src="/lovable-uploads/Material de Apoyo/Logo/logo gris_Mesa de trabajo 1.png"
+          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris_Mesa%20de%20trabajo%201.png"
           alt="Delia Vergara Logo"
           className="h-16 mx-auto mb-8"
         />

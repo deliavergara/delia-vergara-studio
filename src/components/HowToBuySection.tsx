@@ -4,7 +4,7 @@ export const HowToBuySection = () => {
       {/* Background Image with Opacity */}
       <div className="absolute inset-0 opacity-10">
         <img
-          src="/lovable-uploads/99240e15-8897-4a7b-b1b0-ca5b38f33f8f.png"
+          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/99240e15-8897-4a7b-b1b0-ca5b38f33f8f.png"
           alt=""
           className="w-full h-full object-cover"
         />

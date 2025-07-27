@@ -16,7 +16,7 @@ const HowToBuyPage = () => {
           playsInline
           className="w-full h-full object-cover opacity-5"
         >
-          <source src="/lovable-uploads/Material de Apoyo/Videos/DSC_0326.mov" type="video/mp4" />
+          <source src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0326.mov" type="video/mp4" />
         </video>
       </div>
 

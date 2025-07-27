@@ -16,7 +16,7 @@ const ContactPage = () => {
           playsInline
           className="w-full h-full object-cover opacity-5"
         >
-          <source src="/lovable-uploads/Material de Apoyo/Videos/DSC_0330.mov" type="video/mp4" />
+          <source src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0330.mov" type="video/mp4" />
         </video>
       </div>
 
@@ -64,7 +64,7 @@ const ContactPage = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
                 >
-                  <img src="/lovable-uploads/Material de Apoyo/Iconos/0a13d467-6ad9-48b5-82ae-a5481a41885d.png" alt="WhatsApp" className="h-6 w-6" />
+                  <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/0a13d467-6ad9-48b5-82ae-a5481a41885d.png" alt="WhatsApp" className="h-6 w-6" />
                   <span className="font-body text-body">WhatsApp</span>
                 </a>
 
@@ -74,7 +74,7 @@ const ContactPage = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
                 >
-                  <img src="/lovable-uploads/Material de Apoyo/Iconos/d870cb07-e308-4eb3-817d-68dba260d987.png" alt="Instagram" className="h-6 w-6" />
+                  <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/d870cb07-e308-4eb3-817d-68dba260d987.png" alt="Instagram" className="h-6 w-6" />
                   <span className="font-body text-body">@deliavergaras</span>
                 </a>
               </div>

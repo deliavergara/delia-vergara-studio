@@ -50,7 +50,7 @@ const ProductPage = () => {
         {/* Logo */}
         <div className="text-center mb-8">
           <img 
-            src="/lovable-uploads/Material de Apoyo/Logo/logo gris_Mesa de trabajo 1.png" 
+            src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris_Mesa%20de%20trabajo%201.png" 
             alt="Logo"
             className="h-12 mx-auto mb-8"
           />
