@@ -32,9 +32,9 @@ export const HamburgerMenu = ({ onNavigate }: HamburgerMenuProps) => {
         variant="ghost"
         size="icon"
         onClick={() => setIsOpen(true)}
-        className="fixed top-6 right-6 z-50 bg-white/80 backdrop-blur-sm hover:bg-white/90 border border-border shadow-minimal transition-elegant"
+        className="fixed top-6 right-6 z-50 hover:bg-transparent transition-elegant h-12 w-12"
       >
-        <Menu className="h-5 w-5" />
+        <Menu className="h-7 w-7 text-muted-foreground" />
       </Button>
 
       {/* Overlay */}
