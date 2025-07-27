@@ -54,19 +54,17 @@ const CategoryPage = () => {
         </div>
 
         {/* Grid de productos */}
-        <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {category.items.map(item => <div key={item.id} className="group cursor-pointer relative" onClick={() => navigate(`/producto/${item.id}`)}>
-              <div className="aspect-[4/5] bg-accent rounded-sm overflow-hidden relative transition-elegant">
-                <img src={item.mainImage} alt={item.name} className="w-full h-full object-cover transition-elegant group-hover:scale-105 group-hover:opacity-70" />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-elegant flex items-center justify-center">
-                  <h3 className="font-light text-xl text-white opacity-0 group-hover:opacity-100 transition-elegant text-center px-4" style={{
+              <div className="aspect-[4/5] bg-accent rounded-sm overflow-hidden relative transition-elegant mb-4">
+                <img src={item.mainImage} alt={item.name} className="w-full h-full object-cover transition-elegant group-hover:scale-105" />
+              </div>
+              <h3 className="font-light text-lg text-foreground text-center" style={{
                 fontFamily: 'Roboto, sans-serif',
                 fontWeight: '300'
               }}>
-                    {item.name}
-                  </h3>
-                </div>
-              </div>
+                {item.name}
+              </h3>
             </div>)}
         </div>
 
