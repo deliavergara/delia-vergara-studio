@@ -43,7 +43,7 @@ const CategoryPage = () => {
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20clariro_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-24 mb-4 cursor-pointer hover:opacity-70 transition-elegant" onClick={() => navigate("/")} />
-              <h1 className="font-elegant text-white tracking-title font-thin text-2xl">
+              <h1 className="font-roboto-medium text-white tracking-title text-2xl">
                 {category.name}
               </h1>
             </div>
