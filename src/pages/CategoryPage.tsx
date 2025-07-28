@@ -46,15 +46,15 @@ const CategoryPage = () => {
       </div>
 
       {/* Hero section con imagen de portada */}
-      <div className="relative h-80 overflow-hidden">
+      <div className="relative h-96 overflow-hidden">
         {categoryImage && (
           <>
-             <img 
-               src={categoryImage} 
-               alt={category.name}
-               className={`w-full h-full object-cover opacity-50 ${categoryId === 'pulseras' ? 'object-[center_30%]' : ''}`}
-             />
-            <div className="absolute inset-0 bg-black/20"></div>
+            <img 
+              src={categoryImage} 
+              alt={category.name}
+              className={`w-full h-full object-cover ${categoryId === 'pulseras' ? 'object-[center_30%]' : ''}`}
+            />
+            <div className="absolute inset-0 bg-gray-600/60"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <img 
                 src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20clariro_Mesa%20de%20trabajo%201.png" 
