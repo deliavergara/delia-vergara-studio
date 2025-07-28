@@ -21,7 +21,7 @@ const HowToBuyPage = () => {
       </div>
 
       {/* Overlay para mejorar legibilidad */}
-      <div className="absolute inset-0 bg-white/60 z-10" />
+      <div className="absolute inset-0 bg-white/40 z-10" />
 
       {/* Header con botón volver */}
       <div className="fixed top-6 left-6 z-50">
