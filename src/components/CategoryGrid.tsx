@@ -10,12 +10,12 @@ export const CategoryGrid = () => {
     window.scrollTo(0, 0);
   };
 
-  // Mapeo de imágenes de portada rectangulares para cada categoría
+  // Mapeo de imágenes de portada para cada categoría
   const categoryImages = {
-    anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20rectangular.jpg",
-    collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/portada%20collar%20rectangular.jpg",
-    pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20rectangular.jpg",
-    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/portada%20pulsera/portada%20pulsera%20rectangular.jpg"
+    anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/anillo%20portada.jpg",
+    collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/2.portada%20collares.jpg",
+    pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/1.pendientes%20portada.jpg",
+    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/portada%20pulsera/portada%20pulsera.jpg"
   };
 
   return (
