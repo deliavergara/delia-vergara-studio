@@ -1,33 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const HowToBuyPage = () => {
   const navigate = useNavigate();
-
-  return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+  return <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Video de fondo */}
       <div className="fixed inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover opacity-5"
-        >
+        <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-5">
           <source src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0330.mov" type="video/mp4" />
         </video>
       </div>
 
       {/* Header con botón volver */}
       <div className="fixed top-6 left-6 z-50">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => navigate("/")}
-          className="bg-white/80 backdrop-blur-sm hover:bg-white/90 border border-border shadow-minimal transition-elegant"
-        >
+        <Button variant="ghost" size="icon" onClick={() => navigate("/")} className="bg-white/80 backdrop-blur-sm hover:bg-white/90 border border-border shadow-minimal transition-elegant">
           <ArrowLeft className="h-5 w-5" />
         </Button>
       </div>
@@ -35,9 +21,7 @@ const HowToBuyPage = () => {
       {/* Contenido principal */}
       <div className="relative z-10 pt-24 pb-12">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h1 className="font-elegant font-medium text-4xl text-slate-600 mb-16 tracking-title">
-            Cómo comprar
-          </h1>
+          
 
           <div className="space-y-16">
             {/* Información de compra */}
@@ -89,22 +73,12 @@ const HowToBuyPage = () => {
               <div className="flex flex-col items-center gap-8 max-w-2xl mx-auto">
                 {/* Icons aligned side by side */}
                 <div className="flex items-center gap-8">
-                  <a
-                    href="https://wa.me/34625857127"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
-                  >
+                  <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant">
                     <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/0a13d467-6ad9-48b5-82ae-a5481a41885d.png" alt="WhatsApp" className="h-6 w-6" />
                     <span className="font-body text-body">WhatsApp</span>
                   </a>
 
-                  <a
-                    href="https://instagram.com/deliavergaras"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
-                  >
+                  <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant">
                     <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/d870cb07-e308-4eb3-817d-68dba260d987.png" alt="Instagram" className="h-6 w-6" />
                     <span className="font-body text-body">@deliavergaras</span>
                   </a>
@@ -124,8 +98,6 @@ const HowToBuyPage = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default HowToBuyPage;
