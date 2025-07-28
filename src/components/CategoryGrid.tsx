@@ -6,6 +6,8 @@ export const CategoryGrid = () => {
 
   const handleCategoryClick = (categoryId: string) => {
     navigate(`/categoria/${categoryId}`);
+    // Scroll al inicio de la página
+    window.scrollTo(0, 0);
   };
 
   // Mapeo de imágenes de portada para cada categoría
