@@ -24,6 +24,11 @@ const Index = () => {
         <CategoryGrid />
       </div>
       
+      
+      <div>
+        <Footer />
+      </div>
+      
       {/* Contact section */}
       <div className="container mx-auto px-6 pb-24">
         <div className="mt-32 pt-12 border-t border-border text-center space-y-8">
@@ -52,10 +57,6 @@ const Index = () => {
             deliavergara.joyas@gmail.com | +34 625857127
           </p>
         </div>
-      </div>
-      
-      <div>
-        <Footer />
       </div>
     </div>
   );
