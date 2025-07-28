@@ -145,7 +145,7 @@ const ProductPage = () => {
               {currentPrice > 0 && (
                 <>
                   {/* Selector de material */}
-                  <div className="space-y-4">
+                  <div className="space-y-2">
                     <h3 className="font-roboto-medium font-light text-muted-foreground text-lg tracking-title">Material</h3>
                     <div className="flex gap-3">
                       <button
@@ -174,7 +174,7 @@ const ProductPage = () => {
                   </div>
 
                   {/* Selector de moneda */}
-                  <div className="space-y-4">
+                  <div className="space-y-2">
                     <h3 className="font-roboto-medium font-light text-muted-foreground text-lg tracking-title">Moneda</h3>
                     <div className="flex gap-3">
                       <button
