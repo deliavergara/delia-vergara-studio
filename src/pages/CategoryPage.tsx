@@ -39,7 +39,7 @@ const CategoryPage = () => {
           variant="ghost" 
           size="icon" 
           onClick={() => navigate("/")} 
-          className="bg-white/80 backdrop-blur-sm hover:bg-white/90 border border-border shadow-minimal transition-elegant"
+          className="text-white hover:text-white/80 bg-transparent hover:bg-transparent border-none shadow-none transition-elegant"
         >
           <ArrowLeft className="h-5 w-5" />
         </Button>
