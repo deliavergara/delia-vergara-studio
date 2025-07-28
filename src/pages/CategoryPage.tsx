@@ -4,37 +4,70 @@ import { Button } from "@/components/ui/button";
 import { categories } from "@/data/products";
 import { Link } from "react-router-dom";
 const CategoryPage = () => {
-  const {
-    categoryId
-  } = useParams();
+  const { categoryId } = useParams();
   const navigate = useNavigate();
   const category = categories.find(cat => cat.id === categoryId);
+
+  // Mapeo de imágenes de portada para cada categoría
+  const categoryImages = {
+    anillos: "/lovable-uploads/Anillos/anillo portada/anillo portada.jpg",
+    collares: "/lovable-uploads/Collares/portada collares/1.portada collares.jpg",
+    pendientes: "/lovable-uploads/Pendientes/portada pendientes/1.pendientes portada.jpg",
+    pulseras: "/lovable-uploads/Pulsera/portada pulsera/portada pulsera.jpg"
+  };
+
   if (!category) {
-    return <div className="min-h-screen bg-background flex items-center justify-center">
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h1 className="font-elegant text-2xl text-foreground mb-4">Categoría no encontrada</h1>
           <Button onClick={() => navigate("/")} variant="outline">
             Volver al inicio
           </Button>
         </div>
-      </div>;
+      </div>
+    );
   }
-  return <div className="min-h-screen bg-background">
+
+  const categoryImage = categoryImages[categoryId as keyof typeof categoryImages];
+
+  return (
+    <div className="min-h-screen bg-background">
       {/* Header con botón volver */}
       <div className="fixed top-6 left-6 z-50">
-        <Button variant="ghost" size="icon" onClick={() => navigate("/")} className="bg-white/80 backdrop-blur-sm hover:bg-white/90 border border-border shadow-minimal transition-elegant">
+        <Button 
+          variant="ghost" 
+          size="icon" 
+          onClick={() => navigate("/")} 
+          className="bg-white/80 backdrop-blur-sm hover:bg-white/90 border border-border shadow-minimal transition-elegant"
+        >
           <ArrowLeft className="h-5 w-5" />
         </Button>
       </div>
 
-      {/* Logo */}
-      <div className="pt-16 pb-8 text-center">
-        <button onClick={() => navigate("/")} className="hover:opacity-70 transition-elegant cursor-pointer">
-          <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20clariro_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-20 mx-auto mb-20" />
-        </button>
-        <h1 className="font-elegant text-gray-500 tracking-title font-thin text-xl">
-          {category.name}
-        </h1>
+      {/* Hero section con imagen de portada */}
+      <div className="relative h-80 overflow-hidden">
+        {categoryImage && (
+          <>
+            <img 
+              src={categoryImage} 
+              alt={category.name}
+              className="w-full h-full object-cover opacity-80"
+            />
+            <div className="absolute inset-0 bg-black/20"></div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+              <img 
+                src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20clariro_Mesa%20de%20trabajo%201.png" 
+                alt="Delia Vergara Logo" 
+                className="h-16 mb-4 cursor-pointer hover:opacity-70 transition-elegant" 
+                onClick={() => navigate("/")}
+              />
+              <h1 className="font-elegant text-white tracking-title font-thin text-2xl">
+                {category.name}
+              </h1>
+            </div>
+          </>
+        )}
       </div>
 
       {/* Grid de productos */}
@@ -82,6 +115,7 @@ const CategoryPage = () => {
           </Link>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 export default CategoryPage;
