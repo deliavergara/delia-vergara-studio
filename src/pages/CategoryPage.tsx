@@ -4,77 +4,57 @@ import { Button } from "@/components/ui/button";
 import { categories } from "@/data/products";
 import { Link } from "react-router-dom";
 const CategoryPage = () => {
-  const { categoryId } = useParams();
+  const {
+    categoryId
+  } = useParams();
   const navigate = useNavigate();
   const category = categories.find(cat => cat.id === categoryId);
 
-  // Mapeo de imágenes rectangulares de portada para cada categoría
+  // Mapeo de imágenes de portada para cada categoría
   const categoryImages = {
-    anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20rectangular.jpg",
-    collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/portada%20collar%20rectangular.jpg",
-    pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20rectangular.jpg",
-    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/portada%20pulsera/portada%20pulsera%20rectangular.jpg"
+    anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/anillo%20portada.jpg",
+    collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/2.portada%20collares.jpg",
+    pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/1.pendientes%20portada.jpg",
+    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/portada%20pulsera/portada%20pulsera.jpg"
   };
-
   if (!category) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+    return <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h1 className="font-elegant text-2xl text-foreground mb-4">Categoría no encontrada</h1>
           <Button onClick={() => navigate("/")} variant="outline">
             Volver al inicio
           </Button>
         </div>
-      </div>
-    );
+      </div>;
   }
-
   const categoryImage = categoryImages[categoryId as keyof typeof categoryImages];
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header con botón volver */}
       <div className="fixed top-6 left-6 z-50">
-        <Button 
-          variant="ghost" 
-          size="lg" 
-          onClick={() => navigate("/")} 
-          className="text-white hover:text-white/80 bg-transparent hover:bg-transparent border-none shadow-none transition-elegant p-4"
-        >
-          <ArrowLeft className="h-8 w-8" />
+        <Button variant="ghost" size="icon" onClick={() => navigate("/")} className="bg-white/80 backdrop-blur-sm hover:bg-white/90 border border-border shadow-minimal transition-elegant">
+          <ArrowLeft className="h-5 w-5" />
         </Button>
       </div>
 
       {/* Hero section con imagen de portada */}
-      <div className="relative h-96 overflow-hidden">
-        {categoryImage && (
-          <>
-            <img 
-              src={categoryImage} 
-              alt={category.name}
-              className={`w-full h-full object-cover ${categoryId === 'pulseras' ? 'object-[center_30%]' : ''}`}
-            />
-            <div className="absolute inset-0" style={{ backgroundColor: '#7a7a7a', opacity: 0.55 }}></div>
+      <div className="relative h-80 overflow-hidden">
+        {categoryImage && <>
+            <img src={categoryImage} alt={category.name} className={`w-full h-full object-cover opacity-70 ${categoryId === 'pulseras' ? 'object-[center_30%]' : ''}`} />
+            <div className="absolute inset-0 bg-black/20"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <img 
-                src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20blanco_Mesa%20de%20trabajo%201.png" 
-                alt="Delia Vergara Logo" 
-                className="h-24 mb-4 cursor-pointer hover:opacity-70 transition-elegant" 
-                onClick={() => navigate("/")}
-              />
+              <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20clariro_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-24 mb-4 cursor-pointer hover:opacity-70 transition-elegant" onClick={() => navigate("/")} />
               <h1 className="font-elegant text-white tracking-title font-thin text-2xl">
                 {category.name}
               </h1>
             </div>
-          </>
-        )}
+          </>}
       </div>
 
       {/* Grid de productos */}
       <div className="container mx-auto px-6 pb-24 mt-16">
         {/* Descripción de la categoría */}
         <div className="max-w-xl mx-auto text-center mb-16 mt-12">
-          <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+          <p className="font-light text-muted-foreground tracking-body leading-body text-lg">
             {category.id === 'anillos' && <>
                 Anillos únicos hechos a mano en plata 925 y oro.
                 <br />
@@ -115,7 +95,6 @@ const CategoryPage = () => {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
 export default CategoryPage;
