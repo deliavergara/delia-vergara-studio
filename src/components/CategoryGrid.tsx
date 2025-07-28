@@ -10,12 +10,12 @@ export const CategoryGrid = () => {
     window.scrollTo(0, 0);
   };
 
-  // Mapeo de imágenes de portada para cada categoría
+  // Mapeo de imágenes de portada rectangulares para cada categoría
   const categoryImages = {
-    anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/anillo%20portada.jpg",
-    collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/2.portada%20collares.jpg",
-    pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/1.pendientes%20portada.jpg",
-    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/portada%20pulsera/portada%20pulsera.jpg"
+    anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20rectangular.jpg",
+    collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/portada%20collar%20rectangular.jpg",
+    pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20rectangular.jpg",
+    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/portada%20pulsera/portada%20pulsera%20rectangular.jpg"
   };
 
   return (
@@ -40,12 +40,16 @@ export const CategoryGrid = () => {
                       <img
                         src={categoryImage}
                         alt={category.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-85"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-                      <h3 className="absolute inset-0 flex items-center justify-center text-white text-3xl lg:text-4xl font-medium text-center group-hover:text-primary transition-colors opacity-95">
-                        {category.name}
-                      </h3>
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                        <div className="bg-gray-500/80 backdrop-blur-sm rounded-full px-6 py-3 border border-gray-300/30 group-hover:bg-primary/80 transition-all duration-300">
+                          <h3 className="text-white text-lg lg:text-xl font-medium text-center whitespace-nowrap">
+                            {category.name}
+                          </h3>
+                        </div>
+                      </div>
                     </>
                   )}
                 </div>
