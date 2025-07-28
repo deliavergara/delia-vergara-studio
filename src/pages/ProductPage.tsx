@@ -154,7 +154,7 @@ const ProductPage = () => {
                       <button
                         onClick={() => setSelectedMetal('silver')}
                         className={cn(
-                          "px-6 py-3 rounded-sm border transition-quick font-clean text-muted-foreground",
+                          "px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm",
                           selectedMetal === 'silver'
                             ? "border-muted-foreground bg-muted-foreground/10 text-foreground"
                             : "border-border hover:border-muted-foreground/50"
@@ -165,7 +165,7 @@ const ProductPage = () => {
                       <button
                         onClick={() => setSelectedMetal('gold')}
                         className={cn(
-                          "px-6 py-3 rounded-sm border transition-quick font-clean text-muted-foreground",
+                          "px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm",
                           selectedMetal === 'gold'
                             ? "border-muted-foreground bg-muted-foreground/10 text-foreground"
                             : "border-border hover:border-muted-foreground/50"
@@ -183,7 +183,7 @@ const ProductPage = () => {
                       <button
                         onClick={() => setSelectedCurrency('EUR')}
                         className={cn(
-                          "px-6 py-3 rounded-sm border transition-quick font-clean text-muted-foreground",
+                          "px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm",
                           selectedCurrency === 'EUR'
                             ? "border-muted-foreground bg-muted-foreground/10 text-foreground"
                             : "border-border hover:border-muted-foreground/50"
@@ -194,7 +194,7 @@ const ProductPage = () => {
                       <button
                         onClick={() => setSelectedCurrency('CLP')}
                         className={cn(
-                          "px-6 py-3 rounded-sm border transition-quick font-clean text-muted-foreground",
+                          "px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm",
                           selectedCurrency === 'CLP'
                             ? "border-muted-foreground bg-muted-foreground/10 text-foreground"
                             : "border-border hover:border-muted-foreground/50"
