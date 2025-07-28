@@ -67,7 +67,7 @@ const ProductPage = () => {
         <Button
           variant="ghost"
           size="icon"
-          onClick={() => navigate("/")}
+          onClick={() => navigate(`/categoria/${product.category}`)}
           className="hover:bg-white/20 transition-elegant"
         >
           <ArrowLeft className="h-5 w-5" />
