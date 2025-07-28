@@ -12,10 +12,10 @@ export const CategoryGrid = () => {
 
   // Mapeo de imágenes de portada para cada categoría
   const categoryImages = {
-    anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/anillo%20portada.jpg",
-    collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/2.portada%20collares.jpg",
-    pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/1.pendientes%20portada.jpg",
-    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/portada%20pulsera/portada%20pulsera.jpg"
+    anillos: "/lovable-uploads/Anillos/anillo portada/portada anillo categoria.jpg",
+    collares: "/lovable-uploads/Collares/portada collares/portada collar categoria .jpg",
+    pendientes: "/lovable-uploads/Pendientes/portada pendientes/portada pendientes categoria.jpg",
+    pulseras: "/lovable-uploads/Pulsera/portada pulsera/portada pulsera categoria.jpg"
   };
 
   return (
@@ -40,7 +40,7 @@ export const CategoryGrid = () => {
                       <img
                         src={categoryImage}
                         alt={category.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-50"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-70"
                       />
                       <div className="absolute inset-0" style={{ backgroundColor: '#7a7a7a', opacity: 0.7 }}></div>
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
