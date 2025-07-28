@@ -86,18 +86,16 @@ const CategoryPage = () => {
         {/* Footer con contacto */}
         <div className="mt-32 pt-12 border-t border-border text-center space-y-8">
         {/* Contact buttons aligned side by side */}
-        <div className="flex items-center justify-center gap-8">
+        <div className="flex items-center justify-center gap-6">
           <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer" className="group">
-            <div className="bg-transparent backdrop-blur-sm rounded-full px-6 py-3 border-2 border-muted-foreground/60 group-hover:border-primary/80 transition-all duration-300 inline-flex items-center gap-3">
-              <img src="/lovable-uploads/Material de Apoyo/Iconos/icono whatssap.png" alt="WhatsApp" className="h-5 w-5" />
-              <span className="font-body text-body text-muted-foreground group-hover:text-foreground transition-elegant">WhatsApp</span>
+            <div className="bg-transparent backdrop-blur-sm rounded-full px-4 py-2 border-2 border-muted-foreground/60 group-hover:border-primary/80 transition-all duration-300">
+              <span className="font-body text-sm text-muted-foreground group-hover:text-foreground transition-elegant">WhatsApp</span>
             </div>
           </a>
 
           <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer" className="group">
-            <div className="bg-transparent backdrop-blur-sm rounded-full px-6 py-3 border-2 border-muted-foreground/60 group-hover:border-primary/80 transition-all duration-300 inline-flex items-center gap-3">
-              <img src="/lovable-uploads/Material de Apoyo/Iconos/icono instagram-01.png" alt="Instagram" className="h-5 w-5" />
-              <span className="font-body text-body text-muted-foreground group-hover:text-foreground transition-elegant">@deliavergaras</span>
+            <div className="bg-transparent backdrop-blur-sm rounded-full px-4 py-2 border-2 border-muted-foreground/60 group-hover:border-primary/80 transition-all duration-300">
+              <span className="font-body text-sm text-muted-foreground group-hover:text-foreground transition-elegant">@deliavergaras</span>
             </div>
           </a>
         </div>
