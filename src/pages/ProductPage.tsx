@@ -130,7 +130,7 @@ const ProductPage = () => {
             {/* Detalles del producto */}
             <div className="space-y-8">
               {/* Título del producto */}
-              <h1 className="font-roboto-medium text-lg text-product-title tracking-title mb-1">
+              <h1 className="font-roboto-medium text-lg text-product-title tracking-title mb-0.5">
                 {product.name}
               </h1>
               
