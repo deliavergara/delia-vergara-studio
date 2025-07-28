@@ -146,7 +146,7 @@ const ProductPage = () => {
                 <>
                   {/* Selector de material */}
                   <div className="space-y-4">
-                    <h3 className="font-clean font-medium text-muted-foreground text-lg tracking-title">Material</h3>
+                    <h3 className="font-roboto-medium font-light text-muted-foreground text-lg tracking-title">Material</h3>
                     <div className="flex gap-3">
                       <button
                         onClick={() => setSelectedMetal('silver')}
@@ -175,7 +175,7 @@ const ProductPage = () => {
 
                   {/* Selector de moneda */}
                   <div className="space-y-4">
-                    <h3 className="font-clean font-medium text-muted-foreground text-lg tracking-title">Moneda</h3>
+                    <h3 className="font-roboto-medium font-light text-muted-foreground text-lg tracking-title">Moneda</h3>
                     <div className="flex gap-3">
                       <button
                         onClick={() => setSelectedCurrency('EUR')}
