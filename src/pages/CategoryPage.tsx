@@ -12,10 +12,10 @@ const CategoryPage = () => {
 
   // Mapeo de imágenes de portada para cada categoría
   const categoryImages = {
-    anillos: "/lovable-uploads/Anillos/anillo portada/portada anillo categoria.jpg",
-    collares: "/lovable-uploads/Collares/portada collares/portada collar categoria .jpg",
-    pendientes: "/lovable-uploads/Pendientes/portada pendientes/portada pendientes categoria.jpg",
-    pulseras: "/lovable-uploads/Pulsera/portada pulsera/portada pulsera categoria.jpg"
+    anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20categoria.jpg",
+    collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/portada%20collar%20categoria%20.jpg",
+    pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20categoria.jpg",
+    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/portada%20pulsera/portada%20pulsera%20categoria.jpg"
   };
   if (!category) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
