@@ -37,11 +37,11 @@ const CategoryPage = () => {
       <div className="fixed top-6 left-6 z-50">
         <Button 
           variant="ghost" 
-          size="icon" 
+          size="lg" 
           onClick={() => navigate("/")} 
-          className="text-white hover:text-white/80 bg-transparent hover:bg-transparent border-none shadow-none transition-elegant"
+          className="text-white hover:text-white/80 bg-transparent hover:bg-transparent border-none shadow-none transition-elegant p-3"
         >
-          <ArrowLeft className="h-5 w-5" />
+          <ArrowLeft className="h-7 w-7" />
         </Button>
       </div>
 
