@@ -52,7 +52,7 @@ const CategoryPage = () => {
             <img 
               src={categoryImage} 
               alt={category.name}
-              className={`w-full h-full object-cover opacity-70 ${categoryId === 'pulseras' ? 'object-top' : ''}`}
+              className={`w-full h-full object-cover opacity-70 ${categoryId === 'pulseras' ? 'object-bottom' : ''}`}
             />
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
