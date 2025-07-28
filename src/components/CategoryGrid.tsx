@@ -41,7 +41,7 @@ export const CategoryGrid = () => {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-85"
                       />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-                      <h3 className="absolute inset-0 flex items-center justify-center text-white text-lg font-medium text-center group-hover:text-primary transition-colors">
+                      <h3 className="absolute inset-0 flex items-center justify-center text-white text-3xl lg:text-4xl font-medium text-center group-hover:text-primary transition-colors opacity-95">
                         {category.name}
                       </h3>
                     </>
