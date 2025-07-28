@@ -25,7 +25,7 @@ export const CategoryGrid = () => {
           Nuestras Categorías
         </h2>
         
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div className="flex flex-col gap-8 max-w-2xl mx-auto">
           {categories.map((category) => {
             const categoryImage = categoryImages[category.id as keyof typeof categoryImages];
             return (
@@ -34,13 +34,13 @@ export const CategoryGrid = () => {
                 onClick={() => handleCategoryClick(category.id)}
                 className="group cursor-pointer"
               >
-                <div className="aspect-square rounded-lg overflow-hidden relative">
+                <div className="aspect-[5/3] rounded-lg overflow-hidden relative">
                   {categoryImage && (
                     <>
                       <img
                         src={categoryImage}
                         alt={category.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-70"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-50"
                       />
                       <div className="absolute inset-0" style={{ backgroundColor: '#7a7a7a', opacity: 0.7 }}></div>
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
