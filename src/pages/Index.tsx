@@ -27,7 +27,7 @@ const Index = () => {
       {/* Contact section */}
       <div className="container mx-auto px-6 pb-24">
         <div className="mt-16 pt-8 border-t border-border text-center space-y-4">
-          <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+          <p className="text-body font-roboto-medium font-medium text-muted-foreground tracking-body leading-body">
             deliavergara.joyas@gmail.com | +34 625857127
           </p>
           <Link to="/como-comprar">

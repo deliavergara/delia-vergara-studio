@@ -18,7 +18,7 @@ export const AboutSection = () => {
           
           {/* Texto a la derecha */}
           <div className="flex items-center justify-center h-full">
-            <p className="text-body font-light text-muted-foreground tracking-body leading-body text-center lg:text-left">
+            <p className="text-body font-roboto-medium font-medium text-muted-foreground tracking-body leading-body text-center lg:text-left">
               Delia Vergara es una marca de diseño de joyería con esencia orgánica. 
               Piezas únicas, elaboradas a mano en mi taller en Valencia, España.
             </p>
