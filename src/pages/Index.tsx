@@ -33,7 +33,7 @@ const Index = () => {
       <div className="container mx-auto px-6 pb-24">
         <div className="mt-32 pt-12 border-t border-border text-center space-y-8">
           <Link to="/como-comprar">
-            <Button variant="ghost" className="text-muted-foreground hover:text-foreground transition-elegant mb-6">
+            <Button variant="ghost" className="text-muted-foreground hover:text-foreground transition-elegant mb-2">
               Contáctame
             </Button>
           </Link>
