@@ -52,7 +52,7 @@ const CategoryPage = () => {
             <img 
               src={categoryImage} 
               alt={category.name}
-              className="w-full h-full object-cover opacity-80"
+              className="w-full h-full object-cover opacity-70"
             />
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -71,9 +71,9 @@ const CategoryPage = () => {
       </div>
 
       {/* Grid de productos */}
-      <div className="container mx-auto px-6 pb-24 -mt-4">
+      <div className="container mx-auto px-6 pb-24 mt-16">
         {/* Descripción de la categoría */}
-        <div className="max-w-xl mx-auto text-center mb-16">
+        <div className="max-w-xl mx-auto text-center mb-16 mt-12">
           <p className="text-body font-light text-muted-foreground tracking-body leading-body">
             {category.id === 'anillos' && <>
                 Anillos únicos hechos a mano en plata 925 y oro.
