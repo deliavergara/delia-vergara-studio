@@ -26,9 +26,6 @@ export const HamburgerMenu = ({
   }, {
     label: "Cómo comprar",
     path: "/como-comprar"
-  }, {
-    label: "Contáctame",
-    path: "/contacto"
   }];
   const handleItemClick = (path: string) => {
     navigate(path);
