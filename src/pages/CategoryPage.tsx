@@ -31,7 +31,7 @@ const CategoryPage = () => {
   return <div className="min-h-screen bg-background">
       {/* Header con botón volver */}
       <div className="fixed top-6 left-6 z-50">
-        <Button variant="ghost" size="icon" onClick={() => navigate("/")} className="bg-white/80 backdrop-blur-sm hover:bg-white/90 border border-border shadow-minimal transition-elegant">
+        <Button variant="ghost" size="icon" onClick={() => navigate("/")} className="text-white hover:text-white/70 transition-elegant">
           <ArrowLeft className="h-5 w-5" />
         </Button>
       </div>
@@ -42,7 +42,7 @@ const CategoryPage = () => {
             <img src={categoryImage} alt={category.name} className={`w-full h-full object-cover opacity-70 ${categoryId === 'pulseras' ? 'object-[center_30%]' : ''}`} />
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20blanco_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-16 mb-6 cursor-pointer hover:opacity-70 transition-elegant" onClick={() => navigate("/")} />
+              <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20blanco_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-16 mb-12 cursor-pointer hover:opacity-70 transition-elegant" onClick={() => navigate("/")} />
               <h1 className="font-roboto-medium text-white tracking-title text-2xl">
                 {category.name}
               </h1>
