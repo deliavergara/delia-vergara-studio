@@ -74,7 +74,7 @@ const ProductPage = () => {
         </Button>
       </div>
 
-      <div className="pt-20 pb-12">
+      <div className="pt-12 pb-12">
         {/* Logo */}
         <div className="text-center mb-6">
           <button onClick={() => navigate("/")} className="hover:opacity-70 transition-elegant cursor-pointer">
