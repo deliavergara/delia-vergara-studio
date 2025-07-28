@@ -54,7 +54,7 @@ const CategoryPage = () => {
               alt={category.name}
               className={`w-full h-full object-cover ${categoryId === 'pulseras' ? 'object-[center_30%]' : ''}`}
             />
-            <div className="absolute inset-0" style={{ backgroundColor: '#989898', opacity: 0.6 }}></div>
+            <div className="absolute inset-0" style={{ backgroundColor: '#7a7a7a', opacity: 0.55 }}></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <img 
                 src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20clariro_Mesa%20de%20trabajo%201.png" 
