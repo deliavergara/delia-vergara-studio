@@ -39,9 +39,9 @@ const CategoryPage = () => {
           variant="ghost" 
           size="lg" 
           onClick={() => navigate("/")} 
-          className="text-white hover:text-white/80 bg-transparent hover:bg-transparent border-none shadow-none transition-elegant p-3"
+          className="text-white hover:text-white/80 bg-transparent hover:bg-transparent border-none shadow-none transition-elegant p-4"
         >
-          <ArrowLeft className="h-7 w-7" />
+          <ArrowLeft className="h-8 w-8" />
         </Button>
       </div>
 
@@ -57,7 +57,7 @@ const CategoryPage = () => {
             <div className="absolute inset-0" style={{ backgroundColor: '#7a7a7a', opacity: 0.55 }}></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <img 
-                src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20clariro_Mesa%20de%20trabajo%201.png" 
+                src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20blanco_Mesa%20de%20trabajo%201.png" 
                 alt="Delia Vergara Logo" 
                 className="h-24 mb-4 cursor-pointer hover:opacity-70 transition-elegant" 
                 onClick={() => navigate("/")}
