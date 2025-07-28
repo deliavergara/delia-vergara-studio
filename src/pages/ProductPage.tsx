@@ -135,7 +135,7 @@ const ProductPage = () => {
               </h1>
               
               {/* Descripción */}
-              <div>
+              <div className="-mt-6">
                 <p className="text-body font-light text-muted-foreground tracking-body leading-body">
                   {product.description}
                 </p>
