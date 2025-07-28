@@ -108,7 +108,7 @@ const CategoryPage = () => {
           <p className="text-body font-light text-muted-foreground tracking-body leading-body">
             deliavergara.joyas@gmail.com | +34 625857127
           </p>
-          <Link to="/contactame">
+          <Link to="/contacto">
             <Button variant="ghost" className="text-muted-foreground hover:text-foreground transition-elegant">
               Contáctame
             </Button>
