@@ -8,6 +8,14 @@ export const CategoryGrid = () => {
     navigate(`/categoria/${categoryId}`);
   };
 
+  // Mapeo de imágenes de portada para cada categoría
+  const categoryImages = {
+    anillos: "/lovable-uploads/Anillos/anillo portada/anillo portada.jpg",
+    collares: "/lovable-uploads/Collares/portada collares/1.portada collares.jpg",
+    pendientes: "/lovable-uploads/Pendientes/portada pendientes/1.pendientes portada.jpg",
+    pulseras: "/lovable-uploads/Pulsera/portada pulsera/portada pulsera.jpg"
+  };
+
   return (
     <section className="py-24 bg-background mt-24">
       <div className="container mx-auto px-6">
@@ -17,7 +25,7 @@ export const CategoryGrid = () => {
         
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => {
-            const firstImage = category.items[0]?.mainImage;
+            const categoryImage = categoryImages[category.id as keyof typeof categoryImages];
             return (
               <div
                 key={category.id}
@@ -25,11 +33,11 @@ export const CategoryGrid = () => {
                 className="group cursor-pointer"
               >
                 <div className="aspect-square rounded-lg overflow-hidden mb-4">
-                  {firstImage && (
+                  {categoryImage && (
                     <img
-                      src={firstImage}
+                      src={categoryImage}
                       alt={category.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-85"
                     />
                   )}
                 </div>
