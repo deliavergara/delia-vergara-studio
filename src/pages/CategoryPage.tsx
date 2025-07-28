@@ -10,10 +10,10 @@ const CategoryPage = () => {
 
   // Mapeo de imágenes de portada para cada categoría
   const categoryImages = {
-    anillos: "/lovable-uploads/Anillos/anillo portada/anillo portada.jpg",
-    collares: "/lovable-uploads/Collares/portada collares/1.portada collares.jpg",
-    pendientes: "/lovable-uploads/Pendientes/portada pendientes/1.pendientes portada.jpg",
-    pulseras: "/lovable-uploads/Pulsera/portada pulsera/portada pulsera.jpg"
+    anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/anillo%20portada.jpg",
+    collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/1.portada%20collares.jpg",
+    pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/1.pendientes%20portada.jpg",
+    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/portada%20pulsera/portada%20pulsera.jpg"
   };
 
   if (!category) {
