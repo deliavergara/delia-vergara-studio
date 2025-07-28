@@ -37,7 +37,7 @@ const CategoryPage = () => {
       </div>
 
       {/* Hero section con imagen de portada */}
-      <div className="relative h-80 overflow-hidden">
+      <div className="relative h-96 overflow-hidden">
         {categoryImage && <>
             <img src={categoryImage} alt={category.name} className={`w-full h-full object-cover opacity-70 ${categoryId === 'pulseras' ? 'object-[center_30%]' : ''}`} />
             <div className="absolute inset-0 bg-black/20"></div>
