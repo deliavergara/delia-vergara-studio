@@ -8,8 +8,11 @@ export const jewelryItems: JewelryItem[] = [
     name: "Collar Flor",
     description: "Pequeña flor con un circón en el centro. Diseño mínimo y delicado. Incluye cadena. Hechos a mano en plata 925. Disponibles con baño en oro.",
     category: "collares",
-    images: ["https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/Flor/1.collar%20flor%20plata.jpg"],
-    mainImage: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/Flor/1.collar%20flor%20plata.jpg",
+    images: [
+      "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/Flor/1.collar%20flor%20plata.jpg",
+      "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/Flor/1.%20collar%20flor%20plata.jpg"
+    ],
+    mainImage: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/Flor/1.%20collar%20flor%20plata.jpg",
     prices: {
       silverEUR: 35,
       goldEUR: 45,
