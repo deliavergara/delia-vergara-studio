@@ -24,7 +24,7 @@ export const HamburgerMenu = ({
     label: "Pulseras",
     path: "/categoria/pulseras"
   }, {
-    label: "Cómo comprar",
+    label: "Comprar",
     path: "/como-comprar"
   }];
   const handleItemClick = (path: string) => {
