@@ -7,8 +7,8 @@ const HowToBuyPage = () => {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Video de fondo opaco */}
-      <div className="absolute inset-0 z-0">
+      {/* Video de fondo */}
+      <div className="fixed inset-0 z-0">
         <video
           autoPlay
           muted
@@ -16,12 +16,9 @@ const HowToBuyPage = () => {
           playsInline
           className="w-full h-full object-cover opacity-5"
         >
-          <source src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0326.mov" type="video/mp4" />
+          <source src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0330.mov" type="video/mp4" />
         </video>
       </div>
-
-      {/* Overlay para mejorar legibilidad */}
-      <div className="absolute inset-0 bg-white/40 z-10" />
 
       {/* Header con botón volver */}
       <div className="fixed top-6 left-6 z-50">
@@ -35,33 +32,92 @@ const HowToBuyPage = () => {
         </Button>
       </div>
 
-      {/* Contenido */}
-      <div className="relative z-20 min-h-screen flex items-center justify-center">
-        <div className="container mx-auto px-6 text-center max-w-4xl">
-          <h1 className="font-elegant font-medium text-4xl text-muted-foreground mb-16 tracking-title">
+      {/* Contenido principal */}
+      <div className="relative z-10 pt-24 pb-12">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <h1 className="font-elegant font-medium text-4xl text-slate-600 mb-16 tracking-title">
             Cómo comprar
           </h1>
-          
-          <div className="space-y-12">
-            <p className="text-body font-light text-muted-foreground tracking-body leading-body mb-12">
-              Actualmente vivo en España y tengo un pequeño stock disponible en Valencia (Puerto Rico, Ruzafa) 
-              y en Chile (Los Domínicos, Las Condes), y hago envíos a todo Europa y Chile.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-              <div className="space-y-4">
-                <h2 className="font-elegant font-medium text-2xl text-muted-foreground tracking-title">Mis Diseños</h2>
+
+          <div className="space-y-16">
+            {/* Información de compra */}
+            <div className="space-y-12">
+              <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+                Actualmente vivo en España y tengo un pequeño stock disponible en Valencia (Puerto Rico, Ruzafa) 
+                y en Chile (Los Domínicos, Las Condes), y hago envíos a todo Europa y Chile.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div className="space-y-4">
+                  <h2 className="font-elegant font-medium text-2xl text-muted-foreground tracking-title">Mis Diseños</h2>
+                  <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+                    Puedes consultar el stock disponible o solicitar una pieza por encargo, 
+                    teniendo en cuenta el tiempo de elaboración y envío.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h2 className="font-elegant font-medium text-2xl text-muted-foreground tracking-title">A Pedido</h2>
+                  <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+                    Si tienes algún proyecto especial en mente, hablemos. 
+                    Así podremos definir el diseño y darte un presupuesto.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Sección de contacto */}
+            <div className="border-t border-border pt-16 space-y-12">
+              <h2 className="font-elegant font-medium text-3xl text-slate-600 tracking-title">
+                Contáctame
+              </h2>
+
+              <div className="space-y-6 text-center">
                 <p className="text-body font-light text-muted-foreground tracking-body leading-body">
-                  Puedes consultar el stock disponible o solicitar una pieza por encargo, 
-                  teniendo en cuenta el tiempo de elaboración y envío.
+                  La mayoría de las piezas son producidas en ediciones limitadas y están sujetas
+                  a cambios, ya que constantemente busco innovar con nuevos diseños.
+                  Suelo tener stock disponible, pero la mayoría de las piezas se hacen por encargo. Puedes solicitar mis diseños en plata
+                  y plata enchapada en oro, así como encargos personalizados.
+                </p>
+                <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+                  ¿Quieres una pieza personalizada o tienes dudas?
+                  Contáctame para que podamos hablar y crear juntos lo que buscas.
                 </p>
               </div>
+              
+              {/* Contact options aligned horizontally */}
+              <div className="flex flex-col items-center gap-8 max-w-2xl mx-auto">
+                {/* Icons aligned side by side */}
+                <div className="flex items-center gap-8">
+                  <a
+                    href="https://wa.me/34625857127"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
+                  >
+                    <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/0a13d467-6ad9-48b5-82ae-a5481a41885d.png" alt="WhatsApp" className="h-6 w-6" />
+                    <span className="font-body text-body">WhatsApp</span>
+                  </a>
 
-              <div className="space-y-4">
-                <h2 className="font-elegant font-medium text-2xl text-muted-foreground tracking-title">A Pedido</h2>
+                  <a
+                    href="https://instagram.com/deliavergaras"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 text-muted-foreground hover:text-foreground transition-elegant"
+                  >
+                    <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/d870cb07-e308-4eb3-817d-68dba260d987.png" alt="Instagram" className="h-6 w-6" />
+                    <span className="font-body text-body">@deliavergaras</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Información de contacto */}
+              <div className="pt-8 border-t border-border space-y-4">
                 <p className="text-body font-light text-muted-foreground tracking-body leading-body">
-                  Si tienes algún proyecto especial en mente, hablemos. 
-                  Así podremos definir el diseño y darte un presupuesto.
+                  Deliavergara.joyas@gmail.com
+                </p>
+                <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+                  +34 625857127
                 </p>
               </div>
             </div>
