@@ -29,11 +29,25 @@ const CategoryPage = () => {
   }
   const categoryImage = categoryImages[categoryId as keyof typeof categoryImages];
   return <div className="min-h-screen bg-background">
-      {/* Header con botón volver */}
-      <div className="fixed top-6 left-6 z-50">
-        <Button variant="ghost" size="icon" onClick={() => navigate("/")} className="text-white hover:text-white/70 transition-elegant">
-          <ArrowLeft className="h-5 w-5" />
-        </Button>
+      {/* Header con botón volver, logo y título */}
+      <div className="fixed top-6 left-6 right-6 z-50 flex items-center justify-between">
+        <div onClick={() => navigate("/")} className="group cursor-pointer">
+          <div className="bg-transparent backdrop-blur-sm rounded-full p-3 border border-muted-foreground/60 group-hover:border-primary/80 transition-all duration-300">
+            <ArrowLeft className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-elegant" />
+          </div>
+        </div>
+        
+        <div className="flex items-center gap-4">
+          <img 
+            src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20blanco_Mesa%20de%20trabajo%201.png" 
+            alt="Delia Vergara Logo" 
+            className="h-12 cursor-pointer hover:opacity-70 transition-elegant" 
+            onClick={() => navigate("/")} 
+          />
+          <h1 className="font-roboto-medium text-white tracking-title text-xl">
+            {category.name}
+          </h1>
+        </div>
       </div>
 
       {/* Hero section con imagen de portada */}
@@ -41,12 +55,6 @@ const CategoryPage = () => {
         {categoryImage && <>
             <img src={categoryImage} alt={category.name} className={`w-full h-full object-cover opacity-70 ${categoryId === 'pulseras' ? 'object-[center_30%]' : ''}`} />
             <div className="absolute inset-0 bg-black/20"></div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20blanco_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-16 mb-16 cursor-pointer hover:opacity-70 transition-elegant" onClick={() => navigate("/")} />
-              <h1 className="font-roboto-medium text-white tracking-title text-2xl">
-                {category.name}
-              </h1>
-            </div>
           </>}
       </div>
 
