@@ -43,7 +43,7 @@ const CategoryPage = () => {
         <img 
           src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20blanco_Mesa%20de%20trabajo%201.png" 
           alt="Delia Vergara Logo" 
-          className="h-12 cursor-pointer hover:opacity-70 transition-elegant mb-2" 
+          className="h-16 cursor-pointer hover:opacity-70 transition-elegant mb-2" 
           onClick={() => navigate("/")} 
         />
         <h1 className="font-roboto-medium text-white tracking-title text-xl">

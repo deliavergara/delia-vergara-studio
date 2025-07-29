@@ -64,14 +64,11 @@ const ProductPage = () => {
     <div className="min-h-screen bg-background">
       {/* Header con botón volver */}
       <div className="fixed top-6 left-6 z-50">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => navigate(`/categoria/${product.category}`)}
-          className="hover:bg-white/20 transition-elegant"
-        >
-          <ArrowLeft className="h-5 w-5" />
-        </Button>
+        <div onClick={() => navigate(`/categoria/${product.category}`)} className="group cursor-pointer">
+          <div className="bg-transparent backdrop-blur-sm rounded-full p-3 border border-muted-foreground/60 group-hover:border-primary/80 transition-all duration-300">
+            <ArrowLeft className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-elegant" />
+          </div>
+        </div>
       </div>
 
       <div className="pt-12 pb-12">
