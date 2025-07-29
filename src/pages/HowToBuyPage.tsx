@@ -43,21 +43,21 @@ const HowToBuyPage = () => {
               
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">• Joyas en Stock</h3>
+                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">Joyas en Stock</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     Tengo un pequeño y exclusivo stock de piezas listas para ser enviadas. Son joyas de edición limitada que se encuentran físicamente en Valencia, España (zona Ruzafa) y en Santiago, Chile (zona Los Domínicos/Las Condes). Si te interesa alguna, la puedo enviar de inmediato
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">• Diseños por Encargo</h3>
+                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">Diseños por Encargo</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     La mayoría de mis creaciones se pueden volver a producir especialmente para ti. El tiempo de producción varía según la complejidad: desde unos días para piezas sencillas hasta algunas semanas para las más elaboradas
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">• Proyectos Personalizados</h3>
+                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">Proyectos Personalizados</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     Si tienes una idea o un sueño, hablemos. Me gusta colaborar y crear juntos una joya totalmente nueva y personal
                   </p>
@@ -73,28 +73,28 @@ const HowToBuyPage = () => {
               
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">• Materiales</h3>
+                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">Materiales</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     Trabajo principalmente con plata de ley y plata enchapada en oro. También puedo realizar tu encargo en oro macizo o en algún otro material que prefieras
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">• La Talla</h3>
+                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">La Talla</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     La talla es a medida, pídeme la que requieras. Si tienes dudas de la tuya, contáctame y te guiaré con métodos muy simples para encontrar tu medida exacta
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">• Formas de Pago</h3>
+                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">Formas de Pago</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (euros) y en Chile (pesos chilenos), elige la que te acomode
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">• Envíos</h3>
+                  <h3 className="font-elegant font-medium text-xl text-muted-foreground tracking-title">Envíos</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     Realizo envíos a toda Europa y Chile. El coste del envío se calcula según tu ubicación y se suma al valor final de tu joya (para Chile es desde Santiago, para que no te preocupes del envío internacional)
                   </p>
