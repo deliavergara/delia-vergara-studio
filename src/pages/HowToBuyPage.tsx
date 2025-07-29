@@ -37,9 +37,7 @@ const HowToBuyPage = () => {
           <div className="space-y-16">
             {/* Tipos de Joyas */}
             <div className="space-y-8">
-              <h2 className="font-elegant font-medium text-3xl text-slate-600 tracking-title text-center">
-                Tipos de Joyas
-              </h2>
+              
               
               <div className="space-y-8">
                 <div className="space-y-4">
