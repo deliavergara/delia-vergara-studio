@@ -24,7 +24,7 @@ const HowToBuyPage = () => {
           
           {/* Título principal */}
           <div className="text-center mb-16">
-            <h1 className="font-roboto-medium font-medium text-4xl text-text-dark-gray tracking-title mb-8">
+            <h1 className="font-roboto-medium text-text-dark-gray tracking-title mb-8 font-normal text-3xl">
               Cómo comprar
             </h1>
             <p className="text-body font-light text-muted-foreground tracking-body leading-body max-w-3xl mx-auto">
@@ -39,19 +39,19 @@ const HowToBuyPage = () => {
               
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <h3 className="font-roboto-medium font-medium text-xl text-text-dark-gray tracking-title">Joyas en Stock</h3>
+                  <h3 className="font-roboto-medium text-text-dark-gray tracking-title font-medium text-base">Joyas en Stock</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">Tengo un pequeño y exclusivo stock de piezas listas para ser enviadas. Son joyas de edición limitada que se encuentran físicamente en Valencia, España (zona Ruzafa) y en Santiago, Chile (zona Los Domínicos, Las Condes). Si te interesa alguna, la puedo enviar de inmediato</p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="font-roboto-medium font-medium text-xl text-text-dark-gray tracking-title">Diseños por Encargo</h3>
+                  <h3 className="font-roboto-medium font-medium text-text-dark-gray tracking-title text-base">Diseños por Encargo</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     La mayoría de mis creaciones se pueden volver a producir especialmente para ti. El tiempo de producción varía según la complejidad: desde unos días para piezas sencillas hasta algunas semanas para las más elaboradas
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="font-roboto-medium font-medium text-xl text-text-dark-gray tracking-title">Proyectos Personalizados</h3>
+                  <h3 className="font-roboto-medium font-medium text-text-dark-gray tracking-title text-base">Proyectos Personalizados</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     Si tienes una idea o un sueño, hablemos. Me gusta colaborar y crear juntos una joya totalmente nueva y personal
                   </p>
@@ -60,8 +60,8 @@ const HowToBuyPage = () => {
             </div>
 
             {/* Video antes de especificaciones */}
-            <div className="text-center mb-16">
-              <video autoPlay muted loop playsInline className="mx-auto w-full max-w-lg h-64 object-cover rounded-lg shadow-elegant">
+            <div className="text-center mb-16 bg-transparent rounded-none">
+              <video autoPlay muted loop playsInline className="mx-auto w-full max-w-lg h-64 object-cover shadow-elegant rounded-none">
                 <source src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0330.mov" type="video/mp4" />
               </video>
             </div>
@@ -74,28 +74,28 @@ const HowToBuyPage = () => {
               
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <h3 className="font-roboto-medium font-medium text-xl text-text-dark-gray tracking-title">Materiales</h3>
+                  <h3 className="font-roboto-medium font-medium text-text-dark-gray tracking-title text-base">Materiales</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     Trabajo principalmente con plata de ley y plata enchapada en oro. También puedo realizar tu encargo en oro macizo o en algún otro material que prefieras
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="font-roboto-medium font-medium text-xl text-text-dark-gray tracking-title">La Talla</h3>
+                  <h3 className="font-roboto-medium font-medium text-text-dark-gray tracking-title text-base">La Talla</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     La talla es a medida, pídeme la que requieras. Si tienes dudas de la tuya, contáctame y te guiaré con métodos muy simples para encontrar tu medida exacta
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="font-roboto-medium font-medium text-xl text-text-dark-gray tracking-title">Formas de Pago</h3>
+                  <h3 className="font-roboto-medium font-medium text-text-dark-gray tracking-title text-base">Formas de Pago</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (euros) y en Chile (pesos chilenos), elige la que te acomode
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="font-roboto-medium font-medium text-xl text-text-dark-gray tracking-title">Envíos</h3>
+                  <h3 className="font-roboto-medium font-medium text-text-dark-gray tracking-title text-base">Envíos</h3>
                   <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
                     Realizo envíos a toda Europa y Chile. El coste del envío se calcula según tu ubicación y se suma al valor final de tu joya (para Chile es desde Santiago, para que no te preocupes del envío internacional)
                   </p>
@@ -105,7 +105,7 @@ const HowToBuyPage = () => {
 
             {/* Sección de contacto */}
             <div className="border-t border-border pt-16 space-y-12">
-              <h2 className="font-roboto-medium font-medium text-3xl text-text-dark-gray tracking-title text-center">
+              <h2 className="font-roboto-medium font-medium text-text-dark-gray tracking-title text-center text-xl">
                 Contáctame
               </h2>
 
