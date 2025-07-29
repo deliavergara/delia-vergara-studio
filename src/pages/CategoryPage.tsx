@@ -30,24 +30,25 @@ const CategoryPage = () => {
   const categoryImage = categoryImages[categoryId as keyof typeof categoryImages];
   return <div className="min-h-screen bg-background">
       {/* Header con botón volver, logo y título */}
-      <div className="fixed top-6 left-6 right-6 z-50 flex items-center justify-between">
+      <div className="fixed top-6 left-6 z-50">
         <div onClick={() => navigate("/")} className="group cursor-pointer">
           <div className="bg-transparent backdrop-blur-sm rounded-full p-3 border border-muted-foreground/60 group-hover:border-primary/80 transition-all duration-300">
             <ArrowLeft className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-elegant" />
           </div>
         </div>
-        
-        <div className="flex items-center gap-4">
-          <img 
-            src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20blanco_Mesa%20de%20trabajo%201.png" 
-            alt="Delia Vergara Logo" 
-            className="h-12 cursor-pointer hover:opacity-70 transition-elegant" 
-            onClick={() => navigate("/")} 
-          />
-          <h1 className="font-roboto-medium text-white tracking-title text-xl">
-            {category.name}
-          </h1>
-        </div>
+      </div>
+      
+      {/* Logo y título centrados */}
+      <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center">
+        <img 
+          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20blanco_Mesa%20de%20trabajo%201.png" 
+          alt="Delia Vergara Logo" 
+          className="h-12 cursor-pointer hover:opacity-70 transition-elegant mb-2" 
+          onClick={() => navigate("/")} 
+        />
+        <h1 className="font-roboto-medium text-white tracking-title text-xl">
+          {category.name}
+        </h1>
       </div>
 
       {/* Hero section con imagen de portada */}
