@@ -64,6 +64,9 @@ Minimalist palette with whites, soft grays, and subtle earth tones
 
     /* Product title color */
     --product-title: 32 9% 36%; /* #595655 */
+    
+    /* Text colors for jewelry site */
+    --text-dark-gray: 0 0% 25%; /* Dark gray for titles */
 
     --sidebar-background: 0 0% 98%;
 
