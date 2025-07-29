@@ -19,11 +19,7 @@ const HowToBuyPage = () => {
           
           {/* Logo en la parte superior */}
           <div className="text-center mb-16">
-            <img 
-              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20medio_Mesa%20de%20trabajo%201.png" 
-              alt="Delia Vergara Logo" 
-              className="mx-auto h-24 w-auto mb-12"
-            />
+            <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20medio_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="mx-auto h-24 w-auto mb-12" />
           </div>
           
           {/* Título principal */}
@@ -44,9 +40,7 @@ const HowToBuyPage = () => {
               <div className="space-y-8">
                 <div className="space-y-4">
                   <h3 className="font-roboto-medium font-medium text-xl text-text-dark-gray tracking-title">Joyas en Stock</h3>
-                  <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">
-                    Tengo un pequeño y exclusivo stock de piezas listas para ser enviadas. Son joyas de edición limitada que se encuentran físicamente en Valencia, España (zona Ruzafa) y en Santiago, Chile (zona Los Domínicos/Las Condes). Si te interesa alguna, la puedo enviar de inmediato
-                  </p>
+                  <p className="text-body font-light text-muted-foreground tracking-body leading-body pl-6">Tengo un pequeño y exclusivo stock de piezas listas para ser enviadas. Son joyas de edición limitada que se encuentran físicamente en Valencia, España (zona Ruzafa) y en Santiago, Chile (zona Los Domínicos, Las Condes). Si te interesa alguna, la puedo enviar de inmediato</p>
                 </div>
 
                 <div className="space-y-4">
@@ -67,13 +61,7 @@ const HowToBuyPage = () => {
 
             {/* Video antes de especificaciones */}
             <div className="text-center mb-16">
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="mx-auto w-full max-w-lg h-64 object-cover rounded-lg shadow-elegant"
-              >
+              <video autoPlay muted loop playsInline className="mx-auto w-full max-w-lg h-64 object-cover rounded-lg shadow-elegant">
                 <source src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0330.mov" type="video/mp4" />
               </video>
             </div>
