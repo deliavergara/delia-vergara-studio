@@ -86,7 +86,7 @@ const CategoryPage = () => {
               <h3 style={{
             fontFamily: 'Roboto, sans-serif',
             fontWeight: '400'
-          }} className="text-product-title tracking-title text-base font-normal text-left text-slate-950">
+          }} className="text-product-title tracking-title text-base font-normal text-left">
                 {item.name}
               </h3>
             </div>)}
