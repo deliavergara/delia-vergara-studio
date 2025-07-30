@@ -103,10 +103,10 @@ const ProductPage = () => {
                   <div className="space-y-2">
                     <h3 className="font-roboto-medium font-light text-muted-foreground text-lg tracking-title">Material</h3>
                     <div className="flex gap-3">
-                      <button onClick={() => setSelectedMetal('silver')} className={cn("px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm", selectedMetal === 'silver' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
+                      <button onClick={() => setSelectedMetal('silver')} className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'silver' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
                         Plata
                       </button>
-                      <button onClick={() => setSelectedMetal('gold')} className={cn("px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm", selectedMetal === 'gold' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
+                      <button onClick={() => setSelectedMetal('gold')} className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'gold' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
                         Oro
                       </button>
                     </div>
@@ -116,10 +116,10 @@ const ProductPage = () => {
                   <div className="space-y-2">
                     <h3 className="font-roboto-medium font-light text-muted-foreground text-lg tracking-title">Moneda</h3>
                     <div className="flex gap-3">
-                      <button onClick={() => setSelectedCurrency('EUR')} className={cn("px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm", selectedCurrency === 'EUR' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
+                      <button onClick={() => setSelectedCurrency('EUR')} className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedCurrency === 'EUR' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
                         EUR (€)
                       </button>
-                      <button onClick={() => setSelectedCurrency('CLP')} className={cn("px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm", selectedCurrency === 'CLP' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
+                      <button onClick={() => setSelectedCurrency('CLP')} className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedCurrency === 'CLP' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
                         CLP ($)
                       </button>
                     </div>
