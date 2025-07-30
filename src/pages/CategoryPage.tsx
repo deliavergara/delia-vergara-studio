@@ -40,12 +40,7 @@ const CategoryPage = () => {
       
       {/* Logo y título centrados */}
       <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center">
-        <img 
-          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20blanco_Mesa%20de%20trabajo%201.png" 
-          alt="Delia Vergara Logo" 
-          className="h-16 cursor-pointer hover:opacity-70 transition-elegant mb-2" 
-          onClick={() => navigate("/")} 
-        />
+        <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20blanco_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-16 cursor-pointer hover:opacity-70 transition-elegant mb-2" onClick={() => navigate("/")} />
         <h1 className="font-roboto-medium text-white tracking-title text-xl">
           {category.name}
         </h1>
@@ -63,7 +58,7 @@ const CategoryPage = () => {
       <div className="container mx-auto px-6 pb-24 mt-16">
         {/* Descripción de la categoría */}
         <div className="max-w-xl mx-auto text-center mb-16 mt-12">
-          <p className="font-light text-muted-foreground tracking-body leading-body text-lg">
+          <p className="tracking-body leading-body text-gray-950 text-base font-light">
             {category.id === 'anillos' && <>
                 Anillos únicos hechos a mano en plata 925 y oro.
                 <br />
@@ -76,7 +71,7 @@ const CategoryPage = () => {
         </div>
 
         {/* Grid de productos */}
-        <div className="grid grid-cols-2 gap-x-10 gap-y-16 max-w-2xl mx-auto">
+        <div className="grid grid-cols-2 gap-10 max-w-2xl mx-auto">
           {category.items.map(item => <div key={item.id} className="group cursor-pointer relative" onClick={() => navigate(`/producto/${item.id}`)}>
               <div className="aspect-[3/4] bg-accent rounded-sm overflow-hidden relative transition-elegant mb-4">
                 <img src={item.mainImage} alt={item.name} className="w-full h-full object-cover transition-elegant group-hover:scale-105" style={{
@@ -86,7 +81,7 @@ const CategoryPage = () => {
               <h3 style={{
             fontFamily: 'Roboto, sans-serif',
             fontWeight: '400'
-          }} className="text-product-title tracking-title text-base font-normal text-left">
+          }} className="text-product-title tracking-title text-base font-normal text-left text-slate-950">
                 {item.name}
               </h3>
             </div>)}
