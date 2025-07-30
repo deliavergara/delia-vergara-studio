@@ -55,7 +55,7 @@ Minimalist palette with whites, soft grays, and subtle earth tones
     --shadow-hover: 0 8px 25px hsla(0 0% 0% / 0.15);
     
     /* Typography */
-    --font-elegant: 'Roboto', sans-serif;
+    --font-elegant: 'Avenir', sans-serif;
     --font-clean: 'Roboto', sans-serif;
     
     /* Transitions */
@@ -136,6 +136,12 @@ Minimalist palette with whites, soft grays, and subtle earth tones
   
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-elegant);
+  }
+  
+  .product-title {
+    font-family: 'Avenir', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.05em;
   }
 }
 

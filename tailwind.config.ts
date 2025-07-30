@@ -19,13 +19,15 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				elegant: ['Roboto', 'sans-serif'],
+				elegant: ['Avenir', 'sans-serif'],
 				clean: ['Roboto', 'sans-serif'],
 				'roboto-medium': ['Roboto', 'sans-serif'],
+				avenir: ['Avenir', 'sans-serif'],
 			},
 			letterSpacing: {
 				'body': '0.02em', // 20 tracking
 				'title': '0.03em', // 30 tracking
+				'product-name': '0.05em', // 50 tracking for product names
 			},
 			lineHeight: {
 				'body': '25px',
