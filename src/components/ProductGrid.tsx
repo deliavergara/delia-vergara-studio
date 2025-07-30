@@ -16,7 +16,7 @@ export const ProductGrid = ({ items, category }: ProductGridProps) => {
     <>
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-elegant text-3xl md:text-4xl text-center mb-16 text-foreground">
+          <h2 className="font-elegant text-3xl md:text-4xl text-center mb-16 text-product-title">
             {category === 'rings' ? 'Anillos' : 'Pendientes'}
           </h2>
           
@@ -34,7 +34,7 @@ export const ProductGrid = ({ items, category }: ProductGridProps) => {
                     className="w-full h-full object-cover transition-elegant group-hover:scale-105"
                   />
                 </div>
-                <h3 className="font-avenir font-black text-xl mt-4 text-foreground group-hover:text-muted-foreground transition-quick tracking-product-name">
+                <h3 className="font-avenir font-black text-xl mt-4 text-product-title group-hover:text-muted-foreground transition-quick tracking-product-name">
                   {item.name}
                 </h3>
               </div>
