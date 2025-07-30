@@ -4,9 +4,10 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { jewelryItems } from "@/data/products";
 import { cn } from "@/lib/utils";
-
 const ProductPage = () => {
-  const { productId } = useParams();
+  const {
+    productId
+  } = useParams();
   const navigate = useNavigate();
   const [selectedMetal, setSelectedMetal] = useState<'silver' | 'gold'>('silver');
   const [selectedCurrency, setSelectedCurrency] = useState<'EUR' | 'CLP'>('EUR');
@@ -14,39 +15,28 @@ const ProductPage = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const dragRef = useRef<HTMLDivElement>(null);
-  
   const product = jewelryItems.find(item => item.id === productId);
-  
   if (!product) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+    return <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h1 className="font-elegant text-2xl text-foreground mb-4">Producto no encontrado</h1>
           <Button onClick={() => navigate("/")} variant="outline">
             Volver al inicio
           </Button>
         </div>
-      </div>
-    );
+      </div>;
   }
-
-  const currentPrice = selectedMetal === 'silver' 
-    ? (selectedCurrency === 'EUR' ? product.prices.silverEUR : product.prices.silverCLP)
-    : (selectedCurrency === 'EUR' ? product.prices.goldEUR : product.prices.goldCLP);
-
+  const currentPrice = selectedMetal === 'silver' ? selectedCurrency === 'EUR' ? product.prices.silverEUR : product.prices.silverCLP : selectedCurrency === 'EUR' ? product.prices.goldEUR : product.prices.goldCLP;
   const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
     setIsDragging(true);
     const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
     setStartX(clientX);
   };
-
   const handleDragEnd = (e: React.MouseEvent | React.TouchEvent) => {
     if (!isDragging) return;
-    
     const clientX = 'changedTouches' in e ? e.changedTouches[0].clientX : e.clientX;
     const deltaX = startX - clientX;
     const threshold = 50;
-
     if (Math.abs(deltaX) > threshold) {
       if (deltaX > 0 && currentImageIndex < product.images.length - 1) {
         // Deslizar hacia la izquierda - siguiente imagen
@@ -56,12 +46,9 @@ const ProductPage = () => {
         setCurrentImageIndex(currentImageIndex - 1);
       }
     }
-    
     setIsDragging(false);
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header con botón volver */}
       <div className="fixed top-6 left-6 z-50">
         <div onClick={() => navigate(`/categoria/${product.category}`)} className="group cursor-pointer">
@@ -75,11 +62,7 @@ const ProductPage = () => {
         {/* Logo */}
         <div className="text-center mb-6">
           <button onClick={() => navigate("/")} className="hover:opacity-70 transition-elegant cursor-pointer">
-            <img 
-              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/Logo%20gris%20claro_Mesa%20de%20trabajo%201.png" 
-              alt="Logo"
-              className="h-16 mx-auto"
-            />
+            <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/Logo%20gris%20claro_Mesa%20de%20trabajo%201.png" alt="Logo" className="h-16 mx-auto" />
           </button>
         </div>
 
@@ -88,40 +71,16 @@ const ProductPage = () => {
             {/* Galería de imágenes */}
             <div className="space-y-6">
               {/* Imagen principal con arrastre */}
-              <div 
-                ref={dragRef}
-                className="aspect-[4/5] bg-accent rounded-sm overflow-hidden max-w-md mx-auto cursor-grab active:cursor-grabbing"
-                onMouseDown={handleDragStart}
-                onMouseUp={handleDragEnd}
-                onTouchStart={handleDragStart}
-                onTouchEnd={handleDragEnd}
-              >
-                <img
-                  src={product.images[currentImageIndex]}
-                  alt={product.name}
-                  className="w-full h-full object-cover select-none"
-                  style={{opacity: '0.93'}}
-                  draggable={false}
-                />
+              <div ref={dragRef} className="aspect-[4/5] bg-accent rounded-sm overflow-hidden max-w-md mx-auto cursor-grab active:cursor-grabbing" onMouseDown={handleDragStart} onMouseUp={handleDragEnd} onTouchStart={handleDragStart} onTouchEnd={handleDragEnd}>
+                <img src={product.images[currentImageIndex]} alt={product.name} className="w-full h-full object-cover select-none" style={{
+                opacity: '0.93'
+              }} draggable={false} />
               </div>
               
               {/* Puntos indicadores */}
-              {product.images.length > 1 && (
-                <div className="flex justify-center gap-2 mt-4">
-                  {product.images.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={cn(
-                        "w-2 h-2 rounded-full transition-all duration-200",
-                        currentImageIndex === index
-                          ? "bg-muted-foreground scale-125"
-                          : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                      )}
-                    />
-                  ))}
-                </div>
-              )}
+              {product.images.length > 1 && <div className="flex justify-center gap-2 mt-4">
+                  {product.images.map((_, index) => <button key={index} onClick={() => setCurrentImageIndex(index)} className={cn("w-2 h-2 rounded-full transition-all duration-200", currentImageIndex === index ? "bg-muted-foreground scale-125" : "bg-muted-foreground/30 hover:bg-muted-foreground/50")} />)}
+                </div>}
             </div>
 
             {/* Detalles del producto */}
@@ -133,38 +92,21 @@ const ProductPage = () => {
               
               {/* Descripción */}
               <div className="-mt-6">
-                <p className="text-body font-light text-muted-foreground tracking-body leading-body">
+                <p className="tracking-body leading-body text-gray-950 font-light text-sm">
                   {product.description}
                 </p>
               </div>
 
               {/* Selectores solo si tiene precios */}
-              {currentPrice > 0 && (
-                <>
+              {currentPrice > 0 && <>
                   {/* Selector de material */}
                   <div className="space-y-2">
                     <h3 className="font-roboto-medium font-light text-muted-foreground text-lg tracking-title">Material</h3>
                     <div className="flex gap-3">
-                      <button
-                        onClick={() => setSelectedMetal('silver')}
-                        className={cn(
-                          "px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm",
-                          selectedMetal === 'silver'
-                            ? "border-muted-foreground bg-muted-foreground/10 text-foreground"
-                            : "border-border hover:border-muted-foreground/50"
-                        )}
-                      >
+                      <button onClick={() => setSelectedMetal('silver')} className={cn("px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm", selectedMetal === 'silver' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
                         Plata
                       </button>
-                      <button
-                        onClick={() => setSelectedMetal('gold')}
-                        className={cn(
-                          "px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm",
-                          selectedMetal === 'gold'
-                            ? "border-muted-foreground bg-muted-foreground/10 text-foreground"
-                            : "border-border hover:border-muted-foreground/50"
-                        )}
-                      >
+                      <button onClick={() => setSelectedMetal('gold')} className={cn("px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm", selectedMetal === 'gold' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
                         Oro
                       </button>
                     </div>
@@ -174,32 +116,15 @@ const ProductPage = () => {
                   <div className="space-y-2">
                     <h3 className="font-roboto-medium font-light text-muted-foreground text-lg tracking-title">Moneda</h3>
                     <div className="flex gap-3">
-                      <button
-                        onClick={() => setSelectedCurrency('EUR')}
-                        className={cn(
-                          "px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm",
-                          selectedCurrency === 'EUR'
-                            ? "border-muted-foreground bg-muted-foreground/10 text-foreground"
-                            : "border-border hover:border-muted-foreground/50"
-                        )}
-                      >
+                      <button onClick={() => setSelectedCurrency('EUR')} className={cn("px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm", selectedCurrency === 'EUR' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
                         EUR (€)
                       </button>
-                      <button
-                        onClick={() => setSelectedCurrency('CLP')}
-                        className={cn(
-                          "px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm",
-                          selectedCurrency === 'CLP'
-                            ? "border-muted-foreground bg-muted-foreground/10 text-foreground"
-                            : "border-border hover:border-muted-foreground/50"
-                        )}
-                      >
+                      <button onClick={() => setSelectedCurrency('CLP')} className={cn("px-4 py-2 rounded-full border transition-quick font-clean text-muted-foreground text-sm", selectedCurrency === 'CLP' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
                         CLP ($)
                       </button>
                     </div>
                   </div>
-                </>
-              )}
+                </>}
 
               {/* Precio */}
               <div className="border-t pt-8">
@@ -242,8 +167,6 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ProductPage;
