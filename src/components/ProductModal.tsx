@@ -103,10 +103,10 @@ export const ProductModal = ({ item, isOpen, onClose }: ProductModalProps) => {
           {/* Product Details */}
           <div className="space-y-6">
             <div>
-              <h2 className="font-elegant text-3xl text-foreground mb-4">
+              <h2 className="font-avenir font-medium text-3xl text-product-name mb-4">
                 {item.name}
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="font-avenir-light text-product-description leading-relaxed">
                 {item.description}
               </p>
             </div>

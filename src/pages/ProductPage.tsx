@@ -80,13 +80,13 @@ const ProductPage = () => {
             {/* Detalles del producto */}
             <div className="space-y-8">
               {/* Título del producto */}
-              <h1 className="font-roboto-medium text-lg text-product-title tracking-title mb-0.5">
+              <h1 className="font-avenir font-medium text-lg text-product-name tracking-title mb-0.5">
                 {product.name}
               </h1>
               
               {/* Descripción */}
               <div className="-mt-6">
-                <p className="tracking-body leading-body text-gray-950 font-light text-sm">
+                <p className="font-avenir-light tracking-body leading-body text-product-description text-sm">
                   {product.description}
                 </p>
               </div>

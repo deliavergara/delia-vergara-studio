@@ -34,7 +34,7 @@ export const ProductGrid = ({ items, category }: ProductGridProps) => {
                     className="w-full h-full object-cover transition-elegant group-hover:scale-105"
                   />
                 </div>
-                <h3 className="font-avenir font-black text-xl mt-4 text-product-title group-hover:text-muted-foreground transition-quick tracking-product-name">
+                <h3 className="font-avenir font-medium text-xl mt-4 text-product-name group-hover:text-muted-foreground transition-quick tracking-product-name">
                   {item.name}
                 </h3>
               </div>

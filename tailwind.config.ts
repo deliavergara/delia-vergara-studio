@@ -84,7 +84,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				'product-title': 'hsl(var(--product-title))',
-				'text-dark-gray': 'hsl(var(--text-dark-gray))'
+				'text-dark-gray': 'hsl(var(--text-dark-gray))',
+				'product-name': 'hsl(var(--product-name))',
+				'product-description': 'hsl(var(--product-description))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
