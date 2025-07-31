@@ -39,21 +39,21 @@ const CategoryPage = () => {
       </div>
       
       {/* Logo centrado y fijo */}
-      <div className="fixed top-16 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center">
+      <div className="fixed top-12 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center">
         <img 
           src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20nombre%20blanco.png" 
           alt="Delia Vergara Logo" 
-          className="h-28 cursor-pointer hover:opacity-70 transition-elegant" 
+          className="h-24 cursor-pointer hover:opacity-70 transition-elegant" 
           onClick={() => navigate("/")} 
         />
         <h1 
-          className="text-white text-lg mt-2 self-end" 
+          className="text-white text-base mt-1 self-end mr-4" 
           style={{
             fontFamily: 'Avenir Heavy, sans-serif', 
             fontWeight: 'bold'
           }}
         >
-          {category.name}
+          {category.name.toUpperCase()}
         </h1>
       </div>
 
@@ -100,7 +100,7 @@ const CategoryPage = () => {
 
         {/* Footer con contacto */}
         <div className="mt-32 pt-12 border-t border-border relative">
-          <div className="absolute bottom-0 left-0 z-0">
+          <div className="absolute bottom-0 left-0 z-0 -ml-8">
             <img 
               src="/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png" 
               alt="Delia Vergara Isologo" 
