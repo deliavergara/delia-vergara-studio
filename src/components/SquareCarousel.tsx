@@ -2,18 +2,20 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const SquareCarousel = () => {
-  // Imágenes de muestra - puedes reemplazar con las fotos reales
   const images = [
-    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=500&fit=crop",
-    "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&h=500&fit=crop",
-    "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=500&h=500&fit=crop",
-    "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&h=500&fit=crop",
-    "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=500&fit=crop",
-    "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&h=500&fit=crop"
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0041%201.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0092.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0278.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0507.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0575.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/IMG_4087.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/_DSC7549.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/_DSC7600.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/_DSC7664.jpg"
   ];
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-8 bg-background">
       <div className="container mx-auto px-6">
         <div className="relative">
           <Carousel
@@ -30,7 +32,7 @@ const SquareCarousel = () => {
                     <img
                       src={image}
                       alt={`Joyería ${index + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 cursor-pointer opacity-95"
                     />
                   </AspectRatio>
                 </CarouselItem>

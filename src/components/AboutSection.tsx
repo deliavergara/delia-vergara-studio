@@ -1,6 +1,6 @@
 export const AboutSection = () => {
   return (
-    <section className="min-h-screen bg-background flex items-center justify-center py-24">
+    <section className="min-h-screen bg-background flex items-center justify-center py-16">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center h-[50vh]">
           {/* Video a la izquierda - ocupa espacio completo hasta la mitad */}
