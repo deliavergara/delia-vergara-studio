@@ -3,16 +3,15 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const SquareCarousel = () => {
   const images = [
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/85A8CA25-232F-4385-A38F-4C76E65AF0E2.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/8E4BF64D-5134-4341-932E-6466C3792C7E.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/ABDE4763-2A6D-4C1E-B5C6-00516D47DE19.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0041%201.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0092.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0507.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0575.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/IMG_4087.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/_DSC7549.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/_DSC7600.jpg"
+    "/lovable-uploads/Material de Apoyo/carrusel/1.jpg",
+    "/lovable-uploads/Material de Apoyo/carrusel/2.jpg",
+    "/lovable-uploads/Material de Apoyo/carrusel/3.jpg",
+    "/lovable-uploads/Material de Apoyo/carrusel/4.jpg",
+    "/lovable-uploads/Material de Apoyo/carrusel/5.jpg",
+    "/lovable-uploads/Material de Apoyo/carrusel/6.jpg",
+    "/lovable-uploads/Material de Apoyo/carrusel/7.jpg",
+    "/lovable-uploads/Material de Apoyo/carrusel/8.jpg",
+    "/lovable-uploads/Material de Apoyo/carrusel/9.jpg"
   ];
 
   return (
@@ -32,8 +31,9 @@ const SquareCarousel = () => {
                   <AspectRatio ratio={1} className="overflow-hidden rounded-lg">
                     <img
                       src={image}
-                      alt={`Joyería ${index + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 cursor-pointer opacity-95"
+                      alt={`Joyería artesanal ${index + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                      loading="lazy"
                     />
                   </AspectRatio>
                 </CarouselItem>
