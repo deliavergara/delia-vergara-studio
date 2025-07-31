@@ -59,12 +59,6 @@ const ProductPage = () => {
       </div>
 
       <div className="pt-12 pb-12">
-        {/* Logo */}
-        <div className="text-center mb-6">
-          <button onClick={() => navigate("/")} className="hover:opacity-70 transition-elegant cursor-pointer">
-            <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/Logo%20gris%20claro_Mesa%20de%20trabajo%201.png" alt="Logo" className="h-16 mx-auto" />
-          </button>
-        </div>
 
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12">
@@ -152,7 +146,7 @@ const ProductPage = () => {
           </div>
         </div>
 
-        {/* Fixed contact buttons y isologo */}
+        {/* Fixed contact buttons */}
         <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
           <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer">
             <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
@@ -177,8 +171,8 @@ const ProductPage = () => {
           </a>
         </div>
 
-        {/* Isologo en la parte inferior izquierda */}
-        <div className="fixed bottom-6 left-6 z-50">
+        {/* Isologo fijo en la parte inferior izquierda */}
+        <div className="absolute bottom-6 left-6 z-50">
           <img 
             src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
             alt="Delia Vergara Isologo" 

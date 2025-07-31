@@ -140,8 +140,8 @@ const HowToBuyPage = () => {
         </div>
       </div>
 
-      {/* Isologo en la parte inferior izquierda */}
-      <div className="fixed bottom-6 left-6 z-50">
+      {/* Isologo fijo en la parte inferior izquierda */}
+      <div className="absolute bottom-6 left-6 z-50">
         <img 
           src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
           alt="Delia Vergara Isologo" 

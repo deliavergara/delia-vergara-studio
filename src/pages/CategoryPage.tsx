@@ -39,9 +39,9 @@ const CategoryPage = () => {
       </div>
       
       {/* Logo y título centrados */}
-      <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center">
-        <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20blanco_Mesa%20de%20trabajo%201.png" alt="Delia Vergara Logo" className="h-16 cursor-pointer hover:opacity-70 transition-elegant mb-2" onClick={() => navigate("/")} />
-        <h1 className="font-roboto-medium text-white tracking-title text-xl">
+      <div className="fixed top-12 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-start">
+        <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20nombre%20blanco.png" alt="Delia Vergara Logo" className="h-20 cursor-pointer hover:opacity-70 transition-elegant mb-3" onClick={() => navigate("/")} />
+        <h1 className="text-white text-xl" style={{fontFamily: 'Avenir Heavy, sans-serif', fontWeight: 'bold'}}>
           {category.name}
         </h1>
       </div>
@@ -101,7 +101,7 @@ const CategoryPage = () => {
         </div>
       </div>
 
-      {/* Fixed contact buttons y isologo */}
+      {/* Fixed contact buttons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
         <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer">
           <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
@@ -126,8 +126,8 @@ const CategoryPage = () => {
         </a>
       </div>
 
-      {/* Isologo en la parte inferior izquierda */}
-      <div className="fixed bottom-6 left-6 z-50">
+      {/* Isologo fijo en la parte inferior izquierda */}
+      <div className="absolute bottom-6 left-6 z-50">
         <img 
           src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
           alt="Delia Vergara Isologo" 
