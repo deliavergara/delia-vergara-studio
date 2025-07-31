@@ -22,7 +22,7 @@ const HowToBuyPage = () => {
           {/* Logo en la parte superior */}
           <div className="text-center mb-16">
             <img 
-              src="/lovable-uploads/Material de Apoyo/Logo/logo gris muy oscuro.png" 
+              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20oscuro.png" 
               alt="Delia Vergara Logo" 
               className="mx-auto h-24 w-auto mb-12" 
             />
@@ -65,7 +65,7 @@ const HowToBuyPage = () => {
             {/* Imagen del packaging */}
             <div className="mx-auto max-w-5xl px-4">
               <img 
-                src="/lovable-uploads/Material de Apoyo/Foto portada/Foto categoria comprar.jpg" 
+                src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/Foto%20categoria%20comprar.jpg" 
                 alt="Packaging Delia Vergara" 
                 className="w-full h-auto object-cover"
               />
@@ -109,7 +109,7 @@ const HowToBuyPage = () => {
                 <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer">
                   <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
                     <img 
-                      src="/lovable-uploads/Material de Apoyo/Iconos/ICONO WHATSAP.png" 
+                      src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20WHATSAP.png" 
                       alt="WhatsApp" 
                       className="h-5 w-5"
                     />
@@ -120,7 +120,7 @@ const HowToBuyPage = () => {
                 <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer">
                   <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
                     <img 
-                      src="/lovable-uploads/Material de Apoyo/Iconos/ICONO INSTAGRAM.png" 
+                      src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20INSTAGRAM.png" 
                       alt="Instagram" 
                       className="h-5 w-5"
                     />
@@ -143,7 +143,7 @@ const HowToBuyPage = () => {
       {/* Isologo en la parte inferior izquierda */}
       <div className="fixed bottom-6 left-6 z-50">
         <img 
-          src="/lovable-uploads/Material de Apoyo/Logo/ISOLOGO_Mesa de trabajo 1.png" 
+          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
           alt="Delia Vergara Isologo" 
           className="h-20 w-auto opacity-60"
         />
