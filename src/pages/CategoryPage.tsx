@@ -15,7 +15,7 @@ const CategoryPage = () => {
     anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20categoria%203.jpg",
     collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/portada%20collar%20categoria%20.jpg",
     pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20categoria.jpg",
-    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/1.%20pulsera%20portada.jpg"
+    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/portada%20pulsera/portada%20pulsera%20categoria%20.jpg"
   };
   if (!category) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
@@ -38,14 +38,12 @@ const CategoryPage = () => {
         </div>
       </div>
       
-      {/* Logo centrado y fijo */}
+      {/* Logo y título centrados */}
       <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center">
-        <img 
-          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20nombre%20blanco.png" 
-          alt="Delia Vergara Logo" 
-          className="h-20 cursor-pointer hover:opacity-70 transition-elegant" 
-          onClick={() => navigate("/")} 
-        />
+        
+        <h1 className="font-roboto-medium text-white tracking-title text-xl">
+          {category.name}
+        </h1>
       </div>
 
       {/* Hero section con imagen de portada */}
@@ -90,52 +88,33 @@ const CategoryPage = () => {
         </div>
 
         {/* Footer con contacto */}
-        <div className="mt-32 pt-12 border-t border-border relative">
-          <div className="absolute bottom-0 left-0 z-0 -ml-8">
-            <img 
-              src="/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png" 
-              alt="Delia Vergara Isologo" 
-              className="h-32 w-auto opacity-50"
-            />
-          </div>
+        <div className="mt-32 pt-12 border-t border-border text-center space-y-8">
+        <Link to="/como-comprar">
+          <Button variant="ghost" className="text-muted-foreground hover:text-foreground transition-elegant mb-6">
+            Contáctame
+          </Button>
+        </Link>
+        
+        {/* Contact buttons aligned side by side */}
+        <div className="flex items-center justify-center gap-6">
+          <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer" className="group">
+            <div className="bg-transparent backdrop-blur-sm rounded-full px-4 py-2 border border-muted-foreground/60 group-hover:border-primary/80 transition-all duration-300">
+              <span className="font-body text-sm text-muted-foreground group-hover:text-foreground transition-elegant">WhatsApp</span>
+            </div>
+          </a>
+
+          <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer" className="group">
+            <div className="bg-transparent backdrop-blur-sm rounded-full px-4 py-2 border border-muted-foreground/60 group-hover:border-primary/80 transition-all duration-300">
+              <span className="font-body text-sm text-muted-foreground group-hover:text-foreground transition-elegant">@deliavergaras</span>
+            </div>
+          </a>
+        </div>
           
-          <div className="text-center space-y-8 relative z-10 pb-12">
-            <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333'}}>
-              CONTÁCTAME
-            </h2>
-            
-            <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
-              deliavergara.joyas@gmail.com | +34 625857127
-            </p>
-          </div>
+          <p className="text-body font-light text-muted-foreground tracking-body leading-body mt-6">
+            deliavergara.joyas@gmail.com | +34 625857127
+          </p>
         </div>
       </div>
-
-      {/* Fixed contact buttons */}
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
-        <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer">
-          <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
-            <img 
-              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20WHATSAP.png" 
-              alt="WhatsApp" 
-              className="h-5 w-5"
-            />
-            <span className="font-avenir-light font-light" style={{color: '#353333'}}>WhatsApp</span>
-          </div>
-        </a>
-
-        <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer">
-          <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
-            <img 
-              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20INSTAGRAM.png" 
-              alt="Instagram" 
-              className="h-5 w-5"
-            />
-            <span className="font-avenir-light font-light" style={{color: '#353333'}}>@deliavergaras</span>
-          </div>
-        </a>
-      </div>
-
     </div>;
 };
 export default CategoryPage;
