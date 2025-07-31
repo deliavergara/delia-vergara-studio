@@ -24,7 +24,7 @@ const HowToBuyPage = () => {
           
           {/* Título principal */}
           <div className="text-center mb-16">
-            <h1 className="font-roboto-medium text-text-dark-gray tracking-title mb-8 font-bold text-2xl uppercase">
+            <h1 className="font-elegant font-medium tracking-title mb-8 text-2xl uppercase" style={{color: '#353333'}}>
               Cómo comprar
             </h1>
             <p className="text-body font-light text-muted-foreground tracking-body leading-body max-w-3xl mx-auto">
