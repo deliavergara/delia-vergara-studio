@@ -24,7 +24,7 @@ const HowToBuyPage = () => {
             <img 
               src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20oscuro.png" 
               alt="Delia Vergara Logo" 
-              className="mx-auto h-20 w-auto mb-12" 
+              className="mx-auto w-72 h-auto mb-12" 
             />
           </div>
           
