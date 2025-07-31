@@ -109,7 +109,7 @@ const HowToBuyPage = () => {
               </div>
               
               <div className="text-center space-y-8 relative z-10 pb-12">
-                <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333', letterSpacing: '50px'}}>
+                <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333', letterSpacing: '2px'}}>
                   CONTÁCTAME
                 </h2>
                 

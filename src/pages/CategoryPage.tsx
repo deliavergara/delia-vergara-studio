@@ -15,7 +15,7 @@ const CategoryPage = () => {
     anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20categoria%203.jpg",
     collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/portada%20collar%20categoria%20.jpg",
     pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20categoria.jpg",
-    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/portada%20pulsera/portada%20pulsera%20categoria%20.jpg"
+    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/1.%20pulsera%20portada.jpg"
   };
   if (!category) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
@@ -110,9 +110,9 @@ const CategoryPage = () => {
           </div>
           
           <div className="text-center space-y-8 relative z-10 pb-12">
-            <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333', letterSpacing: '50px'}}>
-              CONTÁCTAME
-            </h2>
+        <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333', letterSpacing: '2px'}}>
+          CONTÁCTAME
+        </h2>
             
             <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
               deliavergara.joyas@gmail.com | +34 625857127
