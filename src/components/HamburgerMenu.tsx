@@ -32,10 +32,14 @@ export const HamburgerMenu = ({
     setIsOpen(false);
   };
   return <>
-      <Button variant="ghost" size="icon" onClick={() => setIsOpen(true)} className="fixed top-6 left-6 z-50 hover:bg-transparent transition-elegant h-20 w-20 flex flex-col items-center justify-center gap-2">
-        <div className="w-8 h-1 rounded-full" style={{ backgroundColor: '#999493' }}></div>
-        <div className="w-8 h-1 rounded-full" style={{ backgroundColor: '#999493' }}></div>
-      </Button>
+      <button 
+        onClick={() => setIsOpen(true)} 
+        className="fixed top-6 left-6 z-50 rounded-full transition-all duration-300 hover:scale-105 h-16 w-16 flex flex-col items-center justify-center gap-2"
+        style={{backgroundColor: '#EDEDED'}}
+      >
+        <div className="w-6 h-0.5 rounded-full" style={{ backgroundColor: '#353333' }}></div>
+        <div className="w-6 h-0.5 rounded-full" style={{ backgroundColor: '#353333' }}></div>
+      </button>
 
       {/* Menu Panel */}
       <div className={cn("fixed top-0 left-0 h-full w-48 bg-white/70 backdrop-blur-sm z-50 shadow-elegant transition-elegant", isOpen ? "translate-x-0" : "-translate-x-full")}>
