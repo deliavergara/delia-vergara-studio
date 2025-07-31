@@ -1,18 +1,17 @@
-
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const SquareCarousel = () => {
   const images = [
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/1.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/2.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/4.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/5.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/3.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/6.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/7.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/8.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/9.jpg"
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/carrusel/1.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/carrusel/2.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/carrusel/4.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/carrusel/5.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/carrusel/6.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/carrusel/7.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/carrusel/3.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/carrusel/8.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/carrusel/9.jpg"
   ];
 
   return (
