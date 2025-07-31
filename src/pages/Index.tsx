@@ -41,6 +41,15 @@ const Index = () => {
           <p className="text-body font-roboto-medium font-medium text-muted-foreground tracking-body leading-body mt-6">
             deliavergara.joyas@gmail.com | +34 625857127
           </p>
+          
+          {/* Isologo solo en sección de contacto */}
+          <div className="flex justify-start mt-16">
+            <img 
+              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
+              alt="Delia Vergara Isologo" 
+              className="h-24 w-auto opacity-60"
+            />
+          </div>
         </div>
       </div>
 
@@ -69,14 +78,6 @@ const Index = () => {
         </a>
       </div>
 
-      {/* Isologo fijo en la parte inferior izquierda */}
-      <div className="absolute bottom-6 left-6 z-50">
-        <img 
-          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
-          alt="Delia Vergara Isologo" 
-          className="h-24 w-auto opacity-60"
-        />
-      </div>
     </div>
   );
 };

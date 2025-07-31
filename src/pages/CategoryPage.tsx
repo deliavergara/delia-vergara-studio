@@ -38,10 +38,22 @@ const CategoryPage = () => {
         </div>
       </div>
       
-      {/* Logo y título centrados */}
-      <div className="fixed top-12 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-start">
-        <img src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20nombre%20blanco.png" alt="Delia Vergara Logo" className="h-20 cursor-pointer hover:opacity-70 transition-elegant mb-3" onClick={() => navigate("/")} />
-        <h1 className="text-white text-xl" style={{fontFamily: 'Avenir Heavy, sans-serif', fontWeight: 'bold'}}>
+      {/* Logo y título */}
+      <div className="fixed top-16 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-6">
+        <img 
+          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20nombre%20blanco.png" 
+          alt="Delia Vergara Logo" 
+          className="h-28 cursor-pointer hover:opacity-70 transition-elegant" 
+          onClick={() => navigate("/")} 
+        />
+        <h1 
+          className="text-white text-2xl" 
+          style={{
+            fontFamily: 'Avenir Heavy, sans-serif', 
+            fontWeight: 'bold',
+            letterSpacing: '50px'
+          }}
+        >
           {category.name}
         </h1>
       </div>
@@ -98,6 +110,15 @@ const CategoryPage = () => {
           <p className="text-body font-light text-muted-foreground tracking-body leading-body mt-6">
             deliavergara.joyas@gmail.com | +34 625857127
           </p>
+          
+          {/* Isologo solo en sección de contacto */}
+          <div className="flex justify-start mt-16">
+            <img 
+              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
+              alt="Delia Vergara Isologo" 
+              className="h-24 w-auto opacity-60"
+            />
+          </div>
         </div>
       </div>
 
@@ -126,14 +147,6 @@ const CategoryPage = () => {
         </a>
       </div>
 
-      {/* Isologo fijo en la parte inferior izquierda */}
-      <div className="absolute bottom-6 left-6 z-50">
-        <img 
-          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
-          alt="Delia Vergara Isologo" 
-          className="h-24 w-auto opacity-60"
-        />
-      </div>
     </div>;
 };
 export default CategoryPage;

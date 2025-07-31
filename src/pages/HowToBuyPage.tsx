@@ -24,7 +24,7 @@ const HowToBuyPage = () => {
             <img 
               src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20oscuro.png" 
               alt="Delia Vergara Logo" 
-              className="mx-auto h-24 w-auto mb-12" 
+              className="mx-auto h-20 w-auto mb-12" 
             />
           </div>
           
@@ -135,19 +135,20 @@ const HowToBuyPage = () => {
                   deliavergara.joyas@gmail.com | +34 625857127
                 </p>
               </div>
+              
+              {/* Isologo solo en sección de contacto */}
+              <div className="flex justify-start mt-16">
+                <img 
+                  src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
+                  alt="Delia Vergara Isologo" 
+                  className="h-24 w-auto opacity-60"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Isologo fijo en la parte inferior izquierda */}
-      <div className="absolute bottom-6 left-6 z-50">
-        <img 
-          src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
-          alt="Delia Vergara Isologo" 
-          className="h-20 w-auto opacity-60"
-        />
-      </div>
     </div>
   );
 };
