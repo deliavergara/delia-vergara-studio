@@ -38,25 +38,44 @@ const Index = () => {
             </Button>
           </Link>
           
-          {/* Contact buttons aligned side by side */}
-          <div className="flex items-center justify-center gap-6">
-            <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="bg-transparent backdrop-blur-sm rounded-full px-4 py-2 border border-muted-foreground/30 group-hover:border-primary/80 group-hover:bg-muted/20 transition-all duration-300">
-                <span className="font-body text-sm text-muted-foreground group-hover:text-foreground group-hover:font-semibold transition-all duration-300">WhatsApp</span>
-              </div>
-            </a>
-
-            <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="bg-transparent backdrop-blur-sm rounded-full px-4 py-2 border border-muted-foreground/30 group-hover:border-primary/80 group-hover:bg-muted/20 transition-all duration-300">
-                <span className="font-body text-sm text-muted-foreground group-hover:text-foreground group-hover:font-semibold transition-all duration-300">@deliavergaras</span>
-              </div>
-            </a>
-          </div>
-          
           <p className="text-body font-roboto-medium font-medium text-muted-foreground tracking-body leading-body mt-6">
             deliavergara.joyas@gmail.com | +34 625857127
           </p>
         </div>
+      </div>
+
+      {/* Fixed contact buttons y isologo */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+        <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer">
+          <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
+            <img 
+              src="/lovable-uploads/Material de Apoyo/Iconos/ICONO WHATSAP.png" 
+              alt="WhatsApp" 
+              className="h-5 w-5"
+            />
+            <span className="font-avenir-light font-light" style={{color: '#353333'}}>WhatsApp</span>
+          </div>
+        </a>
+
+        <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer">
+          <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
+            <img 
+              src="/lovable-uploads/Material de Apoyo/Iconos/ICONO INSTAGRAM.png" 
+              alt="Instagram" 
+              className="h-5 w-5"
+            />
+            <span className="font-avenir-light font-light" style={{color: '#353333'}}>@deliavergaras</span>
+          </div>
+        </a>
+      </div>
+
+      {/* Isologo en la parte inferior izquierda */}
+      <div className="fixed bottom-6 left-6 z-50">
+        <img 
+          src="/lovable-uploads/Material de Apoyo/Logo/ISOLOGO_Mesa de trabajo 1.png" 
+          alt="Delia Vergara Isologo" 
+          className="h-24 w-auto opacity-60"
+        />
       </div>
     </div>
   );

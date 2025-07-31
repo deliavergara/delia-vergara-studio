@@ -6,7 +6,7 @@ const HowToBuyPage = () => {
 
   return (
     <div className="min-h-screen bg-background relative">
-      {/* Header con botón volver */}
+      {/* Header con botón volver - ahora con estilo translúcido */}
       <div className="fixed top-6 left-6 z-50">
         <div onClick={() => navigate("/")} className="group cursor-pointer">
           <div className="bg-transparent backdrop-blur-sm rounded-full p-3 border border-muted-foreground/60 group-hover:border-primary/80 transition-all duration-300">
