@@ -31,7 +31,7 @@ export const CategoryGrid = () => {
                 onClick={() => handleCategoryClick(category.id)}
                 className="group cursor-pointer"
               >
-                <div className="aspect-[5/4] rounded-lg overflow-hidden relative">
+                <div className="aspect-video rounded-lg overflow-hidden relative">
                   {categoryImage && (
                     <>
                       <img
