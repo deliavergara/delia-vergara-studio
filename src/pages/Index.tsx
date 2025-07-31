@@ -32,7 +32,7 @@ const Index = () => {
       {/* Contact section */}
       <div className="container mx-auto px-6 pb-24">
         <div className="mt-32 pt-12 border-t border-border relative">
-          <div className="absolute bottom-0 left-0 z-0 -ml-8">
+          <div className="absolute bottom-0 left-0 z-0 -ml-16">
             <img 
               src="/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png" 
               alt="Delia Vergara Isologo" 
