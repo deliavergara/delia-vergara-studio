@@ -64,7 +64,7 @@ const CategoryPage = () => {
                 <br />
                 Cuidadosamente elaborados con atención a cada detalle.
               </>}
-            {category.id === 'collares' && 'Collares delicados y elegantes que complementan cualquier look. Diseños minimalistas con máximo impacto.'}
+            {category.id === 'collares' && 'Collares minimalistas, delicados y elegantes que complementan cualquier look. '}
             {category.id === 'pendientes' && 'Pendientes con diseños innovadores y técnicas artesanales. Desde sutiles hasta statement pieces.'}
             {category.id === 'pulseras' && 'Pulseras únicas que combinan artesanía tradicional con diseño contemporáneo.'}
           </p>
