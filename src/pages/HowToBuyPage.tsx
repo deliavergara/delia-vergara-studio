@@ -104,10 +104,10 @@ const HowToBuyPage = () => {
                 Contáctame
               </h2>
 
-              {/* Contact buttons */}
-              <div className="flex justify-center gap-6">
+              {/* Contact buttons - ahora fixed */}
+              <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
                 <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer">
-                  <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300" style={{backgroundColor: '#EDEDED'}}>
+                  <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
                     <img 
                       src="/lovable-uploads/Material de Apoyo/Iconos/ICONO WHATSAP.png" 
                       alt="WhatsApp" 
@@ -118,7 +118,7 @@ const HowToBuyPage = () => {
                 </a>
 
                 <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer">
-                  <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300" style={{backgroundColor: '#EDEDED'}}>
+                  <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
                     <img 
                       src="/lovable-uploads/Material de Apoyo/Iconos/ICONO INSTAGRAM.png" 
                       alt="Instagram" 
