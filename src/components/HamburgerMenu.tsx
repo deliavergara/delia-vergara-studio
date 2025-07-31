@@ -35,7 +35,7 @@ export const HamburgerMenu = ({
       <button 
         onClick={() => setIsOpen(true)} 
         className="fixed top-6 left-6 z-50 rounded-full transition-all duration-300 hover:scale-105 h-16 w-16 flex flex-col items-center justify-center gap-2"
-        style={{backgroundColor: '#EDEDED'}}
+        style={{backgroundColor: '#EDEDED', opacity: 0.5}}
       >
         <div className="w-6 h-0.5 rounded-full" style={{ backgroundColor: '#353333' }}></div>
         <div className="w-6 h-0.5 rounded-full" style={{ backgroundColor: '#353333' }}></div>
