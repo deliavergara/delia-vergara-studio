@@ -99,10 +99,24 @@ const HowToBuyPage = () => {
             </div>
 
             {/* Sección de contacto */}
-            <div className="border-t border-border pt-16 space-y-12">
-              <h2 className="font-avenir-black font-black text-2xl uppercase tracking-title text-center" style={{color: '#353333'}}>
-                Contáctame
-              </h2>
+            <div className="border-t border-border pt-16 relative">
+              <div className="absolute bottom-0 left-0 z-0">
+                <img 
+                  src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
+                  alt="Delia Vergara Isologo" 
+                  className="h-40 w-auto opacity-50"
+                />
+              </div>
+              
+              <div className="text-center space-y-8 relative z-10 pb-12">
+                <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333', letterSpacing: '50px'}}>
+                  CONTÁCTAME
+                </h2>
+                
+                <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
+                  deliavergara.joyas@gmail.com | +34 625857127
+                </p>
+              </div>
 
               {/* Contact buttons - ahora fixed */}
               <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
@@ -127,22 +141,6 @@ const HowToBuyPage = () => {
                     <span className="font-avenir-light font-light" style={{color: '#353333'}}>@deliavergaras</span>
                   </div>
                 </a>
-              </div>
-
-              {/* Información de contacto */}
-              <div className="text-center">
-                <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
-                  deliavergara.joyas@gmail.com | +34 625857127
-                </p>
-              </div>
-              
-              {/* Isologo solo en sección de contacto */}
-              <div className="flex justify-start mt-16">
-                <img 
-                  src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
-                  alt="Delia Vergara Isologo" 
-                  className="h-24 w-auto opacity-60"
-                />
               </div>
             </div>
           </div>

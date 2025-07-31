@@ -133,24 +133,23 @@ const ProductPage = () => {
           </div>
           
           {/* Footer con contacto */}
-          <div className="mt-32 pt-12 border-t border-border text-center space-y-8">
-            <div>
-              <Button variant="ghost" className="text-muted-foreground hover:text-foreground transition-elegant mb-6">
-                Contáctame
-              </Button>
-            </div>
-            
-            <p className="text-body font-light text-muted-foreground tracking-body leading-body mt-6">
-              deliavergara.joyas@gmail.com | +34 625857127
-            </p>
-            
-            {/* Isologo solo en sección de contacto */}
-            <div className="flex justify-start mt-16">
+          <div className="mt-32 pt-12 border-t border-border relative">
+            <div className="absolute bottom-0 left-0 z-0">
               <img 
                 src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
                 alt="Delia Vergara Isologo" 
-                className="h-24 w-auto opacity-60"
+                className="h-40 w-auto opacity-50"
               />
+            </div>
+            
+            <div className="text-center space-y-8 relative z-10 pb-12">
+              <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333', letterSpacing: '50px'}}>
+                CONTÁCTAME
+              </h2>
+              
+              <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
+                deliavergara.joyas@gmail.com | +34 625857127
+              </p>
             </div>
           </div>
         </div>
