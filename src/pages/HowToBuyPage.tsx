@@ -22,7 +22,7 @@ const HowToBuyPage = () => {
           {/* Logo en la parte superior */}
           <div className="text-center mb-16">
             <img 
-              src="/lovable-uploads/Material de Apoyo/Logo/logo gris MUY oscuro.png" 
+              src="/lovable-uploads/Material de Apoyo/Logo/logo gris muy oscuro.png" 
               alt="Delia Vergara Logo" 
               className="mx-auto h-24 w-auto mb-12" 
             />
