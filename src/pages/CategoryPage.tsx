@@ -46,15 +46,6 @@ const CategoryPage = () => {
           className="h-24 cursor-pointer hover:opacity-70 transition-elegant" 
           onClick={() => navigate("/")} 
         />
-        <h1 
-          className="text-white text-base mt-1 self-end mr-4" 
-          style={{
-            fontFamily: 'Avenir Heavy, sans-serif', 
-            fontWeight: 'bold'
-          }}
-        >
-          {category.name.toUpperCase()}
-        </h1>
       </div>
 
       {/* Hero section con imagen de portada */}
