@@ -78,7 +78,7 @@ const ProductPage = () => {
             </div>
 
             {/* Detalles del producto */}
-            <div className="space-y-8">
+            <div className="space-y-6">
               {/* Título del producto */}
               <h1 className="font-avenir font-medium text-lg text-product-name tracking-title mb-0.5">
                 {product.name}
@@ -94,8 +94,8 @@ const ProductPage = () => {
               {/* Selectores solo si tiene precios */}
               {currentPrice > 0 && <>
                   {/* Selector de material */}
-                  <div className="space-y-2">
-                    <h3 className="font-roboto-medium font-light text-muted-foreground text-lg tracking-title">Material</h3>
+                  <div className="space-y-3">
+                    <h3 className="font-avenir-book text-sm text-product-description">Material</h3>
                     <div className="flex gap-3">
                       <button onClick={() => setSelectedMetal('silver')} className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'silver' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
                         Plata
@@ -107,8 +107,8 @@ const ProductPage = () => {
                   </div>
 
                   {/* Selector de moneda */}
-                  <div className="space-y-2">
-                    <h3 className="font-roboto-medium font-light text-muted-foreground text-lg tracking-title">Moneda</h3>
+                  <div className="space-y-3">
+                    <h3 className="font-avenir-book text-sm text-product-description">Moneda</h3>
                     <div className="flex gap-3">
                       <button onClick={() => setSelectedCurrency('EUR')} className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedCurrency === 'EUR' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
                         EUR (€)
@@ -121,7 +121,7 @@ const ProductPage = () => {
                 </>}
 
               {/* Precio */}
-              <div className="border-t pt-8">
+              <div className="border-t pt-6">
                 <div className="text-3xl font-elegant font-medium text-muted-foreground tracking-title">
                   {currentPrice === 0 ? 'Por encargo' : `${selectedCurrency === 'EUR' ? '€' : '$'}${currentPrice.toLocaleString()}`}
                 </div>
