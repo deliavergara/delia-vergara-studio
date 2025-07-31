@@ -3,15 +3,14 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const SquareCarousel = () => {
   const images = [
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0041%201.jpg",
     "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0092.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0278.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/_DSC7549.jpg", // foto naranja - pendientes fractales dorados
     "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0507.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0575.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/IMG_4087.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/_DSC7549.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/_DSC7600.jpg",
-    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/_DSC7664.jpg"
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/_DSC7664.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/IMG_4087.jpg", // foto naranja - con pendientes puestos
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0278.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/_DSC7600.jpg", // foto naranja - vestido naranja
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/DSC_0575.jpg"
   ];
 
   return (
