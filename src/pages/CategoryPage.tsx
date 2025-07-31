@@ -41,9 +41,7 @@ const CategoryPage = () => {
       {/* Logo y título centrados */}
       <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center">
         
-        <h1 className="font-roboto-medium text-white tracking-title text-xl">
-          {category.name}
-        </h1>
+        
       </div>
 
       {/* Hero section con imagen de portada */}
