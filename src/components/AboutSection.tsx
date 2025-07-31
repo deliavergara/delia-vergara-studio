@@ -1,6 +1,8 @@
+import { buildGitHubRawUrl } from "@/lib/config";
+
 export const AboutSection = () => {
   return (
-    <section className="min-h-screen bg-background flex items-center justify-center py-24">
+    <section className="min-h-screen bg-background flex items-center justify-center py-16">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center h-[50vh]">
           {/* Video a la izquierda - ocupa espacio completo hasta la mitad */}
@@ -12,7 +14,7 @@ export const AboutSection = () => {
               playsInline
               className="w-full h-full object-cover rounded-sm"
             >
-              <source src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0326.mov" type="video/mp4" />
+              <source src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0326.mov")} type="video/mp4" />
             </video>
           </div>
           

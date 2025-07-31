@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { jewelryItems } from "@/data/products";
 import { cn } from "@/lib/utils";
+import { buildGitHubRawUrl } from "@/lib/config";
 const ProductPage = () => {
   const {
     productId
@@ -136,7 +137,7 @@ const ProductPage = () => {
           <div className="mt-32 pt-12 border-t border-border relative">
             <div className="absolute bottom-0 left-0 z-0 -ml-8">
               <img 
-                src="/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png" 
+                src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} 
                 alt="Delia Vergara Isologo" 
                 className="h-32 w-auto opacity-50"
               />
@@ -159,7 +160,7 @@ const ProductPage = () => {
           <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer">
             <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
               <img 
-                src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20WHATSAP.png" 
+                src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20WHATSAP.png")} 
                 alt="WhatsApp" 
                 className="h-5 w-5"
               />
@@ -170,7 +171,7 @@ const ProductPage = () => {
           <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer">
             <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
               <img 
-                src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20INSTAGRAM.png" 
+                src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20INSTAGRAM.png")} 
                 alt="Instagram" 
                 className="h-5 w-5"
               />
