@@ -19,7 +19,7 @@ export const CategoryGrid = () => {
   };
 
   return (
-    <section className="py-24 bg-background mt-72">
+    <section className="py-24 bg-background mt-32">
       <div className="container mx-auto px-6">
         
         <div className="flex flex-col gap-8 max-w-2xl mx-auto">

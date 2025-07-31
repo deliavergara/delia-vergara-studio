@@ -5,6 +5,7 @@ import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { CategoryGrid } from "@/components/CategoryGrid";
+import SquareCarousel from "@/components/SquareCarousel";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -24,6 +25,9 @@ const Index = () => {
         <CategoryGrid />
       </div>
       
+      <div>
+        <SquareCarousel />
+      </div>
       
       <div>
         <Footer />
