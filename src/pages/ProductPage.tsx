@@ -143,9 +143,9 @@ const ProductPage = () => {
             </div>
             
             <div className="text-center space-y-8 relative z-10 pb-12">
-            <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333', letterSpacing: '2px'}}>
-              CONTÁCTAME
-            </h2>
+              <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333', letterSpacing: '50px'}}>
+                CONTÁCTAME
+              </h2>
               
               <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
                 deliavergara.joyas@gmail.com | +34 625857127
