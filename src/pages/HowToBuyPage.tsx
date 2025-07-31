@@ -22,18 +22,18 @@ const HowToBuyPage = () => {
           {/* Logo en la parte superior */}
           <div className="text-center mb-16">
             <img 
-              src="/lovable-uploads/Material de Apoyo/Logo/logo gris MUY oscuro_Mesa de trabajo 1.png" 
+              src="/lovable-uploads/Material de Apoyo/Logo/logo gris MUY oscuro.png" 
               alt="Delia Vergara Logo" 
               className="mx-auto h-24 w-auto mb-12" 
             />
           </div>
           
           {/* Título principal */}
-          <div className="text-center mb-16">
-            <h1 className="font-avenir-heavy font-black text-xl uppercase tracking-title mb-8" style={{color: '#353333'}}>
+          <div className="mb-16">
+            <h1 className="font-avenir-heavy font-black text-xl uppercase tracking-title mb-8 text-left" style={{color: '#353333'}}>
               Cómo comprar
             </h1>
-            <p className="font-avenir-light font-light tracking-body leading-body max-w-3xl mx-auto" style={{color: '#353333'}}>
+            <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
               Tengo mi taller en Valencia, España, y las joyas que creo son piezas únicas o pequeñas ediciones, diseñadas y hechas a mano, con dedicación. Aquí te explico el detalle de cómo comprar:
             </p>
           </div>
@@ -42,24 +42,21 @@ const HowToBuyPage = () => {
             {/* Tipos de Joyas */}
             <div className="space-y-8">
               <div className="space-y-8">
-                <div className="space-y-4">
-                  <h3 className="font-avenir-book font-normal uppercase tracking-title" style={{color: '#353333'}}>Joyas en Stock</h3>
-                  <p className="font-avenir-light font-light tracking-body leading-body pl-6" style={{color: '#353333'}}>
-                    Tengo un pequeño y exclusivo stock de piezas listas para ser enviadas. Son joyas de edición limitada que se encuentran físicamente en Valencia, España (zona Ruzafa) y en Santiago, Chile (zona Los Domínicos, Las Condes). Si te interesa alguna, la puedo enviar de inmediato
+                <div>
+                  <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
+                    <span className="font-avenir-book font-normal uppercase" style={{color: '#353333'}}>Joyas en Stock:</span> Tengo un pequeño y exclusivo stock de piezas listas para ser enviadas. Son joyas de edición limitada que se encuentran físicamente en Valencia, España (zona Ruzafa) y en Santiago, Chile (zona Los Domínicos, Las Condes). Si te interesa alguna, la puedo enviar de inmediato
                   </p>
                 </div>
 
-                <div className="space-y-4">
-                  <h3 className="font-avenir-book font-normal uppercase tracking-title" style={{color: '#353333'}}>Diseños por Encargo</h3>
-                  <p className="font-avenir-light font-light tracking-body leading-body pl-6" style={{color: '#353333'}}>
-                    La mayoría de mis creaciones se pueden volver a producir especialmente para ti. El tiempo de producción varía según la complejidad: desde unos días para piezas sencillas hasta algunas semanas para las más elaboradas
+                <div>
+                  <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
+                    <span className="font-avenir-book font-normal uppercase" style={{color: '#353333'}}>Diseños por Encargo:</span> La mayoría de mis creaciones se pueden volver a producir especialmente para ti. El tiempo de producción varía según la complejidad: desde unos días para piezas sencillas hasta algunas semanas para las más elaboradas
                   </p>
                 </div>
 
-                <div className="space-y-4">
-                  <h3 className="font-avenir-book font-normal uppercase tracking-title" style={{color: '#353333'}}>Proyectos Personalizados</h3>
-                  <p className="font-avenir-light font-light tracking-body leading-body pl-6" style={{color: '#353333'}}>
-                    Si tienes una idea o un sueño, hablemos. Me gusta colaborar y crear juntos una joya totalmente nueva y personal
+                <div>
+                  <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
+                    <span className="font-avenir-book font-normal uppercase" style={{color: '#353333'}}>Proyectos Personalizados:</span> Si tienes una idea o un sueño, hablemos. Me gusta colaborar y crear juntos una joya totalmente nueva y personal
                   </p>
                 </div>
               </div>
@@ -76,29 +73,26 @@ const HowToBuyPage = () => {
 
             {/* Especificaciones */}
             <div className="space-y-8">
-              <h2 className="font-avenir-heavy font-black text-xl uppercase tracking-title text-center" style={{color: '#353333'}}>
+              <h2 className="font-avenir-heavy font-black text-xl uppercase tracking-title text-left" style={{color: '#353333'}}>
                 Especificaciones
               </h2>
               
               <div className="space-y-8">
-                <div className="space-y-4">
-                  <h3 className="font-avenir-book font-normal uppercase tracking-title" style={{color: '#353333'}}>Materiales y Talla</h3>
-                  <p className="font-avenir-light font-light tracking-body leading-body pl-6" style={{color: '#353333'}}>
-                    Trabajo principalmente con plata de ley y plata enchapada en oro. También puedo realizar tu encargo en oro macizo o en algún otro material que prefieras. La talla es a medida, pídeme la que requieras. Si tienes dudas de la tuya, contáctame y te guiaré con métodos muy simples para encontrar tu medida exacta
+                <div>
+                  <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
+                    <span className="font-avenir-book font-normal uppercase" style={{color: '#353333'}}>Materiales y Talla:</span> Trabajo principalmente con plata de ley y plata enchapada en oro. También puedo realizar tu encargo en oro macizo o en algún otro material que prefieras. La talla es a medida, pídeme la que requieras. Si tienes dudas de la tuya, contáctame y te guiaré con métodos muy simples para encontrar tu medida exacta
                   </p>
                 </div>
 
-                <div className="space-y-4">
-                  <h3 className="font-avenir-book font-normal uppercase tracking-title" style={{color: '#353333'}}>Formas de Pago</h3>
-                  <p className="font-avenir-light font-light tracking-body leading-body pl-6" style={{color: '#353333'}}>
-                    El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (euros) y en Chile (pesos chilenos), elige la que te acomode
+                <div>
+                  <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
+                    <span className="font-avenir-book font-normal uppercase" style={{color: '#353333'}}>Formas de Pago:</span> El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (euros) y en Chile (pesos chilenos), elige la que te acomode
                   </p>
                 </div>
 
-                <div className="space-y-4">
-                  <h3 className="font-avenir-book font-normal uppercase tracking-title" style={{color: '#353333'}}>Envíos</h3>
-                  <p className="font-avenir-light font-light tracking-body leading-body pl-6" style={{color: '#353333'}}>
-                    Realizo envíos a toda Europa y Chile. El coste del envío se calcula según tu ubicación y se suma al valor final de tu joya (para Chile es desde Santiago, para que no te preocupes del envío internacional)
+                <div>
+                  <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
+                    <span className="font-avenir-book font-normal uppercase" style={{color: '#353333'}}>Envíos:</span> Realizo envíos a toda Europa y Chile. El coste del envío se calcula según tu ubicación y se suma al valor final de tu joya (para Chile es desde Santiago, para que no te preocupes del envío internacional)
                   </p>
                 </div>
               </div>
@@ -151,7 +145,7 @@ const HowToBuyPage = () => {
         <img 
           src="/lovable-uploads/Material de Apoyo/Logo/ISOLOGO_Mesa de trabajo 1.png" 
           alt="Delia Vergara Isologo" 
-          className="h-12 w-auto opacity-60"
+          className="h-20 w-auto opacity-60"
         />
       </div>
     </div>
