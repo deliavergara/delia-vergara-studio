@@ -39,18 +39,24 @@ const CategoryPage = () => {
       </div>
       
       {/* Logo centrado y fijo */}
-      <div className="fixed top-12 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center">
+      <div className="fixed top-12 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center" style={{position: 'fixed'}}>
         <img 
           src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20nombre%20blanco.png" 
           alt="Delia Vergara Logo" 
           className="h-24 cursor-pointer hover:opacity-70 transition-elegant" 
-          onClick={() => navigate("/")} 
+          onClick={() => navigate("/")}
+          style={{position: 'fixed', top: '48px', left: '50%', transform: 'translateX(-50%)', zIndex: 50}}
         />
         <h1 
           className="text-white text-base mt-1 self-end mr-4" 
           style={{
             fontFamily: 'Avenir Heavy, sans-serif', 
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            position: 'fixed',
+            top: '120px',
+            left: '50%',
+            transform: 'translateX(-30%)',
+            zIndex: 50
           }}
         >
           {category.name.toUpperCase()}
