@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { buildGitHubRawUrl } from "@/lib/config";
 
 const HowToBuyPage = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const HowToBuyPage = () => {
           {/* Logo en la parte superior */}
           <div className="text-center mb-16">
             <img 
-              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20oscuro.png" 
+              src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20oscuro.png")} 
               alt="Delia Vergara Logo" 
               className="mx-auto w-72 h-auto mb-12" 
             />
@@ -65,7 +66,7 @@ const HowToBuyPage = () => {
             {/* Imagen del packaging */}
             <div className="mx-auto max-w-5xl px-4">
               <img 
-                src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/Foto%20categoria%20comprar.jpg" 
+                src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/Foto%20categoria%20comprar.jpg")} 
                 alt="Packaging Delia Vergara" 
                 className="w-full h-auto object-cover"
               />
@@ -102,7 +103,7 @@ const HowToBuyPage = () => {
             <div className="border-t border-border pt-16 relative">
               <div className="absolute bottom-0 left-0 z-0 -ml-8">
                 <img 
-                  src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png" 
+                  src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} 
                   alt="Delia Vergara Isologo" 
                   className="h-32 w-auto opacity-50"
                 />
@@ -123,7 +124,7 @@ const HowToBuyPage = () => {
                 <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer">
                   <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
                     <img 
-                      src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20WHATSAP.png" 
+                      src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20WHATSAP.png")} 
                       alt="WhatsApp" 
                       className="h-5 w-5"
                     />
@@ -134,7 +135,7 @@ const HowToBuyPage = () => {
                 <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer">
                   <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
                     <img 
-                      src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20INSTAGRAM.png" 
+                      src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20INSTAGRAM.png")} 
                       alt="Instagram" 
                       className="h-5 w-5"
                     />

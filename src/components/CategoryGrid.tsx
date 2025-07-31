@@ -1,5 +1,6 @@
 import { categories } from "@/data/products";
 import { useNavigate } from "react-router-dom";
+import { buildGitHubRawUrl } from "@/lib/config";
 
 export const CategoryGrid = () => {
   const navigate = useNavigate();
@@ -12,10 +13,10 @@ export const CategoryGrid = () => {
 
   // Mapeo de imágenes de portada para cada categoría
   const categoryImages = {
-    anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20categoria%203.jpg",
-    collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/portada%20collar%20categoria%20.jpg",
-    pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20categoria.jpg",
-    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/1.%20pulsera%20portada.jpg"
+    anillos: buildGitHubRawUrl("public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20categoria%203.jpg"),
+    collares: buildGitHubRawUrl("public/lovable-uploads/Collares/portada%20collares/portada%20collar%20categoria%20.jpg"),
+    pendientes: buildGitHubRawUrl("public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20categoria.jpg"),
+    pulseras: buildGitHubRawUrl("public/lovable-uploads/Pulsera/1.%20pulsera%20portada.jpg")
   };
 
   return (

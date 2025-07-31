@@ -7,6 +7,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { CategoryGrid } from "@/components/CategoryGrid";
 import SquareCarousel from "@/components/SquareCarousel";
 import { Footer } from "@/components/Footer";
+import { buildGitHubRawUrl } from "@/lib/config";
 
 const Index = () => {
   return (
@@ -38,7 +39,7 @@ const Index = () => {
         <div className="mt-32 pt-12 border-t border-border relative">
           <div className="absolute bottom-0 left-0 z-0 -ml-24">
             <img 
-              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png" 
+              src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} 
               alt="Delia Vergara Isologo" 
               className="h-32 w-auto opacity-50"
             />
