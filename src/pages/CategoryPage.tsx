@@ -15,7 +15,7 @@ const CategoryPage = () => {
     anillos: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20categoria%203.jpg",
     collares: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Collares/portada%20collares/portada%20collar%20categoria%20.jpg",
     pendientes: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20categoria.jpg",
-    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/portada%20pulsera/portada%20pulsera%20categoria%20.jpg"
+    pulseras: "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Pulsera/1.%20pulsera%20portada.jpg"
   };
   if (!category) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
@@ -38,8 +38,8 @@ const CategoryPage = () => {
         </div>
       </div>
       
-      {/* Logo y título */}
-      <div className="fixed top-16 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-6">
+      {/* Logo centrado y fijo */}
+      <div className="fixed top-16 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center">
         <img 
           src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20nombre%20blanco.png" 
           alt="Delia Vergara Logo" 
@@ -47,11 +47,10 @@ const CategoryPage = () => {
           onClick={() => navigate("/")} 
         />
         <h1 
-          className="text-white text-2xl" 
+          className="text-white text-lg mt-2 self-end" 
           style={{
             fontFamily: 'Avenir Heavy, sans-serif', 
-            fontWeight: 'bold',
-            letterSpacing: '50px'
+            fontWeight: 'bold'
           }}
         >
           {category.name}
@@ -103,14 +102,14 @@ const CategoryPage = () => {
         <div className="mt-32 pt-12 border-t border-border relative">
           <div className="absolute bottom-0 left-0 z-0">
             <img 
-              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
+              src="/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png" 
               alt="Delia Vergara Isologo" 
-              className="h-40 w-auto opacity-50"
+              className="h-32 w-auto opacity-50"
             />
           </div>
           
           <div className="text-center space-y-8 relative z-10 pb-12">
-            <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333', letterSpacing: '50px'}}>
+            <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333'}}>
               CONTÁCTAME
             </h2>
             

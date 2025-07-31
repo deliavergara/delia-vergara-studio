@@ -34,14 +34,14 @@ const Index = () => {
         <div className="mt-32 pt-12 border-t border-border relative">
           <div className="absolute bottom-0 left-0 z-0">
             <img 
-              src="https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/ISOLOGO_Mesa%20de%20trabajo%201.png" 
+              src="/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png" 
               alt="Delia Vergara Isologo" 
-              className="h-40 w-auto opacity-50"
+              className="h-32 w-auto opacity-50"
             />
           </div>
           
           <div className="text-center space-y-8 relative z-10 pb-12">
-            <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333', letterSpacing: '50px'}}>
+            <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333'}}>
               CONTÁCTAME
             </h2>
             
