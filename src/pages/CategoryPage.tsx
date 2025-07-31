@@ -60,12 +60,12 @@ const CategoryPage = () => {
         <div className="max-w-xl mx-auto text-center mb-16 mt-12">
           <p className="tracking-body leading-body text-gray-950 text-base font-light">
             {category.id === 'anillos' && <>
-                Anillos únicos hechos a mano en plata y oro.
+                Anillos únicos hechos a mano en plata 925 y oro.
                 <br />
-                Cuidadosamente elaborados con atención a cada detalle.
+                Cada pieza es cuidadosamente crafteada con atención al detalle.
               </>}
-            {category.id === 'collares' && 'Collares minimalistas, delicados y elegantes que complementan cualquier look. '}
-            {category.id === 'pendientes' && 'Pendientes con diseños innovadores y técnicas artesanales. Desde sutiles hasta statement pieces.'}
+            {category.id === 'collares' && 'Collares minimalistas, delicados y elegantes que complementan cualquier look.'}
+            {category.id === 'pendientes' && 'Pendientes con diseños innovadores y técnicas orgánicas, para lograr un atractivo movimiento.'}
             {category.id === 'pulseras' && 'Pulseras únicas que combinan artesanía tradicional con diseño contemporáneo.'}
           </p>
         </div>
