@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import FixedSocialButtons from "./components/FixedSocialButtons";
 import Index from "./pages/Index";
 import CategoryPage from "./pages/CategoryPage";
 import ProductPage from "./pages/ProductPage";
@@ -17,6 +18,7 @@ const App = () => (
     <Sonner />
     <BrowserRouter>
       <ScrollToTop />
+      <FixedSocialButtons />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/categoria/:categoryId" element={<CategoryPage />} />
