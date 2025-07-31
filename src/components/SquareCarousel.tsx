@@ -4,15 +4,15 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const SquareCarousel = () => {
   const images = [
-    "/lovable-uploads/Material de Apoyo/carrusel/1.jpg",
-    "/lovable-uploads/Material de Apoyo/carrusel/2.jpg",
-    "/lovable-uploads/Material de Apoyo/carrusel/4.jpg",
-    "/lovable-uploads/Material de Apoyo/carrusel/5.jpg",
-    "/lovable-uploads/Material de Apoyo/carrusel/3.jpg",
-    "/lovable-uploads/Material de Apoyo/carrusel/6.jpg",
-    "/lovable-uploads/Material de Apoyo/carrusel/7.jpg",
-    "/lovable-uploads/Material de Apoyo/carrusel/8.jpg",
-    "/lovable-uploads/Material de Apoyo/carrusel/9.jpg"
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/1.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/2.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/4.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/5.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/3.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/6.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/7.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/8.jpg",
+    "https://github.com/deliavergara/delia-vergara-studio/raw/main/public/lovable-uploads/Material%20de%20Apoyo/carrusel/9.jpg"
   ];
 
   return (
