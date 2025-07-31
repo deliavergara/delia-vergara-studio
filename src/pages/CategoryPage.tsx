@@ -32,8 +32,8 @@ const CategoryPage = () => {
       {/* Header con botón volver, logo y título */}
       <div className="fixed top-6 left-6 z-50">
         <div onClick={() => navigate("/")} className="group cursor-pointer">
-          <div className="bg-transparent backdrop-blur-sm rounded-full p-3 border border-muted-foreground/60 group-hover:border-primary/80 transition-all duration-300">
-            <ArrowLeft className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-elegant" />
+          <div className="rounded-full p-3 transition-all duration-300 hover:scale-105 h-12 w-12 flex items-center justify-center" style={{backgroundColor: '#EDEDED', opacity: 0.5}}>
+            <ArrowLeft className="h-5 w-5 transition-elegant" style={{color: '#353333', strokeWidth: 3}} />
           </div>
         </div>
       </div>
