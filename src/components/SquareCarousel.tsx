@@ -17,7 +17,7 @@ const SquareCarousel = () => {
   ];
 
   return (
-    <section className="py-8 bg-background">
+    <section className="py-4 bg-background">
       <div className="container mx-auto px-6">
         <div className="relative">
           <Carousel
@@ -41,8 +41,8 @@ const SquareCarousel = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4 bg-white/80 border-gray-200 hover:bg-white" />
-            <CarouselNext className="right-4 bg-white/80 border-gray-200 hover:bg-white" />
+            <CarouselPrevious className="left-4 w-8 h-8 bg-white/50 border-gray-200 hover:bg-white/70" />
+            <CarouselNext className="right-4 w-8 h-8 bg-white/50 border-gray-200 hover:bg-white/70" />
           </Carousel>
         </div>
       </div>
