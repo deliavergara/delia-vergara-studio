@@ -18,8 +18,8 @@ const CustomJewelryPage = () => {
           </div>
           
           {/* Título sobre la imagen */}
-          <div className="absolute top-8 left-1/2 transform -translate-x-1/2">
-            <h1 className="font-avenir-heavy text-2xl tracking-wide text-white">
+          <div className="absolute top-12 left-1/2 transform -translate-x-1/2">
+            <h1 className="font-avenir-black text-2xl tracking-wide text-white">
               Joyas a medida
             </h1>
           </div>
