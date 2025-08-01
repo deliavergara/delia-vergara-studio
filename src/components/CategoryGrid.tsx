@@ -21,7 +21,7 @@ export const CategoryGrid = () => {
 
   return (
     <section className="py-24 bg-background mt-32">
-      <div className="mx-auto px-2">
+      <div className="container mx-auto px-6 max-w-6xl">
         
         <div className="flex flex-col gap-6 max-w-6xl mx-auto">
           {categories.map((category) => {

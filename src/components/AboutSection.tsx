@@ -4,9 +4,9 @@ export const AboutSection = () => {
   return (
     <section className="min-h-screen bg-background flex items-center justify-center py-0">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="grid lg:grid-cols-3 gap-8 items-center h-[50vh]">
+        <div className="grid lg:grid-cols-5 gap-8 items-center h-[50vh]">
           {/* Video a la izquierda - ocupa espacio completo hasta la mitad */}
-          <div className="h-full">
+          <div className="lg:col-span-2 h-full">
             <video
               autoPlay
               muted
@@ -19,7 +19,7 @@ export const AboutSection = () => {
           </div>
           
           {/* Texto a la derecha */}
-          <div className="lg:col-span-2 flex flex-col items-center justify-center h-full space-y-6">
+          <div className="lg:col-span-3 flex flex-col items-center justify-center h-full space-y-6">
             <p className="text-body font-avenir-heavy font-heavy text-muted-foreground tracking-body leading-body text-center lg:text-left">
               Delia Vergara es una marca de diseño de joyería con esencia orgánica. 
               Piezas únicas, elaboradas a mano en mi taller en Valencia, España.

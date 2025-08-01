@@ -18,7 +18,7 @@ const SquareCarousel = () => {
 
   return (
     <section className="py-4 bg-background">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 max-w-6xl">
         <div className="relative">
           <Carousel
             opts={{
