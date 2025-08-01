@@ -14,21 +14,13 @@ const Index = () => {
     <div className="relative">
       <HamburgerMenu />
       
-      <div>
-        <HeroSection />
-      </div>
+      <HeroSection />
       
-      <div>
-        <AboutSection />
-      </div>
+      <AboutSection />
       
-      <div>
-        <SquareCarousel />
-      </div>
+      <SquareCarousel />
       
-      <div>
-        <CategoryGrid />
-      </div>
+      <CategoryGrid />
       
       <div>
         <Footer />

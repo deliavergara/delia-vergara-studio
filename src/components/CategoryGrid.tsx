@@ -20,10 +20,10 @@ export const CategoryGrid = () => {
   };
 
   return (
-    <section className="py-24 bg-background mt-32">
+    <section className="py-8 bg-background">
       <div className="container mx-auto px-6 max-w-6xl">
         
-        <div className="flex flex-col gap-6 max-w-6xl mx-auto">
+        <div className="flex flex-col gap-4 max-w-6xl mx-auto">
           {categories.map((category) => {
             const categoryImage = categoryImages[category.id as keyof typeof categoryImages];
             return (
@@ -32,7 +32,7 @@ export const CategoryGrid = () => {
                 onClick={() => handleCategoryClick(category.id)}
                 className="group cursor-pointer"
               >
-                <div className="w-full" style={{ aspectRatio: '16/9' }}>
+                <div className="w-full" style={{ aspectRatio: '21/9' }}>
                   <div className="rounded-lg overflow-hidden relative h-full">
                     {categoryImage && (
                       <>
