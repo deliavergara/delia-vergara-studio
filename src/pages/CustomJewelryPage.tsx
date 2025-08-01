@@ -1,21 +1,23 @@
 import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { buildGitHubRawUrl } from "@/lib/config";
-
 const CustomJewelryPage = () => {
-  return (
-    <div className="relative min-h-screen">
+  return <div className="relative min-h-screen">
       <HamburgerMenu />
       
       <div className="container mx-auto px-6 pt-24 pb-32">
         <div className="max-w-4xl mx-auto">
           {/* Título */}
-          <h1 className="font-avenir-black font-black text-3xl uppercase text-center mb-12" style={{color: '#353333'}}>
+          <h1 className="font-avenir-black font-black text-3xl uppercase text-center mb-12" style={{
+          color: '#353333'
+        }}>
             JOYAS A MEDIDA
           </h1>
           
           {/* Contenido de texto */}
           <div className="max-w-3xl mx-auto mb-16">
-            <div className="space-y-8 font-avenir-light text-base leading-relaxed" style={{color: '#353333'}}>
+            <div className="space-y-8 font-avenir-light text-base leading-relaxed" style={{
+            color: '#353333'
+          }}>
               <p>
                 Cada joya que creo es única, diseñada especialmente para quien la llevará. Mi proceso de trabajo comienza siempre con una conversación: quiero conocer tus gustos, tu estilo, la ocasión para la que necesitas la pieza, y cualquier detalle que sea importante para ti.
               </p>
@@ -25,7 +27,9 @@ const CustomJewelryPage = () => {
               </p>
               
               <div className="space-y-4">
-                <h3 className="font-avenir-medium text-xl" style={{color: '#353333'}}>
+                <h3 className="font-avenir-medium text-xl" style={{
+                color: '#353333'
+              }}>
                   ¿Cómo funciona el proceso?
                 </h3>
                 
@@ -50,48 +54,32 @@ const CustomJewelryPage = () => {
           {/* Imagen */}
           <div className="flex justify-center mb-16">
             <div className="max-w-2xl w-full">
-              <img 
-                src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/DSC_0124.jpg")} 
-                alt="Proceso de creación de joyas a medida" 
-                className="w-full h-auto rounded-lg shadow-elegant"
-              />
+              <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/DSC_0124.jpg")} alt="Proceso de creación de joyas a medida" className="w-full h-auto rounded-lg shadow-elegant" />
             </div>
           </div>
           
           {/* Contacto */}
           <div className="text-center space-y-6">
-            <h3 className="font-avenir-medium text-xl" style={{color: '#353333'}}>
+            <h3 className="font-avenir-medium text-xl" style={{
+            color: '#353333'
+          }}>
               ¿Empezamos a crear tu joya?
             </h3>
             
-            <p className="font-avenir-light" style={{color: '#353333'}}>
+            <p className="font-avenir-light" style={{
+            color: '#353333'
+          }}>
               Contáctame para comenzar a diseñar juntos la pieza perfecta para ti
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href="https://wa.me/34625857127" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 font-avenir-medium text-sm"
-                style={{backgroundColor: '#EDEDED', color: '#353333'}}
-              >
-                WhatsApp: +34 625857127
-              </a>
               
-              <a 
-                href="mailto:deliavergara.joyas@gmail.com" 
-                className="px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 font-avenir-medium text-sm"
-                style={{backgroundColor: '#EDEDED', color: '#353333'}}
-              >
-                deliavergara.joyas@gmail.com
-              </a>
+              
+              
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default CustomJewelryPage;
