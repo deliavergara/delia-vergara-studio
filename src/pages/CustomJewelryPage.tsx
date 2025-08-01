@@ -9,9 +9,7 @@ const CustomJewelryPage = () => {
           {/* Título */}
           <h1 className="font-avenir-black font-black text-3xl uppercase text-center mb-12" style={{
           color: '#353333'
-        }}>
-            JOYAS A MEDIDA: CREA LA TUYA
-          </h1>
+        }}>JOYAS A MEDIDA</h1>
           
           {/* Contenido de texto */}
           <div className="max-w-3xl mx-auto mb-16">
@@ -19,27 +17,32 @@ const CustomJewelryPage = () => {
             color: '#353333'
           }}>
               
+              
               <p>
-                ¿Tienes una idea en mente? La convertimos en una joya única. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro u otros materiales, según lo que necesites y tu presupuesto. Cada pieza se diseña y se crea a mano, desde el boceto hasta el acabado final.
+                Trabajo principalmente con plata de ley 925 y baños de oro, aunque también puedo realizar piezas en oro macizo u otros materiales según tus preferencias y presupuesto. Cada diseño se desarrolla a mano, desde el boceto inicial hasta la pieza final, asegurando que sea exactamente lo que habías imaginado.
               </p>
               
               <div className="space-y-4">
                 <h3 className="font-avenir-medium text-xl" style={{
                 color: '#353333'
               }}>
-                  Así funciona el proceso:
+                  ¿Cómo funciona el proceso?
                 </h3>
                 
                 <div className="space-y-3 pl-4">
-                  <p><strong>• Hablemos de tu idea:</strong> Conversamos sobre lo que te imaginas, los materiales que te gustan y el presupuesto.</p>
-                  <p><strong>• Diseñamos juntos:</strong> Preparamos varios bocetos y trabajamos en la propuesta hasta tener el diseño final.</p>
-                  <p><strong>• Elaboración de la joya:</strong> La pieza se hace a mano en mi taller de Valencia y, una vez terminada, se prepara para el envío.</p>
-                  <p><strong>• Plazos:</strong> El tiempo de creación suele ser de entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.</p>
+                  <p><strong>1. Conversación inicial:</strong> Hablamos sobre tu idea, tus gustos y el presupuesto.</p>
+                  <p><strong>2. Diseño:</strong> Desarrollo bocetos y te muestro propuestas hasta dar con el diseño perfecto.</p>
+                  <p><strong>3. Creación:</strong> Trabajo la pieza a mano en mi taller de Valencia.</p>
+                  <p><strong>4. Entrega:</strong> Envío tu joya única directamente a tu domicilio.</p>
                 </div>
               </div>
               
               <p>
-                Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos una joya.
+                Los tiempos de creación varían según la complejidad: desde unos días para piezas sencillas hasta algunas semanas para las más elaboradas. El precio depende del diseño, los materiales elegidos y el tiempo de trabajo requerido.
+              </p>
+              
+              <p className="font-avenir-medium">
+                Si tienes una idea o un sueño, hablemos. Me gusta colaborar y crear juntos una joya totalmente nueva y personal.
               </p>
             </div>
           </div>
