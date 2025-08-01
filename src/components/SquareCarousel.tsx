@@ -41,8 +41,8 @@ const SquareCarousel = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4 w-8 h-8 bg-white/50 border-gray-200 hover:bg-white/70" />
-            <CarouselNext className="right-4 w-8 h-8 bg-white/50 border-gray-200 hover:bg-white/70" />
+            <CarouselPrevious className="left-4 w-8 h-8 bg-white/30 border border-gray-200/40 hover:bg-white/50" />
+            <CarouselNext className="right-4 w-8 h-8 bg-white/30 border border-gray-200/40 hover:bg-white/50" />
           </Carousel>
         </div>
       </div>
