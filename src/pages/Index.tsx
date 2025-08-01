@@ -23,11 +23,11 @@ const Index = () => {
       </div>
       
       <div>
-        <CategoryGrid />
+        <SquareCarousel />
       </div>
       
       <div>
-        <SquareCarousel />
+        <CategoryGrid />
       </div>
       
       <div>
