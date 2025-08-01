@@ -5,12 +5,9 @@ export const AboutSection = () => {
     <section className="bg-background py-6">
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Texto arriba del video - más pequeño y angosto */}
-        <div className="text-center mb-4 max-w-2xl mx-auto">
+        <div className="text-center mb-8 max-w-2xl mx-auto">
           <p className="text-sm font-avenir-heavy font-heavy text-muted-foreground tracking-body leading-relaxed">
             Delia Vergara es una marca de diseño de joyería con esencia orgánica. Piezas únicas, elaboradas a mano en mi taller en Valencia.
-          </p>
-          <p className="text-sm font-avenir-light font-light text-muted-foreground tracking-body leading-relaxed mt-2">
-            La mayoría de las piezas son producidas en ediciones limitadas y están sujetas a cambios, ya que constantemente busco innovar con nuevos diseños.
           </p>
         </div>
         
