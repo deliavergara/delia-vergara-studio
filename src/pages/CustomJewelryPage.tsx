@@ -18,9 +18,7 @@ const CustomJewelryPage = () => {
             <div className="space-y-8 font-avenir-light text-base leading-relaxed" style={{
             color: '#353333'
           }}>
-              <p>
-                Cada joya que creo es única, diseñada especialmente para quien la llevará. Mi proceso de trabajo comienza siempre con una conversación: quiero conocer tus gustos, tu estilo, la ocasión para la que necesitas la pieza, y cualquier detalle que sea importante para ti.
-              </p>
+              
               
               <p>
                 Trabajo principalmente con plata de ley 925 y baños de oro, aunque también puedo realizar piezas en oro macizo u otros materiales según tus preferencias y presupuesto. Cada diseño se desarrolla a mano, desde el boceto inicial hasta la pieza final, asegurando que sea exactamente lo que habías imaginado.
