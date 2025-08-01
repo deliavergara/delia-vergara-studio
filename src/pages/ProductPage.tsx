@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { jewelryItems } from "@/data/products";
 import { cn } from "@/lib/utils";
 import { buildGitHubRawUrl } from "@/lib/config";
+import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
 const ProductPage = () => {
   const {
     productId
@@ -15,6 +16,7 @@ const ProductPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
+  const [showSizeGuide, setShowSizeGuide] = useState(false);
   const dragRef = useRef<HTMLDivElement>(null);
   const product = jewelryItems.find(item => item.id === productId);
   if (!product) {
@@ -84,6 +86,16 @@ const ProductPage = () => {
               <h1 className="font-avenir font-medium text-lg text-product-name tracking-title mb-0.5">
                 {product.name}
               </h1>
+              
+              {/* Guía de tallas para anillos */}
+              {product.category === 'anillos' && (
+                <button
+                  onClick={() => setShowSizeGuide(true)}
+                  className="font-avenir-medium text-sm text-muted-foreground hover:text-foreground transition-colors underline decoration-1 underline-offset-4 hover:decoration-2"
+                >
+                  Guía de tallas
+                </button>
+              )}
               
               {/* Descripción */}
               <div className="-mt-6">
@@ -181,6 +193,12 @@ const ProductPage = () => {
         </div>
 
       </div>
+      
+      {/* Size Guide Drawer */}
+      <SizeGuideDrawer
+        isOpen={showSizeGuide}
+        onClose={() => setShowSizeGuide(false)}
+      />
     </div>;
 };
 export default ProductPage;
