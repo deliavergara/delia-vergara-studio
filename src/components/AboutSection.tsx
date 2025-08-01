@@ -7,15 +7,11 @@ export const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center h-[50vh]">
           {/* Video a la izquierda - ocupa espacio completo hasta la mitad */}
           <div className="h-full">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
+            <img
+              src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/foto%20inicio.JPG")}
+              alt="Delia Vergara trabajando"
               className="w-full h-full object-cover rounded-sm"
-            >
-              <source src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0330.mov")} type="video/mp4" />
-            </video>
+            />
           </div>
           
           {/* Texto a la derecha */}
