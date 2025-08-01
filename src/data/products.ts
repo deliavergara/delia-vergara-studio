@@ -120,7 +120,8 @@ export const jewelryItems: JewelryItem[] = [
     category: "pendientes",
     images: [
       buildGitHubRawUrl("public/lovable-uploads/Pendientes/Rosa%20mitsuro/1.pendiente%20rosita%20mitsuro%20plata.jpg"),
-      buildGitHubRawUrl("public/lovable-uploads/Pendientes/Rosa%20mitsuro/2.pendiente%20rosita%20mitsuro%20oro.jpg")
+      buildGitHubRawUrl("public/lovable-uploads/Pendientes/Rosa%20mitsuro/2.pendiente%20rosita%20mitsuro%20oro.jpg"),
+      buildGitHubRawUrl("public/lovable-uploads/Pendientes/Rosa%20mitsuro/DSC_0118.mov")
     ],
     mainImage: buildGitHubRawUrl("public/lovable-uploads/Pendientes/Rosa%20mitsuro/1.pendiente%20rosita%20mitsuro%20plata.jpg"),
     prices: {

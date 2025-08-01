@@ -14,7 +14,7 @@ export const AboutSection = () => {
               playsInline
               className="w-full h-full object-cover rounded-sm"
             >
-              <source src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0326.mov")} type="video/mp4" />
+              <source src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0330.mov")} type="video/mp4" />
             </video>
           </div>
           
