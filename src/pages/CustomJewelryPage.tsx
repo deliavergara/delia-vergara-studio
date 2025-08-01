@@ -51,8 +51,8 @@ const CustomJewelryPage = () => {
               </ul>
             </div>
             
-            {/* Cierre con Avenir Book */}
-            <p className="font-avenir-book text-base text-center leading-relaxed">
+            {/* Cierre con Avenir Medium */}
+            <p className="font-avenir-medium text-base text-center leading-relaxed">
               Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos una joya.
             </p>
             
