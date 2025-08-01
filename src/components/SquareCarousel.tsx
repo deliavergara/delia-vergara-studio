@@ -17,7 +17,7 @@ const SquareCarousel = () => {
   ];
 
   return (
-    <section className="py-0 bg-background">
+    <section className="py-4 bg-background">
       <div className="container mx-auto px-6">
         <div className="relative">
           <Carousel
@@ -27,9 +27,9 @@ const SquareCarousel = () => {
             }}
             className="w-full max-w-5xl mx-auto"
           >
-            <CarouselContent className="-ml-1 md:-ml-2">
+            <CarouselContent className="-ml-2 md:-ml-4">
               {images.map((image, index) => (
-                <CarouselItem key={index} className="pl-1 md:pl-2 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <AspectRatio ratio={1} className="overflow-hidden rounded-lg">
                     <img
                       src={image}
