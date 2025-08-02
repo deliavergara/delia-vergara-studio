@@ -18,6 +18,14 @@ const CategoryPage = () => {
     pendientes: buildGitHubRawUrl("public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20categoria.jpg"),
     pulseras: buildGitHubRawUrl("public/lovable-uploads/Pulsera/1.%20pulsera%20portada.jpg")
   };
+
+  // Mapeo de logos para cada categoría
+  const categoryLogos = {
+    anillos: buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20ANILLOS.png"),
+    collares: buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20COLLARES.png"),
+    pendientes: buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20PENDIENTES.png"),
+    pulseras: buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20PULSERAS.png")
+  };
   if (!category) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
@@ -29,6 +37,7 @@ const CategoryPage = () => {
       </div>;
   }
   const categoryImage = categoryImages[categoryId as keyof typeof categoryImages];
+  const categoryLogo = categoryLogos[categoryId as keyof typeof categoryLogos];
   return <div className="min-h-screen bg-background">
       {/* Header con botón volver, logo y título */}
       <div className="fixed top-6 left-6 z-50">
@@ -61,8 +70,19 @@ const CategoryPage = () => {
 
       {/* Grid de productos */}
       <div className="container mx-auto px-6 pb-24 mt-16">
+        {/* Logo de categoría */}
+        {categoryLogo && (
+          <div className="text-center mb-16 mt-12">
+            <img 
+              src={categoryLogo} 
+              alt={`Logo ${category.name}`} 
+              className="mx-auto w-72 h-auto" 
+            />
+          </div>
+        )}
+        
         {/* Descripción de la categoría */}
-        <div className="max-w-xl mx-auto text-center mb-16 mt-12">
+        <div className="max-w-xl mx-auto text-center mb-16">
           
         </div>
 
