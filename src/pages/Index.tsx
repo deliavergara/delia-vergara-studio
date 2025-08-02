@@ -18,9 +18,9 @@ const Index = () => {
       
       <AboutSection />
       
-      <SquareCarousel />
-      
       <CategoryGrid />
+      
+      <SquareCarousel />
       
       <div>
         <Footer />

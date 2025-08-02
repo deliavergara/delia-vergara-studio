@@ -20,10 +20,9 @@ export const CategoryGrid = () => {
   };
 
   return (
-    <section className="py-4 bg-background">
-      <div className="container mx-auto px-6 max-w-6xl">
-        
-        <div className="flex flex-col gap-4 max-w-6xl mx-auto">
+    <section className="bg-background">
+      <div className="w-full">
+        <div className="flex flex-col">
           {categories.map((category) => {
             const categoryImage = categoryImages[category.id as keyof typeof categoryImages];
             return (
@@ -33,7 +32,7 @@ export const CategoryGrid = () => {
                 className="group cursor-pointer"
               >
                 <div className="w-full" style={{ aspectRatio: '21/9' }}>
-                  <div className="rounded-lg overflow-hidden relative h-full">
+                  <div className="overflow-hidden relative h-full">
                     {categoryImage && (
                       <>
                         <img

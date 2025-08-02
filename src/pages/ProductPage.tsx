@@ -135,7 +135,7 @@ const ProductPage = () => {
 
               {/* Precio */}
               <div className="border-t pt-6">
-                <div className="text-3xl font-elegant font-medium text-muted-foreground tracking-title">
+                <div className="font-avenir font-medium text-lg text-product-name tracking-title">
                   {currentPrice === 0 ? 'Por encargo' : `${selectedCurrency === 'EUR' ? '€' : '$'}${currentPrice.toLocaleString()}`}
                 </div>
                 <p className="text-body font-light text-muted-foreground mt-2 tracking-body leading-body">
