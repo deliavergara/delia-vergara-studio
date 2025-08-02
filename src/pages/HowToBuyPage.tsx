@@ -23,9 +23,9 @@ const HowToBuyPage = () => {
           {/* Logo en la parte superior */}
           <div className="text-center mb-16">
             <img 
-              src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20COMO%20COMPRAR.png")} 
-              alt="Logo Cómo Comprar" 
-              className="mx-auto w-80 h-auto mb-12" 
+              src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20oscuro.png")} 
+              alt="Delia Vergara Logo" 
+              className="mx-auto w-72 h-auto mb-12" 
             />
           </div>
           
