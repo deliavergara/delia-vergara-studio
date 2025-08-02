@@ -51,21 +51,21 @@ const CategoryPage = () => {
         
       </div>
 
-      {/* Logo de categoría */}
-      <div className="flex justify-center pt-24 pb-8">
-        <img 
-          src={buildGitHubRawUrl(`public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20${categoryId.toUpperCase()}.png`)}
-          alt={`Logo ${category.name}`}
-          className="w-72 h-auto"
-        />
-      </div>
-
-      {/* Hero section con imagen de portada */}
+      {/* Hero section con imagen de portada y logo superpuesto */}
       <div className="relative h-[28rem] overflow-hidden">
         {categoryImage && <>
             <img src={categoryImage} alt={category.name} className={`w-full h-full object-cover opacity-70 ${categoryId === 'pulseras' ? 'object-[center_30%]' : ''}`} />
             <div className="absolute inset-0 bg-black/20"></div>
           </>}
+        
+        {/* Logo superpuesto en la parte superior */}
+        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
+          <img 
+            src={buildGitHubRawUrl(`public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20${categoryId.toUpperCase()}.png`)}
+            alt={`Logo ${category.name}`}
+            className="w-72 h-auto"
+          />
+        </div>
       </div>
 
       {/* Grid de productos */}
