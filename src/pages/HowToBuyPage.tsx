@@ -26,7 +26,7 @@ const HowToBuyPage = () => {
             <h1 className="font-avenir-black font-black text-3xl uppercase text-center mb-8" style={{color: '#353333'}}>
               CÓMO COMPRAR
             </h1>
-            <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
+            <p className="font-avenir font-medium text-base leading-relaxed" style={{color: '#353333'}}>
               Tengo mi taller en Valencia, España, y las joyas que creo son piezas únicas o pequeñas ediciones, diseñadas y hechas a mano, con dedicación. Aquí te explico el detalle de cómo comprar:
             </p>
           </div>
@@ -36,20 +36,20 @@ const HowToBuyPage = () => {
             <div className="space-y-8">
               <div className="space-y-8">
                 <div>
-                  <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
-                    <span className="font-avenir-book font-normal uppercase" style={{color: '#353333'}}>Joyas en Stock:</span> Tengo un pequeño y exclusivo stock de piezas listas para ser enviadas. Son joyas de edición limitada que se encuentran físicamente en Valencia, España (zona Ruzafa) y en Santiago, Chile (zona Los Domínicos, Las Condes). Si te interesa alguna, la puedo enviar de inmediato
+                  <p className="font-avenir text-base leading-relaxed" style={{color: '#353333'}}>
+                    <span className="font-normal">Joyas en Stock:</span> <span className="font-light">Tengo un pequeño y exclusivo stock de piezas listas para ser enviadas. Son joyas de edición limitada que se encuentran físicamente en Valencia, España (zona Ruzafa) y en Santiago, Chile (zona Los Domínicos, Las Condes). Si te interesa alguna, la puedo enviar de inmediato</span>
                   </p>
                 </div>
 
                 <div>
-                  <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
-                    <span className="font-avenir-book font-normal uppercase" style={{color: '#353333'}}>Diseños por Encargo:</span> La mayoría de mis creaciones se pueden volver a producir especialmente para ti. El tiempo de producción varía según la complejidad: desde unos días para piezas sencillas hasta algunas semanas para las más elaboradas
+                  <p className="font-avenir text-base leading-relaxed" style={{color: '#353333'}}>
+                    <span className="font-normal">Diseños por Encargo:</span> <span className="font-light">La mayoría de mis creaciones se pueden volver a producir especialmente para ti. El tiempo de producción varía según la complejidad: desde unos días para piezas sencillas hasta algunas semanas para las más elaboradas</span>
                   </p>
                 </div>
 
                 <div>
-                  <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
-                    <span className="font-avenir-book font-normal uppercase" style={{color: '#353333'}}>Proyectos Personalizados:</span> Si tienes una idea o un sueño, hablemos. Me gusta colaborar y crear juntos una joya totalmente nueva y personal
+                  <p className="font-avenir text-base leading-relaxed" style={{color: '#353333'}}>
+                    <span className="font-normal">Proyectos Personalizados:</span> <span className="font-light">Si tienes una idea o un sueño, hablemos. Me gusta colaborar y crear juntos una joya totalmente nueva y personal</span>
                   </p>
                 </div>
               </div>
@@ -72,20 +72,20 @@ const HowToBuyPage = () => {
               
               <div className="space-y-8">
                 <div>
-                  <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
-                    <span className="font-avenir-book font-normal uppercase" style={{color: '#353333'}}>Materiales y Talla:</span> Trabajo principalmente con plata de ley y plata enchapada en oro. También puedo realizar tu encargo en oro macizo o en algún otro material que prefieras. La talla es a medida, pídeme la que requieras. Si tienes dudas de la tuya, contáctame y te guiaré con métodos muy simples para encontrar tu medida exacta
+                  <p className="font-avenir text-base leading-relaxed" style={{color: '#353333'}}>
+                    <span className="font-normal">Materiales y Talla:</span> <span className="font-light">Trabajo principalmente con plata de ley y plata enchapada en oro. También puedo realizar tu encargo en oro macizo o en algún otro material que prefieras. La talla es a medida, pídeme la que requieras. Si tienes dudas de la tuya, contáctame y te guiaré con métodos muy simples para encontrar tu medida exacta</span>
                   </p>
                 </div>
 
                 <div>
-                  <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
-                    <span className="font-avenir-book font-normal uppercase" style={{color: '#353333'}}>Formas de Pago:</span> El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (euros) y en Chile (pesos chilenos), elige la que te acomode
+                  <p className="font-avenir text-base leading-relaxed" style={{color: '#353333'}}>
+                    <span className="font-normal">Formas de Pago:</span> <span className="font-light">El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (euros) y en Chile (pesos chilenos), elige la que te acomode</span>
                   </p>
                 </div>
 
                 <div>
-                  <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
-                    <span className="font-avenir-book font-normal uppercase" style={{color: '#353333'}}>Envíos:</span> Realizo envíos a toda Europa y Chile. El coste del envío se calcula según tu ubicación y se suma al valor final de tu joya (para Chile es desde Santiago, para que no te preocupes del envío internacional)
+                  <p className="font-avenir text-base leading-relaxed" style={{color: '#353333'}}>
+                    <span className="font-normal">Envíos:</span> <span className="font-light">Realizo envíos a toda Europa y Chile. El coste del envío se calcula según tu ubicación y se suma al valor final de tu joya (para Chile es desde Santiago, para que no te preocupes del envío internacional)</span>
                   </p>
                 </div>
               </div>
@@ -111,30 +111,6 @@ const HowToBuyPage = () => {
                 </p>
               </div>
 
-              {/* Contact buttons - ahora fixed */}
-              <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
-                <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer">
-                  <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
-                    <img 
-                      src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20WHATSAP.png")} 
-                      alt="WhatsApp" 
-                      className="h-5 w-5"
-                    />
-                    <span className="font-avenir-light font-light" style={{color: '#353333'}}>WhatsApp</span>
-                  </div>
-                </a>
-
-                <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer">
-                  <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
-                    <img 
-                      src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20INSTAGRAM.png")} 
-                      alt="Instagram" 
-                      className="h-5 w-5"
-                    />
-                    <span className="font-avenir-light font-light" style={{color: '#353333'}}>@deliavergaras</span>
-                  </div>
-                </a>
-              </div>
             </div>
           </div>
         </div>
