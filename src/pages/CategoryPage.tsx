@@ -59,7 +59,7 @@ const CategoryPage = () => {
           </>}
         
         {/* Logo superpuesto más abajo y más grande */}
-        <div className="absolute top-20 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="absolute top-20 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer hover:opacity-70 transition-elegant" onClick={() => navigate("/")}>
           <img 
             src={buildGitHubRawUrl(`public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20${categoryId.toUpperCase()}.png`)}
             alt={`Logo ${category.name}`}
@@ -94,7 +94,7 @@ const CategoryPage = () => {
 
         {/* Contact section */}
         <div className="mt-32 pt-12 border-t border-border relative">
-          <div className="absolute bottom-0 left-0 z-0 -ml-8">
+          <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
             <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} alt="Delia Vergara Isologo" className="h-32 w-auto opacity-50" />
           </div>
           
