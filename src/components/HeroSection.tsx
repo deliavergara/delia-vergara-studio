@@ -23,7 +23,7 @@ export const HeroSection = () => {
           <img
             src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gcasi%20blanco_Mesa%20de%20trabajo%201.png")}
             alt="Delia Vergara Logo"
-            className="w-64 md:w-72 h-auto opacity-80"
+            className="w-[70vw] max-w-72 h-auto opacity-80"
           />
         </button>
       </div>
