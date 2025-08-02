@@ -52,14 +52,14 @@ const CategoryPage = () => {
       </div>
 
       {/* Hero section con imagen de portada y logo superpuesto */}
-      <div className="relative h-[28rem] overflow-hidden">
+      <div className="relative h-[28rem] overflow-hidden flex justify-center">
         {categoryImage && <>
-            <img src={categoryImage} alt={category.name} className={`w-full h-full object-cover opacity-70 ${categoryId === 'pulseras' ? 'object-[center_30%]' : ''}`} />
+            <img src={categoryImage} alt={category.name} className={`h-full object-cover opacity-70 ${categoryId === 'pulseras' ? 'object-[center_30%]' : ''}`} style={{width: '85%'}} />
             <div className="absolute inset-0 bg-black/20"></div>
           </>}
         
-        {/* Logo superpuesto en la parte superior */}
-        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
+        {/* Logo superpuesto en el centro */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
           <img 
             src={buildGitHubRawUrl(`public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20${categoryId.toUpperCase()}.png`)}
             alt={`Logo ${category.name}`}
