@@ -6,6 +6,15 @@ const CustomJewelryPage = () => {
       
       <div className="container mx-auto px-6 pt-24 pb-32">
         <div className="max-w-4xl mx-auto">
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <img 
+              src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLENJOYAS%20A%20MEDIDA.png")}
+              alt="Logo Joyas a Medida"
+              className="w-72 h-auto"
+            />
+          </div>
+          
           {/* Título */}
           <h1 className="font-avenir-black font-black text-3xl uppercase text-center mb-12" style={{
           color: '#353333'
@@ -50,9 +59,9 @@ const CustomJewelryPage = () => {
           </div>
           
           {/* Imagen */}
-          <div className="flex justify-center mb-16">
+          <div className="flex justify-center mb-16 mt-8">
             <div className="max-w-2xl w-full">
-              <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/DSC_0124.jpg")} alt="Proceso de creación de joyas a medida" className="w-full h-auto rounded-lg shadow-elegant" />
+              <img src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/foto%20para%20actegoria%20joyas%20a%20medida.jpg")} alt="Proceso de creación de joyas a medida" className="w-full h-auto rounded-lg shadow-elegant" />
             </div>
           </div>
           

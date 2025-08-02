@@ -31,8 +31,8 @@ const HowToBuyPage = () => {
           
           {/* Título principal */}
           <div className="mb-16">
-            <h1 className="font-avenir-heavy font-black text-xl uppercase tracking-title mb-8 text-left" style={{color: '#353333'}}>
-              Cómo comprar
+            <h1 className="font-avenir-black font-black text-3xl uppercase text-center mb-8" style={{color: '#353333'}}>
+              CÓMO COMPRAR
             </h1>
             <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
               Tengo mi taller en Valencia, España, y las joyas que creo son piezas únicas o pequeñas ediciones, diseñadas y hechas a mano, con dedicación. Aquí te explico el detalle de cómo comprar:

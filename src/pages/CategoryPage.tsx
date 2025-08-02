@@ -51,6 +51,15 @@ const CategoryPage = () => {
         
       </div>
 
+      {/* Logo de categoría */}
+      <div className="flex justify-center pt-24 pb-8">
+        <img 
+          src={buildGitHubRawUrl(`public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20${categoryId.toUpperCase()}.png`)}
+          alt={`Logo ${category.name}`}
+          className="w-72 h-auto"
+        />
+      </div>
+
       {/* Hero section con imagen de portada */}
       <div className="relative h-[28rem] overflow-hidden">
         {categoryImage && <>
