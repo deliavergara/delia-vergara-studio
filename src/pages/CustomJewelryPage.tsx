@@ -1,87 +1,83 @@
 import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { buildGitHubRawUrl } from "@/lib/config";
-
 const CustomJewelryPage = () => {
-  return (
-    <div className="relative min-h-screen">
+  return <div className="relative min-h-screen">
       <HamburgerMenu />
       
-      <div className="pt-24 pb-32">
-        {/* Imagen de fondo con título superpuesto */}
-        <div className="relative mb-16">
-          <div className="mx-auto max-w-4xl px-6">
-            <img 
-              src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/foto%20para%20actegoria%20joyas%20a%20medida.jpg")} 
-              alt="Joyas a medida" 
-              className="w-full h-auto rounded-lg shadow-elegant"
-            />
-          </div>
+      <div className="container mx-auto px-6 pt-24 pb-32">
+        <div className="max-w-4xl mx-auto">
+          {/* Título */}
+          <h1 className="font-avenir-black font-black text-3xl uppercase text-center mb-12" style={{
+          color: '#353333'
+        }}>
+            JOYAS A MEDIDA
+          </h1>
           
-          {/* Título sobre la imagen */}
-          <div className="absolute top-32 left-1/2 transform -translate-x-1/2">
-            <h1 className="font-avenir-heavy font-black text-2xl uppercase tracking-title text-white">
-              Joyas a medida
-            </h1>
-          </div>
-        </div>
-
-        {/* Contenido de texto */}
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto space-y-8" style={{ color: '#353333' }}>
-            
-            {/* Pregunta principal con Avenir Heavy */}
-            <h2 className="font-avenir-heavy text-xl text-center">
-              ¿Tienes una idea en mente?
-            </h2>
-            
-            {/* Descripción con Avenir Medium */}
-            <p className="font-avenir-medium text-base leading-relaxed text-center">
-              La convertimos en una joya única. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro u otros materiales, según lo que necesites y tu presupuesto. Cada pieza se diseña y se crea a mano, desde el boceto hasta el acabado final.
-            </p>
-            
-            {/* Proceso con Avenir Book */}
-            <div className="font-avenir-book space-y-4">
-              <h3 className="text-lg font-semibold">Así funciona el proceso:</h3>
+          {/* Contenido de texto */}
+          <div className="max-w-3xl mx-auto mb-16">
+            <div className="space-y-8 font-avenir-light text-base leading-relaxed" style={{
+            color: '#353333'
+          }}>
               
-              <ul className="space-y-3 pl-4">
-                <li>• <strong>Hablemos de tu idea:</strong> Conversamos sobre lo que te imaginas, los materiales que te gustan y el presupuesto.</li>
-                <li>• <strong>Diseñamos juntos:</strong> Preparamos varios bocetos y trabajamos en la propuesta hasta tener el diseño final.</li>
-                <li>• <strong>Elaboración de la joya:</strong> La pieza se hace a mano en mi taller de Valencia y, una vez terminada, se prepara para el envío.</li>
-                <li>• <strong>Plazos:</strong> El tiempo de creación suele ser de entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.</li>
-              </ul>
+              
+              <p>
+                Trabajo principalmente con plata de ley 925 y baños de oro, aunque también puedo realizar piezas en oro macizo u otros materiales según tus preferencias y presupuesto. Cada diseño se desarrolla a mano, desde el boceto inicial hasta la pieza final, asegurando que sea exactamente lo que habías imaginado.
+              </p>
+              
+              <div className="space-y-4">
+                <h3 className="font-avenir-medium text-xl" style={{
+                color: '#353333'
+              }}>
+                  ¿Cómo funciona el proceso?
+                </h3>
+                
+                <div className="space-y-3 pl-4">
+                  <p><strong>1. Conversación inicial:</strong> Hablamos sobre tu idea, tus gustos y el presupuesto.</p>
+                  <p><strong>2. Diseño:</strong> Desarrollo bocetos y te muestro propuestas hasta dar con el diseño perfecto.</p>
+                  <p><strong>3. Creación:</strong> Trabajo la pieza a mano en mi taller de Valencia.</p>
+                  <p><strong>4. Entrega:</strong> Envío tu joya única directamente a tu domicilio.</p>
+                </div>
+              </div>
+              
+              <p>
+                Los tiempos de creación varían según la complejidad: desde unos días para piezas sencillas hasta algunas semanas para las más elaboradas. El precio depende del diseño, los materiales elegidos y el tiempo de trabajo requerido.
+              </p>
+              
+              <p className="font-avenir-medium">
+                Si tienes una idea o un sueño, hablemos. Me gusta colaborar y crear juntos una joya totalmente nueva y personal.
+              </p>
             </div>
-            
-            {/* Cierre con Avenir Medium */}
-            <p className="font-avenir-medium text-base text-center leading-relaxed">
-              Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos una joya.
-            </p>
-            
-          </div>
-        </div>
-
-        {/* Contact section */}
-        <div className="mt-32 pt-12 border-t border-border relative">
-          <div className="absolute bottom-0 left-0 z-0 -ml-8">
-            <img 
-              src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} 
-              alt="Delia Vergara Isologo" 
-              className="h-32 w-auto opacity-50"
-            />
           </div>
           
-          <div className="text-center space-y-8 relative z-10 pb-12">
-            <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333'}}>
-              CONTÁCTAME
-            </h2>
+          {/* Imagen */}
+          <div className="flex justify-center mb-16">
+            <div className="max-w-2xl w-full">
+              <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/DSC_0124.jpg")} alt="Proceso de creación de joyas a medida" className="w-full h-auto rounded-lg shadow-elegant" />
+            </div>
+          </div>
+          
+          {/* Contacto */}
+          <div className="text-center space-y-6">
+            <h3 className="font-avenir-medium text-xl" style={{
+            color: '#353333'
+          }}>
+              ¿Empezamos a crear tu joya?
+            </h3>
             
-            <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
-              deliavergara.joyas@gmail.com | +34 625857127
+            <p className="font-avenir-light" style={{
+            color: '#353333'
+          }}>
+              Contáctame para comenzar a diseñar juntos la pieza perfecta para ti
             </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              
+              
+              
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default CustomJewelryPage;
