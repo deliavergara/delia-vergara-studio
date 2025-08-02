@@ -16,34 +16,34 @@ const CustomJewelryPage = () => {
           
           {/* Contenido de texto */}
           <div className="max-w-3xl mx-auto mb-16">
-            <div className="space-y-8 font-avenir-light text-base leading-relaxed" style={{
+            <div className="space-y-8 font-avenir text-base leading-relaxed" style={{
             color: '#353333'
           }}>
               
-              <p>
+              <p className="font-medium">
                 ¿Tienes una idea en mente?
               </p>
               
-              <p>
+              <p className="font-light">
                 La convertimos en una joya única. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro u otros materiales, según lo que necesites y tu presupuesto. Cada pieza se diseña y se crea a mano, desde el boceto hasta el acabado final.
               </p>
               
               <div className="space-y-4">
-                <h3 className="font-avenir-medium text-xl" style={{
+                <h3 className="font-medium text-base" style={{
                 color: '#353333'
               }}>
                   Así funciona el proceso:
                 </h3>
                 
                 <div className="space-y-3 pl-4">
-                  <p>• Hablemos de tu idea: Conversamos sobre lo que te imaginas, los materiales que te gustan y el presupuesto.</p>
-                  <p>• Diseñamos juntos: Preparamos varios bocetos y trabajamos en la propuesta hasta tener el diseño final.</p>
-                  <p>• Elaboración de la joya: La pieza se hace a mano en mi taller de Valencia y, una vez terminada, se prepara para el envío.</p>
-                  <p>• Plazos: El tiempo de creación suele ser de entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.</p>
+                  <p><span className="font-medium">Hablemos de tu idea:</span> <span className="font-light">Conversamos sobre lo que te imaginas, los materiales que te gustan y el presupuesto.</span></p>
+                  <p><span className="font-medium">Diseñamos juntos:</span> <span className="font-light">Preparamos varios bocetos y trabajamos en la propuesta hasta tener el diseño final.</span></p>
+                  <p><span className="font-medium">Elaboración de la joya:</span> <span className="font-light">La pieza se hace a mano en mi taller de Valencia y, una vez terminada, se prepara para el envío.</span></p>
+                  <p><span className="font-medium">Plazos:</span> <span className="font-light">El tiempo de creación suele ser de entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.</span></p>
                 </div>
               </div>
               
-              <p>
+              <p className="font-light">
                 Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos una joya.
               </p>
             </div>
