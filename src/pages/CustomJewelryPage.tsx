@@ -7,12 +7,12 @@ const CustomJewelryPage = () => {
       <HamburgerMenu />
       
       <div className="pt-24 pb-32">
-        {/* Logo de categoría */}
-        <div className="text-center mb-16">
+        {/* Logo de categoría encima de la foto con margen */}
+        <div className="text-center mb-8 mt-8">
           <img 
             src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLENJOYAS%20A%20MEDIDA.png")} 
             alt="Logo Joyas a Medida" 
-            className="mx-auto w-72 h-auto mb-12" 
+            className="mx-auto w-80 h-auto" 
           />
         </div>
 

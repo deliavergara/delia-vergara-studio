@@ -70,17 +70,17 @@ const CategoryPage = () => {
 
       {/* Grid de productos */}
       <div className="container mx-auto px-6 pb-24 mt-16">
-        {/* Logo de categoría */}
+        {/* Logo de categoría - centrado antes de las fotos */}
         {categoryLogo && (
           <div className="text-center mb-16 mt-12">
             <img 
               src={categoryLogo} 
               alt={`Logo ${category.name}`} 
-              className="mx-auto w-72 h-auto" 
+              className="mx-auto w-80 h-auto" 
             />
           </div>
         )}
-        
+
         {/* Descripción de la categoría */}
         <div className="max-w-xl mx-auto text-center mb-16">
           
