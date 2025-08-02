@@ -34,7 +34,7 @@ const SquareCarousel = () => {
                     <img
                       src={image}
                       alt={`Joyería artesanal ${index + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 cursor-pointer opacity-95"
                       loading="lazy"
                     />
                   </AspectRatio>
