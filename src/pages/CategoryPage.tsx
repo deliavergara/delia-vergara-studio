@@ -58,12 +58,12 @@ const CategoryPage = () => {
             <div className="absolute inset-0 bg-black/20"></div>
           </>}
         
-        {/* Logo superpuesto en la parte superior */}
-        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
+        {/* Logo superpuesto más abajo y más grande */}
+        <div className="absolute top-20 left-1/2 transform -translate-x-1/2 z-10">
           <img 
             src={buildGitHubRawUrl(`public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20${categoryId.toUpperCase()}.png`)}
             alt={`Logo ${category.name}`}
-            className="w-80 h-auto"
+            className="w-96 h-auto"
           />
         </div>
       </div>
