@@ -37,19 +37,19 @@ const HowToBuyPage = () => {
               <div className="space-y-8">
                 <div>
                   <p className="font-avenir text-base leading-relaxed" style={{color: '#353333'}}>
-                    <span className="font-avenir-book">Joyas en Stock:</span> <span className="font-light">Tengo un pequeño y exclusivo stock de piezas listas para ser enviadas. Son joyas de edición limitada que se encuentran físicamente en Valencia, España (zona Ruzafa) y en Santiago, Chile (zona Los Domínicos, Las Condes). Si te interesa alguna, la puedo enviar de inmediato</span>
+                    <span className="font-medium">Joyas en Stock:</span> <span className="font-light">Tengo un pequeño y exclusivo stock de piezas listas para ser enviadas. Son joyas de edición limitada que se encuentran físicamente en Valencia, España (zona Ruzafa) y en Santiago, Chile (zona Los Domínicos, Las Condes). Si te interesa alguna, la puedo enviar de inmediato</span>
                   </p>
                 </div>
 
                 <div>
                   <p className="font-avenir text-base leading-relaxed" style={{color: '#353333'}}>
-                    <span className="font-avenir-book">Diseños por Encargo:</span> <span className="font-light">La mayoría de mis creaciones se pueden volver a producir especialmente para ti. El tiempo de producción varía según la complejidad: desde unos días para piezas sencillas hasta algunas semanas para las más elaboradas</span>
+                    <span className="font-medium">Diseños por Encargo:</span> <span className="font-light">La mayoría de mis creaciones se pueden volver a producir especialmente para ti. El tiempo de producción varía según la complejidad: desde unos días para piezas sencillas hasta algunas semanas para las más elaboradas</span>
                   </p>
                 </div>
 
                 <div>
                   <p className="font-avenir text-base leading-relaxed" style={{color: '#353333'}}>
-                    <span className="font-avenir-book">Proyectos Personalizados:</span> <span className="font-light">Si tienes una idea o un sueño, hablemos. Me gusta colaborar y crear juntos una joya totalmente nueva y personal</span>
+                    <span className="font-medium">Proyectos Personalizados:</span> <span className="font-light">Si tienes una idea o un sueño, hablemos. Me gusta colaborar y crear juntos una joya totalmente nueva y personal</span>
                   </p>
                 </div>
               </div>
@@ -73,19 +73,19 @@ const HowToBuyPage = () => {
               <div className="space-y-8">
                 <div>
                   <p className="font-avenir text-base leading-relaxed" style={{color: '#353333'}}>
-                    <span className="font-avenir-book">Materiales y Talla:</span> <span className="font-light">Trabajo principalmente con plata de ley y plata enchapada en oro. También puedo realizar tu encargo en oro macizo o en algún otro material que prefieras. La talla es a medida, pídeme la que requieras. Si tienes dudas de la tuya, contáctame y te guiaré con métodos muy simples para encontrar tu medida exacta</span>
+                    <span className="font-medium">Materiales y Talla:</span> <span className="font-light">Trabajo principalmente con plata de ley y plata enchapada en oro. También puedo realizar tu encargo en oro macizo o en algún otro material que prefieras. La talla es a medida, pídeme la que requieras. Si tienes dudas de la tuya, contáctame y te guiaré con métodos muy simples para encontrar tu medida exacta</span>
                   </p>
                 </div>
 
                 <div>
                   <p className="font-avenir text-base leading-relaxed" style={{color: '#353333'}}>
-                    <span className="font-avenir-book">Formas de Pago:</span> <span className="font-light">El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (euros) y en Chile (pesos chilenos), elige la que te acomode</span>
+                    <span className="font-medium">Formas de Pago:</span> <span className="font-light">El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (euros) y en Chile (pesos chilenos), elige la que te acomode</span>
                   </p>
                 </div>
 
                 <div>
                   <p className="font-avenir text-base leading-relaxed" style={{color: '#353333'}}>
-                    <span className="font-avenir-book">Envíos:</span> <span className="font-light">Realizo envíos a toda Europa y Chile. El coste del envío se calcula según tu ubicación y se suma al valor final de tu joya (para Chile es desde Santiago, para que no te preocupes del envío internacional)</span>
+                    <span className="font-medium">Envíos:</span> <span className="font-light">Realizo envíos a toda Europa y Chile. El coste del envío se calcula según tu ubicación y se suma al valor final de tu joya (para Chile es desde Santiago, para que no te preocupes del envío internacional)</span>
                   </p>
                 </div>
               </div>
