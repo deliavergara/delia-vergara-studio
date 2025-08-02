@@ -27,8 +27,8 @@ const Index = () => {
       </div>
       
       {/* Contact section */}
-      <div className="container mx-auto px-6 pb-24">
-        <div className="mt-32 pt-12 border-t border-border relative">
+      <div className="container mx-auto px-6 pb-16">
+        <div className="mt-16 pt-8 border-t border-border relative">
           <div className="absolute bottom-0 left-0 z-0 -ml-24 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => window.location.href = '/'}>
             <img 
               src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} 
