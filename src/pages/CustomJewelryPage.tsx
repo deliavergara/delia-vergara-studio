@@ -6,14 +6,6 @@ const CustomJewelryPage = () => {
       
       <div className="container mx-auto px-6 pt-24 pb-32">
         <div className="max-w-4xl mx-auto">
-          {/* Logo */}
-          <div className="flex justify-center mb-8">
-            <img 
-              src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLENJOYAS%20A%20MEDIDA.png")}
-              alt="Logo Joyas a Medida"
-              className="w-72 h-auto"
-            />
-          </div>
           
           {/* Título */}
           <h1 className="font-avenir-black font-black text-3xl uppercase text-center mb-12" style={{

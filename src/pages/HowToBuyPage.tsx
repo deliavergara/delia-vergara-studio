@@ -20,14 +20,6 @@ const HowToBuyPage = () => {
       <div className="relative z-10 pt-24 pb-12">
         <div className="container mx-auto px-6 max-w-4xl">
           
-          {/* Logo en la parte superior */}
-          <div className="text-center mb-16">
-            <img 
-              src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gris%20muy%20oscuro.png")} 
-              alt="Delia Vergara Logo" 
-              className="mx-auto w-72 h-auto mb-12" 
-            />
-          </div>
           
           {/* Título principal */}
           <div className="mb-16">

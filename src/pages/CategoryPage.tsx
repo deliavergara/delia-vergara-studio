@@ -63,7 +63,7 @@ const CategoryPage = () => {
           <img 
             src={buildGitHubRawUrl(`public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20${categoryId.toUpperCase()}.png`)}
             alt={`Logo ${category.name}`}
-            className="w-72 h-auto"
+            className="w-80 h-auto"
           />
         </div>
       </div>
