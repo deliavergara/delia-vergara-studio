@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { categories } from "@/data/products";
 import { buildGitHubRawUrl } from "@/lib/config";
 import { Link } from "react-router-dom";
+import { HamburgerMenu } from "@/components/HamburgerMenu";
 const CategoryPage = () => {
   const {
     categoryId
@@ -30,20 +31,7 @@ const CategoryPage = () => {
   }
   const categoryImage = categoryImages[categoryId as keyof typeof categoryImages];
   return <div className="min-h-screen bg-background">
-      {/* Header con botón volver, logo y título */}
-      <div className="fixed top-6 left-6 z-50">
-        <div onClick={() => navigate("/")} className="group cursor-pointer">
-          <div className="rounded-full p-3 transition-all duration-300 hover:scale-105 h-12 w-12 flex items-center justify-center" style={{
-          backgroundColor: '#EDEDED',
-          opacity: 0.5
-        }}>
-            <ArrowLeft className="h-5 w-5 transition-elegant" style={{
-            color: '#353333',
-            strokeWidth: 3
-          }} />
-          </div>
-        </div>
-      </div>
+      <HamburgerMenu />
       
       {/* Logo y título centrados */}
       <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center">

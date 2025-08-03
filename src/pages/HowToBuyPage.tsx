@@ -1,20 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { buildGitHubRawUrl } from "@/lib/config";
+import { HamburgerMenu } from "@/components/HamburgerMenu";
 
 const HowToBuyPage = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-background relative">
-      {/* Header con botón volver - ahora con estilo translúcido */}
-      <div className="fixed top-6 left-6 z-50">
-        <div onClick={() => navigate("/")} className="group cursor-pointer">
-          <div className="bg-transparent backdrop-blur-sm rounded-full p-3 border border-muted-foreground/60 group-hover:border-primary/80 transition-all duration-300">
-            <ArrowLeft className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-elegant" />
-          </div>
-        </div>
-      </div>
+      <HamburgerMenu />
 
       {/* Contenido principal */}
       <div className="relative z-10 pt-24 pb-12">
