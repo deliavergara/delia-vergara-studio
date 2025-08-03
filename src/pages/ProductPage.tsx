@@ -158,7 +158,7 @@ const ProductPage = () => {
                       {technicalLines.length > 0 && (
                         <div className="space-y-1 pt-2">
                           {technicalLines.map((line, index) => (
-                            <p key={index} className="font-avenir-light tracking-body leading-body text-product-description text-sm italic">
+                            <p key={index} className="font-thin tracking-body leading-body text-product-description text-sm italic">
                               {line}
                             </p>
                           ))}
