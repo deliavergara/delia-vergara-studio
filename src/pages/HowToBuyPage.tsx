@@ -201,16 +201,16 @@ const HowToBuyPage = () => {
               // RESPUESTA MODIFICADA PARA ABRIR EL DRAWER
               answer={
                 <>
-                  La talla es siempre a medida; si no conoces la tuya, verifica la sección de cómo saber mi talla, y si todavía quedas con dudas, contáctame y te guiaré para determinarla. Puedes
+                  La talla es siempre a medida; si no conoces la tuya, verifica la sección
                   {' '} {/* Espacio para separar el texto del botón */}
                   <span 
                     onClick={() => setShowSizeGuide(true)} 
                     className="cursor-pointer font-avenir-medium text-base text-blue-600 underline hover:no-underline"
                   >
-                    hacer clic aquí
+                    cómo saber mi talla
                   </span>
                   {' '} {/* Espacio después del botón */}
-                  para ver la guía de tallas.
+                  , y si todavía quedas con dudas, contáctame y te guiaré para determinarla.
                 </>
               }
             />
