@@ -1,12 +1,10 @@
-Rositas Misturo
-Precio:
-Plata 35UR/35.000CLP
-Baño oro 50EUR/50.000CLP
-
-Descripción;
+---
+sku: "MITSUROROSITASPENDIENTEUNICO"
+nombre: "Rositas Mitsuro"
+---
 
 Pequeñas rosas modeladas con la técnica mistura. Sutiles, delicadas y con curvas orgánicas que nacen solo del modelado a mano.
 
-Hechos a mano en plata 925
+Hechas a mano en plata 925
 Disponibles con baño en oro
 Contáctame

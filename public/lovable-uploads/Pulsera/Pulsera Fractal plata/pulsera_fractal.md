@@ -1,14 +1,10 @@
-Pulsera Fractal
-
-Precio:
-Plata 85EUR/85.000CLP
-Baño oro 105EUR/105.000CLP
-
-Descripción;
+---
+sku: "FRACTALPULSERAUNICO"
+nombre: "Pulsera Fractal"
+---
 
 Con dos módulos fractales a cada lado, esta pulsera tiene gran carácter y elegancia. Diseñada para hacerse notar, diferente a cualquier otra.
 
-
-Hechos a mano en plata 925
-Disponibles con baño en oro
+Hecha a mano en plata 925
+Disponible con baño en oro
 Contáctame

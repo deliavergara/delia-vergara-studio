@@ -1,7 +1,7 @@
-Ana
-
-
-Descripción;
+---
+sku: "ANILLOANAUNICO"
+nombre: "Ana"
+---
 
 Pieza única en oro blanco con una Tanzanita. Tallado a mano, por lo que ninguno será igual al anterior.
 Se puede encargar con la piedra y el material que se ajuste a tú presupuesto.

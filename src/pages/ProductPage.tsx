@@ -117,10 +117,56 @@ const ProductPage = () => {
               )}
               
               {/* Descripción */}
-              <div className="-mt-6">
-                <p className="font-avenir-light tracking-body leading-body text-product-description text-sm">
-                  {product.description}
-                </p>
+              <div className="-mt-6 space-y-4">
+                {(() => {
+                  // Separar la descripción principal de los detalles técnicos
+                  const lines = product.description.split('\n');
+                  const descriptionLines = [];
+                  const technicalLines = [];
+                  let foundTechnical = false;
+                  
+                  for (const line of lines) {
+                    const trimmedLine = line.trim();
+                    if (!trimmedLine) continue;
+                    
+                    // Detectar líneas técnicas comunes
+                    if (trimmedLine.includes('Hecho') || 
+                        trimmedLine.includes('Hechos') || 
+                        trimmedLine.includes('Hechas') || 
+                        trimmedLine.includes('Disponible') || 
+                        trimmedLine.includes('Disponibles') || 
+                        trimmedLine.includes('Contáctame') ||
+                        trimmedLine.includes('Incluye cadena')) {
+                      foundTechnical = true;
+                    }
+                    
+                    if (foundTechnical) {
+                      technicalLines.push(trimmedLine);
+                    } else {
+                      descriptionLines.push(trimmedLine);
+                    }
+                  }
+                  
+                  return (
+                    <>
+                      {/* Descripción principal */}
+                      <p className="font-avenir-light tracking-body leading-body text-product-description text-sm">
+                        {descriptionLines.join(' ')}
+                      </p>
+                      
+                      {/* Detalles técnicos */}
+                      {technicalLines.length > 0 && (
+                        <div className="space-y-1 pt-2">
+                          {technicalLines.map((line, index) => (
+                            <p key={index} className="font-thin tracking-body leading-body text-product-description text-sm italic">
+                              {line}
+                            </p>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  );
+                })()}
               </div>
 
               {/* Selectores solo si tiene precios */}

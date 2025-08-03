@@ -17,7 +17,7 @@ const CategoryPage = () => {
     anillos: buildGitHubRawUrl("public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20categoria%203.jpg"),
     collares: buildGitHubRawUrl("public/lovable-uploads/Collares/portada%20collares/portada%20collar%20categoria%20.jpg"),
     pendientes: buildGitHubRawUrl("public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20categoria.jpg"),
-    pulseras: buildGitHubRawUrl("public/lovable-uploads/Pulsera/1.%20pulsera%20portada.jpg")
+    pulseras: buildGitHubRawUrl("public/lovable-uploads/Pulsera/portada%20pulsera/1.%20pulsera%20portada.jpg")
   };
   if (!category) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
