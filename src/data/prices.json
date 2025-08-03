@@ -1,0 +1,92 @@
+{
+  "PARAROFRACTALDOS": {
+    "valor_venta_es": 55,
+    "valor_venta_bano_oro_es": 70,
+    "valor_venta_cl": 61000,
+    "valor_venta_bano_oro_cl": 77000
+  },
+  "PARAROFRACTALTRES": {
+    "valor_venta_es": 68,
+    "valor_venta_bano_oro_es": 83,
+    "valor_venta_cl": 75000,
+    "valor_venta_bano_oro_cl": 91000
+  },
+  "PULSERAFRACTALUNICO": {
+    "valor_venta_es": 85,
+    "valor_venta_bano_oro_es": 105,
+    "valor_venta_cl": 94000,
+    "valor_venta_bano_oro_cl": 116000
+  },
+  "NITIDOPENDIENTESUNICO": {
+    "valor_venta_es": 36,
+    "valor_venta_bano_oro_es": 48,
+    "valor_venta_cl": 40000,
+    "valor_venta_bano_oro_cl": 53000
+  },
+  "BRUMAANILLOUNICO": {
+    "valor_venta_es": 52,
+    "valor_venta_bano_oro_es": 65,
+    "valor_venta_cl": 57000,
+    "valor_venta_bano_oro_cl": 72000
+  },
+  "MAGMAANILLOUNICO": {
+    "valor_venta_es": 55,
+    "valor_venta_bano_oro_es": 65,
+    "valor_venta_cl": 61000,
+    "valor_venta_bano_oro_cl": 72000
+  },
+  "MITSURSOARGOLLASUNICO": {
+    "valor_venta_es": 50,
+    "valor_venta_bano_oro_es": 65,
+    "valor_venta_cl": 55000,
+    "valor_venta_bano_oro_cl": 72000
+  },
+  "MITSURSOPULSERAUNICO": {
+    "valor_venta_es": 95,
+    "valor_venta_bano_oro_es": 120,
+    "valor_venta_cl": 105000,
+    "valor_venta_bano_oro_cl": 132000
+  },
+  "MITSURSOROSASUNICO": {
+    "valor_venta_es": 70,
+    "valor_venta_bano_oro_es": 85,
+    "valor_venta_cl": 77000,
+    "valor_venta_bano_oro_cl": 94000
+  },
+  "ANILLOBLANCAUNICO": {
+    "valor_venta_es": 65,
+    "valor_venta_bano_oro_es": 70,
+    "valor_venta_cl": 72000,
+    "valor_venta_bano_oro_cl": 77000
+  },
+  "PENDIENTESCAUDALESUNICO": {
+    "valor_venta_es": 65,
+    "valor_venta_bano_oro_es": 83,
+    "valor_venta_cl": 72000,
+    "valor_venta_bano_oro_cl": 91000
+  },
+  "PENDIENTESOVALESUNICO": {
+    "valor_venta_es": 56,
+    "valor_venta_bano_oro_es": 70,
+    "valor_venta_cl": 62000,
+    "valor_venta_bano_oro_cl": 77000
+  },
+  "COLLAROVALUNICO": {
+    "valor_venta_es": 45,
+    "valor_venta_bano_oro_es": 57,
+    "valor_venta_cl": 50000,
+    "valor_venta_bano_oro_cl": 63000
+  },
+  "COLLARFLORUNICO": {
+    "valor_venta_es": 28,
+    "valor_venta_bano_oro_es": 45,
+    "valor_venta_cl": 31000,
+    "valor_venta_bano_oro_cl": 50000
+  },
+  "MEDALLAONUNICO": {
+    "valor_venta_es": 40,
+    "valor_venta_bano_oro_es": 55,
+    "valor_venta_cl": 44000,
+    "valor_venta_bano_oro_cl": 61000
+  }
+}
