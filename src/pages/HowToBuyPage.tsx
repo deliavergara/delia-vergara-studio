@@ -50,12 +50,9 @@ const HowToBuyPage = () => {
           />
           <div className="absolute inset-0 bg-black/20" />
           
-          {/* CAMBIO CLAVE: quitado 'px-6' de aquí para que los hijos puedan extenderse a todo el ancho */}
-          <div className="relative z-10 h-full flex flex-col justify-center items-center"> 
-            
-            {/* Título y Número: AHORA tienen su propio padding horizontal y ancho completo */}
+          <div className="relative z-10 h-full flex flex-col justify-center items-center px-6">
             <div 
-              className="text-center mb-8 px-6 md:px-16 w-full" /* Añadido px-6, md:px-16, w-full */
+              className="text-center mb-8"
               style={{
                 opacity: getOpacity(200, 400),
                 transform: `translateY(${getTranslateY(200, 400)}px)`
@@ -67,9 +64,8 @@ const HowToBuyPage = () => {
               </h2>
             </div>
 
-            {/* La caja de opacidad: Ahora ocupa el 'w-full' de su padre sin límites de max-width */}
             <div 
-              className="w-full" /* MODIFICADO: quitado max-w-4xl y mx-auto. Será 100% de su padre (que ahora es sin padding) */
+              className="w-full max-w-4xl mx-auto"
               style={{
                 opacity: getOpacity(400, 600),
                 transform: `translateY(${getTranslateY(400, 600)}px)`
@@ -78,8 +74,7 @@ const HowToBuyPage = () => {
               <div 
                 className="bg-black/55 backdrop-blur-sm p-8 rounded-lg w-full"
               >
-                {/* Contenido dentro de la caja: AHORA tiene su propio padding horizontal y max-width */}
-                <div className="space-y-4 text-white text-left px-6 md:px-16 max-w-4xl mx-auto"> /* Añadido px-6, md:px-16, max-w-4xl, mx-auto */
+                <div className="space-y-4 text-white text-left">
                   <div>
                     <h3 className="font-avenir-medium text-lg mb-1">En Stock</h3>
                     <p className="font-avenir-book text-sm">
