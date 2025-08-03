@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { jewelryItems } from "@/data/products";
 import { cn } from "@/lib/utils";
 import { buildGitHubRawUrl } from "@/lib/config";
+import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
 const ProductPage = () => {
   const {
     productId
@@ -15,6 +16,7 @@ const ProductPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
+  const [showSizeGuide, setShowSizeGuide] = useState(false);
   const dragRef = useRef<HTMLDivElement>(null);
   const product = jewelryItems.find(item => item.id === productId);
   if (!product) {
@@ -72,10 +74,29 @@ const ProductPage = () => {
               }} draggable={false} />
               </div>
               
-              {/* Puntos indicadores */}
-              {product.images.length > 1 && <div className="flex justify-center gap-2 mt-4">
-                  {product.images.map((_, index) => <button key={index} onClick={() => setCurrentImageIndex(index)} className={cn("w-2 h-2 rounded-full transition-all duration-200", currentImageIndex === index ? "bg-muted-foreground scale-125" : "bg-muted-foreground/30 hover:bg-muted-foreground/50")} />)}
-                </div>}
+              {/* Galería de miniaturas */}
+              {product.images.length > 1 && (
+                <div className="flex gap-3 justify-center overflow-x-auto pb-2">
+                  {product.images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={cn(
+                        "flex-shrink-0 w-16 h-16 rounded-sm overflow-hidden border-2 transition-all duration-200",
+                        currentImageIndex === index
+                          ? "border-muted-foreground scale-105"
+                          : "border-border hover:border-muted-foreground/50"
+                      )}
+                    >
+                      <img
+                        src={image}
+                        alt={`${product.name} ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Detalles del producto */}
@@ -84,6 +105,16 @@ const ProductPage = () => {
               <h1 className="font-avenir font-medium text-lg text-product-name tracking-title mb-0.5">
                 {product.name}
               </h1>
+              
+              {/* Guía de tallas para anillos */}
+              {product.category === 'anillos' && (
+                <button
+                  onClick={() => setShowSizeGuide(true)}
+                  className="font-avenir-medium text-sm text-muted-foreground hover:text-foreground transition-colors underline decoration-1 underline-offset-4 hover:decoration-2"
+                >
+                  Guía de tallas
+                </button>
+              )}
               
               {/* Descripción */}
               <div className="-mt-6">
@@ -123,7 +154,7 @@ const ProductPage = () => {
 
               {/* Precio */}
               <div className="border-t pt-6">
-                <div className="text-3xl font-elegant font-medium text-muted-foreground tracking-title">
+                <div className="font-avenir font-medium text-lg text-product-name tracking-title">
                   {currentPrice === 0 ? 'Por encargo' : `${selectedCurrency === 'EUR' ? '€' : '$'}${currentPrice.toLocaleString()}`}
                 </div>
                 <p className="text-body font-light text-muted-foreground mt-2 tracking-body leading-body">
@@ -135,7 +166,7 @@ const ProductPage = () => {
           
           {/* Footer con contacto */}
           <div className="mt-32 pt-12 border-t border-border relative">
-            <div className="absolute bottom-0 left-0 z-0 -ml-8">
+            <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
               <img 
                 src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} 
                 alt="Delia Vergara Isologo" 
@@ -155,32 +186,13 @@ const ProductPage = () => {
           </div>
         </div>
 
-        {/* Fixed contact buttons */}
-        <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
-          <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
-              <img 
-                src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20WHATSAP.png")} 
-                alt="WhatsApp" 
-                className="h-5 w-5"
-              />
-              <span className="font-avenir-light font-light" style={{color: '#353333'}}>WhatsApp</span>
-            </div>
-          </a>
-
-          <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center justify-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
-              <img 
-                src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ICONO%20INSTAGRAM.png")} 
-                alt="Instagram" 
-                className="h-5 w-5"
-              />
-              <span className="font-avenir-light font-light" style={{color: '#353333'}}>@deliavergaras</span>
-            </div>
-          </a>
-        </div>
-
       </div>
+      
+      {/* Size Guide Drawer */}
+      <SizeGuideDrawer
+        isOpen={showSizeGuide}
+        onClose={() => setShowSizeGuide(false)}
+      />
     </div>;
 };
 export default ProductPage;

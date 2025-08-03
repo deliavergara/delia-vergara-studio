@@ -15,12 +15,12 @@ export const ProductGrid = ({ items, category }: ProductGridProps) => {
   return (
     <>
       <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h2 className="font-elegant text-3xl md:text-4xl text-center mb-16 text-product-title">
             {category === 'rings' ? 'Anillos' : 'Pendientes'}
           </h2>
           
-          <div className="grid grid-cols-2 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 gap-6 md:gap-8">
             {filteredItems.map((item) => (
               <div
                 key={item.id}

@@ -17,8 +17,8 @@ const SquareCarousel = () => {
   ];
 
   return (
-    <section className="py-8 bg-background">
-      <div className="container mx-auto px-6">
+    <section className="py-4 bg-background">
+      <div className="container mx-auto px-6 max-w-5xl">
         <div className="relative">
           <Carousel
             opts={{
@@ -34,15 +34,14 @@ const SquareCarousel = () => {
                     <img
                       src={image}
                       alt={`Joyería artesanal ${index + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105 cursor-pointer opacity-90"
                       loading="lazy"
                     />
                   </AspectRatio>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4 bg-white/80 border-gray-200 hover:bg-white" />
-            <CarouselNext className="right-4 bg-white/80 border-gray-200 hover:bg-white" />
+            <CarouselNext className="right-4 w-8 h-8 bg-white/30 border border-gray-200/40 hover:bg-white/50" />
           </Carousel>
         </div>
       </div>

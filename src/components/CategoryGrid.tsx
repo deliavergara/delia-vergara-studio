@@ -20,10 +20,9 @@ export const CategoryGrid = () => {
   };
 
   return (
-    <section className="py-24 bg-background mt-32">
-      <div className="mx-auto px-2">
-        
-        <div className="flex flex-col gap-6 max-w-6xl mx-auto">
+    <section className="bg-background">
+      <div className="w-full">
+        <div className="flex flex-col">
           {categories.map((category) => {
             const categoryImage = categoryImages[category.id as keyof typeof categoryImages];
             return (
@@ -32,8 +31,8 @@ export const CategoryGrid = () => {
                 onClick={() => handleCategoryClick(category.id)}
                 className="group cursor-pointer"
               >
-                <div className="w-full" style={{ aspectRatio: '16/9' }}>
-                  <div className="rounded-lg overflow-hidden relative h-full">
+                <div className="w-full" style={{ aspectRatio: '21/9' }}>
+                  <div className="overflow-hidden relative h-full">
                     {categoryImage && (
                       <>
                         <img
@@ -43,8 +42,8 @@ export const CategoryGrid = () => {
                         />
                         <div className="absolute inset-0" style={{ backgroundColor: '#7a7a7a', opacity: 0.3 }}></div>
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                          <div className="bg-transparent backdrop-blur-sm rounded-full px-6 py-3 border-2 border-white/60 group-hover:border-white group-hover:border-4 transition-all duration-300">
-                            <h3 className="text-white text-lg lg:text-xl font-medium text-center whitespace-nowrap">
+                          <div className="bg-transparent backdrop-blur-sm rounded-full px-5 py-2 border-2 border-white/60 group-hover:border-white group-hover:border-4 transition-all duration-300">
+                            <h3 className="text-white text-base lg:text-lg font-medium text-center whitespace-nowrap">
                               {category.name}
                             </h3>
                           </div>

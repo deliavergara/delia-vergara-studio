@@ -142,7 +142,7 @@ export const ProductModal = ({ item, isOpen, onClose }: ProductModalProps) => {
 
             {/* Price */}
             <div className="border-t pt-6">
-              <div className="text-2xl font-elegant text-foreground">
+              <div className="font-avenir font-medium text-lg text-product-name tracking-title">
                 €{item.prices[selectedMetal]}
               </div>
               <p className="text-sm text-muted-foreground mt-1">

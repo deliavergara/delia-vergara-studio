@@ -15,14 +15,17 @@ export const HamburgerMenu = ({
     label: "Anillos",
     path: "/categoria/anillos"
   }, {
-    label: "Collares",
-    path: "/categoria/collares"
-  }, {
     label: "Pendientes",
     path: "/categoria/pendientes"
   }, {
+    label: "Collares",
+    path: "/categoria/collares"
+  }, {
     label: "Pulseras",
     path: "/categoria/pulseras"
+  }, {
+    label: "Joyas a medida",
+    path: "/joyas-a-medida"
   }, {
     label: "Comprar",
     path: "/como-comprar"

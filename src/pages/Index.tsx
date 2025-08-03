@@ -14,30 +14,16 @@ const Index = () => {
     <div className="relative">
       <HamburgerMenu />
       
-      <div>
-        <HeroSection />
-      </div>
+      <HeroSection />
       
-      <div>
-        <AboutSection />
-      </div>
+      <AboutSection />
       
-      <div>
-        <CategoryGrid />
-      </div>
-      
-      <div>
-        <SquareCarousel />
-      </div>
-      
-      <div>
-        <Footer />
-      </div>
+      <CategoryGrid />
       
       {/* Contact section */}
-      <div className="container mx-auto px-6 pb-24">
-        <div className="mt-32 pt-12 border-t border-border relative">
-          <div className="absolute bottom-0 left-0 z-0 -ml-24">
+      <div className="container mx-auto px-6 pb-16">
+        <div className="mt-8 pt-8 border-t border-border relative">
+          <div className="absolute bottom-0 left-0 z-0 -ml-24 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => window.location.href = '/'}>
             <img 
               src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} 
               alt="Delia Vergara Isologo" 
@@ -55,6 +41,10 @@ const Index = () => {
             </p>
           </div>
         </div>
+      </div>
+      
+      <div>
+        <Footer />
       </div>
 
 
