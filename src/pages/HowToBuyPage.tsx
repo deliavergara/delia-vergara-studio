@@ -3,10 +3,15 @@ import { buildGitHubRawUrl } from "@/lib/config";
 import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
+// Importar SizeGuideDrawer
+import { SizeGuideDrawer } from "@/components/SizeGuideDrawer"; // ASEGÚRATE DE QUE LA RUTA SEA CORRECTA
+
 
 const HowToBuyPage = () => {
   const navigate = useNavigate();
   const [scrollY, setScrollY] = useState(0);
+  // Añadir estado para el SizeGuideDrawer
+  const [showSizeGuide, setShowSizeGuide] = useState(false); // ESTADO PARA EL DRAWER
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -48,14 +53,14 @@ const HowToBuyPage = () => {
               backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/arbol.jpg")})`,
             }}
           />
-          <div className="absolute inset-0 bg-black/20" /> {/* VUELTO A LA OPACIDAD ORIGINAL */}
+          <div className="absolute inset-0 bg-black/20" /> 
           
           <div className="relative z-10 h-full flex flex-col justify-center items-center px-6">
             <div 
               className="text-center mb-8"
               style={{
-                opacity: getOpacity(0, 150), // RANGO AJUSTADO: Aparece muy temprano
-                transform: `translateY(${getTranslateY(0, 150)}px)` // RANGO AJUSTADO
+                opacity: getOpacity(0, 150),
+                transform: `translateY(${getTranslateY(0, 150)}px)`
               }}
             >
               <span className="font-avenir-medium text-8xl md:text-9xl text-white block mb-4">1</span>
@@ -67,8 +72,8 @@ const HowToBuyPage = () => {
             <div 
               className="w-full max-w-4xl mx-auto"
               style={{
-                opacity: getOpacity(100, 250), // RANGO AJUSTADO: Poco después del título
-                transform: `translateY(${getTranslateY(100, 250)}px)` // RANGO AJUSTADO
+                opacity: getOpacity(100, 250),
+                transform: `translateY(${getTranslateY(100, 250)}px)`
               }}
             >
               <div 
@@ -107,8 +112,8 @@ const HowToBuyPage = () => {
             <div 
               className="mb-8"
               style={{
-                opacity: getOpacity(600, 750), // RANGO AJUSTADO: Se asume que h-screen es ~800px, inicia antes de que la sección esté completamente arriba.
-                transform: `translateY(${getTranslateY(600, 750)}px)` // RANGO AJUSTADO
+                opacity: getOpacity(600, 750),
+                transform: `translateY(${getTranslateY(600, 750)}px)`
               }}
             >
               <span className="font-avenir-medium text-8xl md:text-9xl block mb-4" style={{ color: '#353333' }}>2</span>
@@ -120,8 +125,8 @@ const HowToBuyPage = () => {
             <div 
               className="max-w-xl space-y-4"
               style={{
-                opacity: getOpacity(700, 850), // RANGO AJUSTADO
-                transform: `translateY(${getTranslateY(700, 850)}px)` // RANGO AJUSTADO
+                opacity: getOpacity(700, 850),
+                transform: `translateY(${getTranslateY(700, 850)}px)`
               }}
             >
               <p className="font-avenir-book text-base leading-relaxed" style={{ color: '#353333' }}>
@@ -142,14 +147,14 @@ const HowToBuyPage = () => {
               backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/caja.jpg")})`, 
             }}
           />
-          <div className="absolute inset-0 bg-black/40" /> {/* VUELTO A LA OPACIDAD ORIGINAL */}
+          <div className="absolute inset-0 bg-black/40" /> 
           
           <div className="relative z-10 h-full flex flex-col justify-start items-start px-6 md:px-16 pt-32">
             <div 
               className="mb-1 flex items-start justify-between w-full max-w-4xl"
               style={{
-                opacity: getOpacity(1300, 1450), // RANGO AJUSTADO
-                transform: `translateY(${getTranslateY(1300, 1450)}px)` // RANGO AJUSTADO
+                opacity: getOpacity(1300, 1450),
+                transform: `translateY(${getTranslateY(1300, 1450)}px)`
               }}
             >
               <h2 className="font-avenir-medium text-2xl md:text-3xl text-white">
@@ -161,8 +166,8 @@ const HowToBuyPage = () => {
             <div 
               className="max-w-xl space-y-2"
               style={{
-                opacity: getOpacity(1400, 1550), // RANGO AJUSTADO
-                transform: `translateY(${getTranslateY(1400, 1550)}px)` // RANGO AJUSTADO
+                opacity: getOpacity(1400, 1550),
+                transform: `translateY(${getTranslateY(1400, 1550)}px)`
               }}
             >
               <p className="font-avenir-book text-base leading-snug text-white">
@@ -193,7 +198,21 @@ const HowToBuyPage = () => {
             />
             <FAQItem 
               question="¿Cómo sé mi talla?"
-              answer="La talla es siempre a medida; si no conoces la tuya, verifica la sección de cómo saber mi talla, y si todavía quedas con dudas, contáctame y te guiaré para determinarla."
+              // RESPUESTA MODIFICADA PARA ABRIR EL DRAWER
+              answer={
+                <>
+                  La talla es siempre a medida; si no conoces la tuya, verifica la sección de cómo saber mi talla, y si todavía quedas con dudas, contáctame y te guiaré para determinarla. Puedes
+                  {' '} {/* Espacio para separar el texto del botón */}
+                  <span 
+                    onClick={() => setShowSizeGuide(true)} 
+                    className="cursor-pointer font-avenir-medium text-base text-blue-600 underline hover:no-underline"
+                  >
+                    hacer clic aquí
+                  </span>
+                  {' '} {/* Espacio después del botón */}
+                  para ver la guía de tallas.
+                </>
+              }
             />
             <FAQItem 
               question="¿Qué formas de pago aceptas?"
@@ -215,7 +234,11 @@ const HowToBuyPage = () => {
       <div className="border-t border-border pt-16 relative px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
-            <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} alt="Delia Vergara Isologo" className="h-32 w-auto opacity-50" />
+            <img 
+              src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} 
+              alt="Delia Vergara Isologo" 
+              className="h-32 w-auto opacity-50"
+            />
           </div>
           
           <div className="text-center space-y-8 relative z-10 pb-12">
@@ -229,13 +252,19 @@ const HowToBuyPage = () => {
           </div>
         </div>
       </div>
+
+      {/* COMPONENTE SIZEGUIDEDRAWER AÑADIDO A LA PÁGINA */}
+      <SizeGuideDrawer
+        isOpen={showSizeGuide}
+        onClose={() => setShowSizeGuide(false)}
+      />
     </div>
   );
 };
 
 interface FAQItemProps {
   question: string;
-  answer: string;
+  answer: string | JSX.Element; // Permitir que la respuesta sea JSX para el botón
 }
 
 const FAQItem = ({ question, answer }: FAQItemProps) => {
