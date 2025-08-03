@@ -66,10 +66,10 @@
     "valor_venta_bano_oro_cl": 77000
   },
   "CAUDALESPENDIENTEUNICO": {
-    "valor_venta_es": 65,
-    "valor_venta_bano_oro_es": 83,
-    "valor_venta_cl": 72000,
-    "valor_venta_bano_oro_cl": 91000
+    "valor_venta_es": 60,
+    "valor_venta_bano_oro_es": 75,
+    "valor_venta_cl": 66000,
+    "valor_venta_bano_oro_cl": 83000
   },
   "OVALESPENDIENTEUNICO": {
     "valor_venta_es": 56,
