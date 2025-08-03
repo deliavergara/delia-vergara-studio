@@ -120,15 +120,15 @@
     "valor_venta_bano_oro_cl": 83000
   },
   "ALCAZARANILLOUNICO": {
-    "valor_venta_es": 120,
-    "valor_venta_bano_oro_es": 150,
-    "valor_venta_cl": 132000,
-    "valor_venta_bano_oro_cl": 165000
+    "valor_venta_es": 0,
+    "valor_venta_bano_oro_es": 0,
+    "valor_venta_cl": 0,
+    "valor_venta_bano_oro_cl": 0
   },
   "ANILLOANAUNICO": {
-    "valor_venta_es": 110,
-    "valor_venta_bano_oro_es": 140,
-    "valor_venta_cl": 121000,
-    "valor_venta_bano_oro_cl": 154000
+    "valor_venta_es": 0,
+    "valor_venta_bano_oro_es": 0,
+    "valor_venta_cl": 0,
+    "valor_venta_bano_oro_cl": 0
   }
 }
