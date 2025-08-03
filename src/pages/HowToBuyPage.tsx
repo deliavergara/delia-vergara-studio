@@ -207,10 +207,10 @@ const HowToBuyPage = () => {
                     onClick={() => setShowSizeGuide(true)} 
                     className="cursor-pointer font-avenir-medium text-base text-blue-600 underline hover:no-underline"
                   >
-                    cómo saber mi talla
+                    cómo saber mi talla,
                   </span>
                   {' '} {/* Espacio después del botón */}
-                  , y si todavía quedas con dudas, contáctame y te guiaré para determinarla.
+                   y si todavía quedas con dudas, contáctame y te guiaré para determinarla.
                 </>
               }
             />
