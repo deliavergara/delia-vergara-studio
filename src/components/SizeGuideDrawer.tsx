@@ -65,9 +65,9 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
             {/* Ilustración guía de talla */}
             <div className="flex justify-center my-6">
               <img 
-                src="/lovable-uploads/Material%20de%20Apoyo/Iconos/ilustracion%20guia%20de%20talla%20anillo.PNG"
+                src="/lovable-uploads/Material%20de%20Apoyo/Iconos/ilustracion%20guia%20de%20talla%20anillos.PNG"
                 alt="Ilustración de cómo medir el anillo"
-                className="w-64 h-auto"
+                className="w-80 h-auto"
               />
             </div>
             
