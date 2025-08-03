@@ -9,7 +9,7 @@ export const AboutSection = () => {
         
         {/* Video centrado */}
         <div className="flex justify-center">
-          <div className="w-full max-w-xl">
+          <div className="w-full max-w-md">
             <video autoPlay muted loop playsInline className="w-full aspect-[3/4] object-cover rounded-sm">
               <source src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0326.mov")} type="video/mp4" />
             </video>
