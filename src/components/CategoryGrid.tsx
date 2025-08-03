@@ -38,7 +38,7 @@ export const CategoryGrid = () => {
                         <img
                           src={categoryImage}
                           alt={category.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-95"
                         />
                         <div className="absolute inset-0" style={{ backgroundColor: '#7a7a7a', opacity: 0.3 }}></div>
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
