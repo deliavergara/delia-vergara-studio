@@ -45,7 +45,7 @@ const HowToBuyPage = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url(https://raw.githubusercontent.com/deliavergara/delia-vergara-studio/feature/como_comprar/public/lovable-uploads/Como%20comprar/arbol.jpg)`,
+              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/arbol.jpg")})`,
             }}
           />
           <div className="absolute inset-0 bg-black/20" />
