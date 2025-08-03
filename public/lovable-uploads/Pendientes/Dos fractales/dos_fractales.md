@@ -1,16 +1,10 @@
-Dos fractales
-
-Precio:
-Plata 55EUR/55.000CLP
-Baño oro 71EUR/71.000CLP
-
-Descripción;
+---
+sku: "PARFRACTALPENDIENTEDOS"
+nombre: "Dos Fractales"
+---
 
 Compuestos por dos módulos florales: uno pequeño que se ajusta de forma delicada y otro más grande que le da carácter. Una pieza con equilibrio, elegante, ligera y con movimiento.
 
-
-
-
-Hechos a mano en plata 925
-Disponibles con baño en oro
+Hecho a mano en plata 925
+Disponible con baño en oro
 Contáctame
