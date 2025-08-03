@@ -62,6 +62,15 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
               <li>3. Con los milímetros que obtengas, revisa en esta tabla cuál es tu talla correspondiente.</li>
             </ol>
             
+            {/* Ilustración guía de talla */}
+            <div className="flex justify-center my-6">
+              <img 
+                src="/lovable-uploads/Material%20de%20Apoyo/Iconos/ilustracion%20guia%20de%20talla%20anillo.PNG"
+                alt="Ilustración de cómo medir el anillo"
+                className="w-48 h-auto"
+              />
+            </div>
+            
             <p className="font-avenir-light text-sm text-foreground leading-relaxed italic">
               Por ejemplo: si tu anillo mide 16 mm de diámetro interior, tu talla será la 10.
             </p>
