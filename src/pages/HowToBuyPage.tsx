@@ -152,7 +152,7 @@ const HowToBuyPage = () => {
           
           <div className="relative z-10 h-full flex flex-col justify-start items-start px-6 md:px-16 pt-32">
             <div 
-              className="mb-1 flex items-start justify-between w-full max-w-4xl"
+              className="-mb-4 flex items-start justify-between w-full max-w-4xl"
               style={{
                 opacity: getOpacity(1400, 1600),
                 transform: `translateY(${getTranslateY(1400, 1600)}px)`
