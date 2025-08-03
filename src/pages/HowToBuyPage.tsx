@@ -45,10 +45,11 @@ const HowToBuyPage = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/arbol.jpg")})`,
+              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/1.%20como%20comprar.JPG")})`,
             }}
           />
-          <div className="absolute inset-0 bg-black/20" />
+          {/* CAMBIO CLAVE AQUÍ: Overlay de color negro hecho completamente transparente para depuración */}
+          <div className="absolute inset-0 bg-black/0" /> 
           
           <div className="relative z-10 h-full flex flex-col justify-center items-center px-6">
             <div 
@@ -104,10 +105,11 @@ const HowToBuyPage = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/caja.jpg")})`,
+              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/2.%20como%20comprar.jpg")})`,
             }}
           />
-          <div className="absolute inset-0 bg-white/70" />
+          {/* CAMBIO CLAVE AQUÍ: Overlay de color blanco hecho completamente transparente para depuración */}
+          <div className="absolute inset-0 bg-white/0" /> 
           
           <div className="relative z-10 h-full flex flex-col justify-start items-start px-6 md:px-16 pt-32">
             <div 
@@ -117,160 +119,4 @@ const HowToBuyPage = () => {
                 transform: `translateY(${getTranslateY(800, 1000)}px)`
               }}
             >
-              <span className="font-avenir-medium text-8xl md:text-9xl block mb-4" style={{ color: '#353333' }}>2</span>
-              <h2 className="font-avenir-medium text-2xl md:text-3xl" style={{ color: '#353333' }}>
-                Contacto y Confirmación
-              </h2>
-            </div>
-
-            <div 
-              className="max-w-xl space-y-4"
-              style={{
-                opacity: getOpacity(1000, 1200),
-                transform: `translateY(${getTranslateY(1000, 1200)}px)`
-              }}
-            >
-              <p className="font-avenir-book text-base leading-relaxed" style={{ color: '#353333' }}>
-                Escríbeme para que conversemos sobre la pieza que te interesa.
-              </p>
-              <p className="font-avenir-book text-base leading-relaxed" style={{ color: '#353333' }}>
-                Confirmaremos juntos los detalles, la talla, el precio final y los tiempos de creación o envío.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Paso 3 - Pago y Envío */}
-        <div className="relative h-screen">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/2.%20como%20comprar.jpg")})`,
-            }}
-          />
-          <div className="absolute inset-0 bg-black/40" />
-          
-          <div className="relative z-10 h-full flex flex-col justify-start items-start px-6 md:px-16 pt-32">
-            <div 
-              className="mb-1 flex items-start justify-between w-full max-w-4xl"
-              style={{
-                opacity: getOpacity(1400, 1600),
-                transform: `translateY(${getTranslateY(1400, 1600)}px)`
-              }}
-            >
-              <h2 className="font-avenir-medium text-2xl md:text-3xl text-white">
-                Pago y Envío
-              </h2>
-              <span className="font-avenir-medium text-8xl md:text-9xl text-white">3</span>
-            </div>
-
-            <div 
-              className="max-w-xl space-y-2"
-              style={{
-                opacity: getOpacity(1600, 1800),
-                transform: `translateY(${getTranslateY(1600, 1800)}px)`
-              }}
-            >
-              <p className="font-avenir-book text-base leading-snug text-white">
-                El pago se realiza por transferencia bancaria.
-              </p>
-              <p className="font-avenir-book text-base leading-snug text-white">
-                Una vez lista, preparo y envío tu joya a tu domicilio.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Preguntas Frecuentes */}
-      <div className="relative z-10 py-24 px-6">
-        <div className="container mx-auto max-w-4xl">
-          <h2 
-            className="font-avenir-medium text-3xl md:text-4xl mb-16 text-left" 
-            style={{ color: '#353333' }}
-          >
-            Preguntas Frecuentes
-          </h2>
-
-          <div className="space-y-0">
-            <FAQItem 
-              question="¿De qué materiales son las joyas?"
-              answer="Trabajo principalmente con plata de ley y plata enchapada en oro, aunque puedo realizar tu encargo en oro macizo u otros materiales que prefieras."
-            />
-            <FAQItem 
-              question="¿Cómo sé mi talla?"
-              answer="La talla es siempre a medida; si no conoces la tuya, verifica la sección de cómo saber mi talla, y si todavía quedas con dudas, contáctame y te guiaré para determinarla."
-            />
-            <FAQItem 
-              question="¿Qué formas de pago aceptas?"
-              answer="El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (para pagos en euros) y en Chile (para pagos en pesos chilenos), según te acomode."
-            />
-            <FAQItem 
-              question="¿A dónde realizas envíos y cuál es el costo?"
-              answer="Realizo envíos a toda Europa y Chile. El coste se calcula según tu ubicación y se suma al valor final. Para los pedidos a Chile, el envío se realiza desde Santiago, evitando costos internacionales."
-            />
-            <FAQItem 
-              question="¿Cuánto tarda la producción de una joya por encargo?"
-              answer="El tiempo de producción varía según la complejidad de la pieza, desde unos pocos días hasta algunas semanas. Este plazo te lo confirmaré siempre antes de iniciar el trabajo."
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Sección de contacto */}
-      <div className="border-t border-border pt-16 relative px-6">
-        <div className="container mx-auto max-w-4xl">
-          <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
-            <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} alt="Delia Vergara Isologo" className="h-32 w-auto opacity-50" />
-          </div>
-          
-          <div className="text-center space-y-8 relative z-10 pb-12">
-            <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{ color: '#353333' }}>
-              CONTÁCTAME
-            </h2>
-            
-            <p className="font-avenir-light font-light tracking-body leading-body" style={{ color: '#353333' }}>
-              deliavergara.joyas@gmail.com | +34 625857127
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-interface FAQItemProps {
-  question: string;
-  answer: string;
-}
-
-const FAQItem = ({ question, answer }: FAQItemProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="border-b border-gray-200 last:border-b-0">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-6 text-left flex justify-between items-center hover:bg-gray-50/50 transition-colors duration-200"
-      >
-        <span className="font-avenir-book text-lg pr-8" style={{ color: '#353333' }}>
-          {question}
-        </span>
-        <ChevronDown 
-          className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-          style={{ color: '#353333' }}
-        />
-      </button>
-      
-      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
-        isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
-      }`}>
-        <p className="font-avenir-light text-base leading-relaxed" style={{ color: '#353333' }}>
-          {answer}
-        </p>
-      </div>
-    </div>
-  );
-};
-
-export default HowToBuyPage;
+              <span className="font-avenir-medium text-8xl md:text-9xl
