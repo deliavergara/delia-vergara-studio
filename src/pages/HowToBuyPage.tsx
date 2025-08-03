@@ -76,19 +76,19 @@ const HowToBuyPage = () => {
               >
                 <div className="space-y-4 text-white text-left">
                   <div>
-                    <h3 className="font-avenir-medium text-lg mb-2">En Stock</h3>
+                    <h3 className="font-avenir-medium text-lg mb-1">En Stock</h3>
                     <p className="font-avenir-book text-sm">
                       Piezas listas para envío inmediato desde Valencia (España) o Santiago (Chile).
                     </p>
                   </div>
                   <div>
-                    <h3 className="font-avenir-medium text-lg mb-2">Por Encargo</h3>
+                    <h3 className="font-avenir-medium text-lg mb-1">Por Encargo</h3>
                     <p className="font-avenir-book text-sm">
                       La mayoría de mis diseños se pueden volver a producir especialmente para ti.
                     </p>
                   </div>
                   <div>
-                    <h3 className="font-avenir-medium text-lg mb-2">Personalizada</h3>
+                    <h3 className="font-avenir-medium text-lg mb-1">Personalizada</h3>
                     <p className="font-avenir-book text-sm">
                       Si tienes una idea, hablemos para crear juntos una joya completamente nueva.
                     </p>
