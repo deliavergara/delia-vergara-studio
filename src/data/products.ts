@@ -166,7 +166,7 @@ const productMapping = {
     name: "Caudal",
     description: "Con textura orgánica y cadenas que caen como caudales. Tienen movimiento y mucho carácter.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
   },
-  "OVALESPENDIENTEUNICO": {
+  "OVALPENDIENTEUNICO": {
     folder: "Pendientes/Ovalo",
     images: [
       "1.Pendientes oval plata verde 2.0.jpg",
