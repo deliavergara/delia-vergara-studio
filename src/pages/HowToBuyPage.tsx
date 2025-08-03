@@ -3,15 +3,13 @@ import { buildGitHubRawUrl } from "@/lib/config";
 import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
-// Importar SizeGuideDrawer
-import { SizeGuideDrawer } from "@/components/SizeGuideDrawer"; // ASEGÚRATE DE QUE LA RUTA SEA CORRECTA
+import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
 
 
 const HowToBuyPage = () => {
   const navigate = useNavigate();
   const [scrollY, setScrollY] = useState(0);
-  // Añadir estado para el SizeGuideDrawer
-  const [showSizeGuide, setShowSizeGuide] = useState(false); // ESTADO PARA EL DRAWER
+  const [showSizeGuide, setShowSizeGuide] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -153,8 +151,8 @@ const HowToBuyPage = () => {
             <div 
               className="mb-1 flex items-start justify-between w-full max-w-4xl"
               style={{
-                opacity: getOpacity(1300, 1450),
-                transform: `translateY(${getTranslateY(1300, 1450)}px)`
+                opacity: getOpacity(1000, 1200), // RANGO AJUSTADO MÁS TEMPRANO
+                transform: `translateY(${getTranslateY(1000, 1200)}px)` // RANGO AJUSTADO MÁS TEMPRANO
               }}
             >
               <h2 className="font-avenir-medium text-2xl md:text-3xl text-white">
@@ -166,8 +164,8 @@ const HowToBuyPage = () => {
             <div 
               className="max-w-xl space-y-2"
               style={{
-                opacity: getOpacity(1400, 1550),
-                transform: `translateY(${getTranslateY(1400, 1550)}px)`
+                opacity: getOpacity(1100, 1300), // RANGO AJUSTADO MÁS TEMPRANO
+                transform: `translateY(${getTranslateY(1100, 1300)}px)` // RANGO AJUSTADO MÁS TEMPRANO
               }}
             >
               <p className="font-avenir-book text-base leading-snug text-white">
@@ -198,19 +196,18 @@ const HowToBuyPage = () => {
             />
             <FAQItem 
               question="¿Cómo sé mi talla?"
-              // RESPUESTA MODIFICADA PARA ABRIR EL DRAWER
               answer={
                 <>
                   La talla es siempre a medida; si no conoces la tuya, verifica la sección
-                  {' '} {/* Espacio para separar el texto del botón */}
+                  {' '}
                   <span 
                     onClick={() => setShowSizeGuide(true)} 
                     className="cursor-pointer font-avenir-medium text-base text-blue-600 underline hover:no-underline"
                   >
                     cómo saber mi talla,
                   </span>
-                  {' '} {/* Espacio después del botón */}
-                   y si todavía quedas con dudas, contáctame y te guiaré para determinarla.
+                  {' '}
+                    y si todavía quedas con dudas, contáctame y te guiaré para determinarla.
                 </>
               }
             />
@@ -264,7 +261,7 @@ const HowToBuyPage = () => {
 
 interface FAQItemProps {
   question: string;
-  answer: string | JSX.Element; // Permitir que la respuesta sea JSX para el botón
+  answer: string | JSX.Element;
 }
 
 const FAQItem = ({ question, answer }: FAQItemProps) => {
