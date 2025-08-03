@@ -31,7 +31,7 @@ const HowToBuyPage = () => {
       {/* Proceso de Compra - Scrollytelling */}
       <div className="relative">
         {/* Título principal */}
-        <div className="relative z-2 pt-32 pb-16 text-center">
+        <div className="relative z-10 pt-32 pb-16 text-center">
           <h1 
             className="font-avenir-heavy font-black text-4xl md:text-5xl" 
             style={{ color: '#353333' }}
@@ -48,7 +48,7 @@ const HowToBuyPage = () => {
               backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/arbol.jpg")})`,
             }}
           />
-          <div className="absolute inset-0 bg-black/20" />
+          <div className="absolute inset-0 bg-black/0" /> 
           
           <div className="relative z-10 h-full flex flex-col justify-center items-center px-6">
             <div 
@@ -101,13 +101,10 @@ const HowToBuyPage = () => {
 
         {/* Paso 2 - Contacto y Confirmación */}
         <div className="relative h-screen">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/caja.jpg")})`,
-            }}
-          />
-          <div className="absolute inset-0 bg-white/70" />
+          {/* ELIMINADA LA IMAGEN DE FONDO EN ESTA SECCIÓN */}
+          {/* AÑADIDO UN FONDO BLANCO SOLIDO EN LUGAR DE LA IMAGEN */}
+          <div className="absolute inset-0 bg-white" /> 
+          {/* Eliminado el div de overlay bg-white/70, ya que ahora el fondo es blanco solido */}
           
           <div className="relative z-10 h-full flex flex-col justify-start items-start px-6 md:px-16 pt-32">
             <div 
@@ -142,13 +139,14 @@ const HowToBuyPage = () => {
 
         {/* Paso 3 - Pago y Envío */}
         <div className="relative h-screen">
+          {/* Imagen de fondo de la CAJA en esta sección */}
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/2.%20como%20comprar.jpg")})`,
+              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/caja.jpg")})`, // IMAGEN DE CAJA AQUÍ
             }}
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/0" /> {/* Overlay transparente */}
           
           <div className="relative z-10 h-full flex flex-col justify-start items-start px-6 md:px-16 pt-32">
             <div 
