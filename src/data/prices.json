@@ -6,19 +6,11 @@
     "valor_venta_bano_oro_cl": 69000
   },
   "PARFRACTALPENDIENTEDOS": {
-  "PARFRACTALPENDIENTEUNO": {
-    "valor_venta_es": 48,
-    "valor_venta_bano_oro_es": 63,
-    "valor_venta_cl": 53000,
-    "valor_venta_bano_oro_cl": 69000
-  },
-  "PARFRACTALPENDIENTEDOS": {
     "valor_venta_es": 55,
     "valor_venta_bano_oro_es": 70,
     "valor_venta_cl": 61000,
     "valor_venta_bano_oro_cl": 77000
   },
-  "PARFRACTALPENDIENTETRES": {
   "PARFRACTALPENDIENTETRES": {
     "valor_venta_es": 68,
     "valor_venta_bano_oro_es": 83,
@@ -26,24 +18,16 @@
     "valor_venta_bano_oro_cl": 91000
   },
   "FRACTALPULSERAUNICO": {
-  "FRACTALPULSERAUNICO": {
     "valor_venta_es": 85,
     "valor_venta_bano_oro_es": 105,
     "valor_venta_cl": 94000,
     "valor_venta_bano_oro_cl": 116000
   },
   "NITIDOPENDIENTEUNICO": {
-  "NITIDOPENDIENTEUNICO": {
     "valor_venta_es": 36,
     "valor_venta_bano_oro_es": 48,
     "valor_venta_cl": 40000,
     "valor_venta_bano_oro_cl": 53000
-  },
-  "BRUMAANILLOUNICO": {
-    "valor_venta_es": 52,
-    "valor_venta_bano_oro_es": 65,
-    "valor_venta_cl": 57000,
-    "valor_venta_bano_oro_cl": 72000
   },
   "MAGMAANILLOUNICO": {
     "valor_venta_es": 55,
@@ -51,34 +35,25 @@
     "valor_venta_cl": 61000,
     "valor_venta_bano_oro_cl": 72000
   },
-  "MITSURSOARGOLLASPENDIENTE": {
-  "MITSURSOARGOLLASPENDIENTE": {
+  "MITSUROARGOLLASPENDIENTEUNICO": {
     "valor_venta_es": 50,
     "valor_venta_bano_oro_es": 65,
     "valor_venta_cl": 55000,
     "valor_venta_bano_oro_cl": 72000
   },
-  "MITSURSOPULSERAUNICO": {
+  "MITSUROPULSERAUNICO": {
     "valor_venta_es": 95,
     "valor_venta_bano_oro_es": 120,
     "valor_venta_cl": 105000,
     "valor_venta_bano_oro_cl": 132000
   },
-  "MITSURSOROSASPENDIENTE": {
-  "MITSURSOROSASPENDIENTE": {
+  "MITSUROROSASPENDIENTEUNICO": {
     "valor_venta_es": 70,
     "valor_venta_bano_oro_es": 85,
     "valor_venta_cl": 77000,
     "valor_venta_bano_oro_cl": 94000
   },
-  "MITSUROROSASPENDIENTE": {
-    "valor_venta_es": 35,
-    "valor_venta_bano_oro_es": 50,
-    "valor_venta_cl": 39000,
-    "valor_venta_bano_oro_cl": 55000
-  },
-  "BLANCAANILLOUNICO": {
-  "MITSUROROSASPENDIENTE": {
+  "MITSUROROSITASPENDIENTEUNICO": {
     "valor_venta_es": 35,
     "valor_venta_bano_oro_es": 50,
     "valor_venta_cl": 39000,
@@ -90,7 +65,6 @@
     "valor_venta_cl": 72000,
     "valor_venta_bano_oro_cl": 77000
   },
-  "CAUDALESPENDIENTEUNICO": {
   "CAUDALESPENDIENTEUNICO": {
     "valor_venta_es": 65,
     "valor_venta_bano_oro_es": 83,
@@ -121,10 +95,16 @@
     "valor_venta_cl": 44000,
     "valor_venta_bano_oro_cl": 61000
   },
-  "CUADADAPENDIENTEUNICO": {
-    "valor_venta_es": 60,
-    "valor_venta_bano_oro_es": 75,
-    "valor_venta_cl": 66000,
-    "valor_venta_bano_oro_cl": 83000
+  "ALCAZARANILLOUNICO": {
+    "valor_venta_es": 0,
+    "valor_venta_bano_oro_es": 0,
+    "valor_venta_cl": 0,
+    "valor_venta_bano_oro_cl": 0
+  },
+  "ANILLOANAUNICO": {
+    "valor_venta_es": 0,
+    "valor_venta_bano_oro_es": 0,
+    "valor_venta_cl": 0,
+    "valor_venta_bano_oro_cl": 0
   }
 }
