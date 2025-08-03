@@ -48,14 +48,14 @@ const HowToBuyPage = () => {
               backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/arbol.jpg")})`,
             }}
           />
-          <div className="absolute inset-0 bg-black/20" /> 
+          <div className="absolute inset-0 bg-black/20" /> {/* VUELTO A LA OPACIDAD ORIGINAL */}
           
           <div className="relative z-10 h-full flex flex-col justify-center items-center px-6">
             <div 
               className="text-center mb-8"
               style={{
-                opacity: getOpacity(100, 300), // RANGO AJUSTADO
-                transform: `translateY(${getTranslateY(100, 300)}px)` // RANGO AJUSTADO
+                opacity: getOpacity(0, 150), // RANGO AJUSTADO: Aparece muy temprano
+                transform: `translateY(${getTranslateY(0, 150)}px)` // RANGO AJUSTADO
               }}
             >
               <span className="font-avenir-medium text-8xl md:text-9xl text-white block mb-4">1</span>
@@ -67,8 +67,8 @@ const HowToBuyPage = () => {
             <div 
               className="w-full max-w-4xl mx-auto"
               style={{
-                opacity: getOpacity(300, 500), // RANGO AJUSTADO (inicia antes)
-                transform: `translateY(${getTranslateY(300, 500)}px)` // RANGO AJUSTADO
+                opacity: getOpacity(100, 250), // RANGO AJUSTADO: Poco después del título
+                transform: `translateY(${getTranslateY(100, 250)}px)` // RANGO AJUSTADO
               }}
             >
               <div 
@@ -107,8 +107,8 @@ const HowToBuyPage = () => {
             <div 
               className="mb-8"
               style={{
-                opacity: getOpacity(700, 900), // RANGO AJUSTADO
-                transform: `translateY(${getTranslateY(700, 900)}px)` // RANGO AJUSTADO
+                opacity: getOpacity(600, 750), // RANGO AJUSTADO: Se asume que h-screen es ~800px, inicia antes de que la sección esté completamente arriba.
+                transform: `translateY(${getTranslateY(600, 750)}px)` // RANGO AJUSTADO
               }}
             >
               <span className="font-avenir-medium text-8xl md:text-9xl block mb-4" style={{ color: '#353333' }}>2</span>
@@ -120,8 +120,8 @@ const HowToBuyPage = () => {
             <div 
               className="max-w-xl space-y-4"
               style={{
-                opacity: getOpacity(900, 1100), // RANGO AJUSTADO
-                transform: `translateY(${getTranslateY(900, 1100)}px)` // RANGO AJUSTADO
+                opacity: getOpacity(700, 850), // RANGO AJUSTADO
+                transform: `translateY(${getTranslateY(700, 850)}px)` // RANGO AJUSTADO
               }}
             >
               <p className="font-avenir-book text-base leading-relaxed" style={{ color: '#353333' }}>
@@ -142,14 +142,14 @@ const HowToBuyPage = () => {
               backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/caja.jpg")})`, 
             }}
           />
-          <div className="absolute inset-0 bg-black/40" /> 
+          <div className="absolute inset-0 bg-black/40" /> {/* VUELTO A LA OPACIDAD ORIGINAL */}
           
           <div className="relative z-10 h-full flex flex-col justify-start items-start px-6 md:px-16 pt-32">
             <div 
               className="mb-1 flex items-start justify-between w-full max-w-4xl"
               style={{
-                opacity: getOpacity(1300, 1500), // RANGO AJUSTADO
-                transform: `translateY(${getTranslateY(1300, 1500)}px)` // RANGO AJUSTADO
+                opacity: getOpacity(1300, 1450), // RANGO AJUSTADO
+                transform: `translateY(${getTranslateY(1300, 1450)}px)` // RANGO AJUSTADO
               }}
             >
               <h2 className="font-avenir-medium text-2xl md:text-3xl text-white">
@@ -161,8 +161,8 @@ const HowToBuyPage = () => {
             <div 
               className="max-w-xl space-y-2"
               style={{
-                opacity: getOpacity(1500, 1700), // RANGO AJUSTADO
-                transform: `translateY(${getTranslateY(1500, 1700)}px)` // RANGO AJUSTADO
+                opacity: getOpacity(1400, 1550), // RANGO AJUSTADO
+                transform: `translateY(${getTranslateY(1400, 1550)}px)` // RANGO AJUSTADO
               }}
             >
               <p className="font-avenir-book text-base leading-snug text-white">
