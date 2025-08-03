@@ -74,10 +74,29 @@ const ProductPage = () => {
               }} draggable={false} />
               </div>
               
-              {/* Puntos indicadores */}
-              {product.images.length > 1 && <div className="flex justify-center gap-2 mt-4">
-                  {product.images.map((_, index) => <button key={index} onClick={() => setCurrentImageIndex(index)} className={cn("w-2 h-2 rounded-full transition-all duration-200", currentImageIndex === index ? "bg-muted-foreground scale-125" : "bg-muted-foreground/30 hover:bg-muted-foreground/50")} />)}
-                </div>}
+              {/* Galería de miniaturas */}
+              {product.images.length > 1 && (
+                <div className="flex gap-3 justify-center overflow-x-auto pb-2">
+                  {product.images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={cn(
+                        "flex-shrink-0 w-16 h-16 rounded-sm overflow-hidden border-2 transition-all duration-200",
+                        currentImageIndex === index
+                          ? "border-muted-foreground scale-105"
+                          : "border-border hover:border-muted-foreground/50"
+                      )}
+                    >
+                      <img
+                        src={image}
+                        alt={`${product.name} ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Detalles del producto */}
