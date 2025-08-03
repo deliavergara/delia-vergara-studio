@@ -20,7 +20,7 @@ export const ProductGrid = ({ items, category }: ProductGridProps) => {
             {category === 'rings' ? 'Anillos' : 'Pendientes'}
           </h2>
           
-          <div className="grid grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
             {filteredItems.map((item) => (
               <div
                 key={item.id}
@@ -31,7 +31,7 @@ export const ProductGrid = ({ items, category }: ProductGridProps) => {
                   <img
                     src={item.mainImage}
                     alt={item.name}
-                    className="w-full h-full object-cover transition-elegant group-hover:scale-105"
+                    className="w-full h-full object-cover transition-elegant group-hover:scale-105 opacity-98"
                   />
                 </div>
                 <h3 className="font-avenir font-medium text-xl mt-4 text-product-name group-hover:text-muted-foreground transition-quick tracking-product-name">
