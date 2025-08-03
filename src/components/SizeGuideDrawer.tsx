@@ -67,7 +67,7 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
               <img 
                 src="/lovable-uploads/Material%20de%20Apoyo/Iconos/ilustracion%20guia%20de%20talla%20anillo.PNG"
                 alt="Ilustración de cómo medir el anillo"
-                className="w-48 h-auto"
+                className="w-64 h-auto"
               />
             </div>
             
