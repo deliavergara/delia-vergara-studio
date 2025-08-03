@@ -65,16 +65,16 @@ const HowToBuyPage = () => {
             </div>
 
             <div 
-              className="max-w-2xl mx-auto text-center space-y-6"
+              className="w-full max-w-4xl mx-auto"
               style={{
                 opacity: getOpacity(400, 600),
                 transform: `translateY(${getTranslateY(400, 600)}px)`
               }}
             >
               <div 
-                className="bg-black/55 backdrop-blur-sm p-8 rounded-lg"
+                className="bg-black/55 backdrop-blur-sm p-8 rounded-lg w-full"
               >
-                <div className="space-y-4 text-white">
+                <div className="space-y-4 text-white text-left">
                   <div>
                     <h3 className="font-avenir-medium text-lg mb-2">En Stock</h3>
                     <p className="font-avenir-book text-sm">
@@ -145,14 +145,14 @@ const HowToBuyPage = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/Foto%20categoria%20comprar.jpg")})`,
+              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/2.%20como%20comprar.jpg")})`,
             }}
           />
           <div className="absolute inset-0 bg-black/40" />
           
           <div className="relative z-10 h-full flex flex-col justify-start items-start px-6 md:px-16 pt-32">
             <div 
-              className="mb-8 flex items-start justify-between w-full max-w-4xl"
+              className="mb-6 flex items-start justify-between w-full max-w-4xl"
               style={{
                 opacity: getOpacity(1400, 1600),
                 transform: `translateY(${getTranslateY(1400, 1600)}px)`
@@ -165,16 +165,16 @@ const HowToBuyPage = () => {
             </div>
 
             <div 
-              className="max-w-xl space-y-4"
+              className="max-w-xl space-y-2"
               style={{
                 opacity: getOpacity(1600, 1800),
                 transform: `translateY(${getTranslateY(1600, 1800)}px)`
               }}
             >
-              <p className="font-avenir-book text-base leading-relaxed text-white">
+              <p className="font-avenir-book text-base leading-snug text-white">
                 El pago se realiza por transferencia bancaria.
               </p>
-              <p className="font-avenir-book text-base leading-relaxed text-white">
+              <p className="font-avenir-book text-base leading-snug text-white">
                 Una vez lista, preparo y envío tu joya a tu domicilio.
               </p>
             </div>
