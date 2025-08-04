@@ -23,12 +23,10 @@ export default {
 				clean: ['Roboto', 'sans-serif'],
 				'roboto-medium': ['Roboto', 'sans-serif'],
 				avenir: ['Avenir', 'sans-serif'],
-				'avenir-light': ['Avenir', 'system-ui', 'sans-serif'],
-				'avenir-book': ['Avenir', 'system-ui', 'sans-serif'],
-				'avenir-medium': ['Avenir', 'system-ui', 'sans-serif'],
-				'avenir-heavy': ['Avenir', 'system-ui', 'sans-serif'],
-				'avenir-black': ['Avenir', 'system-ui', 'sans-serif'],
-				'black-mango': ['Black Mango', 'serif'],
+				'avenir-light': ['Avenir', 'sans-serif'],
+				'avenir-book': ['Avenir', 'sans-serif'],
+				'avenir-heavy': ['Avenir', 'sans-serif'],
+				'avenir-black': ['Avenir', 'sans-serif'],
 			},
 			letterSpacing: {
 				'body': '0.02em', // 20 tracking
