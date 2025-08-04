@@ -33,17 +33,7 @@ const HowToBuyPage = () => {
 
       {/* Proceso de Compra - Scrollytelling */}
       <div className="relative">
-        {/* Título principal */}
-        <div className="relative z-10 pt-32 pb-16 text-center">
-          <h1 
-            className="font-avenir-heavy font-black text-4xl md:text-5xl" 
-            style={{ color: '#353333' }}
-          >
-            Cómo comprar tu joya en tres pasos
-          </h1>
-        </div>
-
-        {/* Paso 1 - Elige tu tipo de pieza */}
+        {/* Bloque 1 - Elige tu tipo de pieza con título principal */}
         <div className="relative h-screen">
           <div 
             className="absolute inset-0 bg-cover bg-center"
@@ -51,50 +41,57 @@ const HowToBuyPage = () => {
               backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/arbol.jpg")})`,
             }}
           />
-          <div className="absolute inset-0 bg-black/20" /> 
           
-          <div className="relative z-10 h-full flex flex-col justify-center items-center px-6">
+          <div className="relative z-10 h-full flex flex-col justify-between px-6">
+            {/* Título principal en la parte superior */}
             <div 
-              className="text-center mb-8"
+              className="text-center pt-24"
               style={{
                 opacity: getOpacity(0, 150),
                 transform: `translateY(${getTranslateY(0, 150)}px)`
               }}
             >
-              <span className="font-avenir-medium text-8xl md:text-9xl text-white block mb-4">1</span>
-              <h2 className="font-avenir-medium text-2xl md:text-3xl text-white">
-                Elige tu tipo de pieza
-              </h2>
+              <h1 className="font-black-mango text-white text-3xl md:text-4xl mb-16">
+                CÓMO COMPRAR TU JOYA
+              </h1>
             </div>
 
+            {/* Caja de opacidad en la parte inferior */}
             <div 
-              className="w-full max-w-4xl mx-auto"
+              className="w-full"
               style={{
                 opacity: getOpacity(100, 250),
                 transform: `translateY(${getTranslateY(100, 250)}px)`
               }}
             >
               <div 
-                className="bg-black/55 backdrop-blur-sm p-8 rounded-lg w-full"
+                className="w-full p-8"
+                style={{ backgroundColor: 'rgba(53, 56, 69, 0.5)' }}
               >
-                <div className="space-y-4 text-white text-left">
-                  <div>
-                    <h3 className="font-avenir-medium text-lg mb-1">En Stock</h3>
-                    <p className="font-avenir-book text-sm">
-                      Piezas listas para envío inmediato desde Valencia (España) o Santiago (Chile).
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-avenir-medium text-lg mb-1">Por Encargo</h3>
-                    <p className="font-avenir-book text-sm">
-                      La mayoría de mis diseños se pueden volver a producir especialmente para ti.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-avenir-medium text-lg mb-1">Personalizada</h3>
-                    <p className="font-avenir-book text-sm">
-                      Si tienes una idea, hablemos para crear juntos una joya completamente nueva.
-                    </p>
+                <div className="space-y-4 text-white text-left max-w-4xl mx-auto">
+                  <h2 className="font-avenir-heavy text-xl md:text-2xl mb-6">
+                    1. Elige tu tipo de pieza
+                  </h2>
+                  
+                  <div className="space-y-3">
+                    <div>
+                      <h3 className="font-avenir-medium text-base mb-1">En Stock</h3>
+                      <p className="font-avenir-light text-sm leading-relaxed">
+                        Piezas listas para envío inmediato desde Valencia (España) o Santiago (Chile).
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="font-avenir-medium text-base mb-1">Por Encargo</h3>
+                      <p className="font-avenir-light text-sm leading-relaxed">
+                        La mayoría de mis diseños se pueden volver a producir especialmente para ti.
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="font-avenir-medium text-base mb-1">Personalizada</h3>
+                      <p className="font-avenir-light text-sm leading-relaxed">
+                        Si tienes una idea, hablemos para crear juntos una joya completamente nueva.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -106,7 +103,7 @@ const HowToBuyPage = () => {
         <div className="relative h-screen">
           <div className="absolute inset-0 bg-white" /> 
           
-          <div className="relative z-10 h-full flex flex-col justify-start items-start px-6 md:px-16 pt-32">
+          <div className="relative z-10 h-full flex flex-col justify-center items-start px-6 md:px-16">
             <div 
               className="mb-8"
               style={{
@@ -114,9 +111,8 @@ const HowToBuyPage = () => {
                 transform: `translateY(${getTranslateY(600, 750)}px)`
               }}
             >
-              <span className="font-avenir-medium text-8xl md:text-9xl block mb-4" style={{ color: '#353333' }}>2</span>
-              <h2 className="font-avenir-medium text-2xl md:text-3xl" style={{ color: '#353333' }}>
-                Contacto y Confirmación
+              <h2 className="font-avenir-medium text-xl md:text-2xl mb-6" style={{ color: '#353333' }}>
+                2. Contacto y Confirmación
               </h2>
             </div>
 
@@ -127,10 +123,10 @@ const HowToBuyPage = () => {
                 transform: `translateY(${getTranslateY(700, 850)}px)`
               }}
             >
-              <p className="font-avenir-book text-base leading-relaxed" style={{ color: '#353333' }}>
+              <p className="font-avenir-light text-base leading-relaxed" style={{ color: '#353333' }}>
                 Escríbeme para que conversemos sobre la pieza que te interesa.
               </p>
-              <p className="font-avenir-book text-base leading-relaxed" style={{ color: '#353333' }}>
+              <p className="font-avenir-light text-base leading-relaxed" style={{ color: '#353333' }}>
                 Confirmaremos juntos los detalles, la talla, el precio final y los tiempos de creación o envío.
               </p>
             </div>
@@ -145,33 +141,31 @@ const HowToBuyPage = () => {
               backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/caja.jpg")})`, 
             }}
           />
-          <div className="absolute inset-0 bg-black/40" /> 
           
-          <div className="relative z-10 h-full flex flex-col justify-start items-start px-6 md:px-16 pt-32">
+          <div className="relative z-10 h-full flex flex-col justify-center items-start px-6 md:px-16">
             <div 
-              className="mb-1 flex items-start justify-between w-full max-w-4xl"
+              className="mb-4"
               style={{
-                opacity: getOpacity(1000, 1200), // RANGO AJUSTADO MÁS TEMPRANO
-                transform: `translateY(${getTranslateY(1000, 1200)}px)` // RANGO AJUSTADO MÁS TEMPRANO
+                opacity: getOpacity(1000, 1200),
+                transform: `translateY(${getTranslateY(1000, 1200)}px)`
               }}
             >
-              <h2 className="font-avenir-medium text-2xl md:text-3xl text-white">
-                Pago y Envío
+              <h2 className="font-avenir-medium text-xl md:text-2xl mb-4" style={{ color: '#353333' }}>
+                3. Pago y Envío
               </h2>
-              <span className="font-avenir-medium text-8xl md:text-9xl text-white">3</span>
             </div>
 
             <div 
-              className="max-w-xl space-y-2"
+              className="max-w-xl space-y-1"
               style={{
-                opacity: getOpacity(1100, 1300), // RANGO AJUSTADO MÁS TEMPRANO
-                transform: `translateY(${getTranslateY(1100, 1300)}px)` // RANGO AJUSTADO MÁS TEMPRANO
+                opacity: getOpacity(1100, 1300),
+                transform: `translateY(${getTranslateY(1100, 1300)}px)`
               }}
             >
-              <p className="font-avenir-book text-base leading-snug text-white">
+              <p className="font-avenir-light text-base leading-snug" style={{ color: '#353333' }}>
                 El pago se realiza por transferencia bancaria.
               </p>
-              <p className="font-avenir-book text-base leading-snug text-white">
+              <p className="font-avenir-light text-base leading-snug" style={{ color: '#353333' }}>
                 Una vez lista, preparo y envío tu joya a tu domicilio.
               </p>
             </div>
