@@ -31,49 +31,27 @@ const HowToBuyPage = () => {
     <div className="min-h-screen bg-background relative">
       <HamburgerMenu />
 
-      {/* Proceso de Compra - Pantalla Completa */}
-      <div className="relative">
-        {/* 1ª imagen - Título principal */}
-        <div className="relative h-screen w-full">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Arbol.jpg")})`,
-            }}
-          />
-          
-          <div className="relative z-10 h-full flex items-center justify-center px-6">
-            <div 
-              className="text-center"
-              style={{
-                opacity: getOpacity(0, 150),
-                transform: `translateY(${getTranslateY(0, 150)}px)`
-              }}
-            >
-              <h1 className="font-black-mango text-white text-2xl md:text-3xl lg:text-4xl">
-                Cómo comprar tu joya en 3 pasos
-              </h1>
-            </div>
+      {/* Proceso de Compra - Pantalla Completa con efecto Bimani */}
+      <div className="scroll-snap-container">
+        {/* 1ª pantalla - árbol.jpg */}
+        <section className="snap-screen bg-cover bg-center relative" 
+          style={{
+            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Arbol.jpg")})`,
+          }}>
+          <div className="screen-content">
+            <h1 className="font-black-mango text-white text-2xl md:text-3xl lg:text-4xl text-center">
+              Cómo comprar tu joya en 3 pasos
+            </h1>
           </div>
-        </div>
+        </section>
 
-        {/* 2ª imagen - Paso 1 */}
-        <div className="relative h-screen w-full">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Persona.jpg")})`,
-            }}
-          />
-          
-          <div className="relative z-10 h-full flex items-center px-6 md:px-16">
-            <div 
-              className="max-w-2xl"
-              style={{
-                opacity: getOpacity(600, 750),
-                transform: `translateY(${getTranslateY(600, 750)}px)`
-              }}
-            >
+        {/* 2ª pantalla - persona.jpg */}
+        <section className="snap-screen bg-cover bg-center relative" 
+          style={{
+            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Persona.jpg")})`,
+          }}>
+          <div className="screen-content justify-start items-center">
+            <div className="max-w-2xl">
               <h2 className="font-avenir-heavy text-white text-xl md:text-2xl mb-8">
                 1 Elige tu tipo de joya
               </h2>
@@ -100,25 +78,15 @@ const HowToBuyPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* 3ª imagen - Paso 2 */}
-        <div className="relative h-screen w-full">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Medalla.jpg")})`,
-            }}
-          />
-          
-          <div className="relative z-10 h-full flex items-center px-6 md:px-16">
-            <div 
-              className="max-w-2xl"
-              style={{
-                opacity: getOpacity(1200, 1350),
-                transform: `translateY(${getTranslateY(1200, 1350)}px)`
-              }}
-            >
+        {/* 3ª pantalla - medalla.jpg */}
+        <section className="snap-screen bg-cover bg-center relative" 
+          style={{
+            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Medalla.jpg")})`,
+          }}>
+          <div className="screen-content justify-start items-center">
+            <div className="max-w-2xl">
               <h2 className="font-avenir-heavy text-white text-xl md:text-2xl mb-8">
                 2 Contacto y confirmación
               </h2>
@@ -133,25 +101,15 @@ const HowToBuyPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* 4ª imagen - Paso 3 */}
-        <div className="relative h-screen w-full">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Caja.jpg")})`,
-            }}
-          />
-          
-          <div className="relative z-10 h-full flex items-center px-6 md:px-16">
-            <div 
-              className="max-w-2xl"
-              style={{
-                opacity: getOpacity(1800, 1950),
-                transform: `translateY(${getTranslateY(1800, 1950)}px)`
-              }}
-            >
+        {/* 4ª pantalla - caja.jpg */}
+        <section className="snap-screen bg-cover bg-center relative" 
+          style={{
+            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Caja.jpg")})`,
+          }}>
+          <div className="screen-content justify-start items-center">
+            <div className="max-w-2xl">
               <h2 className="font-avenir-heavy text-black text-xl md:text-2xl mb-8">
                 3 Pago y envío
               </h2>
@@ -166,7 +124,7 @@ const HowToBuyPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
 
       {/* Preguntas Frecuentes */}
