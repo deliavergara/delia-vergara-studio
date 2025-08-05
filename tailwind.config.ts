@@ -25,8 +25,10 @@ export default {
 				avenir: ['Avenir', 'sans-serif'],
 				'avenir-light': ['Avenir', 'sans-serif'],
 				'avenir-book': ['Avenir', 'sans-serif'],
+				'avenir-medium': ['Avenir', 'sans-serif'],
 				'avenir-heavy': ['Avenir', 'sans-serif'],
 				'avenir-black': ['Avenir', 'sans-serif'],
+				'black-mango': ['Black Mango Regular', 'serif'],
 			},
 			letterSpacing: {
 				'body': '0.02em', // 20 tracking
