@@ -1,83 +1,126 @@
 import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { buildGitHubRawUrl } from "@/lib/config";
+import { useEffect, useState } from "react";
+
 const CustomJewelryPage = () => {
-  return <div className="relative min-h-screen">
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className="relative">
       <HamburgerMenu />
       
-      <div className="container mx-auto px-6 pt-24 pb-32">
-        <div className="max-w-4xl mx-auto">
-          
-          {/* Título */}
-          <h1 className="font-avenir-black font-black text-3xl uppercase text-center mb-12" style={{
-          color: '#353333'
-        }}>
-            JOYAS A MEDIDA
-          </h1>
-          
-          {/* Contenido de texto */}
-          <div className="max-w-3xl mx-auto mb-16">
-            <div className="space-y-8 font-avenir text-base leading-relaxed" style={{
-            color: '#353333'
-          }}>
-              
-              <p className="font-medium">
-                ¿Tienes una idea en mente?
-              </p>
-              
-              <p className="font-light">
-                La convertimos en una joya única. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro u otros materiales, según lo que necesites y tu presupuesto. Cada pieza se diseña y se crea a mano, desde el boceto hasta el acabado final.
-              </p>
-              
-              <div className="space-y-4">
-                <h3 className="font-medium text-base" style={{
-                color: '#353333'
-              }}>
-                  Así funciona el proceso:
-                </h3>
-                
-                <div className="space-y-3 pl-4">
-                  <p><span className="font-medium">Hablemos de tu idea:</span> <span className="font-light">Conversamos sobre lo que te imaginas, los materiales que te gustan y el presupuesto.</span></p>
-                  <p><span className="font-medium">Diseñamos juntos:</span> <span className="font-light">Preparamos varios bocetos y trabajamos en la propuesta hasta tener el diseño final.</span></p>
-                  <p><span className="font-medium">Elaboración de la joya:</span> <span className="font-light">La pieza se hace a mano en mi taller de Valencia y, una vez terminada, se prepara para el envío.</span></p>
-                  <p><span className="font-medium">Plazos:</span> <span className="font-light">El tiempo de creación suele ser de entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.</span></p>
-                </div>
-              </div>
-              
-              <p className="font-light">
-                Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos una joya.
-              </p>
-            </div>
+      {/* Video Background */}
+      <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-95"
+        >
+          <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/C52E6DC.mov")} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/5"></div>
+      </div>
+
+      {/* Scrollable Content */}
+      <div className="relative z-10 min-h-[500vh]">
+        {/* Section 1: Title */}
+        <div className="h-screen flex items-center justify-center px-6">
+          <div 
+            className="text-center transform transition-all duration-700"
+            style={{
+              opacity: Math.max(0, 1 - scrollY / 400),
+              transform: `translateY(${scrollY * 0.3}px)`
+            }}
+          >
+            <h1 className="font-black-mango text-4xl md:text-6xl lg:text-7xl uppercase text-white text-center mb-8">
+              JOYAS A MEDIDA
+            </h1>
           </div>
-          
-          {/* Imagen */}
-          <div className="flex justify-center mb-16 mt-8">
-            <div className="max-w-2xl w-full">
-              <img src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/foto%20para%20actegoria%20joyas%20a%20medida.jpg")} alt="Proceso de creación de joyas a medida" className="w-full h-auto rounded-lg shadow-elegant" />
-            </div>
-          </div>
-          
-          {/* Contacto */}
-          <div className="text-center space-y-6">
-            <h3 className="font-avenir-medium text-xl" style={{
-            color: '#353333'
-          }}>
-              ¿Empezamos a crear tu joya?
-            </h3>
-            
-            <p className="font-avenir-light" style={{
-            color: '#353333'
-          }}>
-              Contáctame para comenzar a diseñar juntos la pieza perfecta para ti
+        </div>
+
+        {/* Section 2: Opening */}
+        <div className="h-screen flex items-center justify-center px-6">
+          <div 
+            className="max-w-4xl mx-auto text-center space-y-8 transform transition-all duration-700"
+            style={{
+              opacity: scrollY > 300 ? Math.min(1, (scrollY - 300) / 400) : 0,
+              transform: `translateY(${Math.max(0, 50 - (scrollY - 300) * 0.1)}px)`
+            }}
+          >
+            <h2 className="font-avenir-heavy text-2xl md:text-3xl lg:text-4xl text-white">
+              ¿Tienes una idea en mente?
+            </h2>
+            <p className="font-avenir-light text-lg md:text-xl lg:text-2xl text-white">
+              Juntos la podemos convertir en una joya única:
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              
-              
-              
+          </div>
+        </div>
+
+        {/* Section 3: Process Step 1-2 */}
+        <div className="h-screen flex items-center justify-center px-6">
+          <div 
+            className="max-w-4xl mx-auto space-y-8 transform transition-all duration-700"
+            style={{
+              opacity: scrollY > 800 ? Math.min(1, (scrollY - 800) / 400) : 0,
+              transform: `translateY(${Math.max(0, 50 - (scrollY - 800) * 0.1)}px)`
+            }}
+          >
+            <div className="space-y-6">
+              <p className="font-avenir-light text-base md:text-lg lg:text-xl text-white leading-relaxed">
+                <span className="font-bold">1.</span> Hablemos de tu idea: conversemos sobre lo que te imaginas, los materiales que te gustan y el presupuesto. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro macizo u otros materiales, según lo que necesites.
+              </p>
+              <p className="font-avenir-light text-base md:text-lg lg:text-xl text-white leading-relaxed">
+                <span className="font-bold">2.</span> Diseñamos juntos: preparo bocetos e iteramos en la propuesta hasta tener el diseño final. Podemos probar con diferentes formas, colores, piedras, lo que haga falta.
+              </p>
             </div>
           </div>
         </div>
+
+        {/* Section 4: Process Step 3-4 */}
+        <div className="h-screen flex items-center justify-center px-6">
+          <div 
+            className="max-w-4xl mx-auto space-y-8 transform transition-all duration-700"
+            style={{
+              opacity: scrollY > 1300 ? Math.min(1, (scrollY - 1300) / 400) : 0,
+              transform: `translateY(${Math.max(0, 50 - (scrollY - 1300) * 0.1)}px)`
+            }}
+          >
+            <div className="space-y-6">
+              <p className="font-avenir-light text-base md:text-lg lg:text-xl text-white leading-relaxed">
+                <span className="font-bold">3.</span> Elaboración de la joya: La pieza se hace a mano en mi taller en Valencia, cada resultado es único. El tiempo de creación suele ser entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.
+              </p>
+              <p className="font-avenir-light text-base md:text-lg lg:text-xl text-white leading-relaxed">
+                <span className="font-bold">4.</span> Envío: una vez terminada la joya, se prepara para el envío, que puede tomar algunos días o semanas, dependiendo del destino.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Section 5: Closing */}
+        <div className="h-screen flex items-center justify-center px-6">
+          <div 
+            className="max-w-4xl mx-auto text-center transform transition-all duration-700"
+            style={{
+              opacity: scrollY > 1800 ? Math.min(1, (scrollY - 1800) / 400) : 0,
+              transform: `translateY(${Math.max(0, 50 - (scrollY - 1800) * 0.1)}px)`
+            }}
+          >
+            <p className="font-avenir-book text-lg md:text-xl lg:text-2xl text-white leading-relaxed">
+              Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos juntos una joya.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default CustomJewelryPage;
