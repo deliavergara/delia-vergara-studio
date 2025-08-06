@@ -18,26 +18,32 @@ const CustomJewelryPage = () => {
   };
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative">
       <HamburgerMenu />
       
-      {/* Video Background - Simple */}
-      <div className="fixed inset-0 w-full h-full z-0">
+      {/* Video Background */}
+      <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
         <video
           autoPlay
           loop
           muted
           playsInline
           className="w-full h-full object-cover"
+          style={{ opacity: 0.95 }}
         >
-          <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} type="video/mp4" />
-          <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/C52E6DC.mov")} type="video/quicktime" />
+          {/* CAMBIO CLAVE: Usa un solo source con formato MP4, más universal. */}
+          {/* DEBES ASEGURARTE DE QUE LA RUTA APUNTE A UN ARCHIVO .mp4 EXISTENTE */}
+          <source 
+            src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} 
+            type="video/mp4" 
+          />
         </video>
+        <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
       {/* Scrollable Content */}
       <div className="relative z-10 min-h-[400vh] pt-24">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6 space-y-16">
           
           {/* Title */}
           <div 
@@ -51,10 +57,10 @@ const CustomJewelryPage = () => {
 
           {/* Opening Question */}
           <div 
-            className="text-center py-8"
+            className="text-center py-12"
             style={{ opacity: getOpacity(200) }}
           >
-            <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
+            <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-6">
               ¿Tienes una idea en mente?
             </h2>
             <p className="font-avenir-light text-xl md:text-2xl text-white">
@@ -62,9 +68,9 @@ const CustomJewelryPage = () => {
             </p>
           </div>
 
-          {/* Process Steps - Continuous flow */}
+          {/* Process Steps - All flowing together */}
           <div 
-            className="space-y-6 py-12"
+            className="space-y-8 py-16"
             style={{ opacity: getOpacity(400) }}
           >
             <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
