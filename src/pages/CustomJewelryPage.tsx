@@ -32,7 +32,6 @@ const CustomJewelryPage = () => {
           style={{ opacity: 0.95 }}
         >
           <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/C52E6DC.mov")} type="video/mp4" />
-          <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/C52E6DC.mov")} type="video/quicktime" />
         </video>
         <div className="absolute inset-0 bg-black/5"></div>
       </div>
