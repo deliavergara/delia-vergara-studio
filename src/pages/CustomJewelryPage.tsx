@@ -1,4 +1,5 @@
 import { HamburgerMenu } from "@/components/HamburgerMenu";
+import { buildGitHubRawUrl } from "@/lib/config";
 import { useEffect, useState } from "react";
 
 const CustomJewelryPage = () => {
@@ -20,7 +21,7 @@ const CustomJewelryPage = () => {
     <div className="relative min-h-screen">
       <HamburgerMenu />
       
-      {/* Video Background - Fixed */}
+      {/* Video Background - Simple */}
       <div className="fixed inset-0 w-full h-full z-0">
         <video
           autoPlay
@@ -28,21 +29,10 @@ const CustomJewelryPage = () => {
           muted
           playsInline
           className="w-full h-full object-cover"
-          onError={(e) => {
-            console.error('Error loading video:', e);
-          }}
-          onLoadStart={() => {
-            console.log('Video loading started');
-          }}
-          onCanPlay={() => {
-            console.log('Video can play');
-          }}
         >
-          <source src="/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4" type="video/mp4" />
-          <source src="/lovable-uploads/Joyas%20a%20medida/C52E6DC.mov" type="video/quicktime" />
+          <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} type="video/mp4" />
+          <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/C52E6DC.mov")} type="video/quicktime" />
         </video>
-        {/* Overlay with 95% opacity as requested */}
-        <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
       {/* Scrollable Content */}
