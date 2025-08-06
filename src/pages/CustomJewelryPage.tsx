@@ -1,5 +1,4 @@
 import { HamburgerMenu } from "@/components/HamburgerMenu";
-import { buildGitHubRawUrl } from "@/lib/config";
 import { useEffect, useState } from "react";
 
 const CustomJewelryPage = () => {
@@ -18,28 +17,37 @@ const CustomJewelryPage = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative min-h-screen">
       <HamburgerMenu />
       
-      {/* Video Background */}
-      <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
+      {/* Video Background - Fixed */}
+      <div className="fixed inset-0 w-full h-full z-0">
         <video
           autoPlay
           loop
           muted
           playsInline
           className="w-full h-full object-cover"
-          style={{ opacity: 0.95 }}
+          onError={(e) => {
+            console.error('Error loading video:', e);
+          }}
+          onLoadStart={() => {
+            console.log('Video loading started');
+          }}
+          onCanPlay={() => {
+            console.log('Video can play');
+          }}
         >
-          <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} type="video/mp4" />
+          <source src="/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4" type="video/mp4" />
+          <source src="/lovable-uploads/Joyas%20a%20medida/C52E6DC.mov" type="video/quicktime" />
         </video>
+        {/* Overlay with 95% opacity as requested */}
         <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
       {/* Scrollable Content */}
-      {/* CAMBIO CLAVE: Se añade 'bg-transparent' para que el video de fondo sea visible */}
-      <div className="relative z-10 min-h-[400vh] pt-24 bg-transparent">
-        <div className="max-w-4xl mx-auto px-6 space-y-16">
+      <div className="relative z-10 min-h-[400vh] pt-24">
+        <div className="max-w-4xl mx-auto px-6">
           
           {/* Title */}
           <div 
@@ -53,10 +61,10 @@ const CustomJewelryPage = () => {
 
           {/* Opening Question */}
           <div 
-            className="text-center py-12"
+            className="text-center py-8"
             style={{ opacity: getOpacity(200) }}
           >
-            <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-6">
+            <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
             </h2>
             <p className="font-avenir-light text-xl md:text-2xl text-white">
@@ -64,9 +72,9 @@ const CustomJewelryPage = () => {
             </p>
           </div>
 
-          {/* Process Steps - All flowing together */}
+          {/* Process Steps - Continuous flow */}
           <div 
-            className="space-y-8 py-16"
+            className="space-y-6 py-12"
             style={{ opacity: getOpacity(400) }}
           >
             <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
