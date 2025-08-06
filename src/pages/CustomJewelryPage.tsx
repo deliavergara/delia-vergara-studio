@@ -37,7 +37,8 @@ const CustomJewelryPage = () => {
       </div>
 
       {/* Scrollable Content */}
-      <div className="relative z-10 min-h-[400vh] pt-24">
+      {/* CAMBIO CLAVE: Se añade 'bg-transparent' para que el video de fondo sea visible */}
+      <div className="relative z-10 min-h-[400vh] pt-24 bg-transparent">
         <div className="max-w-4xl mx-auto px-6 space-y-16">
           
           {/* Title */}
