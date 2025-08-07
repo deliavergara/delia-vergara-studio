@@ -42,20 +42,20 @@ const CustomJewelryPage = () => {
       <div className="relative z-10 min-h-[400vh] pt-24 bg-transparent">
         <div className="max-w-2xl mx-auto px-6 space-y-8">
           
-          {/* Title - Bloque 1 */}
+          {/* Title */}
           <div 
             className="text-center py-12"
-            style={{ opacity: getOpacity(300, 200) }}
+            style={{ opacity: getOpacity(250, 200) }}
           >
             <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
               JOYAS A MEDIDA
             </h1>
           </div>
 
-          {/* Opening Question - Bloque 2 */}
+          {/* Opening Question */}
           <div 
             className="text-center py-6"
-            style={{ opacity: getOpacity(800, 200) }}
+            style={{ opacity: getOpacity(600, 200) }}
           >
             <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
@@ -65,10 +65,13 @@ const CustomJewelryPage = () => {
             </p>
           </div>
 
-          {/* Process Steps - Separado en 4 bloques */}
-          <div className="space-y-16 py-8">
-            {/* 1. Hablemos de tu idea - Bloque 3 */}
-            <div className="space-y-4" style={{ opacity: getOpacity(1300, 200) }}>
+          {/* Process Steps */}
+          <div 
+            className="space-y-16 py-8"
+            style={{ opacity: getOpacity(1000, 400) }}
+          >
+            {/* 1. Hablemos de tu idea */}
+            <div className="space-y-4">
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
               </h3>
@@ -77,8 +80,8 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
-            {/* 2. Diseñamos juntos - Bloque 4 */}
-            <div className="space-y-4" style={{ opacity: getOpacity(1800, 200) }}>
+            {/* 2. Diseñamos juntos */}
+            <div className="space-y-4">
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 2. Diseñamos juntos
               </h3>
@@ -87,8 +90,8 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
-            {/* 3. Elaboración de la joya - Bloque 5 */}
-            <div className="space-y-4" style={{ opacity: getOpacity(2300, 200) }}>
+            {/* 3. Elaboración de la joya */}
+            <div className="space-y-4">
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 3. Elaboración de la joya
               </h3>
@@ -97,8 +100,8 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
-            {/* 4. Envío - Bloque 6 */}
-            <div className="space-y-4" style={{ opacity: getOpacity(2800, 200) }}>
+            {/* 4. Envío */}
+            <div className="space-y-4">
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 4. Envío
               </h3>
@@ -108,10 +111,10 @@ const CustomJewelryPage = () => {
             </div>
           </div>
 
-          {/* Closing - Bloque 7 */}
+          {/* Closing */}
           <div 
             className="text-center py-20"
-            style={{ opacity: getOpacity(3300, 200) }}
+            style={{ opacity: getOpacity(1500, 200) }}
           >
             <p className="font-avenir-book text-xl md:text-2xl text-white leading-relaxed">
               Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos juntos una joya.
