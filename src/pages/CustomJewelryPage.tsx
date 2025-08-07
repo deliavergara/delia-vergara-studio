@@ -31,21 +31,18 @@ const CustomJewelryPage = () => {
           className="w-full h-full object-cover"
           style={{ opacity: 0.90 }}
         >
-          {/* CAMBIO CLAVE: Usa un solo source con formato MP4, más universal. */}
-          {/* DEBES ASEGURARTE DE QUE LA RUTA APUNTE A UN ARCHIVO .mp4 EXISTENTE */}
           <source 
             src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} 
             type="video/mp4" 
           />
         </video>
+        {/* LÍNEA ELIMINADA: el div que creaba el fondo gris */}
         <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
-            {/* Scrollable Content */}
       <div className="relative z-10 min-h-[400vh] pt-24">
         <div className="max-w-2xl mx-auto px-6 space-y-8">
           
-          {/* Title */}
           <div 
             className="text-center py-12"
             style={{ opacity: getOpacity(-100) }}
@@ -55,7 +52,6 @@ const CustomJewelryPage = () => {
             </h1>
           </div>
 
-          {/* Opening Question */}
           <div 
             className="text-center py-6"
             style={{ opacity: getOpacity(100) }}
@@ -68,11 +64,9 @@ const CustomJewelryPage = () => {
             </p>
           </div>
 
-          {/* Process Steps */}
           <div 
             className="space-y-16 py-8"
           >
-            {/* 1. Hablemos de tu idea */}
             <div 
               className="space-y-4"
               style={{ opacity: getOpacity(300) }}
@@ -85,7 +79,6 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
-            {/* 2. Diseñamos juntos */}
             <div 
               className="space-y-4"
               style={{ opacity: getOpacity(400) }}
@@ -98,7 +91,6 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
-            {/* 3. Elaboración de la joya */}
             <div 
               className="space-y-4"
               style={{ opacity: getOpacity(500) }}
@@ -111,7 +103,6 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
-            {/* 4. Envío */}
             <div 
               className="space-y-4"
               style={{ opacity: getOpacity(600) }}
@@ -125,7 +116,6 @@ const CustomJewelryPage = () => {
             </div>
           </div>
 
-          {/* Closing */}
           <div 
             className="text-center py-20"
             style={{ opacity: getOpacity(800) }}
