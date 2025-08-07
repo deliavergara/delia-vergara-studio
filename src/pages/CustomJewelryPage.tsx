@@ -29,7 +29,7 @@ const CustomJewelryPage = () => {
           muted
           playsInline
           className="w-full h-full object-cover"
-          style={{ opacity: 0.1 }}
+          style={{ opacity: 0.9 }}
         >
           <source 
             src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} 
@@ -40,34 +40,34 @@ const CustomJewelryPage = () => {
 
       {/* Scrollable Content */}
       <div className="relative z-10 min-h-[400vh] pt-24">
-        <div className="max-w-4xl mx-auto px-6 space-y-16">
+        <div className="max-w-2xl mx-auto px-6 space-y-8">
           
           {/* Title */}
           <div 
-            className="text-center py-20"
+            className="text-center py-12"
             style={{ opacity: getOpacity(0) }}
           >
-            <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-12">
+            <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
               JOYAS A MEDIDA
             </h1>
           </div>
 
           {/* Opening Question */}
           <div 
-            className="text-center py-12"
+            className="text-center py-6"
             style={{ opacity: getOpacity(200) }}
           >
-            <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-6">
+            <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
             </h2>
-            <p className="font-avenir-light text-xl md:text-2xl text-white">
+            <p className="font-avenir-light text-xl md:text-2xl text-white mb-6">
               Juntos la podemos convertir en una joya única:
             </p>
           </div>
 
           {/* Process Steps */}
           <div 
-            className="space-y-8 py-16 max-w-2xl mx-auto"
+            className="space-y-8 py-8"
             style={{ opacity: getOpacity(400) }}
           >
             <div className="space-y-4">
