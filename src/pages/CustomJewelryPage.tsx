@@ -11,52 +11,47 @@ const CustomJewelryPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const getOpacity = (startY: number, range: number = 300) => {
-    if (scrollY < startY - 100) return 0;
-    if (scrollY > startY + range) return 1;
-    return Math.min(1, Math.max(0, (scrollY - startY + 100) / range));
+  const getOpacity = (center: number, range: number = 200) => {
+    const distance = Math.abs(scrollY - center);
+    if (distance > range) {
+      return 0;
+    }
+    return Math.min(1, Math.max(0, 1 - distance / range));
   };
 
   return (
     <div className="relative">
       <HamburgerMenu />
       
-      {/* Video Background */}
-      <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
+      <div className="fixed inset-0 w-full h-full overflow-hidden z-0" style={{ backgroundColor: '#353845' }}>
         <video
           autoPlay
           loop
           muted
           playsInline
           className="w-full h-full object-cover"
-          style={{ opacity: 0.90 }}
+          style={{ opacity: 0.95 }}
         >
-          <source 
-            src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} 
-            type="video/mp4" 
-          />
+          <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
-            {/* Scrollable Content */}
       <div className="relative z-10 min-h-[400vh] pt-24">
         <div className="max-w-2xl mx-auto px-6 space-y-8">
           
-          {/* Title */}
           <div 
             className="text-center py-12"
-            style={{ opacity: getOpacity(0) }}
+            style={{ opacity: getOpacity(200) }}
           >
             <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
               JOYAS A MEDIDA
             </h1>
           </div>
 
-          {/* Opening Question */}
           <div 
             className="text-center py-6"
-            style={{ opacity: getOpacity(200) }}
+            style={{ opacity: getOpacity(600) }}
           >
             <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
@@ -66,13 +61,8 @@ const CustomJewelryPage = () => {
             </p>
           </div>
 
-          {/* Process Steps */}
-          <div 
-            className="space-y-16 py-8"
-            style={{ opacity: getOpacity(400) }}
-          >
-            {/* 1. Hablemos de tu idea */}
-            <div className="space-y-4">
+          <div className="space-y-16 py-8">
+            <div className="space-y-4" style={{ opacity: getOpacity(1000) }}>
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
               </h3>
@@ -81,8 +71,7 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
-            {/* 2. Diseñamos juntos */}
-            <div className="space-y-4">
+            <div className="space-y-4" style={{ opacity: getOpacity(1500) }}>
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 2. Diseñamos juntos
               </h3>
@@ -91,8 +80,7 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
-            {/* 3. Elaboración de la joya */}
-            <div className="space-y-4">
+            <div className="space-y-4" style={{ opacity: getOpacity(2000) }}>
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 3. Elaboración de la joya
               </h3>
@@ -101,8 +89,7 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
-            {/* 4. Envío */}
-            <div className="space-y-4">
+            <div className="space-y-4" style={{ opacity: getOpacity(2500) }}>
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 4. Envío
               </h3>
@@ -112,10 +99,9 @@ const CustomJewelryPage = () => {
             </div>
           </div>
 
-          {/* Closing */}
           <div 
             className="text-center py-20"
-            style={{ opacity: getOpacity(800) }}
+            style={{ opacity: getOpacity(3000) }}
           >
             <p className="font-avenir-book text-xl md:text-2xl text-white leading-relaxed">
               Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos juntos una joya.
