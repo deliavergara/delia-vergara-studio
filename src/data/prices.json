@@ -130,5 +130,11 @@
     "valor_venta_bano_oro_es": 0,
     "valor_venta_cl": 0,
     "valor_venta_bano_oro_cl": 0
+  },
+  "IRISANILLOUNICO": {
+    "valor_venta_es": 55,
+    "valor_venta_bano_oro_es": 65,
+    "valor_venta_cl": 61000,
+    "valor_venta_bano_oro_cl": 72000
   }
 }
