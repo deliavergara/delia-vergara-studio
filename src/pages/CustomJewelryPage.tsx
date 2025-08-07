@@ -23,6 +23,7 @@ const CustomJewelryPage = () => {
     <div className="relative">
       <HamburgerMenu />
       
+      {/* Video Background */}
       <div className="fixed inset-0 w-full h-full overflow-hidden z-0" style={{ backgroundColor: '#353845' }}>
         <video
           autoPlay
@@ -37,9 +38,11 @@ const CustomJewelryPage = () => {
         <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
+      {/* Scrollable Content */}
       <div className="relative z-10 min-h-[400vh] pt-24">
         <div className="max-w-2xl mx-auto px-6 space-y-8">
           
+          {/* Title */}
           <div 
             className="text-center py-12"
             style={{ opacity: getOpacity(200) }}
@@ -49,6 +52,7 @@ const CustomJewelryPage = () => {
             </h1>
           </div>
 
+          {/* Opening Question */}
           <div 
             className="text-center py-6"
             style={{ opacity: getOpacity(600) }}
@@ -61,8 +65,13 @@ const CustomJewelryPage = () => {
             </p>
           </div>
 
-          <div className="space-y-16 py-8">
-            <div className="space-y-4" style={{ opacity: getOpacity(1000) }}>
+          {/* Process Steps */}
+          <div 
+            className="space-y-16 py-8"
+            style={{ opacity: getOpacity(1000) }}
+          >
+            {/* 1. Hablemos de tu idea */}
+            <div className="space-y-4">
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
               </h3>
@@ -71,7 +80,8 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
-            <div className="space-y-4" style={{ opacity: getOpacity(1500) }}>
+            {/* 2. Diseñamos juntos */}
+            <div className="space-y-4">
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 2. Diseñamos juntos
               </h3>
@@ -80,7 +90,8 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
-            <div className="space-y-4" style={{ opacity: getOpacity(2000) }}>
+            {/* 3. Elaboración de la joya */}
+            <div className="space-y-4">
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 3. Elaboración de la joya
               </h3>
@@ -89,7 +100,8 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
-            <div className="space-y-4" style={{ opacity: getOpacity(2500) }}>
+            {/* 4. Envío */}
+            <div className="space-y-4">
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 4. Envío
               </h3>
@@ -99,6 +111,7 @@ const CustomJewelryPage = () => {
             </div>
           </div>
 
+          {/* Closing */}
           <div 
             className="text-center py-20"
             style={{ opacity: getOpacity(3000) }}
