@@ -29,7 +29,7 @@ const CustomJewelryPage = () => {
           muted
           playsInline
           className="w-full h-full object-cover"
-          style={{ opacity: 0.95 }}
+          style={{ opacity: 0.90 }}
         >
           {/* CAMBIO CLAVE: Usa un solo source con formato MP4, más universal. */}
           {/* DEBES ASEGURARTE DE QUE LA RUTA APUNTE A UN ARCHIVO .mp4 EXISTENTE */}
@@ -64,7 +64,7 @@ const CustomJewelryPage = () => {
               ¿Tienes una idea en mente?
             </h2>
             <p className="font-avenir-light text-xl md:text-2xl text-white mb-6">
-              Juntos la podemos convertir en una joya única:
+              Juntos la podemos convertir en una joya única
             </p>
           </div>
 
@@ -74,32 +74,41 @@ const CustomJewelryPage = () => {
             style={{ opacity: getOpacity(400) }}
           >
             {/* 1. Hablemos de tu idea */}
-            <div className="space-y-4">
+            <div 
+              className="space-y-4"
+              style={{ opacity: getOpacity(800) }}
+            >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
               </h3>
               <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
-                conversemos sobre lo que te imaginas, los materiales que te gustan y el presupuesto. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro macizo u otros materiales, según lo que necesites.
+                Conversemos sobre lo que te imaginas, los materiales que te gustan y el presupuesto. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro macizo u otros materiales, según lo que necesites.
               </p>
             </div>
             
             {/* 2. Diseñamos juntos */}
-            <div className="space-y-4">
+            <div 
+              className="space-y-4"
+              style={{ opacity: getOpacity(800) }}
+            >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 2. Diseñamos juntos
               </h3>
               <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
-                preparo bocetos e iteramos en la propuesta hasta tener el diseño final. Podemos probar con diferentes formas, colores, piedras, lo que haga falta.
+                Preparo bocetos e iteramos en la propuesta hasta tener el diseño final. Podemos probar con diferentes formas, colores, piedras, lo que haga falta.
               </p>
             </div>
             
             {/* 3. Elaboración de la joya */}
-            <div className="space-y-4">
+            <div 
+              className="space-y-4"
+              style={{ opacity: getOpacity(800) }}
+            >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 3. Elaboración de la joya
               </h3>
               <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
-                la pieza se hace a mano en mi taller en Valencia, cada resultado es único. El tiempo de creación suele ser entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.
+                La pieza la hago a mano en mi taller en Valencia, cada resultado es único. El tiempo de creación suele ser entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.
               </p>
             </div>
             
@@ -112,7 +121,7 @@ const CustomJewelryPage = () => {
                 4. Envío
               </h3>
               <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
-                una vez terminada la joya, se prepara para el envío, que puede tomar algunos días o semanas, dependiendo del destino.
+                Una vez terminada la joya, se prepara para el envío, que puede tomar algunos días o semanas, dependiendo del destino.
               </p>
             </div>
           </div>
