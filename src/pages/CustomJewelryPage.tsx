@@ -41,53 +41,77 @@ const CustomJewelryPage = () => {
         <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
-      {/* Scrollable Content */}
+            {/* Scrollable Content */}
       <div className="relative z-10 min-h-[400vh] pt-24">
-        <div className="max-w-4xl mx-auto px-6 space-y-16">
+        <div className="max-w-2xl mx-auto px-6 space-y-8">
           
           {/* Title */}
           <div 
-            className="text-center py-20"
+            className="text-center py-12"
             style={{ opacity: getOpacity(0) }}
           >
-            <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-12">
+            <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
               JOYAS A MEDIDA
             </h1>
           </div>
 
           {/* Opening Question */}
           <div 
-            className="text-center py-12"
+            className="text-center py-6"
             style={{ opacity: getOpacity(200) }}
           >
-            <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-6">
+            <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
             </h2>
-            <p className="font-avenir-light text-xl md:text-2xl text-white">
+            <p className="font-avenir-light text-xl md:text-2xl text-white mb-6">
               Juntos la podemos convertir en una joya única:
             </p>
           </div>
 
-          {/* Process Steps - All flowing together */}
+          {/* Process Steps */}
           <div 
-            className="space-y-8 py-16"
+            className="space-y-8 py-8"
             style={{ opacity: getOpacity(400) }}
           >
-            <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
-              <span className="font-bold">1.</span> Hablemos de tu idea: conversemos sobre lo que te imaginas, los materiales que te gustan y el presupuesto. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro macizo u otros materiales, según lo que necesites.
-            </p>
+            {/* 1. Hablemos de tu idea */}
+            <div className="space-y-4">
+              <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
+                1. Hablemos de tu idea:
+              </h3>
+              <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
+                conversemos sobre lo que te imaginas, los materiales que te gustan y el presupuesto. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro macizo u otros materiales, según lo que necesites.
+              </p>
+            </div>
             
-            <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
-              <span className="font-bold">2.</span> Diseñamos juntos: preparo bocetos e iteramos en la propuesta hasta tener el diseño final. Podemos probar con diferentes formas, colores, piedras, lo que haga falta.
-            </p>
+            {/* 2. Diseñamos juntos */}
+            <div className="space-y-4">
+              <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
+                2. Diseñamos juntos:
+              </h3>
+              <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
+                preparo bocetos e iteramos en la propuesta hasta tener el diseño final. Podemos probar con diferentes formas, colores, piedras, lo que haga falta.
+              </p>
+            </div>
             
-            <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
-              <span className="font-bold">3.</span> Elaboración de la joya: la pieza se hace a mano en mi taller en Valencia, cada resultado es único. El tiempo de creación suele ser entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.
-            </p>
+            {/* 3. Elaboración de la joya */}
+            <div className="space-y-4">
+              <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
+                3. Elaboración de la joya:
+              </h3>
+              <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
+                la pieza se hace a mano en mi taller en Valencia, cada resultado es único. El tiempo de creación suele ser entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.
+              </p>
+            </div>
             
-            <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
-              <span className="font-bold">4.</span> Envío: una vez terminada la joya, se prepara para el envío, que puede tomar algunos días o semanas, dependiendo del destino.
-            </p>
+            {/* 4. Envío */}
+            <div className="space-y-4">
+              <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
+                4. Envío:
+              </h3>
+              <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
+                una vez terminada la joya, se prepara para el envío, que puede tomar algunos días o semanas, dependiendo del destino.
+              </p>
+            </div>
           </div>
 
           {/* Closing */}
