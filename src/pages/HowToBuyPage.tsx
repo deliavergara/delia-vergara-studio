@@ -39,8 +39,10 @@ const HowToBuyPage = () => {
             backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Arbol.jpg")})`,
           }}>
           <div className="screen-content">
-            <h1 className="font-black-mango text-white text-2xl md:text-3xl lg:text-4xl text-center">
-              Cómo comprar tu joya en 3 pasos
+            <h1 className="font-avenir-book text-white text-2xl md:text-3xl lg:text-4xl text-center">
+              Cómo comprar tu joya
+              <br />
+              <span className="block">en 3 pasos</span>
             </h1>
           </div>
         </section>
