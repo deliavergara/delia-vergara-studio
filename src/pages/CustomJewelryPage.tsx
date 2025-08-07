@@ -12,9 +12,10 @@ const CustomJewelryPage = () => {
   }, []);
 
   const getOpacity = (startY: number, range: number = 300) => {
-    if (scrollY < startY - 100) return 0;
-    if (scrollY > startY + range) return 1;
-    return Math.min(1, Math.max(0, (scrollY - startY + 100) / range));
+    if (scrollY < startY - 100) return 1;
+    if (scrollY > startY + range) return 0;
+    const progress = Math.min(1, Math.max(0, (scrollY - startY + 100) / range));
+    return 1 - progress;
   };
 
   return (
