@@ -11,14 +11,10 @@ const CustomJewelryPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Función para el efecto de opacidad "campana de Gauss".
-  // La opacidad es 1 en el punto `center` y 0 cuando la distancia es mayor a `range`.
-  const getOpacity = (center: number, range: number = 200) => {
-    const distance = Math.abs(scrollY - center);
-    if (distance > range) {
-      return 0;
-    }
-    return 1 - distance / range;
+  const getOpacity = (startY: number, range: number = 300) => {
+    if (scrollY < startY - 100) return 0;
+    if (scrollY > startY + range) return 1;
+    return Math.min(1, Math.max(0, (scrollY - startY + 100) / range));
   };
 
   return (
@@ -26,7 +22,7 @@ const CustomJewelryPage = () => {
       <HamburgerMenu />
       
       {/* Video Background */}
-      <div className="fixed inset-0 w-full h-full overflow-hidden z-0" style={{ backgroundColor: '#353845' }}>
+      <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
         <video
           autoPlay
           loop
@@ -35,19 +31,24 @@ const CustomJewelryPage = () => {
           className="w-full h-full object-cover"
           style={{ opacity: 0.95 }}
         >
-          <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} type="video/mp4" />
+          {/* CAMBIO CLAVE: Usa un solo source con formato MP4, más universal. */}
+          {/* DEBES ASEGURARTE DE QUE LA RUTA APUNTE A UN ARCHIVO .mp4 EXISTENTE */}
+          <source 
+            src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} 
+            type="video/mp4" 
+          />
         </video>
         <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
-      {/* Scrollable Content */}
-      <div className="relative z-10 min-h-[400vh] pt-24 bg-transparent">
+            {/* Scrollable Content */}
+      <div className="relative z-10 min-h-[400vh] pt-24">
         <div className="max-w-2xl mx-auto px-6 space-y-8">
           
           {/* Title */}
           <div 
             className="text-center py-12"
-            style={{ opacity: getOpacity(0, 200) }}
+            style={{ opacity: getOpacity(0) }}
           >
             <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
               JOYAS A MEDIDA
@@ -57,20 +58,20 @@ const CustomJewelryPage = () => {
           {/* Opening Question */}
           <div 
             className="text-center py-6"
-            style={{ opacity: getOpacity(300, 200) }}
+            style={{ opacity: getOpacity(200) }}
           >
             <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
             </h2>
             <p className="font-avenir-light text-xl md:text-2xl text-white mb-6">
-              Juntos la podemos convertir en una joya única:
+              Juntos la podemos convertir en una joya única
             </p>
           </div>
 
           {/* Process Steps */}
           <div 
             className="space-y-16 py-8"
-            style={{ opacity: getOpacity(600, 400) }}
+            style={{ opacity: getOpacity(400) }}
           >
             {/* 1. Hablemos de tu idea */}
             <div className="space-y-4">
@@ -116,7 +117,7 @@ const CustomJewelryPage = () => {
           {/* Closing */}
           <div 
             className="text-center py-20"
-            style={{ opacity: getOpacity(1000, 200) }}
+            style={{ opacity: getOpacity(800) }}
           >
             <p className="font-avenir-book text-xl md:text-2xl text-white leading-relaxed">
               Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos juntos una joya.
