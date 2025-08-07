@@ -47,7 +47,7 @@ const CustomJewelryPage = () => {
             className="text-center py-12"
             style={{ opacity: getOpacity(-100) }}
           >
-            <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
+            <h1 className="font-avenir-book text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
               JOYAS A MEDIDA
             </h1>
           </div>
