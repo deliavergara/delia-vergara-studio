@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 const CustomJewelryPage = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -18,38 +17,29 @@ const CustomJewelryPage = () => {
     return Math.min(1, Math.max(0, (scrollY - startY + 100) / range));
   };
 
-  const handleVideoLoad = () => {
-    setIsLoaded(true);
-  };
-
   return (
     <div className="relative">
       <HamburgerMenu />
       
-      {isLoaded && (
-        <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            onLoadedData={handleVideoLoad}
-            className="w-full h-full object-cover"
-            style={{ opacity: 0.90 }}
-          >
-            <source 
-              src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} 
-              type="video/mp4" 
-            />
-          </video>
-          <div className="absolute inset-0 bg-black/5"></div>
-        </div>
-      )}
-
-      {!isLoaded && (
-          <div className="fixed inset-0 w-full h-full z-0" style={{ backgroundColor: '#353845' }}></div>
-      )}
-
+      {/* Video Background */}
+      <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+          style={{ opacity: 0.90 }}
+        >
+          <source 
+            src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} 
+            type="video/mp4" 
+          />
+        </video>
+        {/* El div gris ahora se muestra y se mantiene con opacidad 1 */}
+        <div className="absolute inset-0 bg-black/5" style={{ backgroundColor: '#353845', opacity: 1 }}></div>
+      </div>
+      
       <div className="relative z-10 min-h-[400vh] pt-24">
         <div className="max-w-2xl mx-auto px-6 space-y-8">
           
