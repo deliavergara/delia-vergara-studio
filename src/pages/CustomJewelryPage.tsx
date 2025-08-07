@@ -71,12 +71,11 @@ const CustomJewelryPage = () => {
           {/* Process Steps */}
           <div 
             className="space-y-16 py-8"
-            style={{ opacity: getOpacity(400) }}
           >
             {/* 1. Hablemos de tu idea */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacity(800) }}
+              style={{ opacity: getOpacity(300) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
@@ -89,7 +88,7 @@ const CustomJewelryPage = () => {
             {/* 2. Diseñamos juntos */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacity(800) }}
+              style={{ opacity: getOpacity(400) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 2. Diseñamos juntos
@@ -102,7 +101,7 @@ const CustomJewelryPage = () => {
             {/* 3. Elaboración de la joya */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacity(800) }}
+              style={{ opacity: getOpacity(500) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 3. Elaboración de la joya
@@ -115,7 +114,7 @@ const CustomJewelryPage = () => {
             {/* 4. Envío */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacity(800) }}
+              style={{ opacity: getOpacity(600) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 4. Envío
