@@ -54,7 +54,7 @@ const HowToBuyPage = () => {
           }}>
           <div className="screen-content justify-start items-center">
             <div className="max-w-2xl">
-              <h2 className="font-avenir-heavy text-white text-xl md:text-2xl mb-8">
+            <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-8">
                 1 Elige tu tipo de joya
               </h2>
               
