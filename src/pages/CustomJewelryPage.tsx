@@ -70,7 +70,7 @@ const CustomJewelryPage = () => {
 
           {/* Process Steps */}
           <div 
-            className="space-y-12 py-8"
+            className="space-y-16 py-8"
             style={{ opacity: getOpacity(400) }}
           >
             {/* 1. Hablemos de tu idea */}
