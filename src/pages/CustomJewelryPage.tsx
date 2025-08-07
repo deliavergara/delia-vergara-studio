@@ -48,7 +48,7 @@ const CustomJewelryPage = () => {
           {/* Title */}
           <div 
             className="text-center py-12"
-            style={{ opacity: getOpacity(0) }}
+            style={{ opacity: getOpacity(-100) }}
           >
             <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
               JOYAS A MEDIDA
@@ -58,7 +58,7 @@ const CustomJewelryPage = () => {
           {/* Opening Question */}
           <div 
             className="text-center py-6"
-            style={{ opacity: getOpacity(200) }}
+            style={{ opacity: getOpacity(100) }}
           >
             <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
@@ -71,11 +71,12 @@ const CustomJewelryPage = () => {
           {/* Process Steps */}
           <div 
             className="space-y-16 py-8"
+            style={{ opacity: getOpacity(400) }}
           >
             {/* 1. Hablemos de tu idea */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacity(300) }}
+              style={{ opacity: getOpacity(800) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
@@ -88,7 +89,7 @@ const CustomJewelryPage = () => {
             {/* 2. Diseñamos juntos */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacity(400) }}
+              style={{ opacity: getOpacity(800) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 2. Diseñamos juntos
@@ -101,7 +102,7 @@ const CustomJewelryPage = () => {
             {/* 3. Elaboración de la joya */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacity(500) }}
+              style={{ opacity: getOpacity(800) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 3. Elaboración de la joya
@@ -114,7 +115,7 @@ const CustomJewelryPage = () => {
             {/* 4. Envío */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacity(600) }}
+              style={{ opacity: getOpacity(800) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 4. Envío
