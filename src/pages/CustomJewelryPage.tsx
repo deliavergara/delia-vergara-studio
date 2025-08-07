@@ -11,6 +11,8 @@ const CustomJewelryPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Función para el efecto de opacidad "campana de Gauss".
+  // La opacidad es 1 en el punto `center` y 0 cuando la distancia es mayor a `range`.
   const getOpacity = (center: number, range: number = 200) => {
     const distance = Math.abs(scrollY - center);
     if (distance > range) {
@@ -45,7 +47,7 @@ const CustomJewelryPage = () => {
           {/* Title */}
           <div 
             className="text-center py-12"
-            style={{ opacity: getOpacity(250, 200) }}
+            style={{ opacity: getOpacity(0, 200) }}
           >
             <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
               JOYAS A MEDIDA
@@ -55,7 +57,7 @@ const CustomJewelryPage = () => {
           {/* Opening Question */}
           <div 
             className="text-center py-6"
-            style={{ opacity: getOpacity(600, 200) }}
+            style={{ opacity: getOpacity(300, 200) }}
           >
             <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
@@ -68,7 +70,7 @@ const CustomJewelryPage = () => {
           {/* Process Steps */}
           <div 
             className="space-y-16 py-8"
-            style={{ opacity: getOpacity(1000, 400) }}
+            style={{ opacity: getOpacity(600, 400) }}
           >
             {/* 1. Hablemos de tu idea */}
             <div className="space-y-4">
@@ -114,7 +116,7 @@ const CustomJewelryPage = () => {
           {/* Closing */}
           <div 
             className="text-center py-20"
-            style={{ opacity: getOpacity(1500, 200) }}
+            style={{ opacity: getOpacity(1000, 200) }}
           >
             <p className="font-avenir-book text-xl md:text-2xl text-white leading-relaxed">
               Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos juntos una joya.
