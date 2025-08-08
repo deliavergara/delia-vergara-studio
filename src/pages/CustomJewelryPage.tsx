@@ -96,7 +96,7 @@ const CustomJewelryPage = () => {
             {/* 1. Hablemos de tu idea */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacityInOut(100, 200, 350, 400) }}
+              style={{ opacity: getOpacityInOut(100, 200, 400, 450) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
@@ -109,7 +109,7 @@ const CustomJewelryPage = () => {
             {/* 2. Diseñamos juntos */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacityInOut(200, 300, 450, 500) }}
+              style={{ opacity: getOpacityInOut(200, 300, 500, 550) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 2. Diseñamos juntos
@@ -122,7 +122,7 @@ const CustomJewelryPage = () => {
             {/* 3. Elaboración de la joya */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacityInOut(300, 400, 550, 600) }}
+              style={{ opacity: getOpacityInOut(300, 400, 600, 650) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 3. Elaboración de la joya
@@ -135,7 +135,7 @@ const CustomJewelryPage = () => {
             {/* 4. Envío */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacityInOut(400, 500, 650, 700) }}
+              style={{ opacity: getOpacityInOut(400, 500, 700, 750) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 4. Envío
@@ -149,7 +149,7 @@ const CustomJewelryPage = () => {
           {/* Closing */}
           <div 
             className="text-center py-20"
-            style={{ opacity: getOpacityInOut(500, 600, 800, 900) }}
+            style={{ opacity: getOpacityInOut(500, 600, 900, 1100) }}
           >
             <p className="font-avenir-book text-xl md:text-2xl text-white leading-relaxed">
               Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos juntos una joya.
