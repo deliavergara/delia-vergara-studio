@@ -102,7 +102,8 @@ const HowToBuyPage = () => {
           </div>
         </section>
 
-        <div className="relative z-10 py-24 px-6 min-h-screen">
+        {/* Sección de "Preguntas Frecuentes" como snap-section */}
+        <section className="snap-start h-screen flex items-center justify-center relative z-10 py-24 px-6">
           <div className="container mx-auto max-w-4xl">
             <h2
               className="font-avenir-medium text-3xl md:text-4xl mb-16 text-left"
@@ -146,9 +147,10 @@ const HowToBuyPage = () => {
               />
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="border-t border-border pt-16 relative px-6 min-h-screen flex items-center justify-center">
+        {/* Sección de "Contacto" como snap-section */}
+        <section className="snap-start h-screen flex items-center justify-center relative z-10 pt-16 px-6">
           <div className="container mx-auto max-w-4xl">
             <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
               <img
@@ -166,7 +168,8 @@ const HowToBuyPage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </section>
+
       </div>
       <SizeGuideDrawer
         isOpen={showSizeGuide}
