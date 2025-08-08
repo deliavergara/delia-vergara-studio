@@ -102,8 +102,7 @@ const HowToBuyPage = () => {
           </div>
         </section>
 
-        {/* Sección de "Preguntas Frecuentes" como snap-section */}
-        <section className="snap-start h-screen flex items-center justify-center relative z-10 py-24 px-6">
+        <section className="snap-start h-screen flex items-start justify-center relative z-10 py-24 px-6">
           <div className="container mx-auto max-w-4xl">
             <h2
               className="font-avenir-medium text-3xl md:text-4xl mb-16 text-left"
@@ -146,20 +145,8 @@ const HowToBuyPage = () => {
                 answer="El tiempo de producción varía según la complejidad de la pieza, desde unos pocos días hasta algunas semanas. Este plazo te lo confirmaré siempre antes de iniciar el trabajo."
               />
             </div>
-          </div>
-        </section>
 
-        {/* Sección de "Contacto" como snap-section */}
-        <section className="snap-start h-screen flex items-center justify-center relative z-10 pt-16 px-6">
-          <div className="container mx-auto max-w-4xl">
-            <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
-              <img
-                src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")}
-                alt="Delia Vergara Isologo"
-                className="h-32 w-auto opacity-50"
-              />
-            </div>
-            <div className="text-center space-y-8 relative z-10 pb-12">
+            <div className="border-t border-border pt-16 relative mt-16 text-center">
               <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{ color: '#353333' }}>
                 CONTÁCTAME
               </h2>
