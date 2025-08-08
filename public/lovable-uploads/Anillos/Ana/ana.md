@@ -1,5 +1,5 @@
 ---
-sku: "ANILLOANAUNICO"
+sku: "ANAANILLOUNICO"
 nombre: "Ana"
 ---
 
