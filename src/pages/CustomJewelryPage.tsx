@@ -96,7 +96,7 @@ const CustomJewelryPage = () => {
             {/* 1. Hablemos de tu idea */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacityInOut(250, 350, 450, 550) }}
+              style={{ opacity: getOpacityInOut(200, 300, 400, 500) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
