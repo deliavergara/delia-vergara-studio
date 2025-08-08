@@ -1,171 +1,97 @@
-import { useNavigate } from "react-router-dom";
-import { buildGitHubRawUrl } from "@/lib/config";
-import { HamburgerMenu } from "@/components/HamburgerMenu";
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario Joyería</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto; /* Scroll principal */
+    scroll-behavior: smooth;
+  }
 
-const HowToBuyPage = () => {
-  const navigate = useNavigate();
-  const [showSizeGuide, setShowSizeGuide] = useState(false);
+  /* Contenedor principal con scroll snap */
+  .contenedor {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+  }
 
-  return (
-    <div className="min-h-screen bg-background relative">
-      <HamburgerMenu />
+  /* Secciones que encajan con snap */
+  section {
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+  }
 
-      {/* ====== 1. GALERÍA CON SNAPSCROLL ====== */}
-      <div className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
-        {/* 1ª pantalla */}
-        <section
-          className="snap-start h-screen bg-cover bg-center flex items-center justify-center"
-          style={{
-            backgroundImage: `url(${buildGitHubRawUrl(
-              "public/lovable-uploads/Como%20comprar/Arbol.jpg"
-            )})`,
-          }}
-        >
-          <h1 className="font-avenir-book text-white text-4xl md:text-5xl lg:text-6xl text-center">
-            Cómo comprar tu joya
-            <br />
-            <span className="block">en 3 pasos</span>
-          </h1>
-        </section>
+  /* Fondo imagen */
+  .bg {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+  }
 
-        {/* 2ª pantalla */}
-        <section
-          className="snap-start h-screen bg-cover bg-center flex items-center"
-          style={{
-            backgroundImage: `url(${buildGitHubRawUrl(
-              "public/lovable-uploads/Como%20comprar/Persona.jpg"
-            )})`,
-          }}
-        >
-          <div className="max-w-2xl px-6">
-            <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-8">
-              1 Elige tu tipo de joya
-            </h2>
-            <div className="space-y-6">
-              <Item title="En stock:" text="Piezas listas para envío inmediato desde Valencia (España) o Santiago (Chile)." />
-              <Item title="Por encargo:" text="La mayoría de mis diseños se pueden volver a producir especialmente para ti." />
-              <Item title="Personalizada:" text="Si tienes una idea, hablemos para crear juntos una joya completamente nueva." />
-            </div>
-          </div>
-        </section>
+  /* Contenedor de texto */
+  .contenido {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    padding: 20px;
+    overflow-y: auto; /* Mantener scroll interno si hay mucho texto */
+    scrollbar-width: none; /* Firefox: ocultar barra */
+  }
+  .contenido::-webkit-scrollbar { /* Chrome, Safari, Edge: ocultar barra */
+    display: none;
+  }
 
-        {/* 3ª pantalla */}
-        <section
-          className="snap-start h-screen bg-cover bg-center flex items-center"
-          style={{
-            backgroundImage: `url(${buildGitHubRawUrl(
-              "public/lovable-uploads/Como%20comprar/Medalla.jpg"
-            )})`,
-          }}
-        >
-          <div className="max-w-2xl px-6">
-            <h2 className="font-avenir-heavy text-white text-xl md:text-2xl mb-8">
-              2 Contacto y confirmación
-            </h2>
-            <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
-              Escríbeme para que conversemos sobre la pieza que te interesa.
-            </p>
-            <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
-              Confirmaremos juntos los detalles, la talla, el precio final y los tiempos de creación o envío.
-            </p>
-          </div>
-        </section>
+  /* Evitar que la última sección rebote */
+  section:last-child {
+    scroll-snap-align: end;
+  }
+</style>
+</head>
+<body>
 
-        {/* 4ª pantalla */}
-        <section
-          className="snap-start h-screen bg-cover bg-center flex items-center"
-          style={{
-            backgroundImage: `url(${buildGitHubRawUrl(
-              "public/lovable-uploads/Como%20comprar/Caja.jpg"
-            )})`,
-          }}
-        >
-          <div className="max-w-2xl px-6">
-            <h2 className="font-avenir-heavy text-black text-xl md:text-2xl mb-8">
-              3 Pago y envío
-            </h2>
-            <p className="font-avenir-light text-black text-sm md:text-base leading-relaxed">
-              El pago se realiza por transferencia bancaria.
-            </p>
-            <p className="font-avenir-light text-black text-sm md:text-base leading-relaxed">
-              Una vez lista, preparo y envío tu joya a tu domicilio.
-            </p>
-          </div>
-        </section>
-      </div>
+<div class="contenedor">
 
-      {/* ====== 2. PREGUNTAS FRECUENTES ====== */}
-      <div className="relative z-10 py-24 px-6">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="font-avenir-medium text-3xl md:text-4xl mb-16 text-left" style={{ color: "#353333" }}>
-            Preguntas Frecuentes
-          </h2>
-          <div className="space-y-0">
-            <FAQItem question="¿De qué materiales son las joyas?" answer="Trabajo principalmente con plata de ley y plata enchapada en oro, aunque puedo realizar tu encargo en oro macizo u otros materiales que prefieras." />
-            <FAQItem question="¿Cómo sé mi talla?" answer={<>La talla es siempre a medida; si no conoces la tuya, verifica la sección{" "}
-              <span onClick={() => setShowSizeGuide(true)} className="cursor-pointer font-avenir-medium text-base text-blue-600 underline hover:no-underline">
-                cómo saber mi talla,
-              </span>{" "}
-              y si todavía quedas con dudas, contáctame y te guiaré para determinarla.</>} />
-            <FAQItem question="¿Qué formas de pago aceptas?" answer="El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (para pagos en euros) y en Chile (para pagos en pesos chilenos), según te acomode." />
-            <FAQItem question="¿A dónde realizas envíos y cuál es el costo?" answer="Realizo envíos a toda Europa y Chile. El coste se calcula según tu ubicación y se suma al valor final. Para los pedidos a Chile, el envío se realiza desde Santiago, evitando costos internacionales." />
-            <FAQItem question="¿Cuánto tarda la producción de una joya por encargo?" answer="El tiempo de producción varía según la complejidad de la pieza, desde unos pocos días hasta algunas semanas. Este plazo te lo confirmaré siempre antes de iniciar el trabajo." />
-          </div>
-        </div>
-      </div>
-
-      {/* ====== 3. CONTACTO ====== */}
-      <div className="border-t border-border pt-16 relative px-6">
-        <div className="container mx-auto max-w-4xl">
-          <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
-            <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} alt="Delia Vergara Isologo" className="h-32 w-auto opacity-50" />
-          </div>
-          <div className="text-center space-y-8 relative z-10 pb-12">
-            <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{ color: "#353333" }}>
-              CONTÁCTAME
-            </h2>
-            <p className="font-avenir-light font-light tracking-body leading-body" style={{ color: "#353333" }}>
-              deliavergara.joyas@gmail.com | +34 625857127
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Drawer guía de tallas */}
-      <SizeGuideDrawer isOpen={showSizeGuide} onClose={() => setShowSizeGuide(false)} />
+  <!-- Sección 1 -->
+  <section>
+    <div class="bg" style="background-image:url('foto1.jpg');"></div>
+    <div class="contenido">
+      <h1>1 Elige tu tipo de joya</h1>
+      <p><strong>En stock:</strong></p>
+      <p>Piezas listas para envío inmediato desde Valencia (España) o Santiago (Chile).</p>
+      <p><strong>Por encargo:</strong></p>
+      <p>La mayoría de mis diseños se pueden volver a producir especialmente para ti.</p>
     </div>
-  );
-};
+  </section>
 
-/* ====== COMPONENTES AUXILIARES ====== */
-const Item = ({ title, text }: { title: string; text: string }) => (
-  <div>
-    <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">{title}</h3>
-    <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">{text}</p>
-  </div>
-);
-
-interface FAQItemProps {
-  question: string;
-  answer: string | JSX.Element;
-}
-
-const FAQItem = ({ question, answer }: FAQItemProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div className="border-b border-gray-200 last:border-b-0">
-      <button onClick={() => setIsOpen(!isOpen)} className="w-full py-6 text-left flex justify-between items-center hover:bg-gray-50/50 transition-colors duration-200">
-        <span className="font-avenir-book text-lg pr-8" style={{ color: "#353333" }}>{question}</span>
-        <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} style={{ color: "#353333" }} />
-      </button>
-      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-96 opacity-100 pb-6" : "max-h-0 opacity-0"}`}>
-        <p className="font-avenir-light text-base leading-relaxed" style={{ color: "#353333" }}>{answer}</p>
-      </div>
+  <!-- Sección 2 -->
+  <section>
+    <div class="bg" style="background-image:url('foto2.jpg');"></div>
+    <div class="contenido">
+      <h1>2 Elige tu material</h1>
+      <p>Oro, plata o platino, según tu preferencia y presupuesto.</p>
     </div>
-  );
-};
+  </section>
 
-export default HowToBuyPage;
+  <!-- Sección 3 -->
+  <section>
+    <div class="bg" style="background-image:url('foto3.jpg');"></div>
+    <div class="contenido">
+      <h1>3 Finaliza tu pedido</h1>
+      <p>Indícanos tus datos y te contactaremos para confirmar tu joya.</p>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
