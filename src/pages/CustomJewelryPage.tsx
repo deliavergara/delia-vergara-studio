@@ -52,7 +52,7 @@ const CustomJewelryPage = () => {
           {/* Title */}
           <div 
             className="text-center py-12"
-            style={{ opacity: getOpacityOut(0,300) }}
+            style={{ opacity: getOpacityOut(0,400) }}
           >
             <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
               JOYAS A MEDIDA
@@ -62,7 +62,7 @@ const CustomJewelryPage = () => {
           {/* Opening Question */}
           <div 
             className="text-center py-6"
-            style={{ opacity: getOpacityOut(100,300) }}
+            style={{ opacity: getOpacityOut(100,400) }}
           >
             <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
@@ -79,7 +79,7 @@ const CustomJewelryPage = () => {
             {/* 1. Hablemos de tu idea */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacity(300) }}
+              style={{ opacity: getOpacity(250) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
