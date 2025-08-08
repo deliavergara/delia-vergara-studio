@@ -28,6 +28,7 @@ const HowToBuyPage = () => {
       }
     };
 
+    document.documentElement.classList.add("overflow-x-hidden");
     enableSnap(); // empieza con snap para las fotos
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -41,6 +42,7 @@ const HowToBuyPage = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       disableSnap();
+      document.documentElement.classList.remove("overflow-x-hidden");
     };
   }, []);
 
