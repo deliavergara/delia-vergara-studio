@@ -68,10 +68,36 @@ const ProductPage = () => {
             {/* Galería de imágenes */}
             <div className="space-y-6">
               {/* Imagen principal con arrastre */}
-              <div ref={dragRef} className="aspect-[4/5] bg-accent rounded-sm overflow-hidden max-w-md mx-auto cursor-grab active:cursor-grabbing" onMouseDown={handleDragStart} onMouseUp={handleDragEnd} onTouchStart={handleDragStart} onTouchEnd={handleDragEnd}>
-                <img src={product.images[currentImageIndex]} alt={product.name} className="w-full h-full object-cover select-none" style={{
-                opacity: '0.93'
-              }} draggable={false} />
+              <div
+                ref={dragRef}
+                className="aspect-[4/5] bg-accent rounded-sm overflow-hidden max-w-md mx-auto cursor-grab active:cursor-grabbing"
+                onMouseDown={handleDragStart}
+                onMouseUp={handleDragEnd}
+                onTouchStart={handleDragStart}
+                onTouchEnd={handleDragEnd}
+              >
+                {(() => {
+                  const media = product.images[currentImageIndex];
+                  const isVideo = /\.(mp4|mov)$/i.test(media);
+                  return isVideo ? (
+                    <video
+                      src={media}
+                      className="w-full h-full object-cover"
+                      controls
+                      muted
+                      playsInline
+                      loop
+                    />
+                  ) : (
+                    <img
+                      src={media}
+                      alt={product.name}
+                      className="w-full h-full object-cover select-none"
+                      style={{ opacity: '0.93' }}
+                      draggable={false}
+                    />
+                  );
+                })()}
               </div>
               
               {/* Galería de miniaturas */}
@@ -88,11 +114,21 @@ const ProductPage = () => {
                           : "border-border hover:border-muted-foreground/50"
                       )}
                     >
-                      <img
-                        src={image}
-                        alt={`${product.name} ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
+                      {/\.(mp4|mov)$/i.test(image) ? (
+                        <video
+                          src={image}
+                          className="w-full h-full object-cover"
+                          muted
+                          playsInline
+                          loop
+                        />
+                      ) : (
+                        <img
+                          src={image}
+                          alt={`${product.name} ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
                     </button>
                   ))}
                 </div>
