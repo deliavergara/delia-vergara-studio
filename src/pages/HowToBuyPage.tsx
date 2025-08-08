@@ -101,12 +101,12 @@ const HowToBuyPage = () => {
             </div>
           </div>
         </section>
-
-        {/* Sección de "Preguntas Frecuentes" y "Contacto" sin snap-start */}
-        <section className="h-screen flex items-start justify-center relative z-10 py-24 px-6">
-          <div className="container mx-auto max-w-4xl">
+        
+        {/* Sección compactada de "Preguntas Frecuentes" y "Contacto" */}
+        <section className="snap-start h-screen flex flex-col justify-center relative z-10 px-6">
+          <div className="container mx-auto max-w-4xl py-12 md:py-16">
             <h2
-              className="font-avenir-medium text-3xl md:text-4xl mb-16 text-left"
+              className="font-avenir-medium text-3xl md:text-4xl mb-8 text-left"
               style={{ color: '#353333' }}
             >
               Preguntas Frecuentes
@@ -146,15 +146,15 @@ const HowToBuyPage = () => {
                 answer="El tiempo de producción varía según la complejidad de la pieza, desde unos pocos días hasta algunas semanas. Este plazo te lo confirmaré siempre antes de iniciar el trabajo."
               />
             </div>
+          </div>
 
-            <div className="border-t border-border pt-16 relative mt-16 text-center">
-              <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{ color: '#353333' }}>
-                CONTÁCTAME
-              </h2>
-              <p className="font-avenir-light font-light tracking-body leading-body" style={{ color: '#353333' }}>
-                deliavergara.joyas@gmail.com | +34 625857127
-              </p>
-            </div>
+          <div className="container mx-auto max-w-4xl border-t border-border pt-8 mt-8 relative text-center">
+            <h2 className="font-avenir-black font-black text-2xl uppercase mb-4" style={{ color: '#353333' }}>
+              CONTÁCTAME
+            </h2>
+            <p className="font-avenir-light font-light tracking-body leading-body" style={{ color: '#353333' }}>
+              deliavergara.joyas@gmail.com | +34 625857127
+            </p>
           </div>
         </section>
 
@@ -178,9 +178,9 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
     <div className="border-b border-gray-200 last:border-b-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-6 text-left flex justify-between items-center hover:bg-gray-50/50 transition-colors duration-200"
+        className="w-full py-4 text-left flex justify-between items-center hover:bg-gray-50/50 transition-colors duration-200"
       >
-        <span className="font-avenir-book text-lg pr-8" style={{ color: '#353333' }}>
+        <span className="font-avenir-book text-lg pr-4" style={{ color: '#353333' }}>
           {question}
         </span>
         <ChevronDown
@@ -189,7 +189,7 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
         />
       </button>
       <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
-        isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
+        isOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
       }`}>
         <p className="font-avenir-light text-base leading-relaxed" style={{ color: '#353333' }}>
           {answer}
