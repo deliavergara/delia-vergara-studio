@@ -17,6 +17,12 @@ const CustomJewelryPage = () => {
     return Math.min(1, Math.max(0, (scrollY - startY + 100) / range));
   };
 
+  const getOpacityOut = (startY: number, range: number = 300) => {
+    if (scrollY < startY) return 1;
+    if (scrollY > startY + range) return 0;
+    return Math.min(1, Math.max(0, 1 - (scrollY - startY) / range));
+  };
+
   return (
     <div className="relative">
       <HamburgerMenu />
@@ -36,25 +42,27 @@ const CustomJewelryPage = () => {
             type="video/mp4" 
           />
         </video>
-        {/* LÍNEA ELIMINADA: el div que creaba el fondo gris */}
         <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
+            {/* Scrollable Content */}
       <div className="relative z-10 min-h-[400vh] pt-24">
         <div className="max-w-2xl mx-auto px-6 space-y-8">
           
+          {/* Title */}
           <div 
             className="text-center py-12"
-            style={{ opacity: getOpacity(-100) }}
+            style={{ opacity: getOpacityOut(0,400) }}
           >
-            <h1 className="font-avenir-book text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
+            <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
               JOYAS A MEDIDA
             </h1>
           </div>
 
+          {/* Opening Question */}
           <div 
             className="text-center py-6"
-            style={{ opacity: getOpacity(100) }}
+            style={{ opacity: opacity: getOpacityOut(100,400) }}
           >
             <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
@@ -64,9 +72,11 @@ const CustomJewelryPage = () => {
             </p>
           </div>
 
+          {/* Process Steps */}
           <div 
             className="space-y-16 py-8"
           >
+            {/* 1. Hablemos de tu idea */}
             <div 
               className="space-y-4"
               style={{ opacity: getOpacity(300) }}
@@ -79,6 +89,7 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
+            {/* 2. Diseñamos juntos */}
             <div 
               className="space-y-4"
               style={{ opacity: getOpacity(400) }}
@@ -91,6 +102,7 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
+            {/* 3. Elaboración de la joya */}
             <div 
               className="space-y-4"
               style={{ opacity: getOpacity(500) }}
@@ -103,6 +115,7 @@ const CustomJewelryPage = () => {
               </p>
             </div>
             
+            {/* 4. Envío */}
             <div 
               className="space-y-4"
               style={{ opacity: getOpacity(600) }}
@@ -116,6 +129,7 @@ const CustomJewelryPage = () => {
             </div>
           </div>
 
+          {/* Closing */}
           <div 
             className="text-center py-20"
             style={{ opacity: getOpacity(800) }}
