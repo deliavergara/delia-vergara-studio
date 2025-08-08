@@ -102,7 +102,8 @@ const HowToBuyPage = () => {
           </div>
         </section>
 
-        <section className="snap-start h-screen flex items-start justify-center relative z-10 py-24 px-6">
+        {/* Sección de "Preguntas Frecuentes" y "Contacto" sin snap-start */}
+        <section className="h-screen flex items-start justify-center relative z-10 py-24 px-6">
           <div className="container mx-auto max-w-4xl">
             <h2
               className="font-avenir-medium text-3xl md:text-4xl mb-16 text-left"
