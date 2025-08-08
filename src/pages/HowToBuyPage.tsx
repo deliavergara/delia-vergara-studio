@@ -32,7 +32,7 @@ const HowToBuyPage = () => {
       <HamburgerMenu />
 
       {/* Proceso de Compra - Pantalla Completa con efecto Bimani */}
-      <div className="scroll-snap-container">
+      <div className="scroll-snap-container overflow-y-hidden">
         {/* 1ª pantalla - árbol.jpg */}
         <section className="snap-screen bg-cover bg-center relative" 
           style={{
