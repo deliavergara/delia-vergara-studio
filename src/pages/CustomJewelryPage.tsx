@@ -122,7 +122,7 @@ const CustomJewelryPage = () => {
             {/* 3. Elaboración de la joya */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacityInOut(300, 400, 600, 650) }}
+              style={{ opacity: getOpacityInOut(300, 400, 650, 670) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 3. Elaboración de la joya
@@ -135,7 +135,7 @@ const CustomJewelryPage = () => {
             {/* 4. Envío */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacityInOut(400, 500, 700, 750) }}
+              style={{ opacity: getOpacityInOut(400, 500, 750, 770) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 4. Envío
