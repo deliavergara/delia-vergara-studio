@@ -11,9 +11,10 @@ const HowToBuyPage = () => {
   const [showSizeGuide, setShowSizeGuide] = useState(false);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
       <HamburgerMenu />
-      <div className="scroll-container h-screen overflow-y-scroll snap-y snap-mandatory">
+
+      <div className="scroll-container h-screen overflow-y-scroll snap-y snap-mandatory scrollbar-hide">
         <section className="snap-start bg-cover bg-center relative h-screen flex justify-center items-center"
           style={{
             backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Arbol.jpg")})`,
@@ -101,63 +102,72 @@ const HowToBuyPage = () => {
             </div>
           </div>
         </section>
-        
-        {/* Sección compactada de "Preguntas Frecuentes" y "Contacto" */}
-        <section className="snap-start h-screen flex flex-col justify-center relative z-10 px-6">
-          <div className="container mx-auto max-w-4xl py-12 md:py-16">
-            <h2
-              className="font-avenir-medium text-3xl md:text-4xl mb-8 text-left"
-              style={{ color: '#353333' }}
-            >
-              Preguntas Frecuentes
-            </h2>
-            <div className="space-y-0">
-              <FAQItem
-                question="¿De qué materiales son las joyas?"
-                answer="Trabajo principalmente con plata de ley y plata enchapada en oro, aunque puedo realizar tu encargo en oro macizo u otros materiales que prefieras."
-              />
-              <FAQItem
-                question="¿Cómo sé mi talla?"
-                answer={
-                  <>
-                    La talla es siempre a medida; si no conoces la tuya, verifica la sección
-                    {' '}
-                    <span
-                      onClick={() => setShowSizeGuide(true)}
-                      className="cursor-pointer font-avenir-medium text-base text-blue-600 underline hover:no-underline"
-                    >
-                      cómo saber mi talla,
-                    </span>
-                    {' '}
-                    y si todavía quedas con dudas, contáctame y te guiaré para determinarla.
-                  </>
-                }
-              />
-              <FAQItem
-                question="¿Qué formas de pago aceptas?"
-                answer="El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (para pagos en euros) y en Chile (para pagos en pesos chilenos), según te acomode."
-              />
-              <FAQItem
-                question="¿A dónde realizas envíos y cuál es el costo?"
-                answer="Realizo envíos a toda Europa y Chile. El coste se calcula según tu ubicación y se suma al valor final. Para los pedidos a Chile, el envío se realiza desde Santiago, evitando costos internacionales."
-              />
-              <FAQItem
-                question="¿Cuánto tarda la producción de una joya por encargo?"
-                answer="El tiempo de producción varía según la complejidad de la pieza, desde unos pocos días hasta algunas semanas. Este plazo te lo confirmaré siempre antes de iniciar el trabajo."
+      </div>
+
+      <div className="relative z-10 bg-white">
+        <div className="container mx-auto max-w-4xl py-24 px-6">
+          <h2
+            className="font-avenir-medium text-3xl md:text-4xl mb-16 text-left"
+            style={{ color: '#353333' }}
+          >
+            Preguntas Frecuentes
+          </h2>
+          <div className="space-y-0">
+            <FAQItem
+              question="¿De qué materiales son las joyas?"
+              answer="Trabajo principalmente con plata de ley y plata enchapada en oro, aunque puedo realizar tu encargo en oro macizo u otros materiales que prefieras."
+            />
+            <FAQItem
+              question="¿Cómo sé mi talla?"
+              answer={
+                <>
+                  La talla es siempre a medida; si no conoces la tuya, verifica la sección
+                  {' '}
+                  <span
+                    onClick={() => setShowSizeGuide(true)}
+                    className="cursor-pointer font-avenir-medium text-base text-blue-600 underline hover:no-underline"
+                  >
+                    cómo saber mi talla,
+                  </span>
+                  {' '}
+                  y si todavía quedas con dudas, contáctame y te guiaré para determinarla.
+                </>
+              }
+            />
+            <FAQItem
+              question="¿Qué formas de pago aceptas?"
+              answer="El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (para pagos en euros) y en Chile (para pagos en pesos chilenos), según te acomode."
+            />
+            <FAQItem
+              question="¿A dónde realizas envíos y cuál es el costo?"
+              answer="Realizo envíos a toda Europa y Chile. El coste se calcula según tu ubicación y se suma al valor final. Para los pedidos a Chile, el envío se realiza desde Santiago, evitando costos internacionales."
+            />
+            <FAQItem
+              question="¿Cuánto tarda la producción de una joya por encargo?"
+              answer="El tiempo de producción varía según la complejidad de la pieza, desde unos pocos días hasta algunas semanas. Este plazo te lo confirmaré siempre antes de iniciar el trabajo."
+            />
+          </div>
+        </div>
+
+        <div className="border-t border-border pt-16 relative px-6">
+          <div className="container mx-auto max-w-4xl">
+            <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
+              <img
+                src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")}
+                alt="Delia Vergara Isologo"
+                className="h-32 w-auto opacity-50"
               />
             </div>
+            <div className="text-center space-y-8 relative z-10 pb-12">
+              <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{ color: '#353333' }}>
+                CONTÁCTAME
+              </h2>
+              <p className="font-avenir-light font-light tracking-body leading-body" style={{ color: '#353333' }}>
+                deliavergara.joyas@gmail.com | +34 625857127
+              </p>
+            </div>
           </div>
-
-          <div className="container mx-auto max-w-4xl border-t border-border pt-8 mt-8 relative text-center">
-            <h2 className="font-avenir-black font-black text-2xl uppercase mb-4" style={{ color: '#353333' }}>
-              CONTÁCTAME
-            </h2>
-            <p className="font-avenir-light font-light tracking-body leading-body" style={{ color: '#353333' }}>
-              deliavergara.joyas@gmail.com | +34 625857127
-            </p>
-          </div>
-        </section>
-
+        </div>
       </div>
       <SizeGuideDrawer
         isOpen={showSizeGuide}
@@ -178,9 +188,9 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
     <div className="border-b border-gray-200 last:border-b-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-4 text-left flex justify-between items-center hover:bg-gray-50/50 transition-colors duration-200"
+        className="w-full py-6 text-left flex justify-between items-center hover:bg-gray-50/50 transition-colors duration-200"
       >
-        <span className="font-avenir-book text-lg pr-4" style={{ color: '#353333' }}>
+        <span className="font-avenir-book text-lg pr-8" style={{ color: '#353333' }}>
           {question}
         </span>
         <ChevronDown
@@ -189,7 +199,7 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
         />
       </button>
       <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
-        isOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
+        isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
       }`}>
         <p className="font-avenir-light text-base leading-relaxed" style={{ color: '#353333' }}>
           {answer}
