@@ -62,7 +62,7 @@ const CustomJewelryPage = () => {
           {/* Opening Question */}
           <div 
             className="text-center py-6"
-            style={{ opacity: opacity: getOpacityOut(100,400) }}
+            style={{ opacity: getOpacityOut(100,400) }}
           >
             <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
