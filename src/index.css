@@ -186,12 +186,14 @@ Minimalist palette with whites, soft grays, and subtle earth tones
     background: var(--gradient-overlay);
   }
   
-  /* Scroll-snap effect tipo Bimani */
-  .scroll-snap-container {
+  /* Scroll-snap effect tipo Bimani (single scrollbar) */
+  html.snap-y {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    overflow-y: scroll;
-    height: 100vh;
+  }
+  
+  .scroll-snap-container {
+    /* Wrapper sin su propio scroll; el snap lo maneja el viewport cuando <html> tiene la clase .snap-y */
   }
   
   .snap-screen {

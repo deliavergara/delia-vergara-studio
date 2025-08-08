@@ -12,9 +12,14 @@ const HowToBuyPage = () => {
   const [showSizeGuide, setShowSizeGuide] = useState(false);
 
   useEffect(() => {
+    // Habilita snap en el viewport solo en esta página
+    document.documentElement.classList.add("snap-y");
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.documentElement.classList.remove("snap-y");
+    };
   }, []);
 
   const getOpacity = (start: number, end: number) => {
