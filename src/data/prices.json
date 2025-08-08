@@ -83,7 +83,7 @@
     "valor_venta_cl": 72000,
     "valor_venta_bano_oro_cl": 77000
   },
-  "OVALPENDIENTEUNICO": {
+  "OVALPENDIENTEUNO": {
     "valor_venta_es": 40,
     "valor_venta_bano_oro_es": 50,
     "valor_venta_cl": 44000,
@@ -113,10 +113,28 @@
     "valor_venta_cl": 44000,
     "valor_venta_bano_oro_cl": 61000
   },
-  "CUADALPENDIENTEUNICO": {
+  "CAUDALESPENDIENTEUNICO": {
     "valor_venta_es": 60,
     "valor_venta_bano_oro_es": 75,
     "valor_venta_cl": 66000,
     "valor_venta_bano_oro_cl": 83000
+  },
+  "ALCAZARANILLOUNICO": {
+    "valor_venta_es": 0,
+    "valor_venta_bano_oro_es": 0,
+    "valor_venta_cl": 0,
+    "valor_venta_bano_oro_cl": 0
+  },
+  "ANILLOANAUNICO": {
+    "valor_venta_es": 0,
+    "valor_venta_bano_oro_es": 0,
+    "valor_venta_cl": 0,
+    "valor_venta_bano_oro_cl": 0
+  },
+  "IRISANILLOUNICO": {
+    "valor_venta_es": 55,
+    "valor_venta_bano_oro_es": 65,
+    "valor_venta_cl": 61000,
+    "valor_venta_bano_oro_cl": 72000
   }
 }

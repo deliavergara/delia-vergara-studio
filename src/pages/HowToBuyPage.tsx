@@ -1,126 +1,275 @@
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
 import { buildGitHubRawUrl } from "@/lib/config";
 import { HamburgerMenu } from "@/components/HamburgerMenu";
+import { useEffect, useRef, useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
+
+
 const HowToBuyPage = () => {
   const navigate = useNavigate();
-  return <div className="min-h-screen bg-background relative">
+  const [scrollY, setScrollY] = useState(0);
+  const [showSizeGuide, setShowSizeGuide] = useState(false);
+  const snapContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const enableSnap = () => document.documentElement.classList.add("snap-y");
+    const disableSnap = () => document.documentElement.classList.remove("snap-y");
+
+    const toggleSnap = () => {
+      const container = snapContainerRef.current;
+      if (!container) return;
+      const containerBottom = container.offsetTop + container.offsetHeight;
+      const viewportBottom = window.scrollY + window.innerHeight;
+      if (viewportBottom >= containerBottom) {
+        disableSnap();
+      } else {
+        enableSnap();
+      }
+    };
+
+    document.documentElement.classList.add("overflow-x-hidden");
+    enableSnap(); // empieza con snap para las fotos
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      toggleSnap();
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    // Inicializa por si se entra a mitad de página
+    toggleSnap();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      disableSnap();
+      document.documentElement.classList.remove("overflow-x-hidden");
+    };
+  }, []);
+
+  const getOpacity = (start: number, end: number) => {
+    const progress = Math.max(0, Math.min(1, (scrollY - start) / (end - start)));
+    return progress;
+  };
+
+  const getTranslateY = (start: number, end: number, distance: number = 50) => {
+    const progress = Math.max(0, Math.min(1, (scrollY - start) / (end - start)));
+    return distance * (1 - progress);
+  };
+
+  return (
+    <div className="min-h-screen bg-background relative">
       <HamburgerMenu />
 
-      {/* Contenido principal */}
-      <div className="relative z-10 pt-24 pb-12">
-        <div className="container mx-auto px-6 max-w-4xl">
-          
-          
-          {/* Título principal */}
-          <div className="mb-16">
-            <h1 className="font-avenir-black font-black text-3xl uppercase text-center mb-8" style={{
-            color: '#353333'
+      {/* Proceso de Compra - Pantalla Completa con efecto Bimani */}
+      <div className="scroll-snap-container" ref={snapContainerRef}>
+        {/* 1ª pantalla - árbol.jpg */}
+        <section className="snap-screen bg-cover bg-center relative" 
+          style={{
+            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Arbol.jpg")})`,
           }}>
-              CÓMO COMPRAR
+          <div className="screen-content">
+            <h1 className="font-avenir-book text-white text-4xl md:text-5xl lg:text-6xl text-center">
+              Cómo comprar tu joya
+              <br />
+              <span className="block">en 3 pasos</span>
             </h1>
-            <p className="font-avenir font-medium text-base leading-relaxed" style={{
-            color: '#353333'
-          }}>
-              Tengo mi taller en Valencia, España, y las joyas que creo son piezas únicas o pequeñas ediciones, diseñadas y hechas a mano, con dedicación. Aquí te explico el detalle de cómo comprar:
-            </p>
           </div>
+        </section>
 
-          <div className="space-y-16">
-            {/* Tipos de Joyas */}
-            <div className="space-y-8">
-              <div className="space-y-8">
-                <div>
-                  <p className="font-avenir text-base leading-relaxed" style={{
-                  color: '#353333'
-                }}>
-                    <span className="font-bold">Joyas en Stock:</span> <span className="font-light">Tengo un pequeño y exclusivo stock de piezas listas para ser enviadas. Son joyas de edición limitada que se encuentran físicamente en Valencia, España (zona Ruzafa) y en Santiago, Chile (zona Los Domínicos, Las Condes). Si te interesa alguna, la puedo enviar de inmediato</span>
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-avenir text-base leading-relaxed" style={{
-                  color: '#353333'
-                }}>
-                    <span className="text-base font-bold">Diseños por Encargo:</span> <span className="font-light">La mayoría de mis creaciones se pueden volver a producir especialmente para ti. El tiempo de producción varía según la complejidad: desde unos días para piezas sencillas hasta algunas semanas para las más elaboradas</span>
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-avenir text-base leading-relaxed" style={{
-                  color: '#353333'
-                }}>
-                    <span className="font-bold">Proyectos Personalizados:</span> <span className="font-light">Si tienes una idea o un sueño, hablemos. Me gusta colaborar y crear juntos una joya totalmente nueva y personal</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Imagen del packaging */}
-            <div className="mx-auto max-w-5xl px-4">
-              <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/Foto%20categoria%20comprar.jpg")} alt="Packaging Delia Vergara" className="w-full h-auto object-cover" />
-            </div>
-
-            {/* Especificaciones */}
-            <div className="space-y-8">
-              <h2 className="font-avenir-heavy font-black text-xl uppercase tracking-title text-left" style={{
-              color: '#353333'
-            }}>
-                Especificaciones
+        {/* 2ª pantalla - persona.jpg */}
+        <section className="snap-screen bg-cover bg-center relative" 
+          style={{
+            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Persona.jpg")})`,
+          }}>
+          <div className="screen-content justify-start items-center">
+            <div className="max-w-2xl">
+            <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-8">
+                1 Elige tu tipo de joya
               </h2>
               
-              <div className="space-y-8">
+              <div className="space-y-6">
                 <div>
-                  <p className="font-avenir text-base leading-relaxed" style={{
-                  color: '#353333'
-                }}>
-                    <span className="font-bold">Materiales y Talla:</span> <span className="font-light">Trabajo principalmente con plata de ley y plata enchapada en oro. También puedo realizar tu encargo en oro macizo o en algún otro material que prefieras. La talla es a medida, pídeme la que requieras. Si tienes dudas de la tuya, contáctame y te guiaré con métodos muy simples para encontrar tu medida exacta</span>
+                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">En stock:</h3>
+                  <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
+                    Piezas listas para envío inmediato desde Valencia (España) o Santiago (Chile).
                   </p>
                 </div>
-
                 <div>
-                  <p className="font-avenir text-base leading-relaxed" style={{
-                  color: '#353333'
-                }}>
-                    <span className="font-bold">Formas de Pago:</span> <span className="font-light">El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (euros) y en Chile (pesos chilenos), elige la que te acomode</span>
+                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">Por encargo:</h3>
+                  <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
+                    La mayoría de mis diseños se pueden volver a producir especialmente para ti.
                   </p>
                 </div>
-
                 <div>
-                  <p className="font-avenir text-base leading-relaxed" style={{
-                  color: '#353333'
-                }}>
-                    <span className="font-bold">Envíos:</span> <span className="font-light">Realizo envíos a toda Europa y Chile. El coste del envío se calcula según tu ubicación y se suma al valor final de tu joya (para Chile es desde Santiago, para que no te preocupes del envío internacional)</span>
+                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">Personalizada:</h3>
+                  <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
+                    Si tienes una idea, hablemos para crear juntos una joya completamente nueva.
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Sección de contacto */}
-            <div className="border-t border-border pt-16 relative">
-              <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
-                <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} alt="Delia Vergara Isologo" className="h-32 w-auto opacity-50" />
-              </div>
+        {/* 3ª pantalla - medalla.jpg */}
+        <section className="snap-screen bg-cover bg-center relative" 
+          style={{
+            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Medalla.jpg")})`,
+          }}>
+          <div className="screen-content justify-start items-center">
+            <div className="max-w-2xl">
+              <h2 className="font-avenir-heavy text-white text-xl md:text-2xl mb-8">
+                2 Contacto y confirmación
+              </h2>
               
-              <div className="text-center space-y-8 relative z-10 pb-12">
-                <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{
-                color: '#353333'
-              }}>
-                  CONTÁCTAME
-                </h2>
-                
-                <p className="font-avenir-light font-light tracking-body leading-body" style={{
-                color: '#353333'
-              }}>
-                  deliavergara.joyas@gmail.com | +34 625857127
+              <div className="space-y-4">
+                <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
+                  Escríbeme para que conversemos sobre la pieza que te interesa.
+                </p>
+                <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
+                  Confirmaremos juntos los detalles, la talla, el precio final y los tiempos de creación o envío.
                 </p>
               </div>
-
             </div>
+          </div>
+        </section>
+
+        {/* 4ª pantalla - caja.jpg */}
+        <section className="snap-screen bg-cover bg-center relative" 
+          style={{
+            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Caja.jpg")})`,
+          }}>
+          <div className="screen-content justify-start items-center">
+            <div className="max-w-2xl">
+              <h2 className="font-avenir-heavy text-black text-xl md:text-2xl mb-8">
+                3 Pago y envío
+              </h2>
+              
+              <div className="space-y-4">
+                <p className="font-avenir-light text-black text-sm md:text-base leading-relaxed">
+                  El pago se realiza por transferencia bancaria.
+                </p>
+                <p className="font-avenir-light text-black text-sm md:text-base leading-relaxed">
+                  Una vez lista, preparo y envío tu joya a tu domicilio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Preguntas Frecuentes */}
+      <div className="relative z-10 py-24 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <h2 
+            className="font-avenir-medium text-3xl md:text-4xl mb-16 text-left" 
+            style={{ color: '#353333' }}
+          >
+            Preguntas Frecuentes
+          </h2>
+
+          <div className="space-y-0">
+            <FAQItem 
+              question="¿De qué materiales son las joyas?"
+              answer="Trabajo principalmente con plata de ley y plata enchapada en oro, aunque puedo realizar tu encargo en oro macizo u otros materiales que prefieras."
+            />
+            <FAQItem 
+              question="¿Cómo sé mi talla?"
+              answer={
+                <>
+                  La talla es siempre a medida; si no conoces la tuya, verifica la sección
+                  {' '}
+                  <span 
+                    onClick={() => setShowSizeGuide(true)} 
+                    className="cursor-pointer font-avenir-medium text-base text-blue-600 underline hover:no-underline"
+                  >
+                    cómo saber mi talla,
+                  </span>
+                  {' '}
+                    y si todavía quedas con dudas, contáctame y te guiaré para determinarla.
+                </>
+              }
+            />
+            <FAQItem 
+              question="¿Qué formas de pago aceptas?"
+              answer="El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (para pagos en euros) y en Chile (para pagos en pesos chilenos), según te acomode."
+            />
+            <FAQItem 
+              question="¿A dónde realizas envíos y cuál es el costo?"
+              answer="Realizo envíos a toda Europa y Chile. El coste se calcula según tu ubicación y se suma al valor final. Para los pedidos a Chile, el envío se realiza desde Santiago, evitando costos internacionales."
+            />
+            <FAQItem 
+              question="¿Cuánto tarda la producción de una joya por encargo?"
+              answer="El tiempo de producción varía según la complejidad de la pieza, desde unos pocos días hasta algunas semanas. Este plazo te lo confirmaré siempre antes de iniciar el trabajo."
+            />
           </div>
         </div>
       </div>
 
-    </div>;
+      {/* Sección de contacto */}
+      <div className="border-t border-border pt-16 relative px-6">
+        <div className="container mx-auto max-w-4xl">
+          <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
+            <img 
+              src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} 
+              alt="Delia Vergara Isologo" 
+              className="h-32 w-auto opacity-50"
+            />
+          </div>
+          
+          <div className="text-center space-y-8 relative z-10 pb-12">
+            <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{ color: '#353333' }}>
+              CONTÁCTAME
+            </h2>
+            
+            <p className="font-avenir-light font-light tracking-body leading-body" style={{ color: '#353333' }}>
+              deliavergara.joyas@gmail.com | +34 625857127
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* COMPONENTE SIZEGUIDEDRAWER AÑADIDO A LA PÁGINA */}
+      <SizeGuideDrawer
+        isOpen={showSizeGuide}
+        onClose={() => setShowSizeGuide(false)}
+      />
+    </div>
+  );
 };
+
+interface FAQItemProps {
+  question: string;
+  answer: string | JSX.Element;
+}
+
+const FAQItem = ({ question, answer }: FAQItemProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border-b border-gray-200 last:border-b-0">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full py-6 text-left flex justify-between items-center hover:bg-gray-50/50 transition-colors duration-200"
+      >
+        <span className="font-avenir-book text-lg pr-8" style={{ color: '#353333' }}>
+          {question}
+        </span>
+        <ChevronDown 
+          className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          style={{ color: '#353333' }}
+        />
+      </button>
+      
+      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+        isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
+      }`}>
+        <p className="font-avenir-light text-base leading-relaxed" style={{ color: '#353333' }}>
+          {answer}
+        </p>
+      </div>
+    </div>
+  );
+};
+
 export default HowToBuyPage;

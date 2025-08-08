@@ -1,5 +1,5 @@
 ---
-sku: "OVALESPENDIENTEUNICO"
+sku: "OVALESPENDIENTEDOS"
 nombre: "Óvalo"
 ---
 

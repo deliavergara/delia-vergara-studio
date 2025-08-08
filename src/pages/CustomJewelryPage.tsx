@@ -1,83 +1,164 @@
 import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { buildGitHubRawUrl } from "@/lib/config";
+import { useEffect, useState } from "react";
+
 const CustomJewelryPage = () => {
-  return <div className="relative min-h-screen">
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const getOpacity = (startY: number, range: number = 300) => {
+    if (scrollY < startY - 100) return 0;
+    if (scrollY > startY + range) return 1;
+    return Math.min(1, Math.max(0, (scrollY - startY + 100) / range));
+  }; 
+
+  const getOpacityOut = (startY: number, range: number = 300) => {
+    if (scrollY < startY) return 1;
+    if (scrollY > startY + range) return 0;
+    return Math.min(1, Math.max(0, 1 - (scrollY - startY) / range));
+  };
+
+  const getOpacityInOut = (fadeInStart: number, fadeInRange: number = 300, fadeOutStart: number, fadeOutRange: number = 300) => {
+  // Fade-in
+    if (scrollY < fadeInStart) return 0;
+    if (scrollY < fadeInStart + fadeInRange) {
+    return Math.min(1, Math.max(0, (scrollY - fadeInStart) / fadeInRange));
+    }
+
+  // Fade-out
+    if (scrollY > fadeOutStart) {
+    if (scrollY > fadeOutStart + fadeOutRange) return 0;
+    return Math.min(1, Math.max(0, 1 - (scrollY - fadeOutStart) / fadeOutRange));
+    }
+
+  // Max opacitiy between
+    return 1;
+  };
+
+  return (
+    <div className="relative">
       <HamburgerMenu />
       
-      <div className="container mx-auto px-6 pt-24 pb-32">
-        <div className="max-w-4xl mx-auto">
+      {/* Video Background */}
+      <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+          style={{ opacity: 0.90 }}
+        >
+          <source 
+            src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} 
+            type="video/mp4" 
+          />
+        </video>
+        <div className="absolute inset-0 bg-black/5"></div>
+      </div>
+
+            {/* Scrollable Content */}
+      <div className="relative z-10 min-h-[400vh] pt-24">
+        <div className="max-w-2xl mx-auto px-6 space-y-8">
           
-          {/* Título */}
-          <h1 className="font-avenir-black font-black text-3xl uppercase text-center mb-12" style={{
-          color: '#353333'
-        }}>
-            JOYAS A MEDIDA
-          </h1>
-          
-          {/* Contenido de texto */}
-          <div className="max-w-3xl mx-auto mb-16">
-            <div className="space-y-8 font-avenir text-base leading-relaxed" style={{
-            color: '#353333'
-          }}>
-              
-              <p className="font-medium">
-                ¿Tienes una idea en mente?
-              </p>
-              
-              <p className="font-light">
-                La convertimos en una joya única. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro u otros materiales, según lo que necesites y tu presupuesto. Cada pieza se diseña y se crea a mano, desde el boceto hasta el acabado final.
-              </p>
-              
-              <div className="space-y-4">
-                <h3 className="font-medium text-base" style={{
-                color: '#353333'
-              }}>
-                  Así funciona el proceso:
-                </h3>
-                
-                <div className="space-y-3 pl-4">
-                  <p><span className="font-medium">Hablemos de tu idea:</span> <span className="font-light">Conversamos sobre lo que te imaginas, los materiales que te gustan y el presupuesto.</span></p>
-                  <p><span className="font-medium">Diseñamos juntos:</span> <span className="font-light">Preparamos varios bocetos y trabajamos en la propuesta hasta tener el diseño final.</span></p>
-                  <p><span className="font-medium">Elaboración de la joya:</span> <span className="font-light">La pieza se hace a mano en mi taller de Valencia y, una vez terminada, se prepara para el envío.</span></p>
-                  <p><span className="font-medium">Plazos:</span> <span className="font-light">El tiempo de creación suele ser de entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.</span></p>
-                </div>
-              </div>
-              
-              <p className="font-light">
-                Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos una joya.
-              </p>
-            </div>
+          {/* Title */}
+          <div 
+            className="text-center py-12"
+            style={{ opacity: getOpacityOut(0,250) }}
+          >
+            <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
+              JOYAS A MEDIDA
+            </h1>
           </div>
-          
-          {/* Imagen */}
-          <div className="flex justify-center mb-16 mt-8">
-            <div className="max-w-2xl w-full">
-              <img src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/foto%20para%20actegoria%20joyas%20a%20medida.jpg")} alt="Proceso de creación de joyas a medida" className="w-full h-auto rounded-lg shadow-elegant" />
-            </div>
-          </div>
-          
-          {/* Contacto */}
-          <div className="text-center space-y-6">
-            <h3 className="font-avenir-medium text-xl" style={{
-            color: '#353333'
-          }}>
-              ¿Empezamos a crear tu joya?
-            </h3>
-            
-            <p className="font-avenir-light" style={{
-            color: '#353333'
-          }}>
-              Contáctame para comenzar a diseñar juntos la pieza perfecta para ti
+
+          {/* Opening Question */}
+          <div 
+            className="text-center py-6"
+            style={{ opacity: getOpacityOut(100,250) }}
+          >
+            <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
+              ¿Tienes una idea en mente?
+            </h2>
+            <p className="font-avenir-light text-xl md:text-2xl text-white mb-6">
+              Juntos la podemos convertir en una joya única
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              
-              
-              
+          </div>
+
+          {/* Process Steps */}
+          <div 
+            className="space-y-16 py-8"
+          >
+            {/* 1. Hablemos de tu idea */}
+            <div 
+              className="space-y-4"
+              style={{ opacity: getOpacityInOut(100, 200, 400, 450) }}
+            >
+              <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
+                1. Hablemos de tu idea
+              </h3>
+              <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
+                Conversemos sobre lo que te imaginas, los materiales que te gustan y el presupuesto. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro macizo u otros materiales, según lo que necesites.
+              </p>
             </div>
+            
+            {/* 2. Diseñamos juntos */}
+            <div 
+              className="space-y-4"
+              style={{ opacity: getOpacityInOut(200, 300, 500, 550) }}
+            >
+              <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
+                2. Diseñamos juntos
+              </h3>
+              <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
+                Preparo bocetos e iteramos en la propuesta hasta tener el diseño final. Podemos probar con diferentes formas, colores, piedras, lo que haga falta.
+              </p>
+            </div>
+            
+            {/* 3. Elaboración de la joya */}
+            <div 
+              className="space-y-4"
+              style={{ opacity: getOpacityInOut(300, 400, 650, 670) }}
+            >
+              <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
+                3. Elaboración de la joya
+              </h3>
+              <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
+                La pieza la hago a mano en mi taller en Valencia, cada resultado es único. El tiempo de creación suele ser entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.
+              </p>
+            </div>
+            
+            {/* 4. Envío */}
+            <div 
+              className="space-y-4"
+              style={{ opacity: getOpacityInOut(400, 500, 750, 770) }}
+            >
+              <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
+                4. Envío
+              </h3>
+              <p className="font-avenir-light text-lg md:text-xl text-white leading-relaxed">
+                Una vez terminada la joya, se prepara para el envío, que puede tomar algunos días o semanas, dependiendo del destino.
+              </p>
+            </div>
+          </div>
+
+          {/* Closing */}
+          <div 
+            className="text-center py-20"
+            style={{ opacity: getOpacityInOut(500, 600, 900, 1100) }}
+          >
+            <p className="font-avenir-book text-xl md:text-2xl text-white leading-relaxed">
+              Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos juntos una joya.
+            </p>
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default CustomJewelryPage;
