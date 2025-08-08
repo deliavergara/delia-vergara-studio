@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { buildGitHubRawUrl } from "@/lib/config";
 import { HamburgerMenu } from "@/components/HamburgerMenu";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
 
@@ -10,15 +10,37 @@ const HowToBuyPage = () => {
   const navigate = useNavigate();
   const [scrollY, setScrollY] = useState(0);
   const [showSizeGuide, setShowSizeGuide] = useState(false);
+  const snapContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Habilita snap en el viewport solo en esta página
-    document.documentElement.classList.add("snap-y");
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
+    const enableSnap = () => document.documentElement.classList.add("snap-y");
+    const disableSnap = () => document.documentElement.classList.remove("snap-y");
+
+    const toggleSnap = () => {
+      const container = snapContainerRef.current;
+      if (!container) return;
+      const containerBottom = container.offsetTop + container.offsetHeight;
+      const viewportBottom = window.scrollY + window.innerHeight;
+      if (viewportBottom >= containerBottom) {
+        disableSnap();
+      } else {
+        enableSnap();
+      }
+    };
+
+    enableSnap(); // empieza con snap para las fotos
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      toggleSnap();
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    // Inicializa por si se entra a mitad de página
+    toggleSnap();
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      document.documentElement.classList.remove("snap-y");
+      disableSnap();
     };
   }, []);
 
@@ -37,7 +59,7 @@ const HowToBuyPage = () => {
       <HamburgerMenu />
 
       {/* Proceso de Compra - Pantalla Completa con efecto Bimani */}
-      <div className="scroll-snap-container">
+      <div className="scroll-snap-container" ref={snapContainerRef}>
         {/* 1ª pantalla - árbol.jpg */}
         <section className="snap-screen bg-cover bg-center relative" 
           style={{
