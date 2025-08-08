@@ -11,16 +11,33 @@ const CustomJewelryPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const getOpacity = (startY: number, range: number = 300) => {
+/*  const getOpacity = (startY: number, range: number = 300) => {
     if (scrollY < startY - 100) return 0;
     if (scrollY > startY + range) return 1;
     return Math.min(1, Math.max(0, (scrollY - startY + 100) / range));
-  };
+  }; */
 
   const getOpacityOut = (startY: number, range: number = 300) => {
     if (scrollY < startY) return 1;
     if (scrollY > startY + range) return 0;
     return Math.min(1, Math.max(0, 1 - (scrollY - startY) / range));
+  };
+
+  const getOpacityInOut = (fadeInStart: number, fadeInRange: number = 300, fadeOutStart: number, fadeOutRange: number = 300) => {
+  // Fade-in
+    if (scrollY < fadeInStart) return 0;
+    if (scrollY < fadeInStart + fadeInRange) {
+    return Math.min(1, Math.max(0, (scrollY - fadeInStart) / fadeInRange));
+    }
+
+  // Fade-out
+    if (scrollY > fadeOutStart) {
+    if (scrollY > fadeOutStart + fadeOutRange) return 0;
+    return Math.min(1, Math.max(0, 1 - (scrollY - fadeOutStart) / fadeOutRange));
+    }
+
+  // Max opacitiy between
+    return 1;
   };
 
   return (
@@ -79,7 +96,7 @@ const CustomJewelryPage = () => {
             {/* 1. Hablemos de tu idea */}
             <div 
               className="space-y-4"
-              style={{ opacity: getOpacity(250) }}
+              style={{ opacity: getOpacityInOut(250, 350, 450, 550) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
