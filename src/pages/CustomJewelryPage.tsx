@@ -11,11 +11,11 @@ const CustomJewelryPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-/*  const getOpacity = (startY: number, range: number = 300) => {
+  const getOpacity = (startY: number, range: number = 300) => {
     if (scrollY < startY - 100) return 0;
     if (scrollY > startY + range) return 1;
     return Math.min(1, Math.max(0, (scrollY - startY + 100) / range));
-  }; */
+  }; 
 
   const getOpacityOut = (startY: number, range: number = 300) => {
     if (scrollY < startY) return 1;
