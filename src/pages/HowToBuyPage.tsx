@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
 
-
 const HowToBuyPage = () => {
   const navigate = useNavigate();
   const [scrollY, setScrollY] = useState(0);
@@ -28,11 +27,11 @@ const HowToBuyPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen bg-background relative overflow-x-hidden overflow-y-hidden">
       <HamburgerMenu />
 
       {/* Proceso de Compra - Pantalla Completa con efecto Bimani */}
-      <div className="scroll-snap-container overflow-y-hidden">
+      <div className="scroll-snap-container">
         {/* 1ª pantalla - árbol.jpg */}
         <section className="snap-screen bg-cover bg-center relative" 
           style={{
