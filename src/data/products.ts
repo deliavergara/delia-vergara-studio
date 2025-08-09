@@ -213,7 +213,18 @@ const productMapping = {
     name: "Dos Óvalos",
     description: "Coloridos y sentadores. Puedes elegir el color de la piedra o incluso perlas\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
   },
-  
+  "OVALPENDIENTEUNO": {
+    folder: "Pendientes/Un Ovalo",
+    images: [
+      "unovalo_1.jpg",
+      "unovalo_2.jpg",
+      "unovalo_3.jpg"
+    ],
+    category: "pendientes",
+    name: "Un Óvalo",
+    description: "Sutiles y elegantes. Puedes elegir el color de la piedra o incluso perlas.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+  },
+
   // Pulseras
   "FRACTALPULSERAUNICO": {
     folder: "Pulsera/Pulsera Fractal plata",
