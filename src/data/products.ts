@@ -152,38 +152,6 @@ const productMapping = {
     name: "Tres Fractales",
     description: "Compuestos por tres módulos fractales. Forman una pieza de impacto, ligera y con presencia.\n\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
   },
-  "CAUDALESPENDIENTEUNICO": {
-    folder: "Pendientes/Caudales",
-    images: [
-      "1.Pendinetes caudales plata.jpg",
-      "2.Pendinetes caudales plata 2.0.JPG",
-      "caudales_3.mov"
-    ],
-    category: "pendientes",
-    name: "Caudal",
-    description: "Con textura orgánica y cadenas que caen como caudales. Tienen movimiento y mucho carácter.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
-  },
-  "OVALPENDIENTEUNO": {
-    folder: "Pendientes/Un Ovalo",
-    images: [
-      "unovalo_1.jpg",
-      "unovalo_2.jpg",
-      "unovalo_3.jpg"
-    ],
-    category: "pendientes",
-    name: "Un Óvalo",
-    description: "Sutiles y elegantes. Puedes elegir el color de la piedra o incluso perlas.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
-  },
-  "OVALPENDIENTEDOS": {
-    folder: "Pendientes/Dos ovalos",
-    images: [
-      "1.Pendientes oval plata verde 2.0.jpg",
-      "2. pendientes ovalo perlas plata 3.0.jpg"
-    ],
-    category: "pendientes",
-    name: "Dos Óvalos",
-    description: "Coloridos y sentadores. Puedes elegir el color de la piedra o incluso perlas\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
-  },
   "MITSUROROSASPENDIENTEUNICO": {
     folder: "Pendientes/Rosa mitsuro",
     images: [
@@ -224,9 +192,38 @@ const productMapping = {
     name: "Nítido",
     description: "Sutiles y delicados. Pensados para usarse todos los días.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
   },
-
-
-
+  "CAUDALESPENDIENTEUNICO": {
+    folder: "Pendientes/Caudales",
+    images: [
+      "1.Pendinetes caudales plata.jpg",
+      "2.Pendinetes caudales plata 2.0.JPG",
+      "caudales_3.mov"
+    ],
+    category: "pendientes",
+    name: "Caudal",
+    description: "Con textura orgánica y cadenas que caen como caudales. Tienen movimiento y mucho carácter.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+  },
+  "OVALPENDIENTEDOS": {
+    folder: "Pendientes/Dos ovalos",
+    images: [
+      "1.Pendientes oval plata verde 2.0.jpg",
+      "2. pendientes ovalo perlas plata 3.0.jpg"
+    ],
+    category: "pendientes",
+    name: "Dos Óvalos",
+    description: "Coloridos y sentadores. Puedes elegir el color de la piedra o incluso perlas\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+  },
+  "OVALPENDIENTEUNO": {
+    folder: "Pendientes/Un Ovalo",
+    images: [
+      "unovalo_1.jpg",
+      "unovalo_2.jpg",
+      "unovalo_3.jpg"
+    ],
+    category: "pendientes",
+    name: "Un Óvalo",
+    description: "Sutiles y elegantes. Puedes elegir el color de la piedra o incluso perlas.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+  },
 
   // Pulseras
   "FRACTALPULSERAUNICO": {
@@ -250,6 +247,18 @@ const productMapping = {
     category: "pulseras",
     name: "Pulsera Mitsuro",
     description: "Modelada a mano con la técnica Mitsuro, esta pulsera de casi 200g de plata se forma a partir de sus propias curvas. Es una pieza única.\nSi quieres la tuya será una nueva, pero igual de especial.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
+  },
+  "FACETADAPULSERAUNICO": {
+    folder: "Pulsera/Pulsera Facetada",
+    images: [
+      "facetada_1.jpg",
+      "facetada_2.jpg",
+      "facetada_3.jpg",
+      "facetada_4.mov"
+    ],
+    category: "pulseras",
+    name: "Pulsera Facetada",
+    description: "Diseñada desde cero cada vez. Cada una con sus propias facetas, única e irrepetible.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
   }
 };
 
