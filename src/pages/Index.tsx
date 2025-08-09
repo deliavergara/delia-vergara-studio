@@ -37,7 +37,7 @@ const Index = () => {
             </h2>
             
             <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
-              deliavergara.joyas@gmail.com | +34 625857127
+              deliavergara.joyas@gmail.com  <br /> +34 625857127
             </p>
           </div>
         </div>

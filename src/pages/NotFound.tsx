@@ -47,7 +47,7 @@ const NotFound = () => {
         </div>
         
         <p className="text-body font-light text-muted-foreground tracking-body leading-body mt-6">
-          deliavergara.joyas@gmail.com | +34 625857127
+          deliavergara.joyas@gmail.com  <br /> +34 625857127
         </p>
       </div>
     </div>
