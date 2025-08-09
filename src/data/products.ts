@@ -157,8 +157,7 @@ const productMapping = {
     images: [
       "1.pendiente rosita mitsuro plata.jpg",
       "2.pendiente rosita mitsuro oro.jpg",
-      "rosamitsuro_1.mov",
-      "rosamitsuro_2.mov"
+      "mitsurorosa.mov"
     ],
     category: "pendientes",
     name: "Rosa Mitsuro",
@@ -204,16 +203,6 @@ const productMapping = {
     name: "Caudal",
     description: "Con textura orgánica y cadenas que caen como caudales. Tienen movimiento y mucho carácter.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
   },
-  "OVALPENDIENTEDOS": {
-    folder: "Pendientes/Dos ovalos",
-    images: [
-      "1.Pendientes oval plata verde 2.0.jpg",
-      "2. pendientes ovalo perlas plata 3.0.jpg"
-    ],
-    category: "pendientes",
-    name: "Dos Óvalos",
-    description: "Coloridos y sentadores. Puedes elegir el color de la piedra o incluso perlas\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
-  },
   "OVALPENDIENTEUNO": {
     folder: "Pendientes/Un Ovalo",
     images: [
@@ -225,6 +214,17 @@ const productMapping = {
     name: "Un Óvalo",
     description: "Sutiles y elegantes. Puedes elegir el color de la piedra o incluso perlas.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
   },
+  "OVALPENDIENTEDOS": {
+    folder: "Pendientes/Dos ovalos",
+    images: [
+      "1.Pendientes oval plata verde 2.0.jpg",
+      "2. pendientes ovalo perlas plata 3.0.jpg"
+    ],
+    category: "pendientes",
+    name: "Dos Óvalos",
+    description: "Coloridos y sentadores. Puedes elegir el color de la piedra o incluso perlas\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+  },
+
 
   // Pulseras
   "FRACTALPULSERAUNICO": {
