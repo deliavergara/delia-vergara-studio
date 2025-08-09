@@ -137,4 +137,16 @@
     "valor_venta_cl": 61000,
     "valor_venta_bano_oro_cl": 72000
   }
+  "FACETADAPULSERAUNICO": {
+    "valor_venta_es": 70,
+    "valor_venta_bano_oro_es": 85,
+    "valor_venta_cl": 77000,
+    "valor_venta_bano_oro_cl": 94000
+  }
+  "LYRAPULSERAUNICO": {
+    "valor_venta_es": 70,
+    "valor_venta_bano_oro_es": 85,
+    "valor_venta_cl": 77000,
+    "valor_venta_bano_oro_cl": 94000
+  }
 }
