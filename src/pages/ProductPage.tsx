@@ -68,10 +68,38 @@ const ProductPage = () => {
             {/* Galería de imágenes */}
             <div className="space-y-6">
               {/* Imagen principal con arrastre */}
-              <div ref={dragRef} className="aspect-[4/5] bg-accent rounded-sm overflow-hidden max-w-md mx-auto cursor-grab active:cursor-grabbing" onMouseDown={handleDragStart} onMouseUp={handleDragEnd} onTouchStart={handleDragStart} onTouchEnd={handleDragEnd}>
-                <img src={product.images[currentImageIndex]} alt={product.name} className="w-full h-full object-cover select-none" style={{
-                opacity: '0.93'
-              }} draggable={false} />
+              <div
+                ref={dragRef}
+                className="aspect-[4/5] bg-accent rounded-sm overflow-hidden max-w-md mx-auto cursor-grab active:cursor-grabbing"
+                onMouseDown={handleDragStart}
+                onMouseUp={handleDragEnd}
+                onTouchStart={handleDragStart}
+                onTouchEnd={handleDragEnd}
+              >
+                {(() => {
+                  const media = product.images[currentImageIndex];
+                  const isVideo = /\.(mp4|mov)$/i.test(media);
+                  return isVideo ? (
+                    <video
+                      src={media}
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      playsInline
+                      loop
+                      disablePictureInPicture
+                      controlsList="nodownload noplaybackrate nofullscreen noremoteplayback"
+                    />
+                  ) : (
+                    <img
+                      src={media}
+                      alt={product.name}
+                      className="w-full h-full object-cover select-none"
+                      style={{ opacity: '0.93' }}
+                      draggable={false}
+                    />
+                  );
+                })()}
               </div>
               
               {/* Galería de miniaturas */}
@@ -88,11 +116,24 @@ const ProductPage = () => {
                           : "border-border hover:border-muted-foreground/50"
                       )}
                     >
-                      <img
-                        src={image}
-                        alt={`${product.name} ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
+                      {/\.(mp4|mov)$/i.test(image) ? (
+                        <video
+                          src={image}
+                          className="w-full h-full object-cover"
+                          autoPlay
+                          muted
+                          playsInline
+                          loop
+                          disablePictureInPicture
+                          controlsList="nodownload noplaybackrate nofullscreen noremoteplayback"
+                        />
+                      ) : (
+                        <img
+                          src={image}
+                          alt={`${product.name} ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
                     </button>
                   ))}
                 </div>
@@ -175,10 +216,26 @@ const ProductPage = () => {
                   <div className="space-y-3">
                     <h3 className="font-avenir-book text-sm text-product-description">Material</h3>
                     <div className="flex gap-3">
-                      <button onClick={() => setSelectedMetal('silver')} className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'silver' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setSelectedMetal('silver');
+                        }}
+                        className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'silver' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}
+                      >
                         Plata
                       </button>
-                      <button onClick={() => setSelectedMetal('gold')} className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'gold' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setSelectedMetal('gold');
+                        }}
+                        className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'gold' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}
+                      >
                         Oro
                       </button>
                     </div>

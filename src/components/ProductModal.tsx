@@ -116,7 +116,8 @@ export const ProductModal = ({ item, isOpen, onClose }: ProductModalProps) => {
               <h3 className="font-clean font-medium text-foreground">Material</h3>
               <div className="flex gap-3">
                 <button
-                  onClick={() => setSelectedMetal('silver')}
+                  type="button"
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); setSelectedMetal('silver'); }}
                   className={cn(
                     "px-4 py-2 rounded-sm border transition-quick font-clean",
                     selectedMetal === 'silver'
@@ -127,7 +128,8 @@ export const ProductModal = ({ item, isOpen, onClose }: ProductModalProps) => {
                   Plata
                 </button>
                 <button
-                  onClick={() => setSelectedMetal('gold')}
+                  type="button"
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); setSelectedMetal('gold'); }}
                   className={cn(
                     "px-4 py-2 rounded-sm border transition-quick font-clean",
                     selectedMetal === 'gold'

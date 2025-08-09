@@ -23,11 +23,12 @@ const productMapping = {
     name: "Alcázar",
     description: "Diseñado en oro blanco 18K y una espectacular aguamarina. Este anillo puede reproducirse en el material y la piedra que se ajusten a tu presupuesto.\n\nHecho por encargo\nDisponible en plata, plata con baño de oro, oro 18k\nContáctame"
   },
-  "ANILLOANAUNICO": {
+  "ANAANILLOUNICO": {
     folder: "Anillos/Ana",
     images: [
       "1.Anillo oro blanco 18k con tanzanita.jpg",
-      "2.Anillo oro blanco 18k con tanzanita 2.0.jpg"
+      "2.Anillo oro blanco 18k con tanzanita 2.0.jpg",
+      "ana_3.mov"
     ],
     category: "anillos",
     name: "Ana",
@@ -52,6 +53,40 @@ const productMapping = {
     category: "anillos",
     name: "Magma",
     description: "Con textura como la de la piedra volcánica, el anillo magma es diferente, atrevido, pero también elegante y delicado.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+  },
+  "GRANATEANILLOUNICO": {
+    folder: "Anillos/Granate",
+    images: [
+      "granate_1.jpg",
+      "granate_2.jpg",
+      "granate_3.jpg"
+    ],
+    category: "anillos",
+    name: "Granate",
+    description: "Este anillo lleva un granate de forma rectangular, tallado con pocas facetas para resaltar su profundidad y su tono vino intenso.\nEstá montado en un cuerpo de plata, con un engaste que envuelve toda la piedra y acentúa su forma geométrica.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+  },
+  "NUBEANILLOUNICO": {
+    folder: "Anillos/Nube",
+    images: [
+      "nube_1.jpg",
+      "nube_2.jpg",
+      "nube_3.jpg"
+    ],
+    category: "anillos",
+    name: "Nube",
+    description: "Anillo Nube\nModelado a mano, con terminación mate y relieves orgánicos.\nIncluye tres piedras de color a elección.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+  },
+  "IRISANILLOUNICO": {
+    folder: "Anillos/Iris",
+    images: [
+      "iris_1.jpg",
+      "iris_2.jpg",
+      "iris_3.jpg",
+      "iris_4.jpg"
+    ],
+    category: "anillos",
+    name: "Iris",
+    description: "El anillo Iris parte de una forma fina y sencilla, que se ensancha sutilmente justo antes de abrazar la piedra. Ese cambio de volumen lo vuelve anguloso, elegante y con carácter.\nDisponible con piedra a elección. En la imagen: granate rodolita.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
   },
   
   // Collares
@@ -121,7 +156,9 @@ const productMapping = {
     folder: "Pendientes/Rosa mitsuro",
     images: [
       "1.pendiente rosita mitsuro plata.jpg",
-      "2.pendiente rosita mitsuro oro.jpg"
+      "2.pendiente rosita mitsuro oro.jpg",
+      "rosamitsuro_1.mov",
+      "rosamitsuro_2.mov"
     ],
     category: "pendientes",
     name: "Rosa Mitsuro",
@@ -160,23 +197,35 @@ const productMapping = {
     folder: "Pendientes/Caudales",
     images: [
       "1.Pendinetes caudales plata.jpg",
-      "2.Pendinetes caudales plata 2.0.JPG"
+      "2.Pendinetes caudales plata 2.0.JPG",
+      "caudales_3.mov"
     ],
     category: "pendientes",
     name: "Caudal",
     description: "Con textura orgánica y cadenas que caen como caudales. Tienen movimiento y mucho carácter.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
   },
-  "OVALPENDIENTEUNICO": {
-    folder: "Pendientes/Ovalo",
+  "OVALPENDIENTEDOS": {
+    folder: "Pendientes/Dos ovalos",
     images: [
       "1.Pendientes oval plata verde 2.0.jpg",
       "2. pendientes ovalo perlas plata 3.0.jpg"
     ],
     category: "pendientes",
-    name: "Óvalo",
+    name: "Dos Óvalos",
     description: "Coloridos y sentadores. Puedes elegir el color de la piedra o incluso perlas\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
   },
-  
+  "OVALPENDIENTEUNO": {
+    folder: "Pendientes/Un Ovalo",
+    images: [
+      "unovalo_1.jpg",
+      "unovalo_2.jpg",
+      "unovalo_3.jpg"
+    ],
+    category: "pendientes",
+    name: "Un Óvalo",
+    description: "Sutiles y elegantes. Puedes elegir el color de la piedra o incluso perlas.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+  },
+
   // Pulseras
   "FRACTALPULSERAUNICO": {
     folder: "Pulsera/Pulsera Fractal plata",
@@ -217,8 +266,9 @@ function loadProductFromMapping(sku: string): JewelryItem | null {
   }
 
   // Construir URLs de imágenes
-  const images = mapping.images.map(imageName => 
-    buildGitHubRawUrl(`public/lovable-uploads/${mapping.folder}/${encodeURIComponent(imageName)}`)
+  const encodedFolder = mapping.folder.split('/').map(encodeURIComponent).join('/');
+  const images = mapping.images.map((imageName) =>
+    buildGitHubRawUrl(`public/lovable-uploads/${encodedFolder}/${encodeURIComponent(imageName)}`)
   );
 
   return {
