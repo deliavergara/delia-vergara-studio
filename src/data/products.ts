@@ -254,8 +254,9 @@ function loadProductFromMapping(sku: string): JewelryItem | null {
   }
 
   // Construir URLs de imágenes
-  const images = mapping.images.map(imageName => 
-    buildGitHubRawUrl(`public/lovable-uploads/${mapping.folder}/${encodeURIComponent(imageName)}`)
+  const encodedFolder = mapping.folder.split('/').map(encodeURIComponent).join('/');
+  const images = mapping.images.map((imageName) =>
+    buildGitHubRawUrl(`public/lovable-uploads/${encodedFolder}/${encodeURIComponent(imageName)}`)
   );
 
   return {

@@ -83,10 +83,12 @@ const ProductPage = () => {
                     <video
                       src={media}
                       className="w-full h-full object-cover"
-                      controls
+                      autoPlay
                       muted
                       playsInline
                       loop
+                      disablePictureInPicture
+                      controlsList="nodownload noplaybackrate nofullscreen noremoteplayback"
                     />
                   ) : (
                     <img
@@ -118,9 +120,12 @@ const ProductPage = () => {
                         <video
                           src={image}
                           className="w-full h-full object-cover"
+                          autoPlay
                           muted
                           playsInline
                           loop
+                          disablePictureInPicture
+                          controlsList="nodownload noplaybackrate nofullscreen noremoteplayback"
                         />
                       ) : (
                         <img
@@ -211,10 +216,26 @@ const ProductPage = () => {
                   <div className="space-y-3">
                     <h3 className="font-avenir-book text-sm text-product-description">Material</h3>
                     <div className="flex gap-3">
-                      <button onClick={() => setSelectedMetal('silver')} className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'silver' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setSelectedMetal('silver');
+                        }}
+                        className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'silver' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}
+                      >
                         Plata
                       </button>
-                      <button onClick={() => setSelectedMetal('gold')} className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'gold' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setSelectedMetal('gold');
+                        }}
+                        className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'gold' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}
+                      >
                         Oro
                       </button>
                     </div>

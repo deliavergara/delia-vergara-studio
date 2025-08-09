@@ -12,6 +12,9 @@ export const HamburgerMenu = ({
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const menuItems = [{
+    label: "Inicio",
+    path: "/"
+  }, {
     label: "Anillos",
     path: "/categoria/anillos"
   }, {
