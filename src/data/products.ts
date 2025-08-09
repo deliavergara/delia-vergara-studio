@@ -157,7 +157,8 @@ const productMapping = {
     images: [
       "1.pendiente rosita mitsuro plata.jpg",
       "2.pendiente rosita mitsuro oro.jpg",
-      "mitsurorosa.mov"
+      "rosamitsuro_1.mov",
+      "rosamitsuro_2.mov"
     ],
     category: "pendientes",
     name: "Rosa Mitsuro",
