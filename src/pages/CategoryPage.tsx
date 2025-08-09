@@ -12,7 +12,6 @@ const CategoryPage = () => {
   const navigate = useNavigate();
   const category = categories.find(cat => cat.id === categoryId);
 
-  // Mapeo de imágenes de portada para cada categoría
   const categoryImages = {
     anillos: buildGitHubRawUrl("public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20categoria%203.jpg"),
     collares: buildGitHubRawUrl("public/lovable-uploads/Collares/portada%20collares/portada%20collar%20categoria%20.jpg"),
@@ -33,20 +32,17 @@ const CategoryPage = () => {
   return <div className="min-h-screen bg-background">
       <HamburgerMenu />
       
-      {/* Logo y título centrados */}
       <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center">
         
         
       </div>
 
-      {/* Hero section con imagen de portada y logo superpuesto */}
       <div className="relative h-[28rem] overflow-hidden">
         {categoryImage && <>
             <img src={categoryImage} alt={category.name} className={`w-full h-full object-cover opacity-70 ${categoryId === 'pulseras' ? 'object-[center_30%]' : ''}`} />
             <div className="absolute inset-0 bg-black/20"></div>
           </>}
         
-        {/* Logo superpuesto más abajo y más grande */}
         <div className="absolute top-20 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer hover:opacity-70 transition-elegant" onClick={() => navigate("/")}>
           <img 
             src={buildGitHubRawUrl(`public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20${categoryId.toUpperCase()}.png`)}
@@ -56,15 +52,12 @@ const CategoryPage = () => {
         </div>
       </div>
 
-      {/* Grid de productos */}
       <div className="container mx-auto px-6 pb-24 mt-16">
-        {/* Descripción de la categoría */}
         <div className="max-w-xl mx-auto text-center mb-16 mt-12">
           
         </div>
 
-        {/* Grid de productos */}
-        <div className="grid grid-cols-2 gap-10 mx-auto">
+        <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto">
           {category.items.map(item => <div key={item.id} className="group cursor-pointer relative" onClick={() => navigate(`/producto/${item.id}`)}>
               <div className="aspect-[3/4] bg-accent rounded-sm overflow-hidden relative transition-elegant mb-4">
                 <img src={item.mainImage} alt={item.name} className="w-full h-full object-cover transition-elegant group-hover:scale-105" style={{
@@ -80,7 +73,6 @@ const CategoryPage = () => {
             </div>)}
         </div>
 
-        {/* Contact section */}
         <div className="mt-32 pt-12 border-t border-border relative">
           <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
             <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} alt="Delia Vergara Isologo" className="h-32 w-auto opacity-50" />
