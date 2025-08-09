@@ -259,6 +259,16 @@ const productMapping = {
     category: "pulseras",
     name: "Pulsera Facetada",
     description: "Diseñada desde cero cada vez. Cada una con sus propias facetas, única e irrepetible.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
+  },
+  "LYRAPULSERAUNICO": {
+    folder: "Pulsera/Pulsera Lyra",
+    images: [
+      "lyra_1.jpg",
+      "lyra_2.jpg",
+    ],
+    category: "pulseras",
+    name: "Pulsera Facetada",
+    description: "Diseñada desde cero cada vez. Cada una con sus propias facetas, única e irrepetible.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
   }
 };
 
