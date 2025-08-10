@@ -112,9 +112,13 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
                     <span className="absolute inset-y-0 right-3 flex items-center text-muted-foreground text-xs">mm</span>
                   </div>
                 </div>
-                <Button onClick={handleCalculate} className="w-full">
+                <button
+                  type="button"
+                  onClick={handleCalculate}
+                  className="w-full px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm border-border hover:border-muted-foreground/50"
+                >
                   Calcular talla
-                </Button>
+                </button>
               </div>
               {error && <p className="text-xs text-destructive">{error}</p>}
               {calculatedSize && !error && (
