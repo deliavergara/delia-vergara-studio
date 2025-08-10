@@ -95,7 +95,7 @@ const CustomJewelryPage = () => {
             className="text-center py-12"
             style={{ opacity: getFadeOutOpacity(elementPositions.title) }} // <-- Usa la nueva función de fade-out
           >
-            <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
+            <h1 className="font-avenir-medium text-white text-4xl md:text-5xl lg:text-6xl text-center">
               JOYAS A MEDIDA
             </h1>
           </div>
@@ -104,9 +104,9 @@ const CustomJewelryPage = () => {
           <div 
             ref={openingQuestionRef}
             className="text-center py-6"
-            style={{ opacity: getFadeOutOpacity(elementPositions.openingQuestion) }} // <-- Usa la nueva función de fade-out
+            style={{ opacity: getFadeOutOpacity(elementPositions.openingQuestion) }}
           >
-            <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
+            <h2 className="font-avenir-medium text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
             </h2>
             <p className="font-avenir-light text-xl md:text-2xl text-white mb-6">
