@@ -98,7 +98,7 @@ const productMapping = {
     ],
     category: "collares",
     name: "Flor",
-    description: "Pequeña flor con un circón en el centro. Diseño mínimo y delicado.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Pequeña flor con una piedra en el centro. Diseño mínimo y delicado.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
   },
   "MEDALLONCOLLARUNICO": {
     folder: "Collares/Medallón",
@@ -107,7 +107,7 @@ const productMapping = {
     ],
     category: "collares",
     name: "Medallón",
-    description: "Medallón con textura y una circonita a un costado. Sutil, pero con presencia.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Medallón con textura y una piedra a un costado. Sutil, pero con presencia.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
   },
   "OVALCOLLARUNICO": {
     folder: "Collares/Ovalo",
@@ -116,7 +116,7 @@ const productMapping = {
     ],
     category: "collares",
     name: "Óvalo", 
-    description: "Collar con forma oval, con un circón de color en el centro que le aporta elegancia. Perfecto para combinar con los pendientes.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Collar con forma oval, con una piedra de color en el centro que le aporta elegancia. Perfecto para combinar con los pendientes.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
   },
   
   // Pendientes
@@ -202,7 +202,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Rositas Mitsuro",
-    description: "Pequeñas rosas modeladas con la técnica Mitsuro. Sutiles, delicadas y con curvas orgánicas que nacen solo del modelado a mano.\n\nHechas a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Pequeñas rosas modeladas con la técnica mistura. Sutiles, delicadas y con curvas orgánicas que nacen solo del modelado a mano.\n\nHechas a mano en plata 925\nDisponibles con baño en oro\nContáctame"
   },
   "MITSUROARGOLLASPENDIENTEUNICO": {
     folder: "Pendientes/Argollas mitsuro",
