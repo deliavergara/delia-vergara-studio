@@ -82,26 +82,27 @@ const HowToBuyPage = () => {
             backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Persona.jpg")})`,
           }}>
           <div className="screen-content justify-start items-center">
-            <div className="max-w-2xl pl-12"> {/* Se mantiene el max-w-2xl y se agrega padding a la izquierda */}
-              <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-8 text-left">
+            <div className="max-w-2xl">
+            <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-8">
                 1 Elige tu tipo de joya
               </h2>
+              
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2 text-left">En stock:</h3>
-                  <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed text-left">
+                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">En stock:</h3>
+                  <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
                     Piezas listas para envío inmediato desde Valencia (España) o Santiago (Chile).
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2 text-left">Por encargo:</h3>
-                  <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed text-left">
+                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">Por encargo:</h3>
+                  <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
                     La mayoría de mis diseños se pueden volver a producir especialmente para ti.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2 text-left">Personalizada:</h3>
-                  <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed text-left">
+                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">Personalizada:</h3>
+                  <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
                     Si tienes una idea, hablemos para crear juntos una joya completamente nueva.
                   </p>
                 </div>
@@ -109,7 +110,7 @@ const HowToBuyPage = () => {
             </div>
           </div>
         </section>
-        
+
         {/* 3ª pantalla - medalla.jpg */}
         <section className="snap-screen bg-cover bg-center relative" 
           style={{
