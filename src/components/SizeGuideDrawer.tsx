@@ -55,8 +55,7 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
 
   return (
     <Drawer open={isOpen} onOpenChange={onClose}>
-      {/* ¡Aquí está el cambio! La altura se reduce a 60vh. */}
-      <DrawerContent className="h-[60vh] max-w-md mx-auto">
+      <DrawerContent className="h-[90vh] max-w-md mx-auto">
         <DrawerHeader className="border-b pb-4">
           <div className="flex items-center justify-between">
             <DrawerTitle className="font-avenir-medium text-lg text-foreground">
