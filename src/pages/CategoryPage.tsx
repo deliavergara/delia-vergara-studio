@@ -76,7 +76,7 @@ const CategoryPage = () => {
                   src={item.mainImage} 
                   alt={item.name} 
                   className="w-full h-full object-cover transition-elegant group-hover:scale-105" 
-                  style={{ opacity: 0.92 }} 
+                  style={{ opacity: 0.95 }} 
                 />
               </div>
               <h3 
