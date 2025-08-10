@@ -29,6 +29,7 @@ export default {
 				'avenir-heavy': ['Avenir', 'sans-serif'],
 				'avenir-black': ['Avenir', 'sans-serif'],
 				'black-mango': ['Black Mango Regular', 'serif'],
+				'dancing-script': ['Dancing Script', 'cursive'],
 			},
 			letterSpacing: {
 				'body': '0.02em', // 20 tracking
