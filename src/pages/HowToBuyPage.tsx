@@ -65,7 +65,7 @@ const HowToBuyPage = () => {
         {/* 1ª pantalla - árbol.jpg */}
         <section className="snap-screen bg-cover bg-center relative" 
           style={{
-            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Arbol.jpg")})`,
+            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/1_arbol.jpg")})`,
           }}>
           <div className="screen-content">
             <h1 className="font-avenir-book text-white text-4xl md:text-5xl lg:text-6xl text-center">
@@ -79,7 +79,7 @@ const HowToBuyPage = () => {
         {/* 2ª pantalla - persona.jpg */}
         <section className="snap-screen bg-cover bg-center relative" 
           style={{
-            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Persona.jpg")})`,
+            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/0_persona.jpg")})`,
           }}>
           <div className="screen-content justify-start items-center">
             <div className="max-w-2xl">
@@ -114,7 +114,7 @@ const HowToBuyPage = () => {
         {/* 3ª pantalla - medalla.jpg */}
         <section className="snap-screen bg-cover bg-center relative" 
           style={{
-            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Medalla.jpg")})`,
+            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/2_medalla.jpg")})`,
           }}>
           <div className="screen-content justify-start items-center">
             <div className="max-w-2xl">
@@ -137,7 +137,7 @@ const HowToBuyPage = () => {
         {/* 4ª pantalla - caja.jpg */}
         <section className="snap-screen bg-cover bg-center relative" 
           style={{
-            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/Caja.jpg")})`,
+            backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/3_caja.jpg")})`,
           }}>
           <div className="screen-content justify-start items-center">
             <div className="max-w-2xl">
