@@ -18,6 +18,7 @@ interface SizeGuideDrawerProps {
 }
 
 const sizeData = [
+  { diameter: "13.80", size: "Tu talla es especial, escríbeme y validamos" },
   { diameter: "14.01", size: "4" },
   { diameter: "14.30", size: "5" },
   { diameter: "14.65", size: "6" },
@@ -45,6 +46,7 @@ const sizeData = [
   { diameter: "21.70", size: "28" },
   { diameter: "22.05", size: "29" },
   { diameter: "22.35", size: "30" },
+  { diameter: "13.80", size: "Tu talla es especial, escríbeme y validamos" },
 ];
 
 export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
