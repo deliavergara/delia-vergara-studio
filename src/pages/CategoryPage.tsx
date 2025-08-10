@@ -71,7 +71,7 @@ const CategoryPage = () => {
         <div className="grid grid-cols-2 gap-3 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
           {category.items.map(item => (
             <div key={item.id} className="group cursor-pointer relative" onClick={() => navigate(`/producto/${item.id}`)}>
-              <div className="aspect-[3/4] bg-accent rounded-sm overflow-hidden relative transition-elegant mb-4">
+              <div className="aspect-[3/4] bg-accent rounded-sm overflow-hidden relative transition-elegant mb-2">
                 <img 
                   src={item.mainImage} 
                   alt={item.name} 
@@ -80,11 +80,11 @@ const CategoryPage = () => {
                 />
               </div>
               <h3 
-                /*style={{
+                style={{
                   fontFamily: 'Roboto, sans-serif',
                   fontWeight: '400'
-                }}*/ 
-                className="text-product-title tracking-title text-base font-light text-left text-slate-950 font-avenir-light">
+                }} 
+                className="text-product-title tracking-title text-base font-normal text-left text-slate-950">
                 {item.name}
               </h3>
             </div>
