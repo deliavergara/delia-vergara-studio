@@ -141,15 +141,15 @@ const HowToBuyPage = () => {
           }}>
           <div className="screen-content justify-start items-center">
             <div className="max-w-2xl">
-              <h2 className="font-avenir-heavy text-black text-xl md:text-2xl mb-8">
+              <h2 className="font-avenir-heavy text-white text-xl md:text-2xl mb-8">
                 3 Pago y envío
               </h2>
               
               <div className="space-y-4">
-                <p className="font-avenir-light text-black text-sm md:text-base leading-relaxed">
+                <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
                   El pago se realiza por transferencia bancaria.
                 </p>
-                <p className="font-avenir-light text-black text-sm md:text-base leading-relaxed">
+                <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
                   Una vez lista, preparo y envío tu joya a tu domicilio.
                 </p>
               </div>
