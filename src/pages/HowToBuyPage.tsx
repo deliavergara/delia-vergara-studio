@@ -68,7 +68,7 @@ const HowToBuyPage = () => {
             backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/1_arbol.jpg")})`,
           }}>
           <div className="screen-content">
-            <h1 className="font-avenir-book text-white text-4xl md:text-5xl lg:text-6xl text-center -mt-8">
+            <h1 className="font-avenir-book text-white text-4xl md:text-5xl lg:text-6xl text-center -mt-4">
               CÓMO COMPRAR
               <br />
               <span className="block font-avenir-book mt-8 italic">En tres pasos</span>
