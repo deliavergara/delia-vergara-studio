@@ -72,11 +72,11 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
           {/* Texto introductorio */}
           <div className="space-y-4">
-            <p className="font-avenir-light text-sm text-foreground leading-relaxed">
+            <p className="font-avenir-thin text-sm text-foreground leading-relaxed">
               Averiguar tu talla es muy fácil:
             </p>
             
-            <ol className="space-y-2 text-sm font-avenir-light text-foreground leading-relaxed pl-4">
+            <ol className="space-y-2 text-sm font-avenir-thin text-foreground leading-relaxed pl-4">
               <li>1. Busca un anillo que te quede bien en el dedo donde quieras usar la nueva joya.</li>
               <li>2. Mide el diámetro interior del anillo (adentro, lado a lado, omite el grosor).</li>
               <div className="flex justify-center my-6">
