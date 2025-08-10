@@ -1,18 +1,34 @@
 import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { buildGitHubRawUrl } from "@/lib/config";
-import { useEffect, useState, useRef } from "react"; // <-- Se ha añadido useRef
+import { useEffect, useState, useRef } from "react";
 
 const CustomJewelryPage = () => {
-  // Estado para guardar la posición de cada elemento
   const [elementPositions, setElementPositions] = useState({});
-
+  
   // Referencias para cada elemento de texto que se va a animar
   const titleRef = useRef(null);
   const openingQuestionRef = useRef(null);
-  const processStepsRef = useRef(null);
+  const step1Ref = useRef(null);
+  const step2Ref = useRef(null);
+  const step3Ref = useRef(null);
+  const step4Ref = useRef(null);
   const closingRef = useRef(null);
 
-  // Nueva función de opacidad responsiva
+  // Nueva función para un efecto de fade-out (para el título y pregunta inicial)
+  const getFadeOutOpacity = (elementTop) => {
+    if (elementTop === null || elementTop === undefined) return 1;
+    const viewportHeight = window.innerHeight;
+    const fadeStart = viewportHeight * 0.2; // Comienza a desvanecerse cuando el elemento está al 20% desde arriba
+    const fadeEnd = viewportHeight * 0.6; // Desaparece al llegar al 60% desde arriba
+    const scrollDistance = fadeEnd - fadeStart;
+    
+    if (elementTop > fadeEnd) return 0;
+    if (elementTop < fadeStart) return 1;
+    
+    return 1 - (elementTop - fadeStart) / scrollDistance;
+  };
+
+  // Nueva función para un efecto de fade-in y fade-out (para los 4 pasos)
   const getResponsiveOpacity = (elementTop) => {
     if (elementTop === null || elementTop === undefined) return 0;
     
@@ -20,7 +36,7 @@ const CustomJewelryPage = () => {
     const centerPoint = viewportHeight / 2;
     const distanceToCenter = Math.abs(elementTop - centerPoint);
     
-    // Define el rango de fade-in/out (1/3 de la altura de la ventana)
+    // El efecto empieza a desvanecerse cuando el elemento está a 1/3 de la altura de la ventana del centro
     const fadeRange = viewportHeight / 3;
     
     const opacity = 1 - Math.min(1, distanceToCenter / fadeRange);
@@ -29,18 +45,20 @@ const CustomJewelryPage = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Calcula la posición de cada elemento
       const positions = {
         title: titleRef.current?.getBoundingClientRect().top,
         openingQuestion: openingQuestionRef.current?.getBoundingClientRect().top,
-        processSteps: processStepsRef.current?.getBoundingClientRect().top,
+        step1: step1Ref.current?.getBoundingClientRect().top,
+        step2: step2Ref.current?.getBoundingClientRect().top,
+        step3: step3Ref.current?.getBoundingClientRect().top,
+        step4: step4Ref.current?.getBoundingClientRect().top,
         closing: closingRef.current?.getBoundingClientRect().top,
       };
       setElementPositions(positions);
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Llama a la función al inicio para posicionar los elementos
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -73,9 +91,9 @@ const CustomJewelryPage = () => {
           
           {/* Title */}
           <div 
-            ref={titleRef} // <-- Referencia al elemento
+            ref={titleRef}
             className="text-center py-12"
-            style={{ opacity: getResponsiveOpacity(elementPositions.title) }} // <-- Llamada a la nueva función
+            style={{ opacity: getFadeOutOpacity(elementPositions.title) }} // <-- Usa la nueva función de fade-out
           >
             <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
               JOYAS A MEDIDA
@@ -84,9 +102,9 @@ const CustomJewelryPage = () => {
 
           {/* Opening Question */}
           <div 
-            ref={openingQuestionRef} // <-- Referencia al elemento
+            ref={openingQuestionRef}
             className="text-center py-6"
-            style={{ opacity: getResponsiveOpacity(elementPositions.openingQuestion) }} // <-- Llamada a la nueva función
+            style={{ opacity: getFadeOutOpacity(elementPositions.openingQuestion) }} // <-- Usa la nueva función de fade-out
           >
             <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
@@ -97,13 +115,13 @@ const CustomJewelryPage = () => {
           </div>
 
           {/* Process Steps */}
-          <div 
-            ref={processStepsRef} // <-- Referencia al contenedor de los pasos
-            className="space-y-16 py-8"
-            style={{ opacity: getResponsiveOpacity(elementPositions.processSteps) }} // <-- Llamada a la nueva función
-          >
+          <div className="space-y-16 py-8">
             {/* 1. Hablemos de tu idea */}
-            <div className="space-y-4">
+            <div 
+              ref={step1Ref}
+              className="space-y-4"
+              style={{ opacity: getResponsiveOpacity(elementPositions.step1) }}
+            >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
               </h3>
@@ -113,7 +131,11 @@ const CustomJewelryPage = () => {
             </div>
             
             {/* 2. Diseñamos juntos */}
-            <div className="space-y-4">
+            <div 
+              ref={step2Ref}
+              className="space-y-4"
+              style={{ opacity: getResponsiveOpacity(elementPositions.step2) }}
+            >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 2. Diseñamos juntos
               </h3>
@@ -123,7 +145,11 @@ const CustomJewelryPage = () => {
             </div>
             
             {/* 3. Elaboración de la joya */}
-            <div className="space-y-4">
+            <div 
+              ref={step3Ref}
+              className="space-y-4"
+              style={{ opacity: getResponsiveOpacity(elementPositions.step3) }}
+            >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 3. Elaboración de la joya
               </h3>
@@ -133,7 +159,11 @@ const CustomJewelryPage = () => {
             </div>
             
             {/* 4. Envío */}
-            <div className="space-y-4">
+            <div 
+              ref={step4Ref}
+              className="space-y-4"
+              style={{ opacity: getResponsiveOpacity(elementPositions.step4) }}
+            >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 4. Envío
               </h3>
@@ -145,9 +175,9 @@ const CustomJewelryPage = () => {
 
           {/* Closing */}
           <div
-            ref={closingRef} // <-- Referencia al elemento
+            ref={closingRef}
             className="text-center py-20"
-            style={{ opacity: getResponsiveOpacity(elementPositions.closing) }} // <-- Llamada a la nueva función
+            style={{ opacity: getResponsiveOpacity(elementPositions.closing) }}
           >
             <p className="font-avenir-book text-xl md:text-2xl text-white leading-relaxed">
               Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos juntos una joya.
