@@ -6,7 +6,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import FixedSocialButtons from "./components/FixedSocialButtons";
 import Index from "./pages/Index";
 import CategoryPage from "./pages/CategoryPage";
-// import ProductPage from "./pages/ProductPage";
+import ProductPage from "./pages/ProductPage";
 import HowToBuyPage from "./pages/HowToBuyPage";
 import CustomJewelryPage from "./pages/CustomJewelryPage";
 import NotFound from "./pages/NotFound";
@@ -21,7 +21,7 @@ const AppContent = () => {
     '/',
     '/como-comprar',
     '/joyas-a-medida'
-  ].includes(location.pathname) || location.pathname.startsWith('/producto/');
+  ].includes(location.pathname); // Not showing in products || location.pathname.startsWith('/producto/');
 
   return (
     <>
