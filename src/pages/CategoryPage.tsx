@@ -62,13 +62,13 @@ const CategoryPage = () => {
       </div>
 
       {/* Grid de productos */}
-      <div className="container mx-auto px-6 pb-24 mt-16">
+      <div className="container mx-auto px-3 sm:px-6 pb-24 mt-16">
         {/* Descripción de la categoría */}
         <div className="max-w-xl mx-auto text-center mb-16 mt-12">
         </div>
 
         {/* Grid de productos */}
-        <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
           {category.items.map(item => (
             <div key={item.id} className="group cursor-pointer relative" onClick={() => navigate(`/producto/${item.id}`)}>
               <div className="aspect-[3/4] bg-accent rounded-sm overflow-hidden relative transition-elegant mb-4">
