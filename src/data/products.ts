@@ -166,8 +166,8 @@ const productMapping = {
   "OVALPENDIENTEUNO": {
     folder: "Pendientes/Un Ovalo",
     images: [
-      "unovalo_1.jpg",
       "unovalo_2.jpg",
+      "unovalo_1.jpg",
       "unovalo_3.jpg"
     ],
     category: "pendientes",
