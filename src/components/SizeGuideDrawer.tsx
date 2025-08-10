@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
-  Dialog, // Cambiado de Drawer a Dialog
-  DialogContent, // Cambiado de DrawerContent a DialogContent
-  DialogHeader, // Cambiado de DrawerHeader a DialogHeader
-  DialogTitle, // Cambiado de DrawerTitle a DialogTitle
-  DialogClose, // Cambiado de DrawerClose a DialogClose
-} from "@/components/ui/dialog"; // Cambiado el path si es necesario, pero asumo que es de la misma librería
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerClose,
+} from "@/components/ui/drawer";
 import { buildGitHubRawUrl } from "@/lib/config";
 
 interface SizeGuideDrawerProps {
@@ -54,34 +54,35 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-md"> {/* Cambiado de DrawerContent a DialogContent */}
-        <DialogHeader className="border-b pb-4">
+    <Drawer open={isOpen} onOpenChange={onClose}>
+      {/* ¡Aquí está el cambio! La altura se reduce a 60vh. */}
+      <DrawerContent className="h-[60vh] max-w-md mx-auto">
+        <DrawerHeader className="border-b pb-4">
           <div className="flex items-center justify-between">
-            <DialogTitle className="font-avenir-medium text-lg text-foreground">
+            <DrawerTitle className="font-avenir-medium text-lg text-foreground">
               Guía de tallas de anillos
-            </DialogTitle>
-            <DialogClose asChild>
+            </DrawerTitle>
+            <DrawerClose asChild>
               <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
                 <X className="h-4 w-4" />
               </Button>
-            </DialogClose>
+            </DrawerClose>
           </div>
-        </DialogHeader>
-
+        </DrawerHeader>
+        
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
           {/* Texto introductorio */}
           <div className="space-y-4">
             <p className="font-avenir-light text-sm text-foreground leading-relaxed">
               Averiguar tu talla es muy fácil:
             </p>
-
+            
             <ol className="space-y-2 text-sm font-avenir-light text-foreground leading-relaxed pl-4">
               <li>1. Busca un anillo que te quede bien en el dedo donde quieras usar la nueva joya.</li>
               <li>2. Mide el diámetro interior del anillo (la parte de adentro, de lado a lado, sin contar el grosor).</li>
               <li>3. Ingresa los milímetros que obtengas a continuación.</li>
             </ol>
-
+            
             <div className="flex justify-center my-6">
               <img
                 src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ilustracion%20guia%20de%20talla%20anillos.PNG")}
@@ -89,7 +90,7 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
                 className="w-80 h-auto"
               />
             </div>
-
+            
             {/* Calculadora de talla */}
             <div className="space-y-4">
               <p className="font-avenir-light text-sm text-foreground leading-relaxed">
@@ -134,7 +135,7 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
             </div>
           </div>
         </div>
-      </DialogContent>
-    </Dialog>
+      </DrawerContent>
+    </Drawer>
   );
 };
