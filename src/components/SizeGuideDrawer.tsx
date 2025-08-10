@@ -83,7 +83,7 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
                 <img
                   src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ilustracion%20guia%20de%20talla%20anillos.PNG")}
                   alt="Ilustración de cómo medir el anillo"
-                  className="w-34 h-auto"
+                  className="w-32 h-auto"
                 />
               </div>
               <li>3. Ingresa los milímetros que obtengas a continuación.</li>
