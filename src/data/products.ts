@@ -166,8 +166,8 @@ const productMapping = {
   "OVALPENDIENTEUNO": {
     folder: "Pendientes/Un Ovalo",
     images: [
-      "unovalo_2.jpg",
       "unovalo_1.jpg",
+      "unovalo_2.jpg",
       "unovalo_3.jpg"
     ],
     category: "pendientes",
@@ -189,7 +189,8 @@ const productMapping = {
     images: [
       "1.pendiente rosita mitsuro plata.jpg",
       "2.pendiente rosita mitsuro oro.jpg",
-      "mitsurorosa.mov"
+      "rosamitsuro_1.mov",
+      "rosamitsuro_2.mov"
     ],
     category: "pendientes",
     name: "Rosa Mitsuro",
