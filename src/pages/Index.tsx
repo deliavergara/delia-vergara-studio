@@ -18,6 +18,19 @@ const Index = () => {
       
       <AboutSection />
       
+      {/* Brand intro text */}
+      <section aria-label="Presentación de marca" className="bg-background">
+        <div className="container mx-auto px-6 max-w-3xl py-6 text-center">
+          <p className="font-avenir-light font-light text-muted-foreground tracking-body leading-relaxed">
+            Delia Vergara es una marca de diseño de joyería con
+            <br />
+            esencia orgánica. Piezas únicas, elaboradas a mano
+            <br />
+            en mi taller en Valencia, España.
+          </p>
+        </div>
+      </section>
+      
       <CategoryGrid />
       
       {/* Contact section */}
