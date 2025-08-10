@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { buildGitHubRawUrl } from "@/lib/config";
 import { HamburgerMenu } from "@/components/HamburgerMenu";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
 import FixedSocialButtons from "@/components/FixedSocialButtons";
@@ -10,7 +10,6 @@ const HowToBuyPage = () => {
   const navigate = useNavigate();
   const [scrollY, setScrollY] = useState(0);
   const [showSizeGuide, setShowSizeGuide] = useState(false);
-  const snapContainerRef = useRef<HTMLDivElement>(null);
 
   // Estado para controlar la opacidad de cada imagen de fondo
   const [opacities, setOpacities] = useState({
@@ -24,15 +23,7 @@ const HowToBuyPage = () => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
 
-      // Lógica para el efecto de parallax/overlay
       const viewportHeight = window.innerHeight;
-      const scrollPoints = [
-        { start: 0, end: viewportHeight, key: 'image1' },
-        { start: viewportHeight * 1, end: viewportHeight * 2, key: 'image2' },
-        { start: viewportHeight * 2, end: viewportHeight * 3, key: 'image3' },
-        { start: viewportHeight * 3, end: viewportHeight * 4, key: 'image4' },
-      ];
-
       const newOpacities = {
         image1: 0,
         image2: 0,
@@ -40,15 +31,22 @@ const HowToBuyPage = () => {
         image4: 0,
       };
 
-      scrollPoints.forEach(point => {
-        const { start, end, key } = point;
-        if (scrollY >= start && scrollY < end) {
-          const progress = (scrollY - start) / (end - start);
-          newOpacities[key] = Math.min(1, Math.max(0, progress * 2));
-        } else if (scrollY >= end) {
-          newOpacities[key] = 1;
-        }
-      });
+      // Controla el fade-in de cada imagen
+      if (scrollY < viewportHeight * 0.5) {
+        newOpacities.image1 = 1;
+      } else if (scrollY < viewportHeight * 1.5) {
+        newOpacities.image1 = 1 - (scrollY - viewportHeight * 0.5) / (viewportHeight);
+        newOpacities.image2 = (scrollY - viewportHeight * 0.5) / (viewportHeight);
+      } else if (scrollY < viewportHeight * 2.5) {
+        newOpacities.image2 = 1 - (scrollY - viewportHeight * 1.5) / (viewportHeight);
+        newOpacities.image3 = (scrollY - viewportHeight * 1.5) / (viewportHeight);
+      } else if (scrollY < viewportHeight * 3.5) {
+        newOpacities.image3 = 1 - (scrollY - viewportHeight * 2.5) / (viewportHeight);
+        newOpacities.image4 = (scrollY - viewportHeight * 2.5) / (viewportHeight);
+      } else {
+        newOpacities.image4 = 1;
+      }
+
       setOpacities(newOpacities);
     };
 
