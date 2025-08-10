@@ -136,7 +136,7 @@ export const SizeGuideDrawer = ({
           <div className="space-y-4">            
             <ol className="space-y-2 text-sm font-avenir-thin text-foreground leading-relaxed pl-4">
               <li>1. Busca un anillo que te quede bien.</li>
-              <li>2. Mide el diámetro interior del anillo (adentro, lado a lado, omite el grosor).</li>
+              <li>2. Mide el diámetro interior del anillo (dentro, lado a lado, omite el grosor).</li>
               <div className="flex justify-center my-6">
                 <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ilustracion%20guia%20de%20talla%20anillos.PNG")} alt="Ilustración de cómo medir el anillo" className="w-32 h-auto" />
               </div>
