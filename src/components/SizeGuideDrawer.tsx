@@ -18,7 +18,7 @@ interface SizeGuideDrawerProps {
 }
 
 const sizeData = [
-  { diameter: "13.80", size: "Tu talla es especial, escríbeme y validamos" },
+  { diameter: "13.80", size: "especial, escríbeme y validamos" },
   { diameter: "14.01", size: "4" },
   { diameter: "14.30", size: "5" },
   { diameter: "14.65", size: "6" },
@@ -46,7 +46,7 @@ const sizeData = [
   { diameter: "21.70", size: "28" },
   { diameter: "22.05", size: "29" },
   { diameter: "22.35", size: "30" },
-  { diameter: "13.80", size: "Tu talla es especial, escríbeme y validamos" },
+  { diameter: "13.80", size: "especial, escríbeme y validamos" },
 ];
 
 export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
@@ -130,7 +130,7 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
               {calculatedSize && !error && (
                 <div className="rounded-md border border-border/50 bg-muted/20 p-3">
                   <p className="font-avenir-medium text-foreground text-sm">
-                    Tu talla aproximada es la {calculatedSize}
+                    Tu talla aproximada es {calculatedSize}
                   </p>
                   <p className="font-avenir-light text-muted-foreground text-xs mt-1">
                     Si estás entre dos medidas, se redondea hacia arriba.
