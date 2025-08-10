@@ -203,7 +203,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Rositas Mitsuro",
-    description: "Pequeñas rosas modeladas con la técnica mistura. Sutiles, delicadas y con curvas orgánicas que nacen solo del modelado a mano.\n\nHechas a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Pequeñas rosas modeladas con la técnica Mitsuro. Sutiles, delicadas y con curvas orgánicas que nacen solo del modelado a mano.\n\nHechas a mano en plata 925\nDisponibles con baño en oro\nContáctame"
   },
   "MITSUROARGOLLASPENDIENTEUNICO": {
     folder: "Pendientes/Argollas mitsuro",
