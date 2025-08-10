@@ -67,7 +67,7 @@ const HowToBuyPage = () => {
           style={{
             backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/1_arbol.jpg")})`,
           }}>
-          <div className="screen-content">
+          <div className="flex flex-col items-center justify-start h-full pt-16"">
             <h1 className="font-avenir-book text-white text-4xl md:text-5xl lg:text-6xl text-center -mt-4">
               CÓMO COMPRAR
               <br />
