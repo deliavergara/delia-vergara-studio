@@ -32,7 +32,19 @@ const sizeData = [
   { diameter: "17.51", size: "15" },
   { diameter: "17.83", size: "16" },
   { diameter: "18.15", size: "17" },
-  { diameter: "18.47", size: "18" }
+  { diameter: "18.47", size: "18" },
+  { diameter: "18.80", size: "19" },
+  { diameter: "19.10", size: "20" },
+  { diameter: "19.45", size: "21" },
+  { diameter: "19.75", size: "22" },
+  { diameter: "20.10", size: "23" },
+  { diameter: "20.40", size: "24" },
+  { diameter: "20.75", size: "25" },
+  { diameter: "21.05", size: "26" },
+  { diameter: "21.40", size: "27" },
+  { diameter: "21.70", size: "28" },
+  { diameter: "22.05", size: "29" },
+  { diameter: "22.35", size: "30" },
 ];
 
 export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
