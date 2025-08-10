@@ -98,7 +98,7 @@ const productMapping = {
     ],
     category: "collares",
     name: "Flor",
-    description: "Pequeña flor con una piedra en el centro. Diseño mínimo y delicado.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Pequeña flor con un circón en el centro. Diseño mínimo y delicado.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
   },
   "MEDALLONCOLLARUNICO": {
     folder: "Collares/Medallón",
@@ -107,7 +107,7 @@ const productMapping = {
     ],
     category: "collares",
     name: "Medallón",
-    description: "Medallón con textura y una piedra a un costado. Sutil, pero con presencia.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Medallón con textura y una circonita a un costado. Sutil, pero con presencia.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
   },
   "OVALCOLLARUNICO": {
     folder: "Collares/Ovalo",
@@ -116,7 +116,7 @@ const productMapping = {
     ],
     category: "collares",
     name: "Óvalo", 
-    description: "Collar con forma oval, con una piedra de color en el centro que le aporta elegancia. Perfecto para combinar con los pendientes.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Collar con forma oval, con un circón de color en el centro que le aporta elegancia. Perfecto para combinar con los pendientes.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
   },
   
   // Pendientes
@@ -268,8 +268,8 @@ const productMapping = {
       "lyra_2.jpg",
     ],
     category: "pulseras",
-    name: "Pulsera Facetada",
-    description: "Diseñada desde cero cada vez. Cada una con sus propias facetas, única e irrepetible.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    name: "Pulsera Lyra",
+    description: "Par de pulseras orgánicas Se acompañan y se mueven juntas, ligeras y con textura sutil. Diseñadas para lucir siempre en pareja.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
   }
 };
 
