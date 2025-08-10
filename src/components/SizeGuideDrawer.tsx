@@ -78,12 +78,12 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
             
             <ol className="space-y-2 text-sm font-avenir-light text-foreground leading-relaxed pl-4">
               <li>1. Busca un anillo que te quede bien en el dedo donde quieras usar la nueva joya.</li>
-              <li>2. Mide el diámetro interior del anillo (la parte de adentro, de lado a lado, sin contar el grosor).</li>
+              <li>2. Mide el diámetro interior del anillo (adentro, lado a lado, omite el grosor).</li>
               <div className="flex justify-center my-6">
                 <img
                   src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ilustracion%20guia%20de%20talla%20anillos.PNG")}
                   alt="Ilustración de cómo medir el anillo"
-                  className="w-40 h-auto"
+                  className="w-34 h-auto"
                 />
               </div>
               <li>3. Ingresa los milímetros que obtengas a continuación.</li>
