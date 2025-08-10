@@ -4,7 +4,7 @@ import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
-
+import { FixedSocialButtons } from "@/components/FixedSocialButtons";
 
 const HowToBuyPage = () => {
   const navigate = useNavigate();
@@ -67,8 +67,8 @@ const HowToBuyPage = () => {
           style={{
             backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/1_arbol.jpg")})`,
           }}>
-          <div className="screen-content">
-            <h1 className="font-avenir-book text-white text-4xl md:text-5xl lg:text-6xl text-center -mt-4">
+          <div className="flex flex-col h-full items-center justify-start pt-16">
+            <h1 className="font-avenir-book text-white text-4xl md:text-5xl lg:text-6xl text-center">
               CÓMO COMPRAR
               <br />
               <span className="block font-avenir-book mt-8 italic">En tres pasos</span>
@@ -83,7 +83,7 @@ const HowToBuyPage = () => {
           }}>
           <div className="screen-content justify-start items-center">
             <div className="max-w-2xl">
-            <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-8">
+              <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-8">
                 1 Elige tu tipo de joya
               </h2>
               
@@ -223,7 +223,7 @@ const HowToBuyPage = () => {
             </h2>
             
             <p className="font-avenir-light font-light tracking-body leading-body" style={{ color: '#353333' }}>
-              deliavergara.joyas@gmail.com  <br /> +34 625857127
+              deliavergara.joyas@gmail.com <br /> +34 625857127
             </p>
           </div>
         </div>
