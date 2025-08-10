@@ -72,7 +72,7 @@ const HowToBuyPage = () => {
         backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/0_persona.jpg")})`,
         opacity: 0.90
       }}>
-          <div className="flex flex-col h-full pl-8 items-start justify-center">
+          <div className="screen-content justify-start items-center">
             <div className="max-w-2xl">
               <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-8">
                 1 Elige tu tipo de joya
@@ -107,7 +107,7 @@ const HowToBuyPage = () => {
         backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/2_medalla.jpg")})`,
         opacity: 0.90
       }}>
-          <div className="flex flex-col h-full pl-8 items-start justify-center">
+          <div className="screen-content justify-start items-center">
             <div className="max-w-2xl">
               <h2 className="font-avenir-heavy text-white text-xl md:text-2xl mb-8">
                 2 Contacto y confirmación
@@ -130,7 +130,7 @@ const HowToBuyPage = () => {
         backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/3_caja.jpg")})`,
         opacity: 0.90
       }}>
-          <div className="flex flex-col h-full pl-8 items-start justify-center">
+          <div className="screen-content justify-start items-center">
             <div className="max-w-2xl">
               <h2 className="font-avenir-heavy text-white text-xl md:text-2xl mb-8">
                 3 Pago y envío
@@ -161,14 +161,14 @@ const HowToBuyPage = () => {
           <div className="space-y-0">
             <FAQItem question="¿De qué materiales son las joyas?" answer="Trabajo principalmente con plata de ley y plata enchapada en oro, aunque puedo realizar tu encargo en oro macizo u otros materiales que prefieras." />
             <FAQItem question="¿Cómo sé mi talla?" answer={<>
-                    La talla es siempre a medida; si no conoces la tuya, verifica la sección
-                    {' '}
-                    <span onClick={() => setShowSizeGuide(true)} className="cursor-pointer font-avenir-medium text-base text-blue-600 underline hover:no-underline">
-                      cómo saber mi talla,
-                    </span>
-                    {' '}
-                      y si todavía quedas con dudas, contáctame y te guiaré para determinarla.
-                    </>} />
+                  La talla es siempre a medida; si no conoces la tuya, verifica la sección
+                  {' '}
+                  <span onClick={() => setShowSizeGuide(true)} className="cursor-pointer font-avenir-medium text-base text-blue-600 underline hover:no-underline">
+                    cómo saber mi talla,
+                  </span>
+                  {' '}
+                    y si todavía quedas con dudas, contáctame y te guiaré para determinarla.
+                </>} />
             <FAQItem question="¿Qué formas de pago aceptas?" answer="El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (para pagos en euros) y en Chile (para pagos en pesos chilenos), según te acomode." />
             <FAQItem question="¿A dónde realizas envíos y cuál es el costo?" answer="Realizo envíos a toda Europa y Chile. El coste se calcula según tu ubicación y se suma al valor final. Para los pedidos a Chile, el envío se realiza desde Santiago, evitando costos internacionales." />
             <FAQItem question="¿Cuánto tarda la producción de una joya por encargo?" answer="El tiempo de producción varía según la complejidad de la pieza, desde unos pocos días hasta algunas semanas. Este plazo te lo confirmaré siempre antes de iniciar el trabajo." />
