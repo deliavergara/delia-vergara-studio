@@ -69,7 +69,8 @@ const HowToBuyPage = () => {
 
         {/* 2ª pantalla - persona.jpg */}
         <section className="snap-screen bg-cover bg-center relative" style={{
-        backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/0_persona.jpg")})`
+        backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/0_persona.jpg")})`,
+        opacity: 0.90
       }}>
           <div className="screen-content justify-start items-center">
             <div className="max-w-2xl">
@@ -103,7 +104,8 @@ const HowToBuyPage = () => {
 
         {/* 3ª pantalla - medalla.jpg */}
         <section className="snap-screen bg-cover bg-center relative" style={{
-        backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/2_medalla.jpg")})`
+        backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/2_medalla.jpg")})`,
+        opacity: 0.90
       }}>
           <div className="screen-content justify-start items-center">
             <div className="max-w-2xl">
@@ -125,7 +127,8 @@ const HowToBuyPage = () => {
 
         {/* 4ª pantalla - caja.jpg */}
         <section className="snap-screen bg-cover bg-center relative" style={{
-        backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/3_caja.jpg")})`
+        backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/3_caja.jpg")})`,
+        opacity: 0.90
       }}>
           <div className="screen-content justify-start items-center">
             <div className="max-w-2xl">
