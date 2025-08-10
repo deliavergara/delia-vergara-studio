@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { buildGitHubRawUrl } from "@/lib/config";
 import { HamburgerMenu } from "@/components/HamburgerMenu";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { ChevronDown } from "lucide-react";
 import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
 import FixedSocialButtons from "@/components/FixedSocialButtons";
 
@@ -9,11 +10,11 @@ const HowToBuyPage = () => {
   const navigate = useNavigate();
   const [scrollY, setScrollY] = useState(0);
   const [showSizeGuide, setShowSizeGuide] = useState(false);
-  const sectionsRef = useRef([]);
+  const snapContainerRef = useRef<HTMLDivElement>(null);
 
-  // Opacidades de las imágenes de fondo, controladas por el estado
+  // Estado para controlar la opacidad de cada imagen de fondo
   const [opacities, setOpacities] = useState({
-    image1: 1,
+    image1: 1, // La primera imagen empieza visible
     image2: 0,
     image3: 0,
     image4: 0,
@@ -24,10 +25,7 @@ const HowToBuyPage = () => {
       setScrollY(window.scrollY);
 
       // Lógica para el efecto de parallax/overlay
-      const newOpacities = { ...opacities };
       const viewportHeight = window.innerHeight;
-
-      // Definir los puntos de inicio y fin del scroll para cada transición
       const scrollPoints = [
         { start: 0, end: viewportHeight, key: 'image1' },
         { start: viewportHeight * 1, end: viewportHeight * 2, key: 'image2' },
@@ -35,34 +33,37 @@ const HowToBuyPage = () => {
         { start: viewportHeight * 3, end: viewportHeight * 4, key: 'image4' },
       ];
 
+      const newOpacities = {
+        image1: 0,
+        image2: 0,
+        image3: 0,
+        image4: 0,
+      };
+
       scrollPoints.forEach(point => {
         const { start, end, key } = point;
         if (scrollY >= start && scrollY < end) {
           const progress = (scrollY - start) / (end - start);
-          newOpacities[key] = Math.min(1, progress * 2); // Ajusta la velocidad del fade-in
-          newOpacities[key] = Math.max(0, newOpacities[key]);
+          newOpacities[key] = Math.min(1, Math.max(0, progress * 2));
         } else if (scrollY >= end) {
           newOpacities[key] = 1;
-        } else {
-          newOpacities[key] = 0;
         }
       });
-
       setOpacities(newOpacities);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [scrollY, opacities]);
+  }, [scrollY]);
 
   return (
     <div className="min-h-screen bg-background relative">
       <HamburgerMenu />
 
-      {/* Contenedor de imágenes fijas */}
+      {/* Contenedor de imágenes fijas con transición lenta */}
       <div className="fixed inset-0 w-full h-full z-0">
         <div
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms]" // Duración de la transición más lenta
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms]"
           style={{
             backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/1_arbol.jpg")})`,
             opacity: opacities.image1,
@@ -93,7 +94,6 @@ const HowToBuyPage = () => {
 
       {/* Contenido que se desplaza */}
       <div className="relative z-10">
-        {/* Sección 1 */}
         <section className="bg-transparent h-screen pt-32 flex flex-col items-center justify-start">
           <h1 className="font-avenir-medium text-white text-4xl md:text-5xl lg:text-6xl text-center">
             CÓMO COMPRAR
@@ -102,7 +102,6 @@ const HowToBuyPage = () => {
           </h1>
         </section>
 
-        {/* Sección 2 */}
         <section className="bg-transparent h-screen pt-32 flex flex-col items-center justify-start">
           <div className="max-w-2xl px-6">
             <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-8">
@@ -131,7 +130,6 @@ const HowToBuyPage = () => {
           </div>
         </section>
 
-        {/* Sección 3 */}
         <section className="bg-transparent h-screen pt-32 flex flex-col items-center justify-start">
           <div className="max-w-2xl px-6">
             <h2 className="font-avenir-heavy text-white text-xl md:text-2xl mb-8">
@@ -148,7 +146,6 @@ const HowToBuyPage = () => {
           </div>
         </section>
 
-        {/* Sección 4 */}
         <section className="bg-transparent h-screen pt-32 flex flex-col items-center justify-start">
           <div className="max-w-2xl px-6">
             <h2 className="font-avenir-heavy text-white text-xl md:text-2xl mb-8">
@@ -164,15 +161,66 @@ const HowToBuyPage = () => {
             </div>
           </div>
         </section>
-      </div>
 
-      {/* Preguntas Frecuentes y Contacto */}
-      <div className="relative z-10 bg-background">
-        {/* ... (el resto de tu código para las FAQs y el contacto) ... */}
+        {/* Sección de Preguntas Frecuentes y Contacto */}
+        <div className="relative z-10 py-24 px-6 bg-background">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="font-avenir-medium text-3xl md:text-4xl mb-16 text-left" style={{ color: '#353333' }}>
+              Preguntas Frecuentes
+            </h2>
+            <div className="space-y-0">
+              <FAQItem question="¿De qué materiales son las joyas?" answer="Trabajo principalmente con plata de ley y plata enchapada en oro, aunque puedo realizar tu encargo en oro macizo u otros materiales que prefieras." />
+              <FAQItem question="¿Cómo sé mi talla?" answer={<>La talla es siempre a medida; si no conoces la tuya, verifica la sección {' '}<span onClick={() => setShowSizeGuide(true)} className="cursor-pointer font-avenir-medium text-base text-blue-600 underline hover:no-underline">cómo saber mi talla,</span>{' '} y si todavía quedas con dudas, contáctame y te guiaré para determinarla.</>} />
+              <FAQItem question="¿Qué formas de pago aceptas?" answer="El pago se realiza mediante transferencia bancaria. Dispongo de cuentas en Europa (para pagos en euros) y en Chile (para pagos en pesos chilenos), según te acomode." />
+              <FAQItem question="¿A dónde realizas envíos y cuál es el costo?" answer="Realizo envíos a toda Europa y Chile. El coste se calcula según tu ubicación y se suma al valor final. Para los pedidos a Chile, el envío se realiza desde Santiago, evitando costos internacionales." />
+              <FAQItem question="¿Cuánto tarda la producción de una joya por encargo?" answer="El tiempo de producción varía según la complejidad de la pieza, desde unos pocos días hasta algunas semanas. Este plazo te lo confirmaré siempre antes de iniciar el trabajo." />
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-border pt-16 relative px-6 bg-background">
+          <div className="container mx-auto max-w-4xl">
+            <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
+              <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} alt="Delia Vergara Isologo" className="h-32 w-auto opacity-50" />
+            </div>
+            <div className="text-center space-y-8 relative z-10 pb-12">
+              <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{ color: '#353333' }}>
+                CONTÁCTAME
+              </h2>
+              <p className="font-avenir-light font-light tracking-body leading-body" style={{ color: '#353333' }}>
+                deliavergara.joyas@gmail.com <br /> +34 625857127
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <SizeGuideDrawer isOpen={showSizeGuide} onClose={() => setShowSizeGuide(false)} />
       <FixedSocialButtons />
+    </div>
+  );
+};
+
+interface FAQItemProps {
+  question: string;
+  answer: string | JSX.Element;
+}
+
+const FAQItem = ({ question, answer }: FAQItemProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="border-b border-gray-200 last:border-b-0">
+      <button onClick={() => setIsOpen(!isOpen)} className="w-full py-6 text-left flex justify-between items-center hover:bg-gray-50/50 transition-colors duration-200">
+        <span className="font-avenir-book text-lg pr-8" style={{ color: '#353333' }}>
+          {question}
+        </span>
+        <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} style={{ color: '#353333' }} />
+      </button>
+      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}>
+        <p className="font-avenir-light text-base leading-relaxed" style={{ color: '#353333' }}>
+          {answer}
+        </p>
+      </div>
     </div>
   );
 };
