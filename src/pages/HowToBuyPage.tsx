@@ -4,7 +4,7 @@ import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
-import FixedSocialButtons from "@/components/FixedSocialButtons";
+import { FixedSocialButtons } from "@/components/FixedSocialButtons";
 
 const HowToBuyPage = () => {
   const navigate = useNavigate();
@@ -68,10 +68,10 @@ const HowToBuyPage = () => {
             backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/1_arbol.jpg")})`,
           }}>
           <div className="flex flex-col h-full items-center justify-start pt-32">
-            <h1 className="font-avenir-book text-white text-4xl md:text-5xl lg:text-6xl text-center">
+            <h1 className="font-avenir-medium text-white text-4xl md:text-5xl lg:text-6xl text-center">
               CÓMO COMPRAR
               <br />
-              <span className="block font-avenir-book mt-8 italic">En tres pasos</span>
+              <span className="block font-avenir-light mt-8 italic">En tres pasos</span>
             </h1>
           </div>
         </section>
