@@ -69,9 +69,9 @@ const HowToBuyPage = () => {
           }}>
           <div className="screen-content">
             <h1 className="font-avenir-book text-white text-4xl md:text-5xl lg:text-6xl text-center">
-              Cómo comprar tu joya
+              CÓMO COMPRAR TU JOYA
               <br />
-              <span className="block">en 3 pasos</span>
+              <span class="block italic font-light"> En tres pasos</span>
             </h1>
           </div>
         </section>
