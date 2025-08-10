@@ -4,7 +4,7 @@ import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
-import { FixedSocialButtons } from "@/components/FixedSocialButtons";
+import FixedSocialButtons from "@/components/FixedSocialButtons";
 
 const HowToBuyPage = () => {
   const navigate = useNavigate();
