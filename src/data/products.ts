@@ -74,7 +74,7 @@ const productMapping = {
     ],
     category: "anillos",
     name: "Nube",
-    description: "Anillo Nube\nModelado a mano, con terminación mate y relieves orgánicos.\nIncluye tres piedras de color a elección.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Modelado a mano, con terminación mate y relieves orgánicos.\nIncluye tres piedras de color a elección.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
   },
   "IRISANILLOUNICO": {
     folder: "Anillos/Iris",
