@@ -21,7 +21,7 @@ const AppContent = () => {
     '/',
     '/como-comprar',
     '/joyas-a-medida'
-  ].includes(location.pathname) || location.pathname.startsWith('/producto/');
+  ].includes(location.pathname); // Not showing in products || location.pathname.startsWith('/producto/');
 
   return (
     <>
