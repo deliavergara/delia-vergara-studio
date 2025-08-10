@@ -63,7 +63,7 @@ const HowToBuyPage = () => {
       {/* Proceso de Compra - Pantalla Completa con efecto Bimani */}
       <div className="scroll-snap-container" ref={snapContainerRef}>
         {/* 1ª pantalla - árbol.jpg */}
-        <section className="snap-screen bg-cover bg-center relative" 
+        <section className="snap-screen bg-cover bg-center relative"> 
           style={{
             backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/1_arbol.jpg")})`,
           }}>
