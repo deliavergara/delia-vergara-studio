@@ -6,7 +6,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import FixedSocialButtons from "./components/FixedSocialButtons";
 import Index from "./pages/Index";
 import CategoryPage from "./pages/CategoryPage";
-import ProductPage from "./pages/ProductPage";
+// import ProductPage from "./pages/ProductPage";
 import HowToBuyPage from "./pages/HowToBuyPage";
 import CustomJewelryPage from "./pages/CustomJewelryPage";
 import NotFound from "./pages/NotFound";
