@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Drawer,
   DrawerContent,
@@ -34,6 +36,23 @@ const sizeData = [
 ];
 
 export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
+  const [diameter, setDiameter] = useState<string>("");
+  const [calculatedSize, setCalculatedSize] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleCalculate = () => {
+    const value = parseFloat(diameter.replace(",", "."));
+    if (isNaN(value) || value <= 0) {
+      setError("Ingresa un número válido en mm.");
+      setCalculatedSize(null);
+      return;
+    }
+    setError(null);
+    const candidate = sizeData.find((item) => parseFloat(item.diameter) >= value);
+    const size = candidate ? candidate.size : sizeData[sizeData.length - 1].size;
+    setCalculatedSize(size);
+  };
+
   return (
     <Drawer open={isOpen} onOpenChange={onClose}>
       <DrawerContent className="h-[80vh] max-w-md mx-auto">
@@ -71,28 +90,46 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
               />
             </div>
             
-            <p className="font-avenir-light text-sm text-foreground leading-relaxed italic">
-              Por ejemplo: si tu anillo mide 16 mm de diámetro interior, tu talla será la 10.
-            </p>
-          </div>
-          
-          {/* Tabla de tallas */}
-          <div className="space-y-4">
-            <div className="grid grid-cols-2 gap-4 text-sm font-avenir-medium text-muted-foreground uppercase tracking-wide border-b pb-2">
-              <div>Diámetro interior (mm)</div>
-              <div>Talla</div>
-            </div>
-            
-            <div className="space-y-2">
-              {sizeData.map((item, index) => (
-                <div key={index} className="grid grid-cols-2 gap-4 py-1.5 text-sm font-avenir-light border-b border-border/20 last:border-b-0">
-                  <div className="text-foreground">{item.diameter}</div>
-                  <div className="text-foreground">{item.size}</div>
+            {/* Calculadora de talla */}
+            <div className="space-y-4">
+              <p className="font-avenir-light text-sm text-foreground leading-relaxed">
+                Calcula tu talla ingresando el diámetro interior de tu anillo (mm).
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-end">
+                <div className="sm:col-span-2 space-y-2">
+                  <Label htmlFor="ring-diameter" className="font-avenir-medium text-xs uppercase tracking-wide text-muted-foreground">Diámetro interior (mm)</Label>
+                  <div className="relative">
+                    <Input
+                      id="ring-diameter"
+                      inputMode="decimal"
+                      type="text"
+                      placeholder="Ej: 16.0"
+                      value={diameter}
+                      onChange={(e) => setDiameter(e.target.value)}
+                      aria-label="Diámetro interior en milímetros"
+                      className="pr-12"
+                    />
+                    <span className="absolute inset-y-0 right-3 flex items-center text-muted-foreground text-xs">mm</span>
+                  </div>
                 </div>
-              ))}
+                <Button onClick={handleCalculate} className="w-full">
+                  Calcular talla
+                </Button>
+              </div>
+              {error && <p className="text-xs text-destructive">{error}</p>}
+              {calculatedSize && !error && (
+                <div className="rounded-md border border-border/50 bg-muted/20 p-3">
+                  <p className="font-avenir-medium text-foreground text-sm">
+                    Tu talla aproximada es la {calculatedSize}
+                  </p>
+                  <p className="font-avenir-light text-muted-foreground text-xs mt-1">
+                    Si estás entre dos medidas, se redondea hacia arriba.
+                  </p>
+                </div>
+              )}
+            </div>
             </div>
           </div>
-        </div>
       </DrawerContent>
     </Drawer>
   );
