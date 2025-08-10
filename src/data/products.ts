@@ -74,7 +74,7 @@ const productMapping = {
     ],
     category: "anillos",
     name: "Nube",
-    description: "Anillo Nube\nModelado a mano, con terminación mate y relieves orgánicos.\nIncluye tres piedras de color a elección.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Modelado a mano, con terminación mate y relieves orgánicos.\nIncluye tres piedras de color a elección.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
   },
   "IRISANILLOUNICO": {
     folder: "Anillos/Iris",
@@ -166,8 +166,8 @@ const productMapping = {
   "OVALPENDIENTEUNO": {
     folder: "Pendientes/Un Ovalo",
     images: [
-      "unovalo_1.jpg",
       "unovalo_2.jpg",
+      "unovalo_1.jpg",
       "unovalo_3.jpg"
     ],
     category: "pendientes",
@@ -189,7 +189,8 @@ const productMapping = {
     images: [
       "1.pendiente rosita mitsuro plata.jpg",
       "2.pendiente rosita mitsuro oro.jpg",
-      "mitsurorosa.mov"
+      "rosamitsuro_1.mov",
+      "rosamitsuro_2.mov"
     ],
     category: "pendientes",
     name: "Rosa Mitsuro",
@@ -202,7 +203,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Rositas Mitsuro",
-    description: "Pequeñas rosas modeladas con la técnica mistura. Sutiles, delicadas y con curvas orgánicas que nacen solo del modelado a mano.\n\nHechas a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Pequeñas rosas modeladas con la técnica Mitsuro. Sutiles, delicadas y con curvas orgánicas que nacen solo del modelado a mano.\n\nHechas a mano en plata 925\nDisponibles con baño en oro\nContáctame"
   },
   "MITSUROARGOLLASPENDIENTEUNICO": {
     folder: "Pendientes/Argollas mitsuro",
@@ -268,8 +269,8 @@ const productMapping = {
       "lyra_2.jpg",
     ],
     category: "pulseras",
-    name: "Pulsera Facetada",
-    description: "Diseñada desde cero cada vez. Cada una con sus propias facetas, única e irrepetible.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    name: "Pulsera Lyra",
+    description: "Par de pulseras orgánicas Se acompañan y se mueven juntas, ligeras y con textura sutil. Diseñadas para lucir siempre en pareja.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
   }
 };
 

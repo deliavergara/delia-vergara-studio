@@ -1,44 +1,67 @@
 import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { buildGitHubRawUrl } from "@/lib/config";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const CustomJewelryPage = () => {
-  const [scrollY, setScrollY] = useState(0);
+  const [elementPositions, setElementPositions] = useState({});
+  
+  // Referencias para cada elemento de texto que se va a animar
+  const titleRef = useRef(null);
+  const openingQuestionRef = useRef(null);
+  const step1Ref = useRef(null);
+  const step2Ref = useRef(null);
+  const step3Ref = useRef(null);
+  const step4Ref = useRef(null);
+  const closingRef = useRef(null);
+
+  // Nueva función para un efecto de fade-out (para el título y pregunta inicial)
+  const getFadeOutOpacity = (elementTop) => {
+    if (elementTop === null || elementTop === undefined) return 1;
+    const viewportHeight = window.innerHeight;
+    const fadeStart = viewportHeight * 0.2; // Comienza a desvanecerse cuando el elemento está al 20% desde arriba
+    const fadeEnd = viewportHeight * 0.6; // Desaparece al llegar al 60% desde arriba
+    const scrollDistance = fadeEnd - fadeStart;
+    
+    if (elementTop > fadeEnd) return 0;
+    if (elementTop < fadeStart) return 1;
+    
+    return 1 - (elementTop - fadeStart) / scrollDistance;
+  };
+
+  // Nueva función para un efecto de fade-in y fade-out (para los 4 pasos)
+  const getResponsiveOpacity = (elementTop) => {
+    if (elementTop === null || elementTop === undefined) return 0;
+    
+    const viewportHeight = window.innerHeight;
+    const centerPoint = viewportHeight / 2;
+    const distanceToCenter = Math.abs(elementTop - centerPoint);
+    
+    // El efecto empieza a desvanecerse cuando el elemento está a 1/3 de la altura de la ventana del centro
+    const fadeRange = viewportHeight / 3;
+    
+    const opacity = 1 - Math.min(1, distanceToCenter / fadeRange);
+    return Math.max(0, opacity);
+  };
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
+    const handleScroll = () => {
+      const positions = {
+        title: titleRef.current?.getBoundingClientRect().top,
+        openingQuestion: openingQuestionRef.current?.getBoundingClientRect().top,
+        step1: step1Ref.current?.getBoundingClientRect().top,
+        step2: step2Ref.current?.getBoundingClientRect().top,
+        step3: step3Ref.current?.getBoundingClientRect().top,
+        step4: step4Ref.current?.getBoundingClientRect().top,
+        closing: closingRef.current?.getBoundingClientRect().top,
+      };
+      setElementPositions(positions);
+    };
+
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const getOpacity = (startY: number, range: number = 300) => {
-    if (scrollY < startY - 100) return 0;
-    if (scrollY > startY + range) return 1;
-    return Math.min(1, Math.max(0, (scrollY - startY + 100) / range));
-  }; 
-
-  const getOpacityOut = (startY: number, range: number = 300) => {
-    if (scrollY < startY) return 1;
-    if (scrollY > startY + range) return 0;
-    return Math.min(1, Math.max(0, 1 - (scrollY - startY) / range));
-  };
-
-  const getOpacityInOut = (fadeInStart: number, fadeInRange: number = 300, fadeOutStart: number, fadeOutRange: number = 300) => {
-  // Fade-in
-    if (scrollY < fadeInStart) return 0;
-    if (scrollY < fadeInStart + fadeInRange) {
-    return Math.min(1, Math.max(0, (scrollY - fadeInStart) / fadeInRange));
-    }
-
-  // Fade-out
-    if (scrollY > fadeOutStart) {
-    if (scrollY > fadeOutStart + fadeOutRange) return 0;
-    return Math.min(1, Math.max(0, 1 - (scrollY - fadeOutStart) / fadeOutRange));
-    }
-
-  // Max opacitiy between
-    return 1;
-  };
 
   return (
     <div className="relative">
@@ -62,26 +85,28 @@ const CustomJewelryPage = () => {
         <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
-            {/* Scrollable Content */}
+      {/* Scrollable Content */}
       <div className="relative z-10 min-h-[400vh] pt-24">
         <div className="max-w-2xl mx-auto px-6 space-y-8">
           
           {/* Title */}
           <div 
+            ref={titleRef}
             className="text-center py-12"
-            style={{ opacity: getOpacityOut(0,250) }}
+            style={{ opacity: getFadeOutOpacity(elementPositions.title) }} // <-- Usa la nueva función de fade-out
           >
-            <h1 className="font-black-mango text-4xl md:text-5xl lg:text-6xl uppercase text-white mb-6">
+            <h1 className="font-avenir-medium text-white text-4xl md:text-5xl lg:text-6xl text-center">
               JOYAS A MEDIDA
             </h1>
           </div>
 
           {/* Opening Question */}
           <div 
+            ref={openingQuestionRef}
             className="text-center py-6"
-            style={{ opacity: getOpacityOut(100,250) }}
+            style={{ opacity: getFadeOutOpacity(elementPositions.openingQuestion) }}
           >
-            <h2 className="font-avenir-heavy text-2xl md:text-3xl text-white mb-4">
+            <h2 className="font-avenir-medium text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
             </h2>
             <p className="font-avenir-light text-xl md:text-2xl text-white mb-6">
@@ -90,13 +115,12 @@ const CustomJewelryPage = () => {
           </div>
 
           {/* Process Steps */}
-          <div 
-            className="space-y-16 py-8"
-          >
+          <div className="space-y-16 py-8">
             {/* 1. Hablemos de tu idea */}
             <div 
+              ref={step1Ref}
               className="space-y-4"
-              style={{ opacity: getOpacityInOut(100, 200, 400, 450) }}
+              style={{ opacity: getResponsiveOpacity(elementPositions.step1) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
@@ -108,8 +132,9 @@ const CustomJewelryPage = () => {
             
             {/* 2. Diseñamos juntos */}
             <div 
+              ref={step2Ref}
               className="space-y-4"
-              style={{ opacity: getOpacityInOut(200, 300, 500, 550) }}
+              style={{ opacity: getResponsiveOpacity(elementPositions.step2) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 2. Diseñamos juntos
@@ -121,8 +146,9 @@ const CustomJewelryPage = () => {
             
             {/* 3. Elaboración de la joya */}
             <div 
+              ref={step3Ref}
               className="space-y-4"
-              style={{ opacity: getOpacityInOut(300, 400, 650, 670) }}
+              style={{ opacity: getResponsiveOpacity(elementPositions.step3) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 3. Elaboración de la joya
@@ -134,8 +160,9 @@ const CustomJewelryPage = () => {
             
             {/* 4. Envío */}
             <div 
+              ref={step4Ref}
               className="space-y-4"
-              style={{ opacity: getOpacityInOut(400, 500, 750, 770) }}
+              style={{ opacity: getResponsiveOpacity(elementPositions.step4) }}
             >
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 4. Envío
@@ -147,9 +174,10 @@ const CustomJewelryPage = () => {
           </div>
 
           {/* Closing */}
-          <div 
+          <div
+            ref={closingRef}
             className="text-center py-20"
-            style={{ opacity: getOpacityInOut(500, 600, 900, 1100) }}
+            style={{ opacity: getResponsiveOpacity(elementPositions.closing) }}
           >
             <p className="font-avenir-book text-xl md:text-2xl text-white leading-relaxed">
               Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos juntos una joya.
