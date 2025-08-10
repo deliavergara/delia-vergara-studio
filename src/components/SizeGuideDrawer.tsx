@@ -79,22 +79,18 @@ export const SizeGuideDrawer = ({ isOpen, onClose }: SizeGuideDrawerProps) => {
             <ol className="space-y-2 text-sm font-avenir-light text-foreground leading-relaxed pl-4">
               <li>1. Busca un anillo que te quede bien en el dedo donde quieras usar la nueva joya.</li>
               <li>2. Mide el diámetro interior del anillo (la parte de adentro, de lado a lado, sin contar el grosor).</li>
+              <div className="flex justify-center my-6">
+                <img
+                  src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ilustracion%20guia%20de%20talla%20anillos.PNG")}
+                  alt="Ilustración de cómo medir el anillo"
+                  className="w-64 h-auto"
+                />
+              </div>
               <li>3. Ingresa los milímetros que obtengas a continuación.</li>
             </ol>
             
-            <div className="flex justify-center my-6">
-              <img
-                src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ilustracion%20guia%20de%20talla%20anillos.PNG")}
-                alt="Ilustración de cómo medir el anillo"
-                className="w-80 h-auto"
-              />
-            </div>
-            
             {/* Calculadora de talla */}
             <div className="space-y-4">
-              <p className="font-avenir-light text-sm text-foreground leading-relaxed">
-                Calcula tu talla ingresando el diámetro interior de tu anillo (mm).
-              </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-end">
                 <div className="sm:col-span-2 space-y-2">
                   <Label htmlFor="ring-diameter" className="font-avenir-medium text-xs uppercase tracking-wide text-muted-foreground">Diámetro interior (mm)</Label>
