@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
 import FixedSocialButtons from "@/components/FixedSocialButtons";
-
 const HowToBuyPage = () => {
   const navigate = useNavigate();
   const [scrollY, setScrollY] = useState(0);
@@ -63,7 +62,7 @@ const HowToBuyPage = () => {
             <h1 className="font-avenir-book text-white text-4xl md:text-5xl lg:text-6xl text-center">
               CÓMO COMPRAR
               <br />
-              <span className="block font-avenir-book mt-8 italic text-2xl md:text-3xl lg:text-4xl">En tres pasos</span>
+              <span className="block font-avenir-book mt-8 italic text-2xl md:text-3xl lg:text-5xl">En tres pasos</span>
             </h1>
           </div>
         </section>
