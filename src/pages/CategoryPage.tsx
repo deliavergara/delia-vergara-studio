@@ -80,11 +80,11 @@ const CategoryPage = () => {
                 />
               </div>
               <h3 
-                style={{
+                /*style={{
                   fontFamily: 'Roboto, sans-serif',
                   fontWeight: '400'
-                }} 
-                className="text-product-title tracking-title text-base font-normal text-left text-slate-950">
+                }}*/ 
+                className="text-product-title tracking-title text-base font-normal text-left text-slate-950 font-avenir-thin">
                 {item.name}
               </h3>
             </div>
