@@ -37,8 +37,10 @@ const productMapping = {
   "BLANCAANILLOUNICO": {
     folder: "Anillos/Blanca", 
     images: [
-      "1.Anillo plata pidra azul.jpg",
-      "3. Anillo oro piedra verde.jpg"
+      "blanca_1.jpg",
+      "blanca_2.jpg",
+      "blanca_3.jpg",
+      "blanca_4.jpg"
     ],
     category: "anillos",
     name: "Blanca",
@@ -47,8 +49,9 @@ const productMapping = {
   "MAGMAANILLOUNICO": {
     folder: "Anillos/Magma",
     images: [
-      "1.Anillo magma.jpg",
-      "2.Anillo magma .jpg"
+      "magma_1.jpg",
+      "magma_2.jpg",
+      "magma_3.jpg"
     ],
     category: "anillos",
     name: "Magma",
@@ -123,8 +126,10 @@ const productMapping = {
   "PARFRACTALPENDIENTEUNO": {
     folder: "Pendientes/Un fractal",
     images: [
-      "1.pendiente un fractal plata.jpg",
-      "2.Pendiente un fractal oro.jpg"
+      "unfractal_1.jpg",
+      "unfractal_2.jpg",
+      "unfractal_3.jpg",
+      "unfractal_4.jpg"
     ],
     category: "pendientes",
     name: "Un Fractal",
