@@ -19,17 +19,20 @@ const Index = () => {
       <AboutSection />
       
       {/* Brand intro text */}
-      <section aria-label="Presentación de marca" className="bg-background">
-        <div className="container mx-auto px-6 max-w-3xl pt-6 pb-12 text-center">
-          <p className="font-avenir-light font-light text-muted-foreground tracking-body leading-relaxed">
-            Delia Vergara es una marca de diseño de joyería con
-            <br />
-            esencia orgánica. Piezas únicas, elaboradas a mano
-            <br />
-            en mi taller en Valencia, España.
-          </p>
-        </div>
-      </section>
+        <section aria-label="Acerca de mí" className="bg-background">
+          <div className="container mx-auto px-6 max-w-3xl pt-6 pb-12 text-center">
+            <h2 className="font-avenir-black font-black text-foreground tracking-wide mb-3">Acerca de mí</h2>
+            <p className="font-avenir-light font-light text-muted-foreground tracking-body leading-relaxed">
+              Siempre soñé con ser joyera. Desde muy pequeña me fascinaban las joyas y la idea de crearlas con mis propias manos.
+              <br />
+              Viví la mitad de mi vida en Chile y la otra en España. Estudié diseño y, al terminar la carrera, me casé y nos mudamos a Valencia, donde comencé a aprender joyería.
+              <br />
+              Hoy sigo formándome, tomando cursos y perfeccionando mi técnica. Estoy viviendo mi sueño: crear joyas mientras formo mi familia en una ciudad que adoro.
+              <br />
+              Busco que mis joyas sean de diseño, con esencia orgánica. Cada una elaborada a mano, lo que las hace completamente únicas.
+            </p>
+          </div>
+        </section>
       
       <CategoryGrid />
       
