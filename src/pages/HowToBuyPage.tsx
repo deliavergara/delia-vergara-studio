@@ -72,7 +72,7 @@ const HowToBuyPage = () => {
         backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/0_persona.jpg")})`,
         opacity: 0.90
       }}>
-          <div className="screen-content justify-start items-center">
+          <div className="screen-content justify-start items-center pl-[6vw] md:pl-[8vw] lg:pl-[10vw]">
             <div className="max-w-2xl">
               <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-8">
                 1 Elige tu tipo de joya
@@ -107,7 +107,7 @@ const HowToBuyPage = () => {
         backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/2_medalla.jpg")})`,
         opacity: 0.90
       }}>
-          <div className="screen-content justify-start items-center">
+          <div className="screen-content justify-start items-center pl-[6vw] md:pl-[8vw] lg:pl-[10vw]">
             <div className="max-w-2xl">
               <h2 className="font-avenir-heavy text-white text-xl md:text-2xl mb-8">
                 2 Contacto y confirmación
@@ -130,7 +130,7 @@ const HowToBuyPage = () => {
         backgroundImage: `url(${buildGitHubRawUrl("public/lovable-uploads/Como%20comprar/3_caja.jpg")})`,
         opacity: 0.90
       }}>
-          <div className="screen-content justify-start items-center">
+          <div className="screen-content justify-start items-center pl-[6vw] md:pl-[8vw] lg:pl-[10vw]">
             <div className="max-w-2xl">
               <h2 className="font-avenir-heavy text-white text-xl md:text-2xl mb-8">
                 3 Pago y envío

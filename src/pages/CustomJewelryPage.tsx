@@ -3,7 +3,15 @@ import { buildGitHubRawUrl } from "@/lib/config";
 import { useEffect, useState, useRef } from "react";
 
 const CustomJewelryPage = () => {
-  const [elementPositions, setElementPositions] = useState({});
+  const [elementPositions, setElementPositions] = useState<{
+    title?: number;
+    openingQuestion?: number;
+    step1?: number;
+    step2?: number;
+    step3?: number;
+    step4?: number;
+    closing?: number;
+  }>({});
   
   // Referencias para cada elemento de texto que se va a animar
   const titleRef = useRef(null);
@@ -93,7 +101,7 @@ const CustomJewelryPage = () => {
           <div 
             ref={titleRef}
             className="text-center py-12"
-            style={{ opacity: getFadeOutOpacity(elementPositions.title) }} // <-- Usa la nueva función de fade-out
+            style={{ opacity: getFadeOutOpacity(elementPositions.title) }}
           >
             <h1 className="font-avenir-medium text-white text-4xl md:text-5xl lg:text-6xl text-center">
               JOYAS A MEDIDA
