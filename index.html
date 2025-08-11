@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- Black Mango Font -->
     <style>
       @font-face {
         font-family: 'Black Mango Regular';
@@ -24,13 +23,67 @@
         font-style: normal;
       }
     </style>
+    
     <meta property="og:title" content="Delia Vergara | Joyería Artesanal" />
     <meta property="og:description" content="Joyería artesanal con esencia orgánica. Piezas únicas elaboradas a mano en Valencia, España." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://raw.githubusercontent.com/deliavergara/delia-vergara-studio/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo_letras_naranjas.jpg" />
+    <meta property="og:url" content="https://deliavergarajoyas.com/" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://raw.githubusercontent.com/deliavergara/delia-vergara-studio/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo_letras_naranjas.jpg" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "Delia Vergara Joyas",
+          "url": "https://deliavergarajoyas.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://deliavergarajoyas.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "Delia Vergara Joyas",
+          "image": "https://raw.githubusercontent.com/deliavergara/delia-vergara-studio/main/public/lovable-uploads/Material%20de%20Apoyo/Logo/logo_letras_naranjas.jpg",
+          "url": "https://deliavergarajoyas.com/",
+          "telephone": "+34 123 456 789",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle de Ejemplo, 1",
+            "addressLocality": "Valencia",
+            "addressRegion": "Comunidad Valenciana",
+            "postalCode": "46001",
+            "addressCountry": "ES"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.4699,
+            "longitude": -0.3774
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>
