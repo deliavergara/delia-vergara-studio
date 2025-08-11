@@ -68,8 +68,8 @@ const productMapping = {
   "NUBEANILLOUNICO": {
     folder: "Anillos/Nube",
     images: [
-      "nube_1.jpg",
       "nube_2.jpg",
+      "nube_1.jpg",
       "nube_3.jpg"
     ],
     category: "anillos",
