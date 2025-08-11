@@ -129,7 +129,7 @@ const productMapping = {
       "unfractal_1.jpg",
       "unfractal_2.jpg",
       "unfractal_3.jpg",
-      "unfractal_4.jpg"
+      "unfractal_4.mov"
     ],
     category: "pendientes",
     name: "Un Fractal",
