@@ -169,20 +169,20 @@ const ProductPage = () => {
                   for (const line of lines) {
                     const trimmedLine = line.trim();
                     if (!trimmedLine) continue;
-                    
-                    // Detectar líneas técnicas comunes
-                    if (trimmedLine.toLowerCase().includes('hecho') || 
-                        trimmedLine.toLowerCase().includes('hechos') || 
-                        trimmedLine.toLowerCase().includes('hechas') || 
-                        trimmedLine.toLowerCase().includes('disponible') || 
-                        trimmedLine.toLowerCase().includes('disponibles') || 
-                        trimmedLine.toLowerCase().includes('contáctame') ||
-                        trimmedLine.toLowerCase().includes('contactame') ||
-                        trimmedLine.toLowerCase().includes('incluye cadena')) {
+
+                    // Detectar frases técnicas dentro de la misma línea y separar
+                    const technicalPattern = /(hech[oa]s?|disponibles?|disponible|contáctame|contactame|incluye cadena)/i;
+                    const match = trimmedLine.match(technicalPattern);
+
+                    if (match) {
+                      const idx = trimmedLine.toLowerCase().indexOf(match[0].toLowerCase());
+                      const before = trimmedLine.slice(0, idx).trim();
+                      const after = trimmedLine.slice(idx).trim();
+
+                      if (before) descriptionLines.push(before);
+                      if (after) technicalLines.push(after);
                       foundTechnical = true;
-                    }
-                    
-                    if (foundTechnical) {
+                    } else if (foundTechnical) {
                       technicalLines.push(trimmedLine);
                     } else {
                       descriptionLines.push(trimmedLine);
