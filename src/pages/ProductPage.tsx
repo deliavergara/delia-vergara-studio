@@ -171,13 +171,14 @@ const ProductPage = () => {
                     if (!trimmedLine) continue;
                     
                     // Detectar líneas técnicas comunes
-                    if (trimmedLine.includes('Hecho') || 
-                        trimmedLine.includes('Hechos') || 
-                        trimmedLine.includes('Hechas') || 
-                        trimmedLine.includes('Disponible') || 
-                        trimmedLine.includes('Disponibles') || 
-                        trimmedLine.includes('Contáctame') ||
-                        trimmedLine.includes('Incluye cadena')) {
+                    if (trimmedLine.toLowerCase().includes('hecho') || 
+                        trimmedLine.toLowerCase().includes('hechos') || 
+                        trimmedLine.toLowerCase().includes('hechas') || 
+                        trimmedLine.toLowerCase().includes('disponible') || 
+                        trimmedLine.toLowerCase().includes('disponibles') || 
+                        trimmedLine.toLowerCase().includes('contáctame') ||
+                        trimmedLine.toLowerCase().includes('contactame') ||
+                        trimmedLine.toLowerCase().includes('incluye cadena')) {
                       foundTechnical = true;
                     }
                     
