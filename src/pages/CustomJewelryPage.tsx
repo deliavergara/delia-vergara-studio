@@ -45,7 +45,7 @@ const CustomJewelryPage = () => {
     const distanceToCenter = Math.abs(elementTop - centerPoint);
     
     // El efecto empieza a desvanecerse cuando el elemento está a 1/3 de la altura de la ventana del centro
-    const fadeRange = viewportHeight / 3;
+    const fadeRange = viewportHeight / 2;
     
     const opacity = 1 - Math.min(1, distanceToCenter / fadeRange);
     return Math.max(0, opacity);
