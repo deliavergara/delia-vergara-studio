@@ -41,7 +41,7 @@ const CustomJewelryPage = () => {
     if (elementTop === null || elementTop === undefined) return 0;
     
     const viewportHeight = window.innerHeight;
-    const centerPoint = viewportHeight / 2;
+    const centerPoint = viewportHeight / 3;
     const distanceToCenter = Math.abs(elementTop - centerPoint);
     
     // El efecto empieza a desvanecerse cuando el elemento está a 1/3 de la altura de la ventana del centro
