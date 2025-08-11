@@ -19,7 +19,7 @@ const Index = () => {
       {/* Brand intro text */}
         <section aria-label="Acerca de mí" className="bg-background">
           <div className="container mx-auto px-6 max-w-3xl pt-6 pb-12 text-left">
-            <h2 className="font-avenir-medium text-muted-foreground tracking-wide mb-3">Acerca de mí</h2>
+            <h2 className="font-avenir-medium text-muted-foreground tracking-wide mb-3 font-semibold">Acerca de mí</h2>
             <p className="font-avenir-light font-light text-muted-foreground tracking-body leading-relaxed">
               Siempre soñé con ser joyera. Estudié diseño y, al llegar a Valencia, comencé a aprender este oficio que me apasiona.
               <br />
