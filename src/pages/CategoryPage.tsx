@@ -46,7 +46,7 @@ const CategoryPage = () => {
 
         {/* Logo superpuesto más abajo y más grande */}
         <div className="absolute top-20 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer hover:opacity-70 transition-elegant" onClick={() => navigate("/")}>
-          <img src={buildGitHubRawUrl(`public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20${categoryId.toUpperCase()}.png`)} alt={`Logo ${category.name}`} className="w-[80vw] max-w-[28rem] h-auto" />
+          <img src={buildGitHubRawUrl(`public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20${categoryId.toUpperCase()}.png`)} alt={`Logo ${category.name}`} className="w-[70vw] max-w-[22rem] h-auto" />
         </div>
       </div>
 
@@ -64,11 +64,7 @@ const CategoryPage = () => {
               opacity: 0.95
             }} />
               </div>
-              <h3
-          /*style={{
-            fontFamily: 'Roboto, sans-serif',
-            fontWeight: '400'
-          }}*/ className="text-product-title tracking-title text-left font-avenir mb-0.5 font-normal text-base">
+              <h3 className="font-avenir font-medium text-lg tracking-title mb-0.5 text-left">
                 {item.name}
               </h3>
             </div>)}
