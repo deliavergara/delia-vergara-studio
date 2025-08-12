@@ -62,7 +62,7 @@ const HowToBuyPage = () => {
             <h1 className="font-avenir-medium text-white text-4xl md:text-5xl lg:text-6xl text-center">
               CÓMO COMPRAR
               <br />
-              <span className="block font-avenir-book mt-8 text-2xl md:text-3xl lg:text-5xl">En tres pasos</span>
+              <span className="block font-avenir-book mt-8 text-2xl md:text-3xl lg:text-5xl">en tres pasos</span>
             </h1>
           </div>
         </section>
