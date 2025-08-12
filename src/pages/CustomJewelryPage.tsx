@@ -1,7 +1,6 @@
 import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { buildGitHubRawUrl } from "@/lib/config";
 import { useEffect, useState, useRef } from "react";
-
 const CustomJewelryPage = () => {
   const [elementPositions, setElementPositions] = useState<{
     title?: number;
@@ -12,7 +11,7 @@ const CustomJewelryPage = () => {
     step4?: number;
     closing?: number;
   }>({});
-  
+
   // Referencias para cada elemento de texto que se va a animar
   const titleRef = useRef(null);
   const openingQuestionRef = useRef(null);
@@ -23,34 +22,29 @@ const CustomJewelryPage = () => {
   const closingRef = useRef(null);
 
   // Nueva función para un efecto de fade-out (para el título y pregunta inicial)
-  const getFadeOutOpacity = (elementTop) => {
+  const getFadeOutOpacity = elementTop => {
     if (elementTop === null || elementTop === undefined) return 1;
     const viewportHeight = window.innerHeight;
     const fadeStart = viewportHeight * 0.2; // Comienza a desvanecerse cuando el elemento está al 20% desde arriba
     const fadeEnd = viewportHeight * 0.6; // Desaparece al llegar al 60% desde arriba
     const scrollDistance = fadeEnd - fadeStart;
-    
     if (elementTop > fadeEnd) return 0;
     if (elementTop < fadeStart) return 1;
-    
     return 1 - (elementTop - fadeStart) / scrollDistance;
   };
 
   // Nueva función para un efecto de fade-in y fade-out (para los 4 pasos)
-  const getResponsiveOpacity = (elementTop) => {
+  const getResponsiveOpacity = elementTop => {
     if (elementTop === null || elementTop === undefined) return 0;
-    
     const viewportHeight = window.innerHeight;
     const centerPoint = viewportHeight / 3;
     const distanceToCenter = Math.abs(elementTop - centerPoint);
-    
+
     // El efecto empieza a desvanecerse cuando el elemento está a 1/3 de la altura de la ventana del centro
     const fadeRange = viewportHeight / 3;
-    
     const opacity = 1 - Math.min(1, distanceToCenter / fadeRange);
     return Math.max(0, opacity);
   };
-
   useEffect(() => {
     const handleScroll = () => {
       const positions = {
@@ -60,35 +54,23 @@ const CustomJewelryPage = () => {
         step2: step2Ref.current?.getBoundingClientRect().top,
         step3: step3Ref.current?.getBoundingClientRect().top,
         step4: step4Ref.current?.getBoundingClientRect().top,
-        closing: closingRef.current?.getBoundingClientRect().top,
+        closing: closingRef.current?.getBoundingClientRect().top
       };
       setElementPositions(positions);
     };
-
     window.addEventListener('scroll', handleScroll);
     handleScroll();
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  return (
-    <div className="relative">
+  return <div className="relative">
       <HamburgerMenu />
       
       {/* Video Background */}
       <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-          style={{ opacity: 0.90 }}
-        >
-          <source 
-            src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} 
-            type="video/mp4" 
-          />
+        <video autoPlay loop muted playsInline className="w-full h-full object-cover" style={{
+        opacity: 0.90
+      }}>
+          <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/5"></div>
       </div>
@@ -98,22 +80,18 @@ const CustomJewelryPage = () => {
         <div className="max-w-2xl mx-auto px-6 space-y-8">
           
           {/* Title */}
-          <div 
-            ref={titleRef}
-            className="text-center py-12"
-            style={{ opacity: getFadeOutOpacity(elementPositions.title) }}
-          >
-            <h1 className="font-avenir-medium text-white text-4xl md:text-5xl lg:text-6xl text-center">
+          <div ref={titleRef} className="text-center py-12" style={{
+          opacity: getFadeOutOpacity(elementPositions.title)
+        }}>
+            <h1 className="font-avenir-medium text-white text-4xl lg:text-6xl text-center font-medium md:text-4xl">
               JOYAS A MEDIDA
             </h1>
           </div>
 
           {/* Opening Question */}
-          <div 
-            ref={openingQuestionRef}
-            className="text-center py-6"
-            style={{ opacity: getFadeOutOpacity(elementPositions.openingQuestion) }}
-          >
+          <div ref={openingQuestionRef} className="text-center py-6" style={{
+          opacity: getFadeOutOpacity(elementPositions.openingQuestion)
+        }}>
             <h2 className="font-avenir-medium text-2xl md:text-3xl text-white mb-4">
               ¿Tienes una idea en mente?
             </h2>
@@ -125,11 +103,9 @@ const CustomJewelryPage = () => {
           {/* Process Steps */}
           <div className="space-y-16 py-8">
             {/* 1. Hablemos de tu idea */}
-            <div 
-              ref={step1Ref}
-              className="space-y-4"
-              style={{ opacity: getResponsiveOpacity(elementPositions.step1) }}
-            >
+            <div ref={step1Ref} className="space-y-4" style={{
+            opacity: getResponsiveOpacity(elementPositions.step1)
+          }}>
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 1. Hablemos de tu idea
               </h3>
@@ -139,11 +115,9 @@ const CustomJewelryPage = () => {
             </div>
             
             {/* 2. Diseñamos juntos */}
-            <div 
-              ref={step2Ref}
-              className="space-y-4"
-              style={{ opacity: getResponsiveOpacity(elementPositions.step2) }}
-            >
+            <div ref={step2Ref} className="space-y-4" style={{
+            opacity: getResponsiveOpacity(elementPositions.step2)
+          }}>
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 2. Diseñamos juntos
               </h3>
@@ -153,11 +127,9 @@ const CustomJewelryPage = () => {
             </div>
             
             {/* 3. Elaboración de la joya */}
-            <div 
-              ref={step3Ref}
-              className="space-y-4"
-              style={{ opacity: getResponsiveOpacity(elementPositions.step3) }}
-            >
+            <div ref={step3Ref} className="space-y-4" style={{
+            opacity: getResponsiveOpacity(elementPositions.step3)
+          }}>
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 3. Elaboración de la joya
               </h3>
@@ -167,11 +139,9 @@ const CustomJewelryPage = () => {
             </div>
             
             {/* 4. Envío */}
-            <div 
-              ref={step4Ref}
-              className="space-y-4"
-              style={{ opacity: getResponsiveOpacity(elementPositions.step4) }}
-            >
+            <div ref={step4Ref} className="space-y-4" style={{
+            opacity: getResponsiveOpacity(elementPositions.step4)
+          }}>
               <h3 className="font-avenir-book text-lg md:text-xl text-white font-bold">
                 4. Envío
               </h3>
@@ -182,19 +152,15 @@ const CustomJewelryPage = () => {
           </div>
 
           {/* Closing */}
-          <div
-            ref={closingRef}
-            className="text-center py-20"
-            style={{ opacity: getResponsiveOpacity(elementPositions.closing) }}
-          >
+          <div ref={closingRef} className="text-center py-20" style={{
+          opacity: getResponsiveOpacity(elementPositions.closing)
+        }}>
             <p className="font-avenir-book text-xl md:text-2xl text-white leading-relaxed">
               Si tienes alguna idea, no dudes en contactarme. Hablemos y diseñemos juntos una joya.
             </p>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default CustomJewelryPage;
