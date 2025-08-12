@@ -68,7 +68,7 @@ const CustomJewelryPage = () => {
       {/* Video Background */}
       <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
         <video autoPlay loop muted playsInline className="w-full h-full object-cover" style={{
-        opacity: 0.90
+        opacity: 0.95
       }}>
           <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} type="video/mp4" />
         </video>
@@ -83,7 +83,7 @@ const CustomJewelryPage = () => {
           <div ref={titleRef} className="text-center py-12" style={{
           opacity: getFadeOutOpacity(elementPositions.title)
         }}>
-            <h1 className="font-avenir-medium text-white text-4xl lg:text-6xl text-center font-medium md:text-4xl">
+            <h1 className="font-avenir-medium text-white text-4xl md:text-5xl lg:text-6xl text-center">
               JOYAS A MEDIDA
             </h1>
           </div>
