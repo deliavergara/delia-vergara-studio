@@ -84,7 +84,7 @@ const CategoryPage = () => {
                   fontFamily: 'Roboto, sans-serif',
                   fontWeight: '400'
                 }}*/ 
-                className="text-product-title tracking-title text-base font-normal text-left text-slate-950 font-avenir-thin">
+                className="text-product-title tracking-title text-left font-avenir font-medium text-lg mb-0.5">
                 {item.name}
               </h3>
             </div>

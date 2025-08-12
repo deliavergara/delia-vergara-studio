@@ -120,7 +120,7 @@ export const SizeGuideDrawer = ({
       <DrawerContent className="h-[90vh] max-w-md mx-auto">
         <DrawerHeader className="border-b pb-4">
           <div className="flex items-center justify-between">
-            <DrawerTitle className="font-avenir-medium text-lg text-foreground font-normal">
+            <DrawerTitle className="font-avenir font-medium text-lg tracking-title mb-0.5">
               Guía de tallas de anillos
             </DrawerTitle>
             <DrawerClose asChild>
@@ -153,7 +153,11 @@ export const SizeGuideDrawer = ({
                     <span className="absolute inset-y-0 right-3 flex items-center text-muted-foreground text-xs">mm</span>
                   </div>
                 </div>
-                <button type="button" onClick={handleCalculate} className="w-full px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm border-border hover:border-muted-foreground/50">
+                <button
+                  type="button"
+                  onClick={handleCalculate}
+                  className="w-full px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm border-border hover:border-muted-foreground/50 hover:bg-muted/60 hover:text-foreground"
+                >
                   Calcular talla
                 </button>
               </div>
