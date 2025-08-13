@@ -73,27 +73,27 @@ const HowToBuyPage = () => {
         opacity: 0.95
       }}>
           <div className="screen-content justify-start items-start pl-[6vw] md:pl-[8vw] lg:pl-[10vw] pt-[15vh]">
-            <div className="max-w-lg text-left -ml-4">
-              <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-6">
+            <div className="max-w-lg text-left">
+              <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-4">
                 1 Elige tu tipo de joya
               </h2>
               
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div>
-                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">En stock:</h3>
-                  <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
+                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-1">En stock:</h3>
+                  <p className="font-avenir-light text-white text-sm md:text-base leading-snug">
                     Piezas listas para envío inmediato desde Valencia (España) o Santiago (Chile).
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">Por encargo:</h3>
-                  <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
+                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-1">Por encargo:</h3>
+                  <p className="font-avenir-light text-white text-sm md:text-base leading-snug">
                     La mayoría de mis diseños se pueden volver a producir especialmente para ti.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">Personalizada:</h3>
-                  <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
+                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-1">Personalizada:</h3>
+                  <p className="font-avenir-light text-white text-sm md:text-base leading-snug">
                     Si tienes una idea, hablemos para crear juntos una joya completamente nueva.
                   </p>
                 </div>
@@ -108,16 +108,16 @@ const HowToBuyPage = () => {
         opacity: 0.95
       }}>
           <div className="screen-content justify-start items-start pl-[6vw] md:pl-[8vw] lg:pl-[10vw] pt-[15vh]">
-            <div className="max-w-lg text-left -ml-4">
-              <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-6">
+            <div className="max-w-lg text-left">
+              <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-3">
                 2 Contacto y confirmación
               </h2>
               
-              <div className="space-y-4">
-                <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
+              <div className="space-y-2">
+                <p className="font-avenir-light text-white text-sm md:text-base leading-snug">
                   Escríbeme para que conversemos sobre la pieza que te interesa.
                 </p>
-                <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
+                <p className="font-avenir-light text-white text-sm md:text-base leading-snug">
                   Confirmaremos juntos los detalles, la talla, el precio final y los tiempos de creación o envío.
                 </p>
               </div>
@@ -131,16 +131,16 @@ const HowToBuyPage = () => {
         opacity: 0.95
       }}>
           <div className="screen-content justify-start items-start pl-[6vw] md:pl-[8vw] lg:pl-[10vw] pt-[15vh]">
-            <div className="max-w-lg text-left -ml-4">
-              <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-6">
+            <div className="max-w-lg text-left">
+              <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-3">
                 3 Pago y envío
               </h2>
               
-              <div className="space-y-4">
-                <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
+              <div className="space-y-2">
+                <p className="font-avenir-light text-white text-sm md:text-base leading-snug">
                   El pago se realiza por transferencia bancaria.
                 </p>
-                <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
+                <p className="font-avenir-light text-white text-sm md:text-base leading-snug">
                   Una vez lista, preparo y envío tu joya a tu domicilio.
                 </p>
               </div>
