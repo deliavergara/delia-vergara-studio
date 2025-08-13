@@ -131,7 +131,7 @@ const HowToBuyPage = () => {
         opacity: 0.95
       }}>
           <div className="screen-content justify-start items-start pl-[6vw] md:pl-[8vw] lg:pl-[10vw] pt-[15vh]">
-            <div className="max-w-2xl text-left">
+            <div className="max-w-lg text-left -ml-4">
               <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-6">
                 3 Pago y envío
               </h2>
