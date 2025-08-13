@@ -68,76 +68,22 @@ const ProductPage = () => {
             {/* Galería de imágenes */}
             <div className="space-y-6">
               {/* Imagen principal con arrastre */}
-              <div
-                ref={dragRef}
-                className="aspect-[4/5] bg-accent rounded-sm overflow-hidden max-w-md mx-auto cursor-grab active:cursor-grabbing"
-                onMouseDown={handleDragStart}
-                onMouseUp={handleDragEnd}
-                onTouchStart={handleDragStart}
-                onTouchEnd={handleDragEnd}
-              >
+              <div ref={dragRef} className="aspect-[4/5] bg-accent rounded-sm overflow-hidden max-w-md mx-auto cursor-grab active:cursor-grabbing" onMouseDown={handleDragStart} onMouseUp={handleDragEnd} onTouchStart={handleDragStart} onTouchEnd={handleDragEnd}>
                 {(() => {
-                  const media = product.images[currentImageIndex];
-                  const isVideo = /\.(mp4|mov)$/i.test(media);
-                  return isVideo ? (
-                    <video
-                      src={media}
-                      className="w-full h-full object-cover"
-                      autoPlay
-                      muted
-                      playsInline
-                      loop
-                      disablePictureInPicture
-                      controlsList="nodownload noplaybackrate nofullscreen noremoteplayback"
-                    />
-                  ) : (
-                    <img
-                      src={media}
-                      alt={product.name}
-                      className="w-full h-full object-cover select-none"
-                      style={{ opacity: '0.93' }}
-                      draggable={false}
-                    />
-                  );
-                })()}
+                const media = product.images[currentImageIndex];
+                const isVideo = /\.(mp4|mov)$/i.test(media);
+                return isVideo ? <video src={media} className="w-full h-full object-cover" autoPlay muted playsInline loop disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen noremoteplayback" /> : <img src={media} alt={product.name} className="w-full h-full object-cover select-none" style={{
+                  opacity: '0.93'
+                }} draggable={false} />;
+              })()}
               </div>
               
               {/* Galería de miniaturas */}
-              {product.images.length > 1 && (
-                <div className="flex gap-3 justify-center overflow-x-auto pb-2">
-                  {product.images.map((image, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={cn(
-                        "flex-shrink-0 w-16 h-16 rounded-sm overflow-hidden border-2 transition-all duration-200",
-                        currentImageIndex === index
-                          ? "border-muted-foreground scale-105"
-                          : "border-border hover:border-muted-foreground/50"
-                      )}
-                    >
-                      {/\.(mp4|mov)$/i.test(image) ? (
-                        <video
-                          src={image}
-                          className="w-full h-full object-cover"
-                          autoPlay
-                          muted
-                          playsInline
-                          loop
-                          disablePictureInPicture
-                          controlsList="nodownload noplaybackrate nofullscreen noremoteplayback"
-                        />
-                      ) : (
-                        <img
-                          src={image}
-                          alt={`${product.name} ${index + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-                      )}
-                    </button>
-                  ))}
-                </div>
-              )}
+              {product.images.length > 1 && <div className="flex gap-3 justify-center overflow-x-auto pb-2">
+                  {product.images.map((image, index) => <button key={index} onClick={() => setCurrentImageIndex(index)} className={cn("flex-shrink-0 w-16 h-16 rounded-sm overflow-hidden border-2 transition-all duration-200", currentImageIndex === index ? "border-muted-foreground scale-105" : "border-border hover:border-muted-foreground/50")}>
+                      {/\.(mp4|mov)$/i.test(image) ? <video src={image} className="w-full h-full object-cover" autoPlay muted playsInline loop disablePictureInPicture controlsList="nodownload noplaybackrate nofullscreen noremoteplayback" /> : <img src={image} alt={`${product.name} ${index + 1}`} className="w-full h-full object-cover" />}
+                    </button>)}
+                </div>}
             </div>
 
             {/* Detalles del producto */}
@@ -148,67 +94,52 @@ const ProductPage = () => {
               </h1>
               
               {/* Guía de tallas para anillos */}
-              {product.category === 'anillos' && (
-                <button
-                  onClick={() => setShowSizeGuide(true)}
-                  className="font-avenir-medium text-sm text-muted-foreground hover:text-foreground transition-colors underline decoration-1 underline-offset-4 hover:decoration-2"
-                >
+              {product.category === 'anillos' && <button onClick={() => setShowSizeGuide(true)} className="font-avenir-medium text-sm text-muted-foreground hover:text-foreground transition-colors underline decoration-1 underline-offset-4 hover:decoration-2">
                   Guía de tallas
-                </button>
-              )}
+                </button>}
               
               {/* Descripción */}
               <div className="-mt-6 space-y-4">
                 {(() => {
-                  // Separar la descripción principal de los detalles técnicos
-                  const lines = product.description.split('\n');
-                  const descriptionLines = [];
-                  const technicalLines = [];
-                  let foundTechnical = false;
-                  
-                  for (const line of lines) {
-                    const trimmedLine = line.trim();
-                    if (!trimmedLine) continue;
+                // Separar la descripción principal de los detalles técnicos
+                const lines = product.description.split('\n');
+                const descriptionLines = [];
+                const technicalLines = [];
+                let foundTechnical = false;
+                for (const line of lines) {
+                  const trimmedLine = line.trim();
+                  if (!trimmedLine) continue;
 
-                    // Detectar frases técnicas dentro de la misma línea y separar
-                    const technicalPattern = /(hech[oa]s?|disponibles?|disponible|contáctame|contactame|incluye cadena)/i;
-                    const match = trimmedLine.match(technicalPattern);
-
-                    if (match) {
-                      const idx = trimmedLine.toLowerCase().indexOf(match[0].toLowerCase());
-                      const before = trimmedLine.slice(0, idx).trim();
-                      const after = trimmedLine.slice(idx).trim();
-
-                      if (before) descriptionLines.push(before);
-                      if (after) technicalLines.push(after);
-                      foundTechnical = true;
-                    } else if (foundTechnical) {
-                      technicalLines.push(trimmedLine);
-                    } else {
-                      descriptionLines.push(trimmedLine);
-                    }
+                  // Detectar frases técnicas dentro de la misma línea y separar
+                  const technicalPattern = /(hech[oa]s?|disponibles?|disponible|contáctame|contactame|incluye cadena)/i;
+                  const match = trimmedLine.match(technicalPattern);
+                  if (match) {
+                    const idx = trimmedLine.toLowerCase().indexOf(match[0].toLowerCase());
+                    const before = trimmedLine.slice(0, idx).trim();
+                    const after = trimmedLine.slice(idx).trim();
+                    if (before) descriptionLines.push(before);
+                    if (after) technicalLines.push(after);
+                    foundTechnical = true;
+                  } else if (foundTechnical) {
+                    technicalLines.push(trimmedLine);
+                  } else {
+                    descriptionLines.push(trimmedLine);
                   }
-                  
-                  return (
-                    <>
+                }
+                return <>
                       {/* Descripción principal */}
                       <p className="font-avenir-light tracking-body leading-body text-product-description text-sm">
                         {descriptionLines.join(' ')}
                       </p>
                       
                       {/* Detalles técnicos */}
-                      {technicalLines.length > 0 && (
-                        <div className="space-y-0 pt-2">
-                          {technicalLines.map((line, index) => (
-                            <p key={index} className="font-thin tracking-body leading-body text-product-description text-sm italic">
+                      {technicalLines.length > 0 && <div className="space-y-0 pt-2">
+                          {technicalLines.map((line, index) => <p key={index} className="font-thin tracking-body leading-body text-product-description text-sm italic">
                               {line}
-                            </p>
-                          ))}
-                        </div>
-                      )}
-                    </>
-                  );
-                })()}
+                            </p>)}
+                        </div>}
+                    </>;
+              })()}
               </div>
 
               {/* Selectores solo si tiene precios */}
@@ -217,26 +148,18 @@ const ProductPage = () => {
                   <div className="space-y-3">
                     <h3 className="font-avenir-book text-sm text-product-description">Material</h3>
                     <div className="flex gap-3">
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          setSelectedMetal('silver');
-                        }}
-                        className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'silver' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}
-                      >
+                      <button type="button" onClick={e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setSelectedMetal('silver');
+                  }} className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'silver' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
                         Plata
                       </button>
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          setSelectedMetal('gold');
-                        }}
-                        className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'gold' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}
-                      >
+                      <button type="button" onClick={e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setSelectedMetal('gold');
+                  }} className={cn("px-4 py-2 rounded-full border transition-quick font-elegant font-light text-muted-foreground text-sm", selectedMetal === 'gold' ? "border-muted-foreground bg-muted-foreground/10 text-foreground" : "border-border hover:border-muted-foreground/50")}>
                         Oro
                       </button>
                     </div>
@@ -271,19 +194,19 @@ const ProductPage = () => {
           {/* Footer con contacto */}
           <div className="mt-32 pt-12 border-t border-border relative">
             <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
-              <img 
-                src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} 
-                alt="Delia Vergara Isologo" 
-                className="h-32 w-auto opacity-50"
-              />
+              <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} alt="Delia Vergara Isologo" className="h-32 w-auto opacity-50" />
             </div>
             
             <div className="text-center space-y-8 relative z-10 pb-12">
-              <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{color: '#353333'}}>
+              <h2 style={{
+              color: '#353333'
+            }} className="font-avenir-black font-black uppercase mb-8 text-xl">
                 CONTÁCTAME
               </h2>
               
-              <p className="font-avenir-light font-light tracking-body leading-body" style={{color: '#353333'}}>
+              <p className="font-avenir-light font-light tracking-body leading-body" style={{
+              color: '#353333'
+            }}>
                 deliavergara.joyas@gmail.com  <br /> +34 625857127
               </p>
             </div>
@@ -293,10 +216,7 @@ const ProductPage = () => {
       </div>
       
       {/* Size Guide Drawer */}
-      <SizeGuideDrawer
-        isOpen={showSizeGuide}
-        onClose={() => setShowSizeGuide(false)}
-      />
+      <SizeGuideDrawer isOpen={showSizeGuide} onClose={() => setShowSizeGuide(false)} />
     </div>;
 };
 export default ProductPage;
