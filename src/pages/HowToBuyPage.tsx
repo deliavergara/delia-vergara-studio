@@ -73,26 +73,26 @@ const HowToBuyPage = () => {
         opacity: 0.95
       }}>
           <div className="screen-content justify-start items-start pl-[6vw] md:pl-[8vw] lg:pl-[10vw] pt-[15vh]">
-            <div className="max-w-2xl text-left">
-              <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-8">
+            <div className="max-w-lg text-left -ml-4">
+              <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-6">
                 1 Elige tu tipo de joya
               </h2>
               
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-1">En stock:</h3>
+                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">En stock:</h3>
                   <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
                     Piezas listas para envío inmediato desde Valencia (España) o Santiago (Chile).
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-1">Por encargo:</h3>
+                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">Por encargo:</h3>
                   <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
                     La mayoría de mis diseños se pueden volver a producir especialmente para ti.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-1">Personalizada:</h3>
+                  <h3 className="font-avenir-medium text-white text-base md:text-lg mb-2">Personalizada:</h3>
                   <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
                     Si tienes una idea, hablemos para crear juntos una joya completamente nueva.
                   </p>
@@ -108,12 +108,12 @@ const HowToBuyPage = () => {
         opacity: 0.95
       }}>
           <div className="screen-content justify-start items-start pl-[6vw] md:pl-[8vw] lg:pl-[10vw] pt-[15vh]">
-            <div className="max-w-2xl text-left">
+            <div className="max-w-lg text-left -ml-4">
               <h2 className="font-avenir-medium text-white text-xl md:text-2xl mb-6">
                 2 Contacto y confirmación
               </h2>
               
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
                   Escríbeme para que conversemos sobre la pieza que te interesa.
                 </p>
@@ -136,7 +136,7 @@ const HowToBuyPage = () => {
                 3 Pago y envío
               </h2>
               
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <p className="font-avenir-light text-white text-sm md:text-base leading-relaxed">
                   El pago se realiza por transferencia bancaria.
                 </p>
