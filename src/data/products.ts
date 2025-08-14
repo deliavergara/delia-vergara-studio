@@ -244,17 +244,6 @@ const productMapping = {
     name: "Pulsera Fractal",
     description: "Con dos módulos fractales a cada lado, esta pulsera tiene gran carácter y elegancia. Diseñada para hacerse notar, diferente a cualquier otra.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
   },
-  "MITSUROPULSERAUNICO": {
-    folder: "Pulsera/Pulsera Mitsuro",
-    images: [
-      "1.Pulsera Mitsuro plata.jpg",
-      "2.Pulsera mitsuro plata 2.0.jpg",
-      "3.Pulsera mitsuro plata 3.0.jpg"
-    ],
-    category: "pulseras",
-    name: "Pulsera Mitsuro",
-    description: "Modelada a mano con la técnica Mitsuro, esta pulsera de casi 200g de plata se forma a partir de sus propias curvas. Es una pieza única.\nSi quieres la tuya será una nueva, pero igual de especial.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
-  },
   "FACETADAPULSERAUNICO": {
     folder: "Pulsera/Pulsera Facetada",
     images: [
@@ -266,6 +255,17 @@ const productMapping = {
     category: "pulseras",
     name: "Pulsera Facetada",
     description: "Diseñada desde cero cada vez. Cada una con sus propias facetas, única e irrepetible.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
+  },
+  "MITSUROPULSERAUNICO": {
+    folder: "Pulsera/Pulsera Mitsuro",
+    images: [
+      "1.Pulsera Mitsuro plata.jpg",
+      "2.Pulsera mitsuro plata 2.0.jpg",
+      "3.Pulsera mitsuro plata 3.0.jpg"
+    ],
+    category: "pulseras",
+    name: "Pulsera Mitsuro",
+    description: "Modelada a mano con la técnica Mitsuro, esta pulsera de casi 200g de plata se forma a partir de sus propias curvas. Es una pieza única.\nSi quieres la tuya será una nueva, pero igual de especial.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
   },
   "LYRAPULSERAUNICO": {
     folder: "Pulsera/Pulsera Lyra",
