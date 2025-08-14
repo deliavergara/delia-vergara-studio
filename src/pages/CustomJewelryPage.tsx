@@ -72,7 +72,7 @@ const CustomJewelryPage = () => {
       }}>
           <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} type="video/mp4" />
         </video>
-        <div className="absolute inset-0" style={{ backgroundColor: '#7c7c7c', opacity: 0.27 }}></div>
+        <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
       {/* Scrollable Content */}
@@ -83,7 +83,7 @@ const CustomJewelryPage = () => {
           <div ref={titleRef} className="text-center py-12" style={{
           opacity: getFadeOutOpacity(elementPositions.title)
         }}>
-            <h1 className="font-avenir-medium text-white text-4xl lg:text-6xl text-center font-medium md:text-3xl">
+            <h1 className="font-avenir-medium text-white text-4xl lg:text-6xl text-center font-medium md:text-2xl">
               JOYAS A MEDIDA
             </h1>
           </div>
