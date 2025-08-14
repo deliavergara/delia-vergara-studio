@@ -83,7 +83,7 @@ const CustomJewelryPage = () => {
           <div ref={titleRef} className="text-center py-12" style={{
           opacity: getFadeOutOpacity(elementPositions.title)
         }}>
-            <h1 className="font-avenir-medium text-white text-4xl lg:text-6xl text-center md:text-4xl font-medium">
+            <h1 className="font-avenir-medium text-white text-4xl lg:text-6xl text-center font-medium md:text-3xl">
               JOYAS A MEDIDA
             </h1>
           </div>
