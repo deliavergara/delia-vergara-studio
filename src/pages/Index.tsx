@@ -39,7 +39,7 @@ const Index = () => {
             <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} alt="Delia Vergara Isologo" className="h-32 w-auto opacity-50" />
           </div>
           
-          <div className="text-center space-y-8 relative z-10 pb-12">
+          <div className="text-center space-y-8 relative z-10 pb-12 mt-6">
             <h2 className="font-avenir-black font-black text-2xl uppercase mb-8" style={{
             color: '#353333'
           }}>
