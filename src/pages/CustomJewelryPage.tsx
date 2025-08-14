@@ -106,9 +106,7 @@ const CustomJewelryPage = () => {
             <div ref={step1Ref} className="space-y-4" style={{
             opacity: getResponsiveOpacity(elementPositions.step1)
           }}>
-              <h3 className="font-avenir-book text-white font-bold text-base md:text-lg">
-                1. Hablemos de tu idea
-              </h3>
+              <h3 className="font-avenir-book text-white font-bold text-base md:text-lg">Hablemos de tu idea</h3>
               <p className="font-avenir-light text-white leading-relaxed text-base md:text-lg">
                 Conversemos sobre lo que te imaginas, los materiales que te gustan y el presupuesto. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro macizo u otros materiales, según lo que necesites.
               </p>
