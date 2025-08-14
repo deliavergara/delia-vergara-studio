@@ -111,7 +111,7 @@ const ProductPage = () => {
                   if (!trimmedLine) continue;
 
                   // Detectar frases técnicas dentro de la misma línea y separar
-                  const technicalPattern = /(hech[oa]s?|disponibles?|disponible|contáctame|contactame|incluye cadena)/i;
+                  const technicalPattern = /(hech[oa]s?|disponibles?|disponible|incluye cadena)/i;
                   const match = trimmedLine.match(technicalPattern);
                   if (match) {
                     const idx = trimmedLine.toLowerCase().indexOf(match[0].toLowerCase());
@@ -134,7 +134,7 @@ const ProductPage = () => {
                       
                       {/* Detalles técnicos */}
                       {technicalLines.length > 0 && <div className="space-y-0 pt-2">
-                          {technicalLines.map((line, index) => <p key={index} className="font-thin tracking-body leading-body text-product-description text-sm italic">
+                          {technicalLines.filter(line => !/(contáctame|contactame)/i.test(line)).map((line, index) => <p key={index} className="font-thin tracking-body leading-body text-product-description text-sm italic">
                               {line}
                             </p>)}
                         </div>}

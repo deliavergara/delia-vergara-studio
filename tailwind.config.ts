@@ -89,7 +89,8 @@ export default {
 				'product-title': 'hsl(var(--product-title))',
 				'text-dark-gray': 'hsl(var(--text-dark-gray))',
 				'product-name': 'hsl(var(--product-name))',
-				'product-description': 'hsl(var(--product-description))'
+				'product-description': 'hsl(var(--product-description))',
+				'text-medium-gray': 'hsl(var(--text-medium-gray))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
