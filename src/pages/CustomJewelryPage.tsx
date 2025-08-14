@@ -72,7 +72,7 @@ const CustomJewelryPage = () => {
       }}>
           <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/5"></div>
+        <div className="absolute inset-0" style={{ backgroundColor: '#7c7c7c', opacity: 0.3 }}></div>
       </div>
 
       {/* Scrollable Content */}
