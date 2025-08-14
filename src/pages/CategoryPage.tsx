@@ -64,7 +64,7 @@ const CategoryPage = () => {
               opacity: 0.95
             }} />
               </div>
-              <h3 className="font-avenir font-medium tracking-title mb-0.5 text-left text-sm">
+              <h3 className="font-avenir font-medium tracking-title mb-0.5 text-left text-sm text-[#535353]">
                 {item.name}
               </h3>
             </div>)}
