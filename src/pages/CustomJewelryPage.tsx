@@ -106,9 +106,7 @@ const CustomJewelryPage = () => {
             <div ref={step1Ref} className="space-y-4" style={{
             opacity: getResponsiveOpacity(elementPositions.step1)
           }}>
-              <h3 className="font-avenir-book text-white font-bold text-base md:text-lg">
-                1. Hablemos de tu idea
-              </h3>
+              <h3 className="font-avenir-book text-white font-bold text-base md:text-lg">Hablemos de tu idea</h3>
               <p className="font-avenir-light text-white leading-relaxed text-base md:text-lg">
                 Conversemos sobre lo que te imaginas, los materiales que te gustan y el presupuesto. Trabajo principalmente con plata y baños de oro, pero también puedo usar oro macizo u otros materiales, según lo que necesites.
               </p>
@@ -118,9 +116,7 @@ const CustomJewelryPage = () => {
             <div ref={step2Ref} className="space-y-4" style={{
             opacity: getResponsiveOpacity(elementPositions.step2)
           }}>
-              <h3 className="font-avenir-book text-white font-bold text-base md:text-lg">
-                2. Diseñamos juntos
-              </h3>
+              <h3 className="font-avenir-book text-white font-bold text-base md:text-lg">Diseñamos juntos</h3>
               <p className="font-avenir-light text-white leading-relaxed text-base md:text-lg">
                 Preparo bocetos e iteramos en la propuesta hasta tener el diseño final. Podemos probar con diferentes formas, colores, piedras, lo que haga falta.
               </p>
@@ -130,9 +126,7 @@ const CustomJewelryPage = () => {
             <div ref={step3Ref} className="space-y-4" style={{
             opacity: getResponsiveOpacity(elementPositions.step3)
           }}>
-              <h3 className="font-avenir-book text-white font-bold text-base md:text-lg">
-                3. Elaboración de la joya
-              </h3>
+              <h3 className="font-avenir-book text-white font-bold text-base md:text-lg">Elaboración de la joya</h3>
               <p className="font-avenir-light text-white leading-relaxed text-base md:text-lg">
                 La pieza la hago a mano en mi taller en Valencia, cada resultado es único. El tiempo de creación suele ser entre 15 y 25 días hábiles, dependiendo de la complejidad de la pieza.
               </p>
@@ -142,9 +136,7 @@ const CustomJewelryPage = () => {
             <div ref={step4Ref} className="space-y-4" style={{
             opacity: getResponsiveOpacity(elementPositions.step4)
           }}>
-              <h3 className="font-avenir-book text-white font-bold text-base md:text-lg">
-                4. Envío
-              </h3>
+              <h3 className="font-avenir-book text-white font-bold text-base md:text-lg">Envío</h3>
               <p className="font-avenir-light text-white leading-relaxed text-base md:text-lg">
                 Una vez terminada la joya, se prepara para el envío, que puede tomar algunos días o semanas, dependiendo del destino.
               </p>

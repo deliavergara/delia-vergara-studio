@@ -21,7 +21,7 @@ const productMapping = {
     ],
     category: "anillos",
     name: "Alcázar",
-    description: "Diseñado en oro blanco 18K y una espectacular aguamarina. Este anillo puede reproducirse en el material y la piedra que se ajusten a tu presupuesto.\n\nHecho por encargo\nDisponible en plata, plata con baño de oro, oro 18k\nContáctame"
+    description: "Diseñado en oro blanco 18K y una espectacular aguamarina. Este anillo puede reproducirse en el material y la piedra que se ajusten a tu presupuesto.\n\nHecho por encargo\nDisponible en plata, plata con baño de oro, oro 18k"
   },
   "ANAANILLOUNICO": {
     folder: "Anillos/Ana",
@@ -32,7 +32,7 @@ const productMapping = {
     ],
     category: "anillos",
     name: "Ana",
-    description: "Pieza única en oro blanco con una Tanzanita. Tallado a mano, por lo que ninguno será igual al anterior.\nSe puede encargar con la piedra y el material que se ajuste a tú presupuesto.\n\nHecho por encargo\nDisponible en plata, plata con baño de oro, oro 18k\nContáctame"
+    description: "Pieza única en oro blanco con una Tanzanita. Tallado a mano, por lo que ninguno será igual al anterior.\nSe puede encargar con la piedra y el material que se ajuste a tú presupuesto.\n\nHecho por encargo\nDisponible en plata, plata con baño de oro, oro 18k"
   },
   "BLANCAANILLOUNICO": {
     folder: "Anillos/Blanca", 
@@ -44,7 +44,7 @@ const productMapping = {
     ],
     category: "anillos",
     name: "Blanca",
-    description: "Anillo con una pequeña curva interna que guía hasta la piedra central. Color a elección.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Anillo con una pequeña curva interna que guía hasta la piedra central. Color a elección.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "MAGMAANILLOUNICO": {
     folder: "Anillos/Magma",
@@ -55,7 +55,7 @@ const productMapping = {
     ],
     category: "anillos",
     name: "Magma",
-    description: "Con textura como la de la piedra volcánica, el anillo magma es diferente, atrevido, pero también elegante y delicado.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Con textura como la de la piedra volcánica, el anillo magma es diferente, atrevido, pero también elegante y delicado.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "GRANATEANILLOUNICO": {
     folder: "Anillos/Granate",
@@ -66,7 +66,7 @@ const productMapping = {
     ],
     category: "anillos",
     name: "Granate",
-    description: "Este anillo lleva un granate de forma rectangular, tallado con pocas facetas para resaltar su profundidad y su tono vino intenso.\nEstá montado en un cuerpo de plata, con un engaste que envuelve toda la piedra y acentúa su forma geométrica.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Este anillo lleva un granate de forma rectangular, tallado con pocas facetas para resaltar su profundidad y su tono vino intenso.\nEstá montado en un cuerpo de plata, con un engaste que envuelve toda la piedra y acentúa su forma geométrica.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "NUBEANILLOUNICO": {
     folder: "Anillos/Nube",
@@ -77,7 +77,7 @@ const productMapping = {
     ],
     category: "anillos",
     name: "Nube",
-    description: "Modelado a mano, con terminación mate y relieves orgánicos.\nIncluye tres piedras de color a elección.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Modelado a mano, con terminación mate y relieves orgánicos.\nIncluye tres piedras de color a elección.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "IRISANILLOUNICO": {
     folder: "Anillos/Iris",
@@ -89,7 +89,7 @@ const productMapping = {
     ],
     category: "anillos",
     name: "Iris",
-    description: "El anillo Iris parte de una forma fina y sencilla, que se ensancha sutilmente justo antes de abrazar la piedra. Ese cambio de volumen lo vuelve anguloso, elegante y con carácter.\nDisponible con piedra a elección. En la imagen: granate rodolita.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "El anillo Iris parte de una forma fina y sencilla, que se ensancha sutilmente justo antes de abrazar la piedra. Ese cambio de volumen lo vuelve anguloso, elegante y con carácter.\nDisponible con piedra a elección. En la imagen: granate rodolita.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   
   // Collares
@@ -101,7 +101,7 @@ const productMapping = {
     ],
     category: "collares",
     name: "Flor",
-    description: "Pequeña flor con un circón en el centro. Diseño mínimo y delicado.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Pequeña flor con un circón en el centro. Diseño mínimo y delicado.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro"
   },
   "MEDALLONCOLLARUNICO": {
     folder: "Collares/Medallón",
@@ -110,7 +110,7 @@ const productMapping = {
     ],
     category: "collares",
     name: "Medallón",
-    description: "Medallón con textura y una circonita a un costado. Sutil, pero con presencia.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Medallón con textura y una circonita a un costado. Sutil, pero con presencia.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro"
   },
   "OVALCOLLARUNICO": {
     folder: "Collares/Ovalo",
@@ -119,7 +119,7 @@ const productMapping = {
     ],
     category: "collares",
     name: "Óvalo", 
-    description: "Collar con forma oval, con un circón de color en el centro que le aporta elegancia. Perfecto para combinar con los pendientes.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Collar con forma oval, con un circón de color en el centro que le aporta elegancia. Perfecto para combinar con los pendientes.\n\nIncluye cadena\nHechos a mano en plata 925\nDisponibles con baño en oro"
   },
   
   // Pendientes
@@ -133,7 +133,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Un Fractal",
-    description: "Formado por un solo módulo fractal, este pendiente es una pieza delicada, ligera y con un diseño diferente. Ideal para uso diario por su comodidad.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Formado por un solo módulo fractal, este pendiente es una pieza delicada, ligera y con un diseño diferente. Ideal para uso diario por su comodidad.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "PARFRACTALPENDIENTEDOS": {
     folder: "Pendientes/Dos fractales",
@@ -144,7 +144,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Dos Fractales",
-    description: "Compuestos por dos módulos florales: uno pequeño que se ajusta de forma delicada y otro más grande que le da carácter. Una pieza con equilibrio, elegante, ligera y con movimiento.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Compuestos por dos módulos florales: uno pequeño que se ajusta de forma delicada y otro más grande que le da carácter. Una pieza con equilibrio, elegante, ligera y con movimiento.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "PARFRACTALPENDIENTETRES": {
     folder: "Pendientes/Tres fracteles",
@@ -155,7 +155,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Tres Fractales",
-    description: "Compuestos por tres módulos fractales. Forman una pieza de impacto, ligera y con presencia.\n\nHechos a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Compuestos por tres módulos fractales. Forman una pieza de impacto, ligera y con presencia.\n\nHechos a mano en plata 925\nDisponibles con baño en oro"
   },
   "CAUDALESPENDIENTEUNICO": {
     folder: "Pendientes/Caudales",
@@ -166,7 +166,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Caudal",
-    description: "Con textura orgánica y cadenas que caen como caudales. Tienen movimiento y mucho carácter.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Con textura orgánica y cadenas que caen como caudales. Tienen movimiento y mucho carácter.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "OVALPENDIENTEUNO": {
     folder: "Pendientes/Un Ovalo",
@@ -177,7 +177,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Un Óvalo",
-    description: "Sutiles y elegantes. Puedes elegir el color de la piedra o incluso perlas.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Sutiles y elegantes. Puedes elegir el color de la piedra o incluso perlas.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "OVALPENDIENTEDOS": {
     folder: "Pendientes/Dos ovalos",
@@ -187,7 +187,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Dos Óvalos",
-    description: "Coloridos y sentadores. Puedes elegir el color de la piedra o incluso perlas\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Coloridos y sentadores. Puedes elegir el color de la piedra o incluso perlas\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "MITSUROROSASPENDIENTEUNICO": {
     folder: "Pendientes/Rosa mitsuro",
@@ -199,7 +199,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Rosa Mitsuro",
-    description: "Modelados con la técnica Mitsuro, que permite que tomen curvas y una forma orgánica que recuerda a una rosa con su tallo.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Modelados con la técnica Mitsuro, que permite que tomen curvas y una forma orgánica que recuerda a una rosa con su tallo.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "MITSUROROSITASPENDIENTEUNICO": {
     folder: "Pendientes/Rosita mitsuro",
@@ -208,7 +208,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Rositas Mitsuro",
-    description: "Pequeñas rosas modeladas con la técnica Mitsuro. Sutiles, delicadas y con curvas orgánicas que nacen solo del modelado a mano.\n\nHechas a mano en plata 925\nDisponibles con baño en oro\nContáctame"
+    description: "Pequeñas rosas modeladas con la técnica Mitsuro. Sutiles, delicadas y con curvas orgánicas que nacen solo del modelado a mano.\n\nHechas a mano en plata 925\nDisponibles con baño en oro"
   },
   "MITSUROARGOLLASPENDIENTEUNICO": {
     folder: "Pendientes/Argollas mitsuro",
@@ -218,7 +218,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Argolla Mitsuro",
-    description: "Argollas modeladas a mano con la técnica Mitsuro. De una sola pieza que gira sobre sí misma.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Argollas modeladas a mano con la técnica Mitsuro. De una sola pieza que gira sobre sí misma.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "NITIDOPENDIENTEUNICO": {
     folder: "Pendientes/Nítido",
@@ -228,7 +228,7 @@ const productMapping = {
     ],
     category: "pendientes",
     name: "Nítido",
-    description: "Sutiles y delicados. Pensados para usarse todos los días.\n\nHecho a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Sutiles y delicados. Pensados para usarse todos los días.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
 
 
@@ -242,7 +242,7 @@ const productMapping = {
     ],
     category: "pulseras",
     name: "Pulsera Fractal",
-    description: "Con dos módulos fractales a cada lado, esta pulsera tiene gran carácter y elegancia. Diseñada para hacerse notar, diferente a cualquier otra.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Con dos módulos fractales a cada lado, esta pulsera tiene gran carácter y elegancia. Diseñada para hacerse notar, diferente a cualquier otra.\n\nHecha a mano en plata 925\nDisponible con baño en oro"
   },
   "FACETADAPULSERAUNICO": {
     folder: "Pulsera/Pulsera Facetada",
@@ -254,7 +254,7 @@ const productMapping = {
     ],
     category: "pulseras",
     name: "Pulsera Facetada",
-    description: "Diseñada desde cero cada vez. Cada una con sus propias facetas, única e irrepetible.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Diseñada desde cero cada vez. Cada una con sus propias facetas, única e irrepetible.\n\nHecha a mano en plata 925\nDisponible con baño en oro"
   },
   "MITSUROPULSERAUNICO": {
     folder: "Pulsera/Pulsera Mitsuro",
@@ -265,7 +265,7 @@ const productMapping = {
     ],
     category: "pulseras",
     name: "Pulsera Mitsuro",
-    description: "Modelada a mano con la técnica Mitsuro, esta pulsera de casi 200g de plata se forma a partir de sus propias curvas. Es una pieza única.\nSi quieres la tuya será una nueva, pero igual de especial.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Modelada a mano con la técnica Mitsuro, esta pulsera de casi 200g de plata se forma a partir de sus propias curvas. Es una pieza única.\nSi quieres la tuya será una nueva, pero igual de especial.\n\nHecha a mano en plata 925\nDisponible con baño en oro"
   },
   "LYRAPULSERAUNICO": {
     folder: "Pulsera/Pulsera Lyra",
@@ -275,7 +275,7 @@ const productMapping = {
     ],
     category: "pulseras",
     name: "Pulsera Lyra",
-    description: "Par de pulseras orgánicas Se acompañan y se mueven juntas, ligeras y con textura sutil. Diseñadas para lucir siempre en pareja.\n\nHecha a mano en plata 925\nDisponible con baño en oro\nContáctame"
+    description: "Par de pulseras orgánicas Se acompañan y se mueven juntas, ligeras y con textura sutil. Diseñadas para lucir siempre en pareja.\n\nHecha a mano en plata 925\nDisponible con baño en oro"
   }
 };
 
