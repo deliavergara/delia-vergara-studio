@@ -92,10 +92,10 @@ const CustomJewelryPage = () => {
           <div ref={openingQuestionRef} className="text-center py-6" style={{
           opacity: getFadeOutOpacity(elementPositions.openingQuestion)
         }}>
-            <h2 className="font-avenir-medium md:text-3xl text-white mb-4 text-xl">
+            <h2 className="font-avenir-medium text-white mb-4 text-xl md:text-2xl">
               ¿Tienes una idea en mente?
             </h2>
-            <p className="font-avenir-light md:text-2xl text-white mb-6 text-lg">
+            <p className="font-avenir-light text-white mb-6 text-lg md:text-xl">
               Juntos la podemos convertir en una joya única
             </p>
           </div>
