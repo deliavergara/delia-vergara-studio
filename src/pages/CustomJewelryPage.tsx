@@ -118,10 +118,10 @@ const CustomJewelryPage = () => {
             <div ref={step2Ref} className="space-y-4" style={{
             opacity: getResponsiveOpacity(elementPositions.step2)
           }}>
-              <h3 className="font-avenir-book md:text-xl text-white font-bold text-base">
+              <h3 className="font-avenir-book text-white font-bold text-base md:text-lg">
                 2. Diseñamos juntos
               </h3>
-              <p className="font-avenir-light md:text-xl text-white leading-relaxed text-base">
+              <p className="font-avenir-light text-white leading-relaxed text-base md:text-base">
                 Preparo bocetos e iteramos en la propuesta hasta tener el diseño final. Podemos probar con diferentes formas, colores, piedras, lo que haga falta.
               </p>
             </div>
