@@ -71,6 +71,7 @@ Minimalist palette with whites, soft grays, and subtle earth tones
     /* Product name and description colors */
     --product-name: 0 5% 20%; /* #353333 for product names */
     --product-description: 0 5% 20%; /* #353333 for product descriptions */
+    --text-medium-gray: 0 0% 33%; /* #535353 for medium gray text */
 
     --sidebar-background: 0 0% 98%;
 

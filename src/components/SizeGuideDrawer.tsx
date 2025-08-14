@@ -134,7 +134,7 @@ export const SizeGuideDrawer = ({
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
           {/* Texto introductorio */}
           <div className="space-y-4">            
-            <ol className="space-y-2 text-sm font-avenir-thin text-foreground leading-relaxed pl-4">
+            <ol className="space-y-2 text-sm font-avenir-thin text-text-medium-gray leading-relaxed pl-4">
               <li>1. Busca un anillo que te quede bien.</li>
               <li>2. Mide el diámetro interior del anillo (dentro, lado a lado, omite el grosor).</li>
               <div className="flex justify-center my-6">
