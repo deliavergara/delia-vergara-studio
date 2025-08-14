@@ -67,12 +67,10 @@ const CustomJewelryPage = () => {
       
       {/* Video Background */}
       <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
-        <video autoPlay loop muted playsInline className="w-full h-full object-cover" style={{
-        opacity: 0.95
-      }}>
+        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
           <source src={buildGitHubRawUrl("public/lovable-uploads/Joyas%20a%20medida/video_fondo_joya_medida.mp4")} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/5"></div>
+        <div className="absolute inset-0" style={{ backgroundColor: '#7a7a7a', opacity: 0.15 }}></div>
       </div>
 
       {/* Scrollable Content */}
