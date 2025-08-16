@@ -165,8 +165,8 @@ const productMapping = {
       "cuatrofractales_3.mov"
     ],
     category: "pendientes",
-    name: "Tres Fractales",
-    description: "Compuestos por tres módulos fractales. Forman una pieza de impacto, ligera y con presencia.\n\nHechos a mano en plata 925\nDisponibles con baño en oro"
+    name: "Cuatro Fractales",
+    description: "Pendientes de cuatro fractales, creados originalmente por encargo para una novia en París. Su movimiento y largo los hicieron imprescindibles en la colección. \n\nHechos a mano en plata 925\nDisponibles con baño en oro"
   },
   "CAUDALESPENDIENTEUNICO": {
     folder: "Pendientes/Caudales",
