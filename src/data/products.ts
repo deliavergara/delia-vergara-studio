@@ -215,7 +215,8 @@ const productMapping = {
   "MITSUROROSITASPENDIENTEUNICO": {
     folder: "Pendientes/Rosita mitsuro",
     images: [
-      "Rositas mitsuro plata.jpg"
+      "rositas_1.jpg",
+      "rositas_2.jpg"
     ],
     category: "pendientes",
     name: "Rositas Mitsuro",
