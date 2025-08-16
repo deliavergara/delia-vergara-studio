@@ -76,7 +76,7 @@ const CustomJewelryPage = () => {
       </div>
 
       {/* Scrollable Content */}
-      <div className="relative z-10 min-h-[400vh] pt-24">
+      <div className="relative z-10 min-h-[300vh] pt-24">
         <div className="max-w-2xl mx-auto px-6 space-y-8">
           
           {/* Title */}

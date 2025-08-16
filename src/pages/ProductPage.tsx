@@ -182,7 +182,7 @@ const ProductPage = () => {
               {/* Precio */}
               <div className="border-t pt-6">
                 <div className="font-avenir font-medium text-lg text-product-name tracking-title">
-                  {currentPrice === 0 ? 'Por encargo' : `${selectedCurrency === 'EUR' ? '€' : '$'}${currentPrice.toLocaleString()}`}
+                  {currentPrice === 0 ? 'Por encargo' : `${selectedCurrency === 'EUR' ? '€' : '$'}${currentPrice?.toLocaleString() || '0'}`}
                 </div>
                 <p className="text-body font-light text-muted-foreground mt-2 tracking-body leading-body">
                   {currentPrice === 0 ? 'Contacta para presupuesto' : `Precio en ${selectedMetal === 'silver' ? 'plata' : 'oro'} - ${selectedCurrency}`}

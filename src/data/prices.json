@@ -43,13 +43,13 @@
   },
   "GRANATEANILLOUNICO": {
     "valor_venta_es": 70,
-    "valor_venta_bano_oro_es": null,
+    "valor_venta_bano_oro_es": 85,
     "valor_venta_cl": 66000,
     "valor_venta_bano_oro_cl": 77000
   },
   "NUBEANILLOUNICO": {
     "valor_venta_es": 65,
-    "valor_venta_bano_oro_es": null,
+    "valor_venta_bano_oro_es": 80,
     "valor_venta_cl": 61000,
     "valor_venta_bano_oro_cl": 72000
   },
