@@ -17,6 +17,12 @@
     "valor_venta_cl": 75000,
     "valor_venta_bano_oro_cl": 91000
   },
+  "PARFRACTALPENDIENTECUATRO": {
+    "valor_venta_es": 80,
+    "valor_venta_bano_oro_es": 97,
+    "valor_venta_cl": 88000,
+    "valor_venta_bano_oro_cl": 97000
+  },
   "FRACTALPULSERAUNICO": {
     "valor_venta_es": 85,
     "valor_venta_bano_oro_es": 105,

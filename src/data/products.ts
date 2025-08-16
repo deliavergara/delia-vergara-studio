@@ -157,6 +157,17 @@ const productMapping = {
     name: "Tres Fractales",
     description: "Compuestos por tres módulos fractales. Forman una pieza de impacto, ligera y con presencia.\n\nHechos a mano en plata 925\nDisponibles con baño en oro"
   },
+    "PARFRACTALPENDIENTECUATRO": {
+    folder: "Pendientes/Cuatro fractales",
+    images: [
+      "cuatrofractales_1.jpg",
+      "cuatrofractales_2.jpg",
+      "cuatrofractales_3.mov"
+    ],
+    category: "pendientes",
+    name: "Cuatro Fractales",
+    description: "Pendientes de cuatro fractales, creados originalmente por encargo para una novia en París. Su movimiento y largo los hicieron imprescindibles en la colección. \n\nHechos a mano en plata 925\nDisponibles con baño en oro"
+  },
   "CAUDALESPENDIENTEUNICO": {
     folder: "Pendientes/Caudales",
     images: [
@@ -204,7 +215,8 @@ const productMapping = {
   "MITSUROROSITASPENDIENTEUNICO": {
     folder: "Pendientes/Rosita mitsuro",
     images: [
-      "Rositas mitsuro plata.jpg"
+      "rositas_1.jpg",
+      "rositas_2.jpg"
     ],
     category: "pendientes",
     name: "Rositas Mitsuro",
