@@ -50,6 +50,7 @@ export type Database = {
           costo_cadena_referencia: number | null
           costo_piedra_referencia: number | null
           created_at: string
+          descripcion: string | null
           id: string
           nombre: string
           plata_gramos: number | null
@@ -67,6 +68,7 @@ export type Database = {
           costo_cadena_referencia?: number | null
           costo_piedra_referencia?: number | null
           created_at?: string
+          descripcion?: string | null
           id?: string
           nombre: string
           plata_gramos?: number | null
@@ -84,6 +86,7 @@ export type Database = {
           costo_cadena_referencia?: number | null
           costo_piedra_referencia?: number | null
           created_at?: string
+          descripcion?: string | null
           id?: string
           nombre?: string
           plata_gramos?: number | null
