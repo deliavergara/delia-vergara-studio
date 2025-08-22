@@ -1,15 +1,13 @@
-import { buildGitHubRawUrl } from "@/lib/config";
+import { buildMaterialUrl } from "@/lib/supabase-config";
 
 export const HeroSection = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      <div className="absolute inset-0">
-        <img
-          src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Foto%20portada/DSC_0124.jpg")}
-          alt="Delia Vergara Studio"
-          className="w-full h-full object-cover opacity-75"
-        />
-      </div>
+      <img 
+        src={buildMaterialUrl("Foto portada", "DSC_0124.jpg")}
+        alt="Hero background" 
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       
       {/* Subtle gradient overlay to ensure logo readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10" />
@@ -20,10 +18,10 @@ export const HeroSection = () => {
           onClick={() => window.location.href = '/'}
           className="hover:opacity-70 transition-elegant cursor-pointer"
         >
-          <img
-            src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20gcasi%20blanco_Mesa%20de%20trabajo%201.png")}
-            alt="Delia Vergara Logo"
-            className="w-[80vw] max-w-80 h-auto opacity-80"
+          <img 
+            src={buildMaterialUrl("Logo", "logo gcasi blanco_Mesa de trabajo 1.png")}
+            alt="Delia Vergara Logo" 
+            className="h-32 w-auto opacity-50"
           />
         </button>
       </div>

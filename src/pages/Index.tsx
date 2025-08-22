@@ -7,7 +7,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { CategoryGrid } from "@/components/CategoryGrid";
 import SquareCarousel from "@/components/SquareCarousel";
 import { Footer } from "@/components/Footer";
-import { buildGitHubRawUrl } from "@/lib/config";
+import { buildMaterialUrl } from "@/lib/supabase-config";
 const Index = () => {
   return <div className="relative">
       <HamburgerMenu />
@@ -36,7 +36,11 @@ const Index = () => {
       <div className="container mx-auto px-6 pb-16">
         <div className="mt-8 pt-8 border-t border-border relative">
           <div className="absolute bottom-0 left-0 z-0 -ml-24 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => window.location.href = '/'}>
-            <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} alt="Delia Vergara Isologo" className="h-32 w-auto opacity-50" />
+            <img 
+              src={buildMaterialUrl("Logo", "isologo.png")} 
+              alt="Delia Vergara Isologo" 
+              className="h-32 w-auto opacity-50" 
+            />
           </div>
           
           <div className="text-center space-y-8 relative z-10 pb-12 mt-6">

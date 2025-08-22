@@ -6,6 +6,8 @@ import { jewelryItems } from "@/data/products";
 import { cn } from "@/lib/utils";
 import { buildGitHubRawUrl } from "@/lib/config";
 import { SizeGuideDrawer } from "@/components/SizeGuideDrawer";
+import { buildMaterialUrl } from "@/lib/supabase-config";
+
 const ProductPage = () => {
   const {
     productId
@@ -194,7 +196,11 @@ const ProductPage = () => {
           {/* Footer con contacto */}
           <div className="mt-32 pt-12 border-t border-border relative">
             <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
-              <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} alt="Delia Vergara Isologo" className="h-32 w-auto opacity-50" />
+              <img 
+                src={buildMaterialUrl("Logo", "isologo.png")} 
+                alt="Delia Vergara Isologo" 
+                className="h-32 w-auto opacity-50" 
+              />
             </div>
             
             <div className="text-center space-y-8 relative z-10 pb-12">

@@ -1,19 +1,19 @@
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { buildGitHubRawUrl } from "@/lib/config";
+import { buildMaterialUrl } from "@/lib/supabase-config";
 
 const SquareCarousel = () => {
   const images = [
-    buildGitHubRawUrl("public/lovable-uploads/Material de Apoyo/carrusel/1.jpg"),
-    buildGitHubRawUrl("public/lovable-uploads/Material de Apoyo/carrusel/2.jpg"),
-    buildGitHubRawUrl("public/lovable-uploads/Material de Apoyo/carrusel/4.jpg"),
-    buildGitHubRawUrl("public/lovable-uploads/Material de Apoyo/carrusel/5.jpg"),
-    buildGitHubRawUrl("public/lovable-uploads/Material de Apoyo/carrusel/3.jpg"),
-    buildGitHubRawUrl("public/lovable-uploads/Material de Apoyo/carrusel/6.jpg"),
-    buildGitHubRawUrl("public/lovable-uploads/Material de Apoyo/carrusel/7.jpg"),
-    buildGitHubRawUrl("public/lovable-uploads/Material de Apoyo/carrusel/8.jpg"),
-    buildGitHubRawUrl("public/lovable-uploads/Material de Apoyo/carrusel/9.jpg")
+    buildMaterialUrl("carrusel", "1.jpg"),
+    buildMaterialUrl("carrusel", "2.jpg"),
+    buildMaterialUrl("carrusel", "4.jpg"),
+    buildMaterialUrl("carrusel", "5.jpg"),
+    buildMaterialUrl("carrusel", "3.jpg"),
+    buildMaterialUrl("carrusel", "6.jpg"),
+    buildMaterialUrl("carrusel", "7.jpg"),
+    buildMaterialUrl("carrusel", "8.jpg"),
+    buildMaterialUrl("carrusel", "9.jpg")
   ];
 
   return (

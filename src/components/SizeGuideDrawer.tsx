@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerClose } from "@/components/ui/drawer";
-import { buildGitHubRawUrl } from "@/lib/config";
+import { buildMaterialUrl } from "@/lib/supabase-config";
 interface SizeGuideDrawerProps {
   isOpen: boolean;
   onClose: () => void;
@@ -138,7 +138,11 @@ export const SizeGuideDrawer = ({
               <li>1. Busca un anillo que te quede bien.</li>
               <li>2. Mide el diámetro interior del anillo (dentro, lado a lado, omite el grosor).</li>
               <div className="flex justify-center my-6">
-                <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Iconos/ilustracion%20guia%20de%20talla%20anillos.PNG")} alt="Ilustración de cómo medir el anillo" className="w-32 h-auto" />
+                <img 
+                  src={buildMaterialUrl("Iconos", "ilustracion guia de talla anillos.PNG")} 
+                  alt="Ilustración de cómo medir el anillo" 
+                  className="w-32 h-auto" 
+                />
               </div>
               <li>3. Ingresa los milímetros que obtengas a continuación.</li>
             </ol>

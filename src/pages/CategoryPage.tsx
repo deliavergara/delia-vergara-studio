@@ -2,7 +2,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { categories } from "@/data/products";
-import { buildGitHubRawUrl } from "@/lib/config";
+import { ProductGrid } from "@/components/ProductGrid";
+import { buildCategoryPortraitUrl, buildMaterialUrl } from "@/lib/supabase-config";
 import { Link } from "react-router-dom";
 import { HamburgerMenu } from "@/components/HamburgerMenu";
 const CategoryPage = () => {
@@ -14,10 +15,10 @@ const CategoryPage = () => {
 
   // Mapeo de imágenes de portada para cada categoría
   const categoryImages = {
-    anillos: buildGitHubRawUrl("public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20categoria%203.jpg"),
-    collares: buildGitHubRawUrl("public/lovable-uploads/Collares/portada%20collares/portada%20collar%20categoria%20.jpg"),
-    pendientes: buildGitHubRawUrl("public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20categoria.jpg"),
-    pulseras: buildGitHubRawUrl("public/lovable-uploads/Pulsera/portada%20pulsera/1.%20pulsera%20portada.jpg")
+    anillos: buildCategoryPortraitUrl('anillos', 'anillo-portada/portada anillo categoria 3.jpg'),
+    collares: buildCategoryPortraitUrl('collares', 'portada collares/portada collar categoria .jpg'),
+    pendientes: buildCategoryPortraitUrl('pendientes', 'portada pendientes/portada pendientes categoria.jpg'),
+    pulseras: buildCategoryPortraitUrl('pulseras', 'portada pulsera/1. pulsera portada.jpg')
   };
   if (!category) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
@@ -46,7 +47,11 @@ const CategoryPage = () => {
 
         {/* Logo superpuesto más abajo y más grande */}
         <div className="absolute top-20 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer hover:opacity-70 transition-elegant" onClick={() => navigate("/")}>
-          <img src={buildGitHubRawUrl(`public/lovable-uploads/Material%20de%20Apoyo/Logo/logo%20simple%20CATEGORIAS/LOGO%20SIMPLE%20${categoryId.toUpperCase()}.png`)} alt={`Logo ${category.name}`} className="w-[60vw] max-w-[18rem] h-auto" />
+          <img 
+          src={buildMaterialUrl("Logo/logo simple CATEGORIAS", `LOGO SIMPLE ${categoryId.toUpperCase()}.png`)} 
+          alt={`Logo ${category.name}`} 
+          className="w-[60vw] max-w-md h-auto opacity-80"
+        />
         </div>
       </div>
 
@@ -73,7 +78,11 @@ const CategoryPage = () => {
         {/* Contact section */}
         <div className="mt-32 pt-12 border-t border-border relative">
           <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
-            <img src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Logo/isologo.png")} alt="Delia Vergara Isologo" className="h-32 w-auto opacity-50" />
+            <img 
+          src={buildMaterialUrl("Logo", "isologo.png")} 
+          alt="Delia Vergara Isologo" 
+          className="h-32 w-auto opacity-50" 
+        />
           </div>
 
           <div className="text-center space-y-8 relative z-10 pb-12">

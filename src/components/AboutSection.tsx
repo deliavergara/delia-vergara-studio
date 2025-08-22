@@ -1,4 +1,4 @@
-import { buildGitHubRawUrl } from "@/lib/config";
+import { buildMaterialUrl } from "@/lib/supabase-config";
 export const AboutSection = () => {
   return <section className="bg-background py-6">
       <div className="container mx-auto px-6 max-w-6xl">
@@ -11,7 +11,7 @@ export const AboutSection = () => {
         <div className="flex justify-center">
           <div className="w-full max-w-md">
             <video autoPlay muted loop playsInline className="w-full aspect-[3/4] object-cover rounded-sm">
-              <source src={buildGitHubRawUrl("public/lovable-uploads/Material%20de%20Apoyo/Videos/DSC_0326.mov")} type="video/mp4" />
+              <source src={buildMaterialUrl("Videos", "DSC_0326.mov")} type="video/mp4" />
             </video>
           </div>
         </div>

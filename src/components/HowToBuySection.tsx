@@ -1,13 +1,13 @@
-import { buildGitHubRawUrl } from "@/lib/config";
+import { buildMaterialUrl } from "@/lib/supabase-config";
 
 export const HowToBuySection = () => {
   return (
     <section className="relative min-h-screen py-24 px-6">
       {/* Background Image with Opacity */}
       <div className="absolute inset-0 opacity-10">
-        <img
-          src={buildGitHubRawUrl("public/lovable-uploads/99240e15-8897-4a7b-b1b0-ca5b38f33f8f.png")}
-          alt=""
+        <img 
+          src={buildMaterialUrl("", "99240e15-8897-4a7b-b1b0-ca5b38f33f8f.png")}
+          alt="How to buy" 
           className="w-full h-full object-cover"
         />
       </div>

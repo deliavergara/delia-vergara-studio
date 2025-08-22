@@ -1,6 +1,7 @@
 import { categories } from "@/data/products";
 import { useNavigate } from "react-router-dom";
-import { buildGitHubRawUrl } from "@/lib/config";
+import { Category } from "@/types/jewelry";
+import { buildCategoryPortraitUrl } from "@/lib/supabase-config";
 
 export const CategoryGrid = () => {
   const navigate = useNavigate();
@@ -13,10 +14,10 @@ export const CategoryGrid = () => {
 
   // Mapeo de imágenes de portada para cada categoría
   const categoryImages = {
-    anillos: buildGitHubRawUrl("public/lovable-uploads/Anillos/anillo%20portada/portada%20anillo%20categoria%203.jpg"),
-    collares: buildGitHubRawUrl("public/lovable-uploads/Collares/portada%20collares/portada%20collar%20categoria%20.jpg"),
-    pendientes: buildGitHubRawUrl("public/lovable-uploads/Pendientes/portada%20pendientes/portada%20pendientes%20categoria.jpg"),
-    pulseras: buildGitHubRawUrl("public/lovable-uploads/Pulsera/portada%20pulsera/1.%20pulsera%20portada.jpg")
+    anillos: buildCategoryPortraitUrl('anillos', 'anillo-portada/portada anillo categoria 3.jpg'),
+    collares: buildCategoryPortraitUrl('collares', 'portada collares/portada collar categoria .jpg'),
+    pendientes: buildCategoryPortraitUrl('pendientes', 'portada pendientes/portada pendientes categoria.jpg'),
+    pulseras: buildCategoryPortraitUrl('pulseras', 'portada pulsera/1. pulsera portada.jpg')
   };
 
   return (
