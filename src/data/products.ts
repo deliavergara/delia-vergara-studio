@@ -1,5 +1,5 @@
 import { JewelryItem, Category } from "@/types/jewelry";
-import { buildProductImageUrl } from "@/lib/supabase-storage";
+import { buildProductImageUrl } from "@/lib/supabase-config";
 import pricesData from "@/data/prices.json";
 
 interface PriceData {
