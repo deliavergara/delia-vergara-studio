@@ -168,7 +168,7 @@ const productMapping = {
     name: "Cuatro Fractales",
     description: "Pendientes de cuatro fractales, creados originalmente por encargo para una novia en París. Su movimiento y largo los hicieron imprescindibles en la colección. \n\nHechos a mano en plata 925\nDisponibles con baño en oro"
   },
-  "CAUDALESPENDIENTEUNICO": {
+  "CAUDALPENDIENTEUNICO": {
     folder: "Pendientes/Caudales",
     images: [
       "1.Pendinetes caudales plata.jpg",
