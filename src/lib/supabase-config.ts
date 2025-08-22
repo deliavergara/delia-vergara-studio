@@ -11,12 +11,6 @@ export const buildSupabaseUrl = (path: string): string => {
   return url;
 };
 
-// Función de prueba para verificar si Supabase está funcionando
-export const testSupabaseUrl = (): string => {
-  // URL de prueba con un archivo que sabemos que existe
-  return buildSupabaseUrl('Material de Apoyo/Logo/isologo.png');
-};
-
 // Mapeo de nombres de productos a nombres reales de archivos en Supabase
 const productFileMapping: Record<string, Record<string, string[]>> = {
   'anillos': {
