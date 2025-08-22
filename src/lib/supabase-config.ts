@@ -15,13 +15,13 @@ export const buildSupabaseUrl = (path: string): string => {
 const productFileMapping: Record<string, Record<string, string[]>> = {
   'anillos': {
     'alcazar': [
-      'Anillo oro blanco 18 k aguamarina.jpg',
-      'Anillo oro blanco 18 k aguamarina 2.0.jpg',
-      'Anillo oro blanco 18 k aguamarina 3.0.jpg'
+      'alcazar_1.jpg',
+      'alcazar_2.jpg',
+      'alcazar_3.jpg'
     ],
     'ana': [
-      '1.Anillo oro blanco 18k con tanzanita.jpg',
-      '2.Anillo oro blanco 18k con tanzanita 2.0.jpg',
+      'ana_1.jpg',
+      'ana_2.jpg',
       'ana_3.mov'
     ],
     'blanca': [
@@ -54,92 +54,92 @@ const productFileMapping: Record<string, Record<string, string[]>> = {
   },
   'collares': {
     'flor': [
-      '1. collar flor plata.jpg',
-      '1.collar flor plata.jpg'
+      'flor_1.jpg',
+      'flor_2.jpg'
     ],
     'medallon': [
-      '1.DSC_0190.jpg',
-      '2.DSC_0486.mov'
+      'medallon_1.jpg',
+      'medallon_2.mov'
     ],
     'ovalo': [
-      '1.DSC_0057 2.jpg'
+      'ovalo_1.jpg'
     ]
   },
   'pendientes': {
     'argollas-mitsuro': [
-      '1.pendientes argollas mitsuro plata.jpg',
-      '2.pendientes argollas mitsuro plata 2.0.jpg'
+      'argollas-mitsuro_1.jpg',
+      'argollas-mitsuro_2.jpg'
     ],
     'caudales': [
-      '1.Pendinetes caudales plata.jpg',
-      '2.Pendinetes caudales plata 2.0.JPG',
+      'caudales_1.jpg',
+      'caudales_2.jpg',
       'caudales_3.mov'
     ],
     'cuatro-fractales': [
-      'cuatrofractales_1.jpg',
-      'cuatrofractales_2.jpg',
-      'cuatrofractales_3.mov'
+      'cuatro-fractales_1.jpg',
+      'cuatro-fractales_2.jpg',
+      'cuatro-fractales_3.mov'
     ],
     'dos-fractales': [
-      '1.dos fractales plata.jpg',
-      '2.pendientes dos fractales oro .jpg',
-      '3.Dos fractales oro.jpg'
+      'dos-fractales_1.jpg',
+      'dos-fractales_2.jpg',
+      'dos-fractales_3.jpg'
     ],
     'dos-ovalos': [
-      '1.Pendientes oval plata verde 2.0.jpg',
-      '2. pendientes ovalo perlas plata 3.0.jpg'
+      'dos-ovalos_1.jpg',
+      'dos-ovalos_2.jpg'
     ],
     'nitido': [
-      '1.Pendiente Nítido plata.jpg',
-      '2.Pendiente Nítido plata 2.0.jpg'
+      'nitido_1.jpg',
+      'nitido_2.jpg'
     ],
     'rosa-mitsuro': [
-      '1.pendiente rosita mitsuro plata.jpg',
-      '2.pendiente rosita mitsuro oro.jpg',
-      'rosamitsuro_1.mov',
-      'rosamitsuro_2.mov'
+      'rosa-mitsuro_1.jpg',
+      'rosa-mitsuro_2.jpg',
+      'rosa-mitsuro_3.mov',
+      'rosa-mitsuro_4.mov'
     ],
     'rosita-mitsuro': [
-      'rositas_1.jpg',
-      'rositas_2.jpg'
+      'rosita-mitsuro_1.jpg',
+      'rosita-mitsuro_2.jpg'
     ],
     'tres-fractales': [
-      '1.tres fractales plata 4.0.jpg',
-      '2.tres fractales plata 2.0.jpg',
-      '3.tres fractales oro.jpg'
+      'tres-fractales_1.jpg',
+      'tres-fractales_2.jpg',
+      'tres-fractales_3.jpg'
     ],
     'un-fractal': [
-      'unfractal_1.jpg',
-      'unfractal_2.jpg',
-      'unfractal_3.jpg',
-      'unfractal_4.mov'
+      'un-fractal_1.jpg',
+      'un-fractal_2.jpg',
+      'un-fractal_3.jpg',
+      'un-fractal_4.mov'
     ],
     'un-ovalo': [
-      'unovalo_1.jpg',
-      'unovalo_2.jpg',
-      'unovalo_3.jpg'
+      'un-ovalo_1.jpg',
+      'un-ovalo_2.jpg',
+      'un-ovalo_3.jpg'
     ]
   },
   'pulseras': {
     'pulsera-facetada': [
-      'facetada_1.jpg',
-      'facetada_2.jpg',
-      'facetada_3.jpg',
-      'facetada_4.mov'
+      'pulsera-facetada_1.jpg',
+      'pulsera-facetada_2.jpg',
+      'pulsera-facetada_3.jpg',
+      'pulsera-facetada_4.mov'
     ],
     'pulsera-fractal': [
-      '1. Pulsera fractal plata.jpg',
-      '2. pulsera fractal.jpg',
-      '3.Pulsera fractal plata.jpg'
+      'pulsera-fractal_1.jpg',
+      'pulsera-fractal_2.jpg',
+      'pulsera-fractal_3.jpg'
     ],
     'pulsera-lyra': [
-      'lyra_1.jpg',
-      'lyra_2.jpg'
+      'pulsera-lyra_1.jpg',
+      'pulsera-lyra_2.jpg'
     ],
     'pulsera-mitsuro': [
-      '1.Pulsera Mitsuro plata.jpg',
-      '2.Pulsera mitsuro plata 2.0.jpg',
-      '3.Pulsera mitsuro plata 3.0.jpg'
+      'pulsera-mitsuro_1.jpg',
+      'pulsera-mitsuro_2.jpg',
+      'pulsera-mitsuro_3.jpg'
     ]
   }
 };
@@ -148,10 +148,10 @@ const productFileMapping: Record<string, Record<string, string[]>> = {
 export const buildProductImageUrl = (category: string, productName: string, imageIndex: number): string => {
   // Mapear nombres de categorías para que coincidan con Supabase
   const categoryMapping: Record<string, string> = {
-    'anillos': 'Anillos',
-    'collares': 'Collares', 
-    'pendientes': 'Pendientes',
-    'pulseras': 'Pulsera' // En Supabase es 'Pulsera' no 'pulseras'
+    'anillos': 'anillos',
+    'collares': 'collares', 
+    'pendientes': 'pendientes',
+    'pulseras': 'pulsera' // En Supabase es 'pulsera' no 'pulseras'
   };
   
   const mappedCategory = categoryMapping[category] || category;
@@ -164,7 +164,7 @@ export const buildProductImageUrl = (category: string, productName: string, imag
   }
   
   const realFileName = realFiles[imageIndex];
-  const url = buildSupabaseUrl(`${mappedCategory}/${productName}/${realFileName}`);
+  const url = buildSupabaseUrl(`productos/${mappedCategory}/${productName}/${realFileName}`);
   console.log('Product image URL:', { category, mappedCategory, productName, imageIndex, realFileName, url });
   return url;
 };
@@ -179,34 +179,49 @@ export const buildContentUrl = (section: string, subfolder?: string, fileName?: 
 
 // Specific helper functions using the generic buildContentUrl
 export const buildAssetUrl = (folder: string, fileName: string): string => {
-  return buildContentUrl('assets', folder, fileName);
+  return buildContentUrl('productos/assets', folder, fileName);
 };
 
 export const buildMaterialUrl = (folder: string, fileName: string): string => {
-  // Si el fileName ya contiene una ruta de carpeta, usarlo directamente
-  if (fileName.includes('/')) {
-    return buildContentUrl('contenido', 'material-de-apoyo', `${folder}/${fileName}`);
-  }
-  // Si no, construir la ruta normalmente
-  return buildContentUrl('contenido', 'material-de-apoyo', `${folder}/${fileName}`);
+  // Mapeo de nombres de archivos específicos
+  const fileMapping: Record<string, string> = {
+    'ICONO WHATSAP.png': 'iconos_2.png',
+    'ICONO INSTAGRAM.png': 'iconos_1.png',
+    'isologo.png': 'logo_2.png',
+    'logo gcasi blanco_Mesa de trabajo 1.png': 'logo_4.png',
+    'DSC_0124.jpg': 'foto_portada_3.png',
+    'DSC_0326.mov': 'videos_1.mov'
+  };
+  
+  const realFileName = fileMapping[fileName] || fileName;
+  return buildSupabaseUrl(`productos/material-de-apoyo/${folder}/${realFileName}`);
 };
 
 export const buildCustomJewelryUrl = (fileName: string): string => {
-  return buildContentUrl('contenido', 'joyas-a-medida', fileName);
+  return buildSupabaseUrl(`productos/contenido/joyas-a-medida/${fileName}`);
 };
 
 export const buildHowToBuyUrl = (fileName: string): string => {
-  return buildContentUrl('contenido', 'como-comprar', fileName);
+  return buildSupabaseUrl(`productos/contenido/como-comprar/${fileName}`);
 };
 
 export const buildCategoryPortraitUrl = (category: string, fileName: string): string => {
   const categoryMapping: Record<string, string> = {
-    'anillos': 'Anillos',
-    'collares': 'Collares', 
-    'pendientes': 'Pendientes',
-    'pulseras': 'Pulsera'
+    'anillos': 'anillos',
+    'collares': 'collares', 
+    'pendientes': 'pendientes',
+    'pulseras': 'pulsera'
+  };
+  
+  // Mapeo de nombres de archivos de portada
+  const portraitMapping: Record<string, string> = {
+    'portada anillo categoria 3.jpg': 'anillo-portada.jpg',
+    'portada collar categoria .jpg': 'portada_collares_3.jpg',
+    'portada pendientes categoria.jpg': 'portada_pendientes_4.jpg',
+    '1. pulsera portada.jpg': 'portada-pulsera_1.jpg'
   };
   
   const mappedCategory = categoryMapping[category] || category;
-  return buildSupabaseUrl(`${mappedCategory}/${fileName}`);
+  const realFileName = portraitMapping[fileName] || fileName;
+  return buildSupabaseUrl(`productos/${mappedCategory}/${realFileName}`);
 };
