@@ -281,8 +281,8 @@ function loadProductFromMapping(sku: string): JewelryItem | null {
   }
 
   // Construir URLs de imágenes usando Supabase Storage
-  const images = mapping.images.map((_, index) =>
-    buildProductImageUrl(mapping.category, mapping.name, index)
+  const images = mapping.images.map((fileName) =>
+    buildProductImageUrl(mapping.category, mapping.name, fileName)
   );
 
   return {
