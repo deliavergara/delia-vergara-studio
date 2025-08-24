@@ -28,7 +28,7 @@ const CategoryPage = () => {
 
   // Mapeo de imágenes de portada para cada categoría
   const categoryPortraits = {
-         anillos: buildSupabaseUrl('productos/anillos/portada_anillos/anillo_portada.jpg'),
+         anillos: buildSupabaseUrl('productos/anillos/portada_anillos/portada_anillos_4.jpg'),
          collares: buildSupabaseUrl('productos/collares/portada_collares/portada_collares_3.jpg'),
          pendientes: buildSupabaseUrl('productos/pendientes/portada_pendientes/portada_pendientes_4.jpg'),
          pulseras: buildSupabaseUrl('productos/pulseras/portada_pulseras/portada_pulsera_1.jpg')
