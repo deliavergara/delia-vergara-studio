@@ -14,10 +14,10 @@ export const CategoryGrid = () => {
 
   // Mapeo de imágenes de portada para cada categoría
   const categoryPortraits = {
-    anillos: buildCategoryPortraitUrl('anillos', 'anillo-portada.jpg'),
-    collares: buildCategoryPortraitUrl('collares', 'portada_collares_3.jpg'),
-    pendientes: buildCategoryPortraitUrl('pendientes', 'portada_pendientes_4.jpg'),
-    pulseras: buildCategoryPortraitUrl('pulseras', 'portada-pulsera_1.jpg')
+    anillos: buildCategoryPortraitUrl('anillos', 'portada-anillos/anillo-portada.jpg'),
+    collares: buildCategoryPortraitUrl('collares', 'portada-collares/portada_collares_3.jpg'),
+    pendientes: buildCategoryPortraitUrl('pendientes', 'portada-pendientes/portada_pendientes_4.jpg'),
+    pulseras: buildCategoryPortraitUrl('pulseras', 'portada-pulseras/portada-pulsera_1.jpg')
   };
 
   return (
