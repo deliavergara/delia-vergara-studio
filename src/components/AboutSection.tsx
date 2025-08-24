@@ -19,7 +19,7 @@ export const AboutSection = () => {
         <div className="flex justify-center">
           <div className="w-full max-w-md">
             <video autoPlay muted loop playsInline className="w-full aspect-[3/4] object-cover rounded-sm">
-              <source src={buildSupabaseUrl("productos/material_de_apoyo/Videos/DSC_0326.mov")} type="video/mp4" />
+              <source src={buildSupabaseUrl("productos/material_de_apoyo/videos/videos_1.mov")} type="video/mp4" />
             </video>
           </div>
         </div>
