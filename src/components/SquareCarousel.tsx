@@ -5,15 +5,15 @@ import { useState, useEffect } from "react";
 import { buildSupabaseUrl } from "@/lib/supabase-config";
 
 const images = [
-  buildSupabaseUrl("productos/material-de-apoyo/carrusel/1.jpg"),
-  buildSupabaseUrl("productos/material-de-apoyo/carrusel/2.jpg"),
-  buildSupabaseUrl("productos/material-de-apoyo/carrusel/4.jpg"),
-  buildSupabaseUrl("productos/material-de-apoyo/carrusel/5.jpg"),
-  buildSupabaseUrl("productos/material-de-apoyo/carrusel/3.jpg"),
-  buildSupabaseUrl("productos/material-de-apoyo/carrusel/6.jpg"),
-  buildSupabaseUrl("productos/material-de-apoyo/carrusel/7.jpg"),
-  buildSupabaseUrl("productos/material-de-apoyo/carrusel/8.jpg"),
-  buildSupabaseUrl("productos/material-de-apoyo/carrusel/9.jpg")
+     buildSupabaseUrl("productos/material_de_apoyo/carrusel/1.jpg"),
+     buildSupabaseUrl("productos/material_de_apoyo/carrusel/2.jpg"),
+     buildSupabaseUrl("productos/material_de_apoyo/carrusel/4.jpg"),
+     buildSupabaseUrl("productos/material_de_apoyo/carrusel/5.jpg"),
+     buildSupabaseUrl("productos/material_de_apoyo/carrusel/3.jpg"),
+     buildSupabaseUrl("productos/material_de_apoyo/carrusel/6.jpg"),
+     buildSupabaseUrl("productos/material_de_apoyo/carrusel/7.jpg"),
+     buildSupabaseUrl("productos/material_de_apoyo/carrusel/8.jpg"),
+     buildSupabaseUrl("productos/material_de_apoyo/carrusel/9.jpg")
 ];
 
 const SquareCarousel = () => {

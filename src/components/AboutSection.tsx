@@ -6,7 +6,7 @@ export const AboutSection = () => {
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-20">
-          <source src={buildSupabaseUrl("productos/material-de-apoyo/Videos/videos_1.mov")} type="video/mp4" />
+          <source src={buildSupabaseUrl("productos/material_de_apoyo/Videos/videos_1.mov")} type="video/mp4" />
         </video>
       </div>
       <div className="container mx-auto px-6 max-w-6xl">
@@ -19,7 +19,7 @@ export const AboutSection = () => {
         <div className="flex justify-center">
           <div className="w-full max-w-md">
             <video autoPlay muted loop playsInline className="w-full aspect-[3/4] object-cover rounded-sm">
-              <source src={buildSupabaseUrl("productos/material-de-apoyo/Videos/DSC_0326.mov")} type="video/mp4" />
+              <source src={buildSupabaseUrl("productos/material_de_apoyo/Videos/DSC_0326.mov")} type="video/mp4" />
             </video>
           </div>
         </div>

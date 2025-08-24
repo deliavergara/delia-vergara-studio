@@ -70,7 +70,7 @@ const CustomJewelryPage = () => {
         <video autoPlay loop muted playsInline className="w-full h-full object-cover" style={{
         opacity: 0.95
       }}>
-          <source src={buildSupabaseUrl("productos/contenido/joyas-a-medida/video_fondo_joya_medida.mp4")} type="video/mp4" />
+          <source src={buildSupabaseUrl("productos/contenido/joyas_a_medida/video_fondo_joya_medida.mp4")} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/5"></div>
       </div>

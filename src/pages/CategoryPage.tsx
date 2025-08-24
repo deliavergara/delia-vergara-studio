@@ -28,10 +28,10 @@ const CategoryPage = () => {
 
   // Mapeo de imágenes de portada para cada categoría
   const categoryPortraits = {
-    anillos: buildSupabaseUrl('productos/anillos/portada-anillos/anillo-portada.jpg'),
-    collares: buildSupabaseUrl('productos/collares/portada-collares/portada_collares_3.jpg'),
-    pendientes: buildSupabaseUrl('productos/pendientes/portada-pendientes/portada_pendientes_4.jpg'),
-    pulseras: buildSupabaseUrl('productos/pulsera/portada-pulseras/portada-pulsera_1.jpg')
+         anillos: buildSupabaseUrl('productos/anillos/portada_anillos/anillo_portada.jpg'),
+         collares: buildSupabaseUrl('productos/collares/portada_collares/portada_collares_3.jpg'),
+         pendientes: buildSupabaseUrl('productos/pendientes/portada_pendientes/portada_pendientes_4.jpg'),
+         pulseras: buildSupabaseUrl('productos/pulseras/portada_pulseras/portada_pulsera_1.jpg')
   };
   const categoryImage = categoryPortraits[categoryId as keyof typeof categoryPortraits];
   return <div className="min-h-screen bg-background">
@@ -51,7 +51,7 @@ const CategoryPage = () => {
         {/* Logo superpuesto más abajo y más grande */}
         <div className="absolute top-20 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer hover:opacity-70 transition-elegant" onClick={() => navigate("/")}>
           <img 
-          src={buildSupabaseUrl(`productos/material-de-apoyo/logo/logos_simples/logo_simple_${categoryId}.png`)} 
+                     src={buildSupabaseUrl(`productos/material_de_apoyo/logo/logos_simples/logo_simple_${categoryId}.png`)} 
           alt={`Logo ${category.name}`} 
           className="w-[60vw] max-w-md h-auto opacity-80"
         />

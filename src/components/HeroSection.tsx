@@ -6,7 +6,7 @@ export const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${buildSupabaseUrl("productos/material-de-apoyo/foto-portada/foto_portada_3.png")})`
+                     backgroundImage: `url(${buildSupabaseUrl("productos/material_de_apoyo/foto_portada/foto_portada_3.jpg")})`
         }}
       />
       
@@ -20,7 +20,7 @@ export const HeroSection = () => {
           className="hover:opacity-70 transition-elegant cursor-pointer"
         >
           <img 
-            src={buildSupabaseUrl("productos/material-de-apoyo/logo/logo_4.png")}
+                         src={buildSupabaseUrl("productos/material_de_apoyo/logo/logo_4.png")}
             alt="Delia Vergara Logo" 
             className="h-32 w-auto opacity-50"
           />

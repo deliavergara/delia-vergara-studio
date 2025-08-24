@@ -7,7 +7,7 @@ export const HowToBuySection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
         style={{
-          backgroundImage: `url(${buildSupabaseUrl("productos/material-de-apoyo/foto-portada/99240e15-8897-4a7b-b1b0-ca5b38f33f8f.png")})`
+          backgroundImage: `url(${buildSupabaseUrl("productos/material_de_apoyo/foto_portada/99240e15-8897-4a7b-b1b0-ca5b38f33f8f.png")})`
         }}
       />
       
