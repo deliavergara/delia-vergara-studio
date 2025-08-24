@@ -139,7 +139,7 @@ export const SizeGuideDrawer = ({
               <li>2. Mide el diámetro interior del anillo (dentro, lado a lado, omite el grosor).</li>
               <div className="flex justify-center my-6">
                 <img 
-                  src={buildMaterialUrl("Iconos", "ilustracion guia de talla anillos.PNG")} 
+                  src={buildMaterialUrl("iconos", "iconos_3.PNG")} 
                   alt="Ilustración de cómo medir el anillo" 
                   className="w-32 h-auto" 
                 />

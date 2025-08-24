@@ -3,10 +3,11 @@ import { buildMaterialUrl } from "@/lib/supabase-config";
 export const HeroSection = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      <img 
-        src={buildMaterialUrl("Foto portada", "DSC_0124.jpg")}
-        alt="Hero background" 
-        className="absolute inset-0 w-full h-full object-cover"
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${buildMaterialUrl("Foto portada", "foto_portada_3.png")})`
+        }}
       />
       
       {/* Subtle gradient overlay to ensure logo readability */}

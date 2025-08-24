@@ -197,7 +197,7 @@ export const buildMaterialUrl = (folder: string, fileName: string): string => {
   const folderMapping: Record<string, string> = {
     'Iconos': 'iconos',
     'Logo': 'logo',
-    'Foto portada': 'foto portada',
+    'Foto portada': 'foto-portada',
     'Videos': 'videos'
   };
   

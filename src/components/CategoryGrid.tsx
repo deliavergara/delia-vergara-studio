@@ -13,11 +13,11 @@ export const CategoryGrid = () => {
   };
 
   // Mapeo de imágenes de portada para cada categoría
-  const categoryImages = {
-    anillos: buildCategoryPortraitUrl('anillos', 'anillo-portada/portada anillo categoria 3.jpg'),
-    collares: buildCategoryPortraitUrl('collares', 'portada collares/portada collar categoria .jpg'),
-    pendientes: buildCategoryPortraitUrl('pendientes', 'portada pendientes/portada pendientes categoria.jpg'),
-    pulseras: buildCategoryPortraitUrl('pulseras', 'portada pulsera/1. pulsera portada.jpg')
+  const categoryPortraits = {
+    anillos: buildCategoryPortraitUrl('anillos', 'anillo-portada.jpg'),
+    collares: buildCategoryPortraitUrl('collares', 'portada_collares_3.jpg'),
+    pendientes: buildCategoryPortraitUrl('pendientes', 'portada_pendientes_4.jpg'),
+    pulseras: buildCategoryPortraitUrl('pulseras', 'portada-pulsera_1.jpg')
   };
 
   return (
@@ -25,7 +25,7 @@ export const CategoryGrid = () => {
       <div className="w-full">
         <div className="flex flex-col">
           {categories.map((category) => {
-            const categoryImage = categoryImages[category.id as keyof typeof categoryImages];
+            const categoryImage = categoryPortraits[category.id as keyof typeof categoryPortraits];
             return (
               <div
                 key={category.id}

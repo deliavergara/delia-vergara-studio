@@ -14,11 +14,11 @@ const CategoryPage = () => {
   const category = categories.find(cat => cat.id === categoryId);
 
   // Mapeo de imágenes de portada para cada categoría
-  const categoryImages = {
-    anillos: buildCategoryPortraitUrl('anillos', 'anillo-portada/portada anillo categoria 3.jpg'),
-    collares: buildCategoryPortraitUrl('collares', 'portada collares/portada collar categoria .jpg'),
-    pendientes: buildCategoryPortraitUrl('pendientes', 'portada pendientes/portada pendientes categoria.jpg'),
-    pulseras: buildCategoryPortraitUrl('pulseras', 'portada pulsera/1. pulsera portada.jpg')
+  const categoryPortraits = {
+    anillos: buildCategoryPortraitUrl('anillos', 'anillo-portada.jpg'),
+    collares: buildCategoryPortraitUrl('collares', 'portada_collares_3.jpg'),
+    pendientes: buildCategoryPortraitUrl('pendientes', 'portada_pendientes_4.jpg'),
+    pulseras: buildCategoryPortraitUrl('pulseras', 'portada-pulsera_1.jpg')
   };
   if (!category) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
@@ -30,7 +30,7 @@ const CategoryPage = () => {
         </div>
       </div>;
   }
-  const categoryImage = categoryImages[categoryId as keyof typeof categoryImages];
+  const categoryImage = categoryPortraits[categoryId as keyof typeof categoryPortraits];
   return <div className="min-h-screen bg-background">
       <HamburgerMenu />
 
