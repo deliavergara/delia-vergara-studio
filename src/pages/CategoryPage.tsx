@@ -3,33 +3,36 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { categories } from "@/data/products";
 import { ProductGrid } from "@/components/ProductGrid";
-import { buildCategoryPortraitUrl, buildMaterialUrl } from "@/lib/supabase-config";
+import { buildSupabaseUrl } from "@/lib/supabase-config";
 import { Link } from "react-router-dom";
 import { HamburgerMenu } from "@/components/HamburgerMenu";
 const CategoryPage = () => {
-  const {
-    categoryId
-  } = useParams();
+  const { categoryId } = useParams<{ categoryId: string }>();
   const navigate = useNavigate();
+
   const category = categories.find(cat => cat.id === categoryId);
+
+  if (!category) {
+    return <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold mb-4">Categoría no encontrada</h1>
+        <button 
+          onClick={() => navigate('/')}
+          className="px-4 py-2 bg-primary text-primary-foreground rounded-md"
+        >
+          Volver al inicio
+        </button>
+      </div>
+    </div>;
+  }
 
   // Mapeo de imágenes de portada para cada categoría
   const categoryPortraits = {
-    anillos: buildCategoryPortraitUrl('anillos', 'anillo-portada.jpg'),
-    collares: buildCategoryPortraitUrl('collares', 'portada_collares_3.jpg'),
-    pendientes: buildCategoryPortraitUrl('pendientes', 'portada_pendientes_4.jpg'),
-    pulseras: buildCategoryPortraitUrl('pulseras', 'portada-pulsera_1.jpg')
+    anillos: buildSupabaseUrl('productos/anillos/portada-anillos/anillo-portada.jpg'),
+    collares: buildSupabaseUrl('productos/collares/portada-collares/portada_collares_3.jpg'),
+    pendientes: buildSupabaseUrl('productos/pendientes/portada-pendientes/portada_pendientes_4.jpg'),
+    pulseras: buildSupabaseUrl('productos/pulsera/portada-pulseras/portada-pulsera_1.jpg')
   };
-  if (!category) {
-    return <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="font-elegant text-2xl text-foreground mb-4">Categoría no encontrada</h1>
-          <Button onClick={() => navigate("/")} variant="outline">
-            Volver al inicio
-          </Button>
-        </div>
-      </div>;
-  }
   const categoryImage = categoryPortraits[categoryId as keyof typeof categoryPortraits];
   return <div className="min-h-screen bg-background">
       <HamburgerMenu />
@@ -48,7 +51,7 @@ const CategoryPage = () => {
         {/* Logo superpuesto más abajo y más grande */}
         <div className="absolute top-20 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer hover:opacity-70 transition-elegant" onClick={() => navigate("/")}>
           <img 
-          src={buildMaterialUrl("Logo/logo simple CATEGORIAS", `LOGO SIMPLE ${categoryId.toUpperCase()}.png`)} 
+          src={buildSupabaseUrl(`Logo/LOGO SIMPLE ${categoryId.toUpperCase()}.png`)} 
           alt={`Logo ${category.name}`} 
           className="w-[60vw] max-w-md h-auto opacity-80"
         />
@@ -79,7 +82,7 @@ const CategoryPage = () => {
         <div className="mt-32 pt-12 border-t border-border relative">
           <div className="absolute bottom-0 left-0 z-0 -ml-8 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => navigate("/")}>
             <img 
-          src={buildMaterialUrl("Logo", "isologo.png")} 
+          src={buildSupabaseUrl("Logo/isologo.png")} 
           alt="Delia Vergara Isologo" 
           className="h-32 w-auto opacity-50" 
         />

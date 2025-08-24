@@ -1,4 +1,4 @@
-import { buildMaterialUrl } from "@/lib/supabase-config";
+import { buildSupabaseUrl } from "@/lib/supabase-config";
 
 const FixedSocialButtons = () => {
   return (
@@ -6,7 +6,7 @@ const FixedSocialButtons = () => {
       <a href="https://wa.me/34625857127" target="_blank" rel="noopener noreferrer">
         <div className="flex items-center justify-center gap-2 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
           <img
-            src={buildMaterialUrl("Iconos", "ICONO WHATSAP.png")}
+            src={buildSupabaseUrl("productos/material-de-apoyo/iconos/iconos_2.png")}
             alt="WhatsApp"
             className="w-12 h-12 hover:scale-110 transition-transform duration-200"
           />
@@ -17,7 +17,7 @@ const FixedSocialButtons = () => {
       <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer">
         <div className="flex items-center justify-center gap-2 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
           <img
-            src={buildMaterialUrl("Iconos", "ICONO INSTAGRAM.png")}
+            src={buildSupabaseUrl("productos/material-de-apoyo/iconos/iconos_1.png")}
             alt="Instagram"
             className="w-12 h-12 hover:scale-110 transition-transform duration-200"
           />

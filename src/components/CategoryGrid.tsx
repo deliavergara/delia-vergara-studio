@@ -1,23 +1,18 @@
-import { categories } from "@/data/products";
-import { useNavigate } from "react-router-dom";
 import { Category } from "@/types/jewelry";
-import { buildCategoryPortraitUrl } from "@/lib/supabase-config";
+import { buildSupabaseUrl } from "@/lib/supabase-config";
 
-export const CategoryGrid = () => {
-  const navigate = useNavigate();
+interface CategoryGridProps {
+  categories: Category[];
+  onCategoryClick: (categoryId: string) => void;
+}
 
-  const handleCategoryClick = (categoryId: string) => {
-    navigate(`/categoria/${categoryId}`);
-    // Scroll al inicio de la página
-    window.scrollTo(0, 0);
-  };
-
+const CategoryGrid = ({ categories, onCategoryClick }: CategoryGridProps) => {
   // Mapeo de imágenes de portada para cada categoría
   const categoryPortraits = {
-    anillos: buildCategoryPortraitUrl('anillos', 'portada-anillos/anillo-portada.jpg'),
-    collares: buildCategoryPortraitUrl('collares', 'portada-collares/portada_collares_3.jpg'),
-    pendientes: buildCategoryPortraitUrl('pendientes', 'portada-pendientes/portada_pendientes_4.jpg'),
-    pulseras: buildCategoryPortraitUrl('pulseras', 'portada-pulseras/portada-pulsera_1.jpg')
+    anillos: buildSupabaseUrl('productos/anillos/portada-anillos/anillo-portada.jpg'),
+    collares: buildSupabaseUrl('productos/collares/portada-collares/portada_collares_3.jpg'),
+    pendientes: buildSupabaseUrl('productos/pendientes/portada-pendientes/portada_pendientes_4.jpg'),
+    pulseras: buildSupabaseUrl('productos/pulsera/portada-pulseras/portada-pulsera_1.jpg')
   };
 
   return (
@@ -29,7 +24,7 @@ export const CategoryGrid = () => {
             return (
               <div
                 key={category.id}
-                onClick={() => handleCategoryClick(category.id)}
+                onClick={() => onCategoryClick(category.id)}
                 className="group cursor-pointer"
               >
                 <div className="w-full" style={{ aspectRatio: '21/9' }}>
@@ -61,3 +56,5 @@ export const CategoryGrid = () => {
     </section>
   );
 };
+
+export default CategoryGrid;
