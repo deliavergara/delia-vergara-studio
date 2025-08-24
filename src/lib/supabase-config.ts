@@ -193,8 +193,17 @@ export const buildMaterialUrl = (folder: string, fileName: string): string => {
     'DSC_0326.mov': 'videos_1.mov'
   };
   
+  // Mapeo de nombres de carpetas para corregir mayúsculas/minúsculas
+  const folderMapping: Record<string, string> = {
+    'Iconos': 'iconos',
+    'Logo': 'logo',
+    'Foto portada': 'foto portada',
+    'Videos': 'videos'
+  };
+  
   const realFileName = fileMapping[fileName] || fileName;
-  return buildSupabaseUrl(`productos/material-de-apoyo/${folder}/${realFileName}`);
+  const realFolder = folderMapping[folder] || folder;
+  return buildSupabaseUrl(`productos/material-de-apoyo/${realFolder}/${realFileName}`);
 };
 
 export const buildCustomJewelryUrl = (fileName: string): string => {
