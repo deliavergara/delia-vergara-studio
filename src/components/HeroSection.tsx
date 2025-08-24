@@ -20,7 +20,7 @@ export const HeroSection = () => {
           className="hover:opacity-70 transition-elegant cursor-pointer"
         >
           <img 
-            src={buildSupabaseUrl("productos/material-de-apoyo/Logo/logo_4.png")}
+            src={buildSupabaseUrl("productos/material-de-apoyo/logo/logo_4.png")}
             alt="Delia Vergara Logo" 
             className="h-32 w-auto opacity-50"
           />

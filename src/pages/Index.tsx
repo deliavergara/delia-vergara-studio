@@ -39,7 +39,7 @@ const Index = () => {
         <div className="mt-8 pt-8 border-t border-border relative">
           <div className="absolute bottom-0 left-0 z-0 -ml-24 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => window.location.href = '/'}>
             <img 
-                             src={buildSupabaseUrl("productos/material-de-apoyo/Logo/logo_2.png")} 
+                             src={buildSupabaseUrl("productos/material-de-apoyo/logo/logo_2.png")} 
               alt="Delia Vergara Isologo" 
               className="h-32 w-auto opacity-50" 
             />
