@@ -6,9 +6,7 @@ export const SUPABASE_CONFIG = {
 
 // Función unificada para construir URLs de Supabase Storage
 export const buildSupabaseUrl = (path: string): string => {
-  const url = `${SUPABASE_CONFIG.url}/storage/v1/object/public/${SUPABASE_CONFIG.bucket}/${path}`;
-  console.log('Generated Supabase URL:', url);
-  return url;
+  return `${SUPABASE_CONFIG.url}/storage/v1/object/public/${SUPABASE_CONFIG.bucket}/${path}`;
 };
 
 // Función simple para productos - usa directamente los nombres de archivos de products.ts
