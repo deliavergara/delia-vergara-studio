@@ -5,9 +5,11 @@ import { HamburgerMenu } from "@/components/HamburgerMenu";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { CategoryGrid } from "@/components/CategoryGrid";
+import { HowToBuySection } from "@/components/HowToBuySection";
 import SquareCarousel from "@/components/SquareCarousel";
+import FixedSocialButtons from "@/components/FixedSocialButtons";
 import { Footer } from "@/components/Footer";
-import { buildMaterialUrl } from "@/lib/supabase-config";
+import { buildSupabaseUrl } from "@/lib/supabase-config";
 const Index = () => {
   return <div className="relative">
       <HamburgerMenu />
@@ -37,7 +39,7 @@ const Index = () => {
         <div className="mt-8 pt-8 border-t border-border relative">
           <div className="absolute bottom-0 left-0 z-0 -ml-24 cursor-pointer hover:opacity-30 transition-elegant" onClick={() => window.location.href = '/'}>
             <img 
-              src={buildMaterialUrl("Logo", "isologo.png")} 
+                             src={buildSupabaseUrl("productos/material-de-apoyo/Logo/logo_2.png")} 
               alt="Delia Vergara Isologo" 
               className="h-32 w-auto opacity-50" 
             />

@@ -1,12 +1,16 @@
-import { Category } from "@/types/jewelry";
+import { categories } from "@/data/products";
+import { useNavigate } from "react-router-dom";
 import { buildSupabaseUrl } from "@/lib/supabase-config";
 
-interface CategoryGridProps {
-  categories: Category[];
-  onCategoryClick: (categoryId: string) => void;
-}
+export const CategoryGrid = () => {
+  const navigate = useNavigate();
 
-const CategoryGrid = ({ categories, onCategoryClick }: CategoryGridProps) => {
+  const handleCategoryClick = (categoryId: string) => {
+    navigate(`/categoria/${categoryId}`);
+    // Scroll al inicio de la página
+    window.scrollTo(0, 0);
+  };
+
   // Mapeo de imágenes de portada para cada categoría
   const categoryPortraits = {
     anillos: buildSupabaseUrl('productos/anillos/portada-anillos/anillo-portada.jpg'),
@@ -24,7 +28,7 @@ const CategoryGrid = ({ categories, onCategoryClick }: CategoryGridProps) => {
             return (
               <div
                 key={category.id}
-                onClick={() => onCategoryClick(category.id)}
+                onClick={() => handleCategoryClick(category.id)}
                 className="group cursor-pointer"
               >
                 <div className="w-full" style={{ aspectRatio: '21/9' }}>
@@ -56,5 +60,3 @@ const CategoryGrid = ({ categories, onCategoryClick }: CategoryGridProps) => {
     </section>
   );
 };
-
-export default CategoryGrid;

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerClose } from "@/components/ui/drawer";
-import { buildMaterialUrl } from "@/lib/supabase-config";
+import { buildSupabaseUrl } from "@/lib/supabase-config";
 interface SizeGuideDrawerProps {
   isOpen: boolean;
   onClose: () => void;
@@ -139,7 +139,7 @@ export const SizeGuideDrawer = ({
               <li>2. Mide el diámetro interior del anillo (dentro, lado a lado, omite el grosor).</li>
               <div className="flex justify-center my-6">
                 <img 
-                  src={buildMaterialUrl("iconos", "iconos_3.PNG")} 
+                                     src={buildSupabaseUrl("productos/material-de-apoyo/iconos/iconos_3.PNG")} 
                   alt="Ilustración de cómo medir el anillo" 
                   className="w-32 h-auto" 
                 />

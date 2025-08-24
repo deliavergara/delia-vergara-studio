@@ -1,21 +1,22 @@
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { buildMaterialUrl } from "@/lib/supabase-config";
+import { useState, useEffect } from "react";
+import { buildSupabaseUrl } from "@/lib/supabase-config";
+
+const images = [
+  buildSupabaseUrl("productos/material-de-apoyo/carrusel/1.jpg"),
+  buildSupabaseUrl("productos/material-de-apoyo/carrusel/2.jpg"),
+  buildSupabaseUrl("productos/material-de-apoyo/carrusel/4.jpg"),
+  buildSupabaseUrl("productos/material-de-apoyo/carrusel/5.jpg"),
+  buildSupabaseUrl("productos/material-de-apoyo/carrusel/3.jpg"),
+  buildSupabaseUrl("productos/material-de-apoyo/carrusel/6.jpg"),
+  buildSupabaseUrl("productos/material-de-apoyo/carrusel/7.jpg"),
+  buildSupabaseUrl("productos/material-de-apoyo/carrusel/8.jpg"),
+  buildSupabaseUrl("productos/material-de-apoyo/carrusel/9.jpg")
+];
 
 const SquareCarousel = () => {
-  const images = [
-    buildMaterialUrl("carrusel", "1.jpg"),
-    buildMaterialUrl("carrusel", "2.jpg"),
-    buildMaterialUrl("carrusel", "4.jpg"),
-    buildMaterialUrl("carrusel", "5.jpg"),
-    buildMaterialUrl("carrusel", "3.jpg"),
-    buildMaterialUrl("carrusel", "6.jpg"),
-    buildMaterialUrl("carrusel", "7.jpg"),
-    buildMaterialUrl("carrusel", "8.jpg"),
-    buildMaterialUrl("carrusel", "9.jpg")
-  ];
-
   return (
     <section className="py-4 bg-background">
       <div className="container mx-auto px-6 max-w-5xl">
