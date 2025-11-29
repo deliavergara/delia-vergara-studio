@@ -11,12 +11,7 @@ export const buildSupabaseUrl = (path: string): string => {
 
 // Función simple para productos - usa directamente los nombres de archivos de products.ts
 export const buildProductImageUrl = (category: string, productName: string, fileName: string): string => {
-  const categoryMapping: Record<string, string> = {
-    'pulseras': 'pulsera' // Solo este necesita mapeo
-  };
-  
-  const mappedCategory = categoryMapping[category] || category;
-  return buildSupabaseUrl(`productos/${mappedCategory}/${productName}/${fileName}`);
+  return buildSupabaseUrl(`productos/${category}/${productName}/${fileName}`);
 };
 
 // Función simple para material de apoyo

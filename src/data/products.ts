@@ -115,42 +115,42 @@ const productMapping = {
   // Pendientes
   "PARFRACTALPENDIENTEUNO": {
     category: "pendientes",
-    name: "un-fractal",
+    name: "un_fractal",
     images: [
-      "un-fractal_1.jpg",
-      "un-fractal_2.jpg",
-      "un-fractal_3.jpg",
-      "un-fractal_4.mov"
+      "un_fractal_1.jpg",
+      "un_fractal_2.jpg",
+      "un_fractal_3.jpg",
+      "un_fractal_4.mov"
     ],
     description: "Formado por un solo módulo fractal, este pendiente es una pieza delicada, ligera y con un diseño diferente. Ideal para uso diario por su comodidad.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "PARFRACTALPENDIENTEDOS": {
     category: "pendientes",
-    name: "dos-fractales",
+    name: "dos_fractales",
     images: [
-      "dos-fractales_1.jpg",
-      "dos-fractales_2.jpg",
-      "dos-fractales_3.jpg"
+      "dos_fractales_1.jpg",
+      "dos_fractales_2.jpg",
+      "dos_fractales_3.jpg"
     ],
     description: "Compuestos por dos módulos florales: uno pequeño que se ajusta de forma delicada y otro más grande que le da carácter. Una pieza con equilibrio, elegante, ligera y con movimiento.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "PARFRACTALPENDIENTETRES": {
     category: "pendientes",
-    name: "tres-fractales",
+    name: "tres_fractales",
     images: [
-      "tres-fractales_1.jpg",
-      "tres-fractales_2.jpg",
-      "tres-fractales_3.jpg"
+      "tres_fractales_1.jpg",
+      "tres_fractales_2.jpg",
+      "tres_fractales_3.jpg"
     ],
     description: "Compuestos por tres módulos fractales. Forman una pieza de impacto, ligera y con presencia.\n\nHechos a mano en plata 925\nDisponibles con baño en oro"
   },
     "PARFRACTALPENDIENTECUATRO": {
     category: "pendientes",
-    name: "cuatro-fractales",
+    name: "cuatro_fractales",
     images: [
-      "cuatro-fractales_1.jpg",
-      "cuatro-fractales_2.jpg",
-      "cuatro-fractales_3.mov"
+      "cuatro_fractales_1.jpg",
+      "cuatro_fractales_2.jpg",
+      "cuatro_fractales_3.mov"
     ],
     description: "Pendientes de cuatro fractales, creados originalmente por encargo para una novia en París. Su movimiento y largo los hicieron imprescindibles en la colección. \n\nHechos a mano en plata 925\nDisponibles con baño en oro"
   },
@@ -166,49 +166,49 @@ const productMapping = {
   },
   "OVALPENDIENTEUNO": {
     category: "pendientes",
-    name: "un-ovalo",
+    name: "un_ovalo",
     images: [
-      "un-ovalo_1.jpg",
-      "un-ovalo_2.jpg",
-      "un-ovalo_3.jpg"
+      "un_ovalo_1.jpg",
+      "un_ovalo_2.jpg",
+      "un_ovalo_3.jpg"
     ],
     description: "Sutiles y elegantes. Puedes elegir el color de la piedra o incluso perlas.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "OVALPENDIENTEDOS": {
     category: "pendientes",
-    name: "dos-ovalos",
+    name: "dos_ovalos",
     images: [
-      "dos-ovalos_1.jpg",
-      "dos-ovalos_2.jpg"
+      "dos_ovalos_1.jpg",
+      "dos_ovalos_2.jpg"
     ],
     description: "Coloridos y sentadores. Puedes elegir el color de la piedra o incluso perlas\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "MITSUROROSASPENDIENTEUNICO": {
     category: "pendientes",
-    name: "rosa-mitsuro",
+    name: "rosa_mitsuro",
     images: [
-      "rosa-mitsuro_1.jpg",
-      "rosa-mitsuro_2.jpg",
-      "rosa-mitsuro_3.mov",
-      "rosa-mitsuro_4.mov"
+      "rosa_mitsuro_1.jpg",
+      "rosa_mitsuro_2.jpg",
+      "rosa_mitsuro_3.mov",
+      "rosa_mitsuro_4.mov"
     ],
     description: "Modelados con la técnica Mitsuro, que permite que tomen curvas y una forma orgánica que recuerda a una rosa con su tallo.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
   "MITSUROROSITASPENDIENTEUNICO": {
     category: "pendientes",
-    name: "rositas-mitsuro",
+    name: "rosita_mitsuro",
     images: [
-      "rositas-mitsuro_1.jpg",
-      "rositas-mitsuro_2.jpg"
+      "rosita_mitsuro_1.jpg",
+      "rosita_mitsuro_2.jpg"
     ],
     description: "Pequeñas rosas modeladas con la técnica Mitsuro. Sutiles, delicadas y con curvas orgánicas que nacen solo del modelado a mano.\n\nHechas a mano en plata 925\nDisponibles con baño en oro"
   },
   "MITSUROARGOLLASPENDIENTEUNICO": {
     category: "pendientes",
-    name: "argollas-mitsuro",
+    name: "argollas_mitsuro",
     images: [
-      "argollas-mitsuro_1.jpg",
-      "argollas-mitsuro_2.jpg"
+      "argollas_mitsuro_1.jpg",
+      "argollas_mitsuro_2.jpg"
     ],
     description: "Argollas modeladas a mano con la técnica Mitsuro. De una sola pieza que gira sobre sí misma.\n\nHecho a mano en plata 925\nDisponible con baño en oro"
   },
@@ -226,41 +226,41 @@ const productMapping = {
   // Pulseras
   "FRACTALPULSERAUNICO": {
     category: "pulseras",
-    name: "pulsera-fractal",
+    name: "pulsera_fractal_plata",
     images: [
-      "pulsera-fractal_1.jpg",
-      "pulsera-fractal_2.jpg",
-      "pulsera-fractal_3.jpg"
+      "pulsera_fractal_plata_1.jpg",
+      "pulsera_fractal_plata_2.jpg",
+      "pulsera_fractal_plata_3.jpg"
     ],
     description: "Con dos módulos fractales a cada lado, esta pulsera tiene gran carácter y elegancia. Diseñada para hacerse notar, diferente a cualquier otra.\n\nHecha a mano en plata 925\nDisponible con baño en oro"
   },
   "FACETADAPULSERAUNICO": {
     category: "pulseras",
-    name: "pulsera-facetada",
+    name: "pulsera_facetada",
     images: [
-      "pulsera-facetada_1.jpg",
-      "pulsera-facetada_2.jpg",
-      "pulsera-facetada_3.jpg",
-      "pulsera-facetada_4.mov"
+      "pulsera_facetada_1.jpg",
+      "pulsera_facetada_2.jpg",
+      "pulsera_facetada_3.jpg",
+      "pulsera_facetada_4.mov"
     ],
     description: "Diseñada desde cero cada vez. Cada una con sus propias facetas, única e irrepetible.\n\nHecha a mano en plata 925\nDisponible con baño en oro"
   },
   "MITSUROPULSERAUNICO": {
     category: "pulseras",
-    name: "pulsera-mitsuro",
+    name: "pulsera_mitsuro",
     images: [
-      "pulsera-mitsuro_1.jpg",
-      "pulsera-mitsuro_2.jpg",
-      "pulsera-mitsuro_3.jpg"
+      "pulsera_mitsuro_1.jpg",
+      "pulsera_mitsuro_2.jpg",
+      "pulsera_mitsuro_3.jpg"
     ],
     description: "Modelada a mano con la técnica Mitsuro, esta pulsera de casi 200g de plata se forma a partir de sus propias curvas. Es una pieza única.\nSi quieres la tuya será una nueva, pero igual de especial.\n\nHecha a mano en plata 925\nDisponible con baño en oro"
   },
   "LYRAPULSERAUNICO": {
     category: "pulseras",
-    name: "pulsera-lyra",
+    name: "pulsera_lyra",
     images: [
-      "pulsera-lyra_1.jpg",
-      "pulsera-lyra_2.jpg"
+      "pulsera_lyra_1.jpg",
+      "pulsera_lyra_2.jpg"
     ],
     description: "Par de pulseras orgánicas Se acompañan y se mueven juntas, ligeras y con textura sutil. Diseñadas para lucir siempre en pareja.\n\nHecha a mano en plata 925\nDisponible con baño en oro"
   }
