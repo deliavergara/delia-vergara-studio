@@ -56,7 +56,7 @@ const HowToBuyPage = () => {
       <div className="scroll-snap-container" ref={snapContainerRef}>
         {/* 1ª pantalla - árbol.jpg */}
         <section className="snap-screen bg-cover bg-center relative" style={{
-                 backgroundImage: `url(${buildSupabaseUrl("productos/contenido/como_comprar/1_arbol.jpg")})`
+                 backgroundImage: `url(${buildSupabaseUrl("contenido/como_comprar/1_arbol.jpg")})`
       }}>
           <div className="flex flex-col h-full items-center justify-start pt-32">
             <h1 className="font-avenir-medium text-white lg:text-6xl font-medium text-center md:text-2xl text-2xl">
@@ -69,7 +69,7 @@ const HowToBuyPage = () => {
 
         {/* 2ª pantalla - persona.jpg */}
         <section className="snap-screen bg-cover bg-center relative" style={{
-                 backgroundImage: `url(${buildSupabaseUrl("productos/contenido/como_comprar/0_persona.jpg")})`,
+                 backgroundImage: `url(${buildSupabaseUrl("contenido/como_comprar/0_persona.jpg")})`,
         opacity: 0.95
       }}>
           <div className="screen-content justify-start items-start pl-[6vw] md:pl-[8vw] lg:pl-[10vw] pt-[15vh]">
@@ -104,7 +104,7 @@ const HowToBuyPage = () => {
 
         {/* 3ª pantalla - medalla.jpg */}
         <section className="snap-screen bg-cover bg-center relative" style={{
-                 backgroundImage: `url(${buildSupabaseUrl("productos/contenido/como_comprar/2_medalla.jpg")})`,
+                 backgroundImage: `url(${buildSupabaseUrl("contenido/como_comprar/2_medalla.jpg")})`,
         opacity: 0.95
       }}>
           <div className="screen-content justify-start items-start pl-[6vw] md:pl-[8vw] lg:pl-[10vw] pt-[15vh]">
@@ -127,7 +127,7 @@ const HowToBuyPage = () => {
 
         {/* 4ª pantalla - caja.jpg */}
         <section className="snap-screen bg-cover bg-center relative" style={{
-                 backgroundImage: `url(${buildSupabaseUrl("productos/contenido/como_comprar/3_caja.jpg")})`,
+                 backgroundImage: `url(${buildSupabaseUrl("contenido/como_comprar/3_caja.jpg")})`,
         opacity: 0.95
       }}>
           <div className="screen-content justify-start items-start pl-[6vw] md:pl-[8vw] lg:pl-[10vw] pt-[15vh]">
