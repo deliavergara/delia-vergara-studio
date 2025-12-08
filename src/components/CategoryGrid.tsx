@@ -1,30 +1,36 @@
-import { categories } from "@/data/products";
 import { useNavigate } from "react-router-dom";
 import { buildSupabaseUrl } from "@/lib/supabase-config";
+
+// Categorías estáticas (las portadas no vienen de la DB de productos)
+const categoriesList = [
+  { id: 'anillos', name: 'Anillos' },
+  { id: 'collares', name: 'Collares' },
+  { id: 'pendientes', name: 'Pendientes' },
+  { id: 'pulseras', name: 'Pulseras' }
+];
+
+// Mapeo de imágenes de portada para cada categoría
+const categoryPortraits: Record<string, string> = {
+  anillos: buildSupabaseUrl('productos/anillos/portada_anillos/portada_anillos_4.jpg'),
+  collares: buildSupabaseUrl('productos/collares/portada_collares/portada_collares_3.jpg'),
+  pendientes: buildSupabaseUrl('productos/pendientes/portada_pendientes/portada_pendientes_4.jpg'),
+  pulseras: buildSupabaseUrl('productos/pulseras/portada_pulseras/portada_pulsera_1.jpg')
+};
 
 export const CategoryGrid = () => {
   const navigate = useNavigate();
 
   const handleCategoryClick = (categoryId: string) => {
     navigate(`/categoria/${categoryId}`);
-    // Scroll al inicio de la página
     window.scrollTo(0, 0);
-  };
-
-  // Mapeo de imágenes de portada para cada categoría
-  const categoryPortraits = {
-         anillos: buildSupabaseUrl('productos/anillos/portada_anillos/portada_anillos_4.jpg'),
-         collares: buildSupabaseUrl('productos/collares/portada_collares/portada_collares_3.jpg'),
-         pendientes: buildSupabaseUrl('productos/pendientes/portada_pendientes/portada_pendientes_4.jpg'),
-         pulseras: buildSupabaseUrl('productos/pulseras/portada_pulseras/portada_pulsera_1.jpg')
   };
 
   return (
     <section className="bg-background">
       <div className="w-full">
         <div className="flex flex-col">
-          {categories.map((category) => {
-            const categoryImage = categoryPortraits[category.id as keyof typeof categoryPortraits];
+          {categoriesList.map((category) => {
+            const categoryImage = categoryPortraits[category.id];
             return (
               <div
                 key={category.id}

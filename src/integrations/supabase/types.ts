@@ -58,6 +58,7 @@ export type Database = {
           precio_venta_con_bano_oro_es: number | null
           precio_venta_es: number | null
           sku: string
+          storage_path_folder: string | null
           updated_at: string
         }
         Insert: {
@@ -76,6 +77,7 @@ export type Database = {
           precio_venta_con_bano_oro_es?: number | null
           precio_venta_es?: number | null
           sku: string
+          storage_path_folder?: string | null
           updated_at?: string
         }
         Update: {
@@ -94,6 +96,7 @@ export type Database = {
           precio_venta_con_bano_oro_es?: number | null
           precio_venta_es?: number | null
           sku?: string
+          storage_path_folder?: string | null
           updated_at?: string
         }
         Relationships: []
@@ -141,7 +144,7 @@ export type Database = {
       }
     }
     Functions: {
-      [_ in never]: never
+      is_admin: { Args: never; Returns: boolean }
     }
     Enums: {
       [_ in never]: never
