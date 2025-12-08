@@ -14,7 +14,7 @@ const FixedSocialButtons = () => {
         </div>
       </a>
 
-      <a href="https://instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.instagram.com/deliavergaras" target="_blank" rel="noopener noreferrer">
         <div className="flex items-center gap-2 px-3 py-2 rounded-full transition-all duration-300 hover:scale-105" style={{backgroundColor: '#EDEDED'}}>
           <img
             src={buildSupabaseUrl("productos/material_de_apoyo/iconos/iconos_1.png")}
