@@ -7,6 +7,7 @@ interface DBProduct {
   id: string;
   sku: string;
   nombre: string;
+  display_name: string | null;
   categoria: string | null;
   descripcion: string | null;
   porte: string | null;
@@ -114,7 +115,7 @@ async function dbProductToJewelryItem(
 
   return {
     id: product.sku.toLowerCase(),
-    name: product.nombre.toLowerCase().replace(/ /g, '_'),
+    name: product.display_name || product.nombre,
     description: product.descripcion || '',
     category: frontendCategory,
     images,
@@ -139,9 +140,9 @@ export async function fetchProducts(): Promise<JewelryItem[]> {
 
   const { data: products, error } = await supabase
     .from('productos')
-    .select('id, sku, nombre, categoria, descripcion, porte, precio_venta_es, precio_venta_con_bano_oro_es, storage_path_folder')
+    .select('id, sku, nombre, display_name, categoria, descripcion, porte, precio_venta_es, precio_venta_con_bano_oro_es, storage_path_folder')
     .order('categoria')
-    .order('nombre');
+    .order('display_name');
 
   if (error) {
     console.error('Error fetching products:', error);
